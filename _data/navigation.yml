@@ -11,3 +11,20 @@ main:
     url: /faq/
   - title: "Blog"
     url: /blog/
+docs:
+  - title: Specifications
+    children:
+      - title: "5.5"
+        url: ""
+      - title: "5.5.1"
+        url: ""
+      - title: "7.0"
+        url: ""
+      - title: "GEDCOM X"
+        url: "http://gedcomx.org"
+
+  - title: "How to Guides"
+    children:
+      - title: "Migrating 5.5.1 to 7.0"
+        url: ""
+      - title: "Common Cases"
