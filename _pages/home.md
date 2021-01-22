@@ -5,8 +5,8 @@ permalink: /
 header:
   overlay_color: "#5e616c"
   overlay_image: mm-home-page-feature.jpg
-  cta_label: "<i class='fa fa-file-code'></i> Get Specifications"
-  cta_url: "/specifications/"
+  cta_label: "<i class='fa fa-file-code'></i> Read the docs"
+  cta_url: "/docs/"
   caption:
 feature_row:
   - image_path: mm-customizable-feature.png

@@ -1,8 +1,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Specifications"
-    url: /specifications/
+  - title: "Documentation"
+    url: /docs/
   - title: "Code"
     url: /code/
   - title: "Community"
