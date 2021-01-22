@@ -1,0 +1,5 @@
+# Develop override settings
+
+url: http://127.0.0.1:4000
+remote_theme: false
+theme: minimal-mistakes-jekyll
