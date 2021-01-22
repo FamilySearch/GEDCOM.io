@@ -1,0 +1,13 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: "Specifications"
+    url: /specifications/
+  - title: "Code"
+    url: /code/
+  - title: "Community"
+    url: /community/
+  - title: "FAQ"
+    url: /faq/
+  - title: "Blog"
+    url: /blog/
