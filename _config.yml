@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: GEDCOM
+subtitle: Genealogical Data Communication
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   - The official website for the GEDCOM specification used for storing and sharing genealogical information.
