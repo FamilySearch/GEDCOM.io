@@ -1,5 +1,5 @@
 ---
-title: GEDCOM Documentation
+title: GEDCOM Specifications
 permalink: /specs/
 sidebar:
   nav: "specs"
