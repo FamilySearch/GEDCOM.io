@@ -7,8 +7,8 @@ main:
     url: /tools/
   - title: "Guides"
     url: /guides/
-  - title: "FAQ"
-    url: /faq/
+  - title: "Community"
+    url: /community/
   - title: "Blog"
     url: /blog/
 specs:
@@ -22,9 +22,18 @@ specs:
         url: ""
       - title: "GEDCOM X"
         url: "http://gedcomx.org"
-
-  - title: "How to Guides"
+ guides: "How to Guides"
     children:
       - title: "Migrating 5.5.1 to 7.0"
         url: ""
-      - title: "Common Cases"
+      - title: "Common Cases"   
+community:
+  - title: Community
+    children:
+      - title: "Issue Tracker"
+        url: ""
+      - title: "Blog"
+        url: "/blog"
+    
+
+ 
