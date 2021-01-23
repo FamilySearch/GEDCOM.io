@@ -1,17 +1,17 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Documentation"
-    url: /docs/
-  - title: "Code"
-    url: /code/
-  - title: "Community"
-    url: /community/
+  - title: "Specification"
+    url: /specs/
+  - title: "Tools"
+    url: /tools/
+  - title: "Guides"
+    url: /guides/
   - title: "FAQ"
     url: /faq/
   - title: "Blog"
     url: /blog/
-docs:
+specs:
   - title: Specifications
     children:
       - title: "5.5"
