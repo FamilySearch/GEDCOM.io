@@ -1,7 +1,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Specification"
+  - title: "Specifications"
     url: /specs/
   - title: "Tools"
     url: /tools/
