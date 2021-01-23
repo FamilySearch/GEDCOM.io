@@ -1,4 +1,4 @@
 ---
-title: Toola for GEDCOM
+title: Tools for GEDCOM
 permalink: /tools/
 ---
