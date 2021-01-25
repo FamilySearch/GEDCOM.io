@@ -7,5 +7,4 @@ entries_layout: list
 classes: wide
 ---
 
-* Table of Contents
-{:toc}
+
