@@ -59,7 +59,13 @@ defaults:
       classes:
         - wide
       author_profile: false
-
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
