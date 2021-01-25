@@ -49,6 +49,11 @@ include:
 analytics:
   provider: "custom" # Put your analytics code in /_includes/analytics-providers/custom.html
 
+collections:
+  faqs:
+    output: true
+    permalink: /:collection/:path
+
 defaults:
   # _pages
   - scope:
@@ -66,6 +71,14 @@ defaults:
     values:
       layout: single
       show_date: true
+  # _faqs
+  - scope:
+      path: ""
+      type: faqs
+    values:
+      layout: single
+      author_profile: false
+      share: false
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
