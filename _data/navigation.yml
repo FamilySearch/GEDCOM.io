@@ -11,6 +11,7 @@ main:
     url: /community/
   - title: "Blog"
     url: /blog/
+    
 specs:
   - title: Specifications
     children:
@@ -22,11 +23,13 @@ specs:
         url: ""
       - title: "GEDCOM X"
         url: "http://gedcomx.org"
+        
  guides: "How to Guides"
     children:
       - title: "Migrating 5.5.1 to 7.0"
         url: ""
       - title: "Common Cases"   
+      
 community:
   - title: Community
     children:
