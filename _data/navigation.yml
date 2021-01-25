@@ -20,6 +20,11 @@ specs:
         url: ""
       - title: "GEDCOM X"
         url: "http://gedcomx.org"
+tools:
+   - title: "Tools"
+     children:
+      - title: "5.5 to 7.0 Conversion Code"   
+        url: ""
 guides:
    - title: "Guides"
      children:
