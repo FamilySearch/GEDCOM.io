@@ -28,8 +28,8 @@ tools:
 guides:
    - title: "Guides"
      children:
-      - title: "Frequenty Asked Questions
-        url: "/faqs
+      - title: "Frequenty Asked Questions"
+        url: "/faqs"
       - title: "Common Cases"   
         url: ""
       - title: "Migrating 5.5.1 to 7.0"
