@@ -4,4 +4,4 @@ permalink: /specs/
 sidebar:
   nav: "specs"
 ---
-**Sample description**
+**Sample descriptions**
