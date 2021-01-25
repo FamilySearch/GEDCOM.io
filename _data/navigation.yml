@@ -22,7 +22,6 @@ specs:
         url: ""
       - title: "GEDCOM X"
         url: "http://gedcomx.org"
-       guides: "How to Guides"
 guides:
    - title: "Guides"
      children:
