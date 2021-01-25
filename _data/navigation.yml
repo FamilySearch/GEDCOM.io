@@ -9,8 +9,6 @@ main:
     url: /guides/
   - title: "Community"
     url: /community/
-  - title: "Blog"
-    url: /blog/
 specs:
   - title: Specifications
     children:
