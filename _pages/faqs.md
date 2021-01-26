@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions
+title: Technical FAQs
 layout: collection
 permalink: /faqs/
 collection: faqs
