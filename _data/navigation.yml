@@ -13,9 +13,9 @@ specs:
   - title: Specifications
     children:
       - title: "5.5"
-        url: "ged55.pdf"
+        url: "/_pages/ged55.pdf"
       - title: "5.5.1"
-        url: "ged551.pdf"
+        url: "/_pages/ged551.pdf"
       - title: "7.0"
         url: ""
       - title: "GEDCOM X"
