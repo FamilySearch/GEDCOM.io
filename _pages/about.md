@@ -12,7 +12,7 @@ Why is GEDCOM Important ?
 
 Genealogical (family tree) data is important, especially if it is your family! It contains significant information that links your family together in an electronic format. With GEDCOM, you control how you create, preserve, maintain, and share your data.
 
-# How to Create and Use GEDCOM File ?
+## How to Create and Use GEDCOM File ?
 
 To create a GEDCOM file , you can use free or paid services, some of which can be found in the FamilySearch Solutions Gallery or by searching “genealogy software” on the web. These services provide support for their products.
 FamilySearch.org currently allows the upload of GEDCOM files to FamilySearch.org. Uploading your GEDCOM to FamilySearch gives you these benefits:
