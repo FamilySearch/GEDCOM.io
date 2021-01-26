@@ -3,7 +3,7 @@ title: About GEDCOM
 permalink: /about/
 ---
 
-#What is GEDCOM?
+# What is GEDCOM?
 
 GEDCOM is an acronym for GEnealogical Data COMmunication which was created by The Church of Jesus Christ of Latter-Day Saints over 30 years ago. GEDCOM has become a de facto specification and file standard for exchanging genealogical data between different genealogy software and websites.
 GEDCOM is still relevant for personal private backup of family tree information, local ownership and control. A GEDCOM file is a UTF-8 text file containing genealogical information about individual, and meta data linking these redorcds together. “ged” is the standard file extension used as a suffix to indicate the file has been formatted using the GEDCOM data specification. Hundreds of website and desktop applications support the reading and writing of GEDCOM Files. Individuals continue to share portions for collaboration, reports, charts, special analysis, and other innovative purposes.
@@ -13,7 +13,7 @@ Why is GEDCOM Important ?
 
 Genealogical (family tree) data is important, especially if it is your family! It contains significant information that links your family together in an electronic format. With GEDCOM, you control how you create, preserve, maintain, and share your data.
 
-#How to Create and Use GEDCOM File ?
+# How to Create and Use GEDCOM File ?
 
 To create a GEDCOM file , you can use free or paid services, some of which can be found in the FamilySearch Solutions Gallery or by searching “genealogy software” on the web. These services provide support for their products.
 FamilySearch.org currently allows the upload of GEDCOM files to FamilySearch.org. Uploading your GEDCOM to FamilySearch gives you these benefits:
