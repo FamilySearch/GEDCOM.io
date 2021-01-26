@@ -53,6 +53,6 @@ GEDCOM Version 7 announced at RootsTech Connect 2021 will allow you store more i
 This renewed commitment to GEDCOM will increase the use and exchange of genealogical data through file transfer. Privacy and preservation options will increase along with many other valuable services. Barriers to entry will be lowered allowing for more innovators to participate. Software companies and developers will be able to communicate the needs of their users that may be restricted by the current GEDCOM specification so that changes can happen according to the collective voice of the marketplace.
 
 
-# What is GEDZip?
+## What is GEDZip?
 
 GEDZip is a feature of GEDCOM Version 7.0 for using a standard archive file format for combining GEDCOM data with associated images and other files. The GEDZip file can be unzipped after transfer making the genealogical data and associate external files workable together on the new environment.
