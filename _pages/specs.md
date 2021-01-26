@@ -8,5 +8,5 @@ sidebar:
 
 To view all of the specification versions of GEDCOM see the following.
 
-- [Version 5.5.0](#link)
-- Version 5.5.1
+- [Version 5.5](#link)
+- [Version 5.5.1](ged551.pdf)
