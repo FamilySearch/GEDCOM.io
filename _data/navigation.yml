@@ -28,7 +28,7 @@ tools:
 guides:
    - title: "Guides"
      children:
-      - title: "Frequenty Asked Questions"
+      - title: "Technical FAQs"
         url: "/faqs"
       - title: "Common Cases"   
         url: ""
