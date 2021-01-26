@@ -2,7 +2,7 @@
 title: Recommended Practices
 permalink: /practices/
 toc: true
-toc_label: "Content Of This Page"
+toc_label: "Contents of this Page"
 toc_sticky: true
 ---
 # How do I list two places in an emigration?
