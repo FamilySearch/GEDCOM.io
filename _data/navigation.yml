@@ -12,11 +12,15 @@ main:
 specs:
   - title: Specifications
     children:
-      - title: "5.5"
+      - title: "5.5 PDF"
         url: "/_pages/ged55.pdf"
-      - title: "5.5.1"
+      - title: "5.5.1 PDF"
         url: "/_pages/ged551.pdf"
-      - title: "7.0"
+      - title: "7.0 PDF"
+        url: ""
+      - title: "7.0 HTML"
+        url: ""
+      - title: "7.0+ Pubic GitHub"
         url: ""
       - title: "GEDCOM X"
         url: "http://gedcomx.org"
