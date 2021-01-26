@@ -5,10 +5,11 @@ permalink: /about/
 This site is designed for a programmers and technical persons who are considering or are working on programs that will read and write the current version of GEDCOM. Navigate to ***Specifications*** to review past and current versions. ***Tools*** will provide actual code and sample files that are useful for development.  ***Guides*** provides helpful technical information and best practices.  ***Community*** has links to current issues, discussions, blog, and groups to join.
 
 GEDCOM is an acronym for **GE**nealogical **D**ata **COM**munication which was created by The Church of Jesus Christ of Latter-Day Saints over 30 years ago. GEDCOM has become a de facto specification and file standard for exchanging genealogical data between different genealogy software and websites.
-GEDCOM is still relevant for personal private backup of family tree information, local ownership and control. A GEDCOM file is a UTF-8 text file containing genealogical information about individual, and meta data linking these redorcds together. “ged” is the standard file extension used as a suffix to indicate the file has been formatted using the GEDCOM data specification. Hundreds of website and desktop applications support the reading and writing of GEDCOM Files. Individuals continue to share portions for collaboration, reports, charts, special analysis, and other innovative purposes.
+GEDCOM is still relevant for personal private backup of family tree information, local ownership and control. A GEDCOM file is a UTF-8 text file containing genealogical information about individuals, and meta data linking these records together. “ged” is the standard file extension used as a suffix to indicate the file has been formatted using the GEDCOM data specification. Hundreds of website and desktop applications support the reading and writing of GEDCOM Files. Individuals continue to share portions for collaboration, reports, charts, special analysis, and other innovative purposes.
 
-GEDCOM standard file format allows to build, preserve, collaborate, import and export with different applications while maintaining control of the original copy.
-Why is GEDCOM Important ?
+GEDCOM standard file format allows users to build, preserve, collaborate, import and export with different applications while maintaining control of the original copy.
+
+## Why is GEDCOM Important ?
 
 Genealogical (family tree) data is important, especially if it is your family! It contains significant information that links your family together in an electronic format. With GEDCOM, you control how you create, preserve, maintain, and share your data.
 
