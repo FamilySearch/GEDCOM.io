@@ -34,6 +34,8 @@ guides:
         url: ""
       - title: "Migrating 5.5.1 to 7.0"
         url: ""
+      - title: "Recommended Practices"
+        url: "/practices"
         
 community:
   - title: Community
