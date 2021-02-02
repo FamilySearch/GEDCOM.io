@@ -44,8 +44,14 @@ guides:
 community:
   - title: Community
     children:
-      - title: "Issue Tracker"
+      - title: "Project Teams"
         url: ""
+      - title: "GEDCOM General Group"
+        url: "https://groups.google.com/search?q=GEDCOMGeneral"
+      - title: "Public Repository"
+        url: "https://github.com/FamilySearch/GEDCOM/"
+      - title: "Issue Tracker"
+        url: "https://github.com/FamilySearch/GEDCOM/issues"
       - title: "Blog"
         url: "/blog"
     
