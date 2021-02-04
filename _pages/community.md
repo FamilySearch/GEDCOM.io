@@ -16,6 +16,12 @@ Community has links to current issues, discussions, blog, and groups to join and
 - **Relationships** - support for varying definitions of families,roles and relationships
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records
 - **Sources** - More source-centric capabilities including multi-person events and multi-purpose sources
+- **Custom Tags** - work on gathering and referencing known custom tags and discuss how to organize, publish, and possibly add more formaility to the creation, use, and registration.
+- **Tools** - identify software tools, sample code and sample files that will be helpful to create and upgrade GEDCOM processing.
+- **Guides** - author and/or maintain FAQs, best practices, reference implementation guides, and other information that will be helpful to software developers.
+- **Compliance** - what cases, sample files, and minimum requirements will benefit developers in understanding wants working and what not-working according to some level of compliance self-test. 
+
+*Note: Sample files is a sub-area of work that will benefit Tools, Guides, and Compliance.*
 
 If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 

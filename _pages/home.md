@@ -5,27 +5,27 @@ permalink: /
 header:
   overlay_color: "#5e616c"
   overlay_image: mm-home-page-feature.jpg
-  cta_label: "<i class='fa fa-file-code'></i> Read the docs"
-  cta_url: "/docs/"
+  cta_label: "<i class='fa fa-file-code'></i> Read the specs"
+  cta_url: "/specs/"
   caption:
 feature_row:
-  - image_path: mm-customizable-feature.png
-    alt: "customizable"
-    title: "Super Customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+  - image_path: mm-multimedia-feature.png
+    alt: "multimedia"
+    title: "All Media In One Place"
+    excerpt: "Create, maintain, store, and share everything from one file, a GEDZip file."
     url: "/docs/configuration/"
     btn_label: "Learn More"
   - image_path: mm-responsive-feature.png
-    alt: "fully responsive"
-    title: "Responsive Layouts"
+    alt: "rich new features"
+    title: "Rich New Features"
     excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
     url: "/docs/layouts/"
     btn_label: "Learn More"
-  - image_path: mm-free-feature.png
-    alt: "100% free"
-    title: "100% Free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
-    url: "/docs/license/"
+  - image_path: mm-public-feature.png
+    alt: "public access"
+    title: "GitHub Public Repository"
+    excerpt: "Join the public repository and contribute with issues, pull requests, and comments.  Copy, review, and use the published specification for programming whatever genealogical software you want."
+    url: "/specs/"
     btn_label: "Learn More"
 ---
 
