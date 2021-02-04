@@ -13,13 +13,13 @@ feature_row:
     alt: "multimedia"
     title: "All Media In One Place"
     excerpt: "Create, maintain, store, and share everything from one file, a GEDZip file."
-    url: "/docs/configuration/"
+    url: "/gedzip/"
     btn_label: "Learn More"
   - image_path: mm-responsive-feature.png
     alt: "rich new features"
-    title: "Rich New Features"
-    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
+    title: "New Expressivity, Flexibility,and Compatibility"
+    excerpt: "New features add new semantic power to GEDCOM, allowing 7 to represent concepts 5 could not represent.  Media can now link to the Internet as well as local files. All dates now have date phrases, including date ranges and periods. Identifier RIN, RFN, and AFN have been combined into a new EXID, which can now also be used to link to external databases and websites. All text payloads may contain line breaks. LANG payloads are now language tags. Many other positive changes can be reviewed in the ChangeLog in the main public repository."
+    url: "http://github.com/familysearch/GEDCOM"
     btn_label: "Learn More"
   - image_path: mm-public-feature.png
     alt: "public access"
