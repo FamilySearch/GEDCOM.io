@@ -21,7 +21,7 @@ feature_row:
     excerpt: "New features add new semantic power to GEDCOM, allowing GEDCOM Version 7.0 to represent concepts Version 5.5 could not represent. Media can now link to the Internet as well as local files. All dates now have date phrases, including date ranges and periods. Identifier RIN, RFN, and AFN have been combined into a new EXID, which can now also be used to link to external databases and websites. All text payloads may contain line breaks. LANG payloads are now language tags. Many other positive changes can be reviewed in the ChangeLog in the main public repository."
     url: "http://github.com/familysearch/GEDCOM"
     btn_label: "Learn More"
-  - image_path: mm-public-feature2.png
+  - image_path: mm-public-feature1.png
     alt: "public access"
     title: "GitHub Public Repository"
     excerpt: "Join the public repository and contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want."
