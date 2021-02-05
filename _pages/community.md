@@ -19,7 +19,7 @@ Community has links to current issues, discussions, blog, and groups to join and
 - **Custom Tags** - work on gathering and referencing known custom tags and discuss how to organize, publish, and possibly add more formaility to the creation, use, and registration.
 - **Tools** - identify software tools, sample code and sample files that will be helpful to create and upgrade GEDCOM processing.
 - **Guides** - author and/or maintain FAQs, best practices, reference implementation guides, and other information that will be helpful to software developers.
-- **Compliance** - what cases, sample files, and minimum requirements will benefit developers in understanding wants working and what not-working according to some level of compliance self-test. 
+- **Compliance** - what cases, sample files, and minimum requirements will benefit developers in understanding what is working and what is not-working according to some level of compliance self-test. 
 
 *Note: Sample files is a sub-area of work that will benefit Tools, Guides, and Compliance.*
 
