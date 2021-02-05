@@ -15,7 +15,7 @@ feature_row:
     excerpt: "Maintain, store, and share everything from one file: a GEDZip file."
     url: "/gedzip/"
     btn_label: "Learn More"
-  - image_path: mm-new-feature.png
+  - image_path: mm-new-feature2.png
     alt: "many new features"
     title: "New Expressivity, Flexibility,and Compatibility"
     excerpt: "New features add new semantic power to GEDCOM, allowing GEDCOM Version 7.0 to represent concepts Version 5.5 could not represent. Media can now link to the Internet as well as local files. All dates now have date phrases, including date ranges and periods. Identifier RIN, RFN, and AFN have been combined into a new EXID, which can now also be used to link to external databases and websites. All text payloads may contain line breaks. LANG payloads are now language tags. Many other positive changes can be reviewed in the ChangeLog in the main public repository."
