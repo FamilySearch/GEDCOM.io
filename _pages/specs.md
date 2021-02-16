@@ -16,7 +16,7 @@ At the end of this page is a table of the history of released GEDCOM versions.
 - [Version 5.5.1](ged551.pdf)
 - [Version 7.0 PDF]()
 - [Version 7.0 HTML]()
-- [GEDCOM Pulbic GitHub Repository]()
+- [GEDCOM Public GitHub Repository]()
 - [GEDCOM X](http://gedcomx.org)
 
 
