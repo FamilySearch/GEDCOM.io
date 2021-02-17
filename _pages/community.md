@@ -44,9 +44,10 @@ Become a GitHub contributor for the next version by joining the [GEDCOM Public R
 
 You can review issue being discussed for the working version of GEDCOM by going to [Issues](https://github.com/familySearch/GEDCOM/issues)
 
-## Blog
+<!-- ## Blog -->
 
-Frequently review the [blog](/blog) for important posts about the project
+<!-- Frequently review the [blog](/blog) for important posts about the project -->
+
 
 ## Atom Feed
 
