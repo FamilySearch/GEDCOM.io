@@ -12,48 +12,39 @@ main:
 specs:
   - title: Specifications
     children:
-      - title: "5.5 PDF"
-        url: "/_pages/ged55.pdf"
-      - title: "5.5.1 PDF"
-        url: "/_pages/ged551.pdf"
-      - title: "7.0 PDF"
-        url: ""
-      - title: "7.0 HTML"
-        url: ""
-      - title: "Public GitHub Repository"
-        url: ""
+      - title: "Version 5"
+        url: "/specs/#version-5"
+      - title: "Version 7"
+        url: "/specs/#version-7"
       - title: "GEDCOM X"
-        url: "http://gedcomx.org"
+        url: "/specs/#gedcom-x"
 tools:
    - title: "Tools"
      children:
-      - title: "5.5.1 to 7.0 Conversion Code"   
-        url: ""
+
 guides:
    - title: "Guides"
      children:
+      - title: "General FAQs"
+        url: "/guides/#general-faqs"
       - title: "Technical FAQs"
-        url: "/faqs"
-      - title: "Common Cases"   
-        url: ""
-      - title: "Migrating 5.5.1 to 7.0"
-        url: ""
-      - title: "Recommended Practices"
-        url: "/practices"
+        url: "/guides/#technical-faqs"
+      - title: "Migrating 5 to 7"
+        url: "/guides/#migrating-5-to-7"
         
 community:
   - title: Community
     children:
       - title: "Project Teams"
-        url: ""
-      - title: "GEDCOM General Group"
-        url: "https://groups.google.com/search?q=GEDCOMGeneral"
+        url: "/community/#project-teams"
+      - title: "General Group"
+        url: "/community/#general-group"
       - title: "Public Repository"
-        url: "https://github.com/FamilySearch/GEDCOM/"
+        url: "/community/#public-repository"
       - title: "Issue Tracker"
-        url: "https://github.com/FamilySearch/GEDCOM/issues"
+        url: "/community/#issue-tracker"
       - title: "Blog"
-        url: "/blog"
+        url: "/community/#blog"
     
 
  

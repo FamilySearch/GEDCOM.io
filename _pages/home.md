@@ -31,4 +31,4 @@ feature_row:
 
 {% include feature_row %}
 
-More content can go here.
+

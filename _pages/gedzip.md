@@ -5,7 +5,7 @@ sidebar:
   nav: "gedzip"
 ---
 
-**The GEDZip File Type**
+## The GEDZip File Type
 
 It is often useful to transmit a GEDCOM document together with a set of external
 files. The GEDZIP file format is provided for this purpose.

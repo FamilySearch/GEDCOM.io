@@ -4,12 +4,11 @@ permalink: /community/
 sidebar:
   nav: "community"
 ---
+***Joining and staying connected with the community***
+  
+  *Community has links to current issues, discussions, blog, and groups to join and information about contributing to this project.*
 
-**Joining and staying connected with the community**
-
-Community has links to current issues, discussions, blog, and groups to join and information about contributing to this project.
-
-**Project Teams**
+## Project Teams
 
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records
 - **Names** - consider changing personal names from being specified in the Name tag and optional subordinate tags to a new set of subordinate tags 
@@ -26,7 +25,7 @@ Community has links to current issues, discussions, blog, and groups to join and
 If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
 
-**General GEDCOM Group**
+## General Group
 
 This is the wide open discussion and mailing group related to GEDCOM in general.  Join the group by:
 1. entering the url
@@ -35,18 +34,20 @@ https://groups.google.com/search?q=GEDCOMGeneral
 3. Enter you display name and subscription setting
 4. Press Join group at the bottom right of the dialog
 
-**Repository Contriibutors**
+ Click [join](https://groups.google.com/search?q=GEDCOMGeneral) if you are reading to proceed.
+
+## Public Repository
 
 Become a GitHub contributor for the next version by joining the [GEDCOM Public Repository](https://github.com/familySearch/GEDCOM)
 
-**Issue Tracker** 
+## Issue Tracker 
 
 You can review issue being discussed for the working version of GEDCOM by going to [Issues](https://github.com/familySearch/GEDCOM/issues)
 
-**Blog**
+## Blog
 
-Frequently review the blog for important posts about the project
+Frequently review the [blog](/blog) for important posts about the project
 
-**ATOM FEED**
+## Atom Feed
 
 The bottom of every page has a feed that you can read with the appropriate software
