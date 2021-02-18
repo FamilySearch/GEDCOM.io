@@ -23,7 +23,7 @@ Thus, this 5.5.1:
 
 becomes this 7.0:
 
-```gedcom
+```
 1 NAME /橘/ 逸勢
 2 TRAN /Tachibana/ no Hayanari
 3 LANG ja-Latn
@@ -33,7 +33,7 @@ becomes this 7.0:
 
 If we have extra knowledge, we could be more precise, as e.g. knowing that the above phonetic system was actually hiragana, a subset of kana:
 
-```gedcom
+```
 2 TRAN /たちばな/ の はやなり
 3 LANG ja-hira
 ```
@@ -67,7 +67,7 @@ Thus this 5.5.1
 
 becomes this 7.0
 
-```gedcom
+```
 0 @5@ INDI
 1 EXID 123456789
 2 TYPE https://www.familysearch.org/wiki/en/Ancestral_File
@@ -77,13 +77,13 @@ becomes this 7.0
 2 TYPE https://gedcom.io/RFN#MySystem
 ```
 
-> **FIX ME**: pick the right URIs for AFN and RFN
+<!-- **FIX ME**: pick the right URIs for AFN and RFN -->
 
-> **Question**: Should AFN and RFN also be REFN because they identify records, not subjects?
+<!-- **Question**: Should AFN and RFN also be REFN because they identify records, not subjects? -->
 
 ## SUBN
 
-These were defined to be specific to the Ancestral File the TempleReady systems. As these system is no longer in use, this record and its corresponding pointer has been removed. If other applications were using this record for some other purpose, they should switch to an extension to handle that purpose.
+These were defined to be specific to the Ancestral File or the TempleReady systems. As these systems are no longer in use, this record and its corresponding pointer has been removed. If other applications were using this record for some other purpose, they should switch to an extension to handle that purpose.
 
 ## RELA
 
@@ -100,7 +100,7 @@ This 5.5.1
 
 becomes this 7.0
 
-```gedcom
+```
 0 @6@ INDI
 1 ASSO @7@
 2 ROLE OTHER
@@ -110,9 +110,9 @@ becomes this 7.0
 
 ## NOTE_RECORD
 
-5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from 7.0.
+5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity has been removed from 7.0.
 
-Any NOTE_RECORD in 5.5.1 should be replaced with a NOTE_STRUTURE in 7.0. Most systems we surveyed did not use pointers to the same NOTE_RECORD from multiple locations, but those that did should duplicate the NOTE_RECORD's payload and substructures in each NOTE_STRUCTURE in each of those locations.
+Any NOTE_RECORD in 5.5.1 should be replaced with a NOTE_STRUCTURE in 7.0. Most systems we surveyed did not use pointers to the same NOTE_RECORD from multiple locations, but those that did should duplicate the NOTE_RECORD's payload and substructures in each NOTE_STRUCTURE in each of those locations.
 
 This 5.5.1
 
@@ -129,7 +129,7 @@ This 5.5.1
 
 becomes this 7.0
 
-```gedcom
+```
 0 @9@ INDI
 1 NAME Gordon //
 2 NOTE From the Scottish surname Gordon, of uncertain origin
@@ -144,7 +144,7 @@ Note that `REFN` and `CHAN` are not documented as substructures of the `NOTE_STR
 
 ## non-pointer OBJE and SOUR substructures
 
-5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from 7.0.
+5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity has been removed from 7.0.
 
 Non-pointer OBJE substructures should be made into OBJE records and pointed to.
 
@@ -161,7 +161,7 @@ This 5.5.1
 
 becomes this 7.0
 
-```gedcom
+```
 0 @10@ INDI
 1 OBJE @11@
 0 @11@ OBJE
@@ -172,7 +172,7 @@ becomes this 7.0
 ```
 
 
-Non-pointer SOUR substructures may be made into SOUR records, as outlined above, or into `@VOID@` pointer with `PHRASE`s containing the original payload.
+Non-pointer SOUR substructures may be made into SOUR records, as outlined above, or into `@VOID@` pointer with one or more `PHRASE` containing the original payload.
 
 This 5.5.1
 
@@ -182,7 +182,7 @@ This 5.5.1
 
 becomes this 7.0
 
-```gedcom
+```
 1 SOUR @VOID@
 2 PHRASE Roadside marker near mile marker 12 of I 90 in Ohio
 ```
@@ -201,7 +201,7 @@ A `PHRASE` may be used to clarify the age category of a person.
 
 Thus 5.5.1's `2 AGE CHILD` should become 7.0's 
 
-```gedcom
+```
 2 AGE < 8y
 3 PHRASE Child
 ```
@@ -215,7 +215,7 @@ GEDCOM 5.5.1 allowed multiple files in the same OBJE. The explanation given for 
 >  The file reference occurs one to many times so that multiple files
 can be grouped together, each pertaining to the same context. For example, if you wanted to associate a sound clip and a photo, you would reference each multimedia file and indicate the format using the FORM tag subordinate to each file reference.
 
-However, it was not defined how this grouping differed from having multiple `MULTIMEDIA_LINK`s in a single structure.
+However, it was not defined how this grouping differed from having multiple `MULTIMEDIA_LINK` in a single structure.
 Conversations with various GEDCOM producers and consumers suggested no consensus on the meaning of multi-FILE OBJE as opposed to multiple single-file OBJE, so support for multi-file OBJE was removed from 5.5.1.
 Thus, this 5.5.1
 
@@ -231,7 +231,7 @@ Thus, this 5.5.1
 
 should be covered to this 7.0
 
-```gedcom
+```
 0 @XYZ@ INDI
 1 OBJE @O1_1@
 1 OBJE @O1_2@

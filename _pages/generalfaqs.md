@@ -11,18 +11,18 @@ Genealogical (family tree) data is important, especially if it is your family! I
 
 ## How to Create and Use GEDCOM File ?
 
-The GEDCOM standard is not a stand-alone program. It is used by genealogical desktop programs and websites to create a file that can be downloaded and then uploaded by other programs to assist in sharing information between different desktop programs and websites. You create a GEDCOM file by using the procedures specified by the desktop program or website you are using to store your genealogical data. Desktop programs and websites provide support for their own products and the way they implement the GEDCOM Standard may vary.
+The GEDCOM standard is not a stand-alone specification. It is used by genealogical desktop programs and websites to create a file that can be downloaded and then uploaded by other programs to assist in sharing information.  You create a GEDCOM file by using the procedures specified by the desktop program or website you are using to store your genealogical data. Desktop programs and websites provide support for their own products and the way they implement the GEDCOM Standard may vary.
 
 ## Who owns the copyright to GEDCOM?
 The Church of Jesus Christ of Latter-day Saints copyrighted the GEDCOM Standards 1987, 1992, 1993, 1995, 1999, 2019, 2021
 
 ## How can I use the published standards ?
 
-The standards may be copied for the purpose of reviewing or programming of genealogical software, provided the below notice is included. All other rights reserved.
+The standards may be copied for the purpose of reviewing or programming of genealogical software, provided the notice below is included. All other rights reserved.
 
 Copyright © 1987, 1989, 1992, 1993, 1995, 1999, 2019, 2021 by The Church of Jesus Christ of Latter-day Saints. This document may be copied for purposes of review or programming of genealogical software, provided this notice is included. All other rights reserved.
 
-## The GEDCOM 5.5.1 standard is copyright 2019, but I thought it was released in 1999?
+## The GEDCOM 5.5.1 standard was copyrighted 2019, but I thought it was released in 1999?
 
 A draft was released in 1999 and was widely circulated, but before it was made an official release FamilySearch began work on unrelated software projects. Without a new released standard, and recognizing the advantages of 5.5.1 over 5.5, many in the genealogical community implemented 5.5.1 despite its draft status. In 2019 FamilySearch officially released 5.5.1 without the draft notice.
 
@@ -33,11 +33,11 @@ Yes, this is the primary purpose of GEDCOM. Sharing a file should work assuming 
 
 ## What's the difference between GEDCOM and GEDCOM-X ?
 
-GEDCOM-X has a distinct family history data format. It was also created by The Church of Jesus Christ of Latter-day Saints, to address some perceived shortcomings in the original GEDCOM Version 5.5. GEDCOM-X is more closely related to the FamilySearch Family Tree’s internal data models and is widely implemented by software that interoperates with FamilySearch Family Tree. However, GEDCOM remains more common as a file format for sharing files between desktop programs and websites. See more at [GEDCOMX](http://www.gedcomx.org/About.html).
+GEDCOM-X has a distinct family history data format. It was also created by The Church of Jesus Christ of Latter-day Saints, to address some perceived shortcomings in the original GEDCOM Version 5.5. GEDCOM-X is more closely related to the FamilySearch Family Tree’s internal data model and is widely implemented by software that interoperates with FamilySearch Family Tree. However, GEDCOM remains more common as a file format for sharing files between desktop programs and websites. See more at [GEDCOMX](http://www.gedcomx.org/About.html).
 
 ## What's New ?
 
-Because information about your family is important, FamilySearch is committed to the continued improvement of the GEDCOM Standard. GEDCOM Version 7.0, announced at RootsTech Connect 2021, will allow your users to manage and share information more efficiently. GEDCOM Version 7.0 incorporates the added ability to include valuable photos and other files when they download a GEDCOM 7.0 file from your desktop program or website. All of this information will be packaged in a ZIP format. This feature is called GEDZip. Future updates to the GEDCOM Standard will continue to expand the capabilities of the GEDZip program. 
+Because information about your family is important, FamilySearch is committed to the continued improvement of the GEDCOM Standard. GEDCOM Version 7.0, announced at RootsTech Connect 2021, will allow your users to manage and share information more efficiently. GEDCOM Version 7.0 incorporates the added ability to include valuable photos and other files when they download a GEDCOM 7.0 file from your desktop program or website. All of this information will be packaged in a ZIP format, this features is called GEDZip. Future updates to the GEDCOM Standard will continue to expand the capabilities of the GEDZip program. 
 
 This renewed commitment to the GEDCOM Standard will increase the use and exchange of genealogical data through file transfers. Preservation options will increase along with many other valuable services. Barriers to entry will be lowered allowing for more innovators to participate. Software companies and developers will be able to address the needs of their users that may be restricted by the current GEDCOM specification so that changes can happen according to the collective voice of the marketplace. All of this will directly benefit those who rely on genealogical desktop programs and websites to organize and store their family tree information. 
 

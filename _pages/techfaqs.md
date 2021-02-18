@@ -9,7 +9,7 @@ toc_sticky: true
 
 Have paired immigration/emigration events:
 
-```gedcom
+```
 1 EMIG
 2 PLAC Nice, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France
 3 FROM City, Arrondissement, Department, Provence, Country
@@ -24,7 +24,7 @@ Have paired immigration/emigration events:
 
 Use a `PHRASE` under the `AGE` at death
 
-```gedcom
+```
 1 DEAT
 2 AGE 0d
 3 PHRASE Stillborn
@@ -34,14 +34,14 @@ Use a `PHRASE` under the `AGE` at death
 
 Not all researchers wish to include miscarriages in their families, but some do. For those who do, we recommend a non-pointer `CHIL` if no details are known:
 
-```gedcom
+```
 1 CHIL @VOID@
 2 PHRASE Miscarried after 6 months
 ```
 
 or an `INDI` with `NO BIRT` if there is more to say about the child:
 
-```gedcom
+```
 0 @EX1@ INDI
 1 NAME Roman /Hernandez/
 1 NO BIRT
@@ -50,16 +50,16 @@ or an `INDI` with `NO BIRT` if there is more to say about the child:
 
 # Why can an attribute have an age?
 
-Once case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time
+One case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time
 
-```gedcom
+```
 1 EDUC Ph.D. in Computer Science
 2 AGE 26y
 ```
 
 Another case is when an attribute was expected to be temporary and observed at a particular time; for example, physical descriptions tend to be temporary
 
-```gedcom
+```
 1 DESC Mostly bald with bushy mustachios
 2 AGE 38y
 ```
@@ -68,11 +68,11 @@ When birth date and date range of attribute are both known, `DATE` is generally 
 
 # How do I record illegitimate children?
 
-This is one of many relationship situations with many possible technical complications, the best solutions to which are being discussed for possible revision in subsequent versions of GECDOM.
+This is one of many relationship situations with many possible technical complications, the best solutions are being discussed for possible revision in subsequent versions of GECDOM.
 
 At present, the best available tool is `INDI.FAMC.PEDI`, one for each family:
 
-```gedcom
+```
 0 @I1@ INDI
 1 FAMC @F1@
 2 PEDI BIRTH
@@ -88,7 +88,7 @@ Because the nature of `BIRTH` is unclear (is it about the biological progenitors
 
 There is no standard way to do this. However, this is an excellent use of the simplest form of extension: using a standard tag (`RESN` in this case) in a non-standard location (`FAMC` and `CHIL` in this case).
 
-```gedcom
+```
 0 @I2@ INDI
 1 FAMC @F3@
 2 RESN CONFIDENTIAL
@@ -127,18 +127,16 @@ It should be noted that some user interfaces may have more complete handling of 
 
 All dates in the `DateValue` datatype must have a year. Thus, you cannot use yearless dates as `DateValue`s.
 
-However, you can add any date information as a `PHRASE`, as
+You can add any date information as a `PHRASE`, however, if you could bound the year, you could add them as a PHRASE, as e.g.
 
-If you could bound the year, you could add them as a PHRASE, as e.g.
-
-```gedcom
+```
 2 DATE
 3 PHRASE March 3rd (year unknown)
 ```
 
 You might also consider bounding the year if possible, as e.g.
 
-```gedcom
+```
 2 DATE BET 1820 AND 1840
 3 PHRASE March 3rd (year unknown)
 ```
@@ -150,7 +148,7 @@ Inside a GEDCOM file, pointers do this using the cross-reference identifiers. Ho
 
 If you wish to reference a part of a GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files.
 
-```gedcom
+```
 0 @I23@ INDI
 1 NAME Arthur /Pendragon/
 1 REFN King Arthur
@@ -160,11 +158,12 @@ If you wish to reference a part of a GEDCOM file from outside that file, you sho
 1 UID 4bd2c474-ec84-43cb-86ef-b51ab09c2ed2
 ```
 
-```html
+HTML
+```
 <span gedlink="somefile.ged?UID=4bd2c474-ec84-43cb-86ef-b51ab09c2ed2">King Author</span>
 ```
-
-```xml
+XML
+```
 <Person>
   <InGed>
     <File>somefile.ged</File>
@@ -173,8 +172,8 @@ If you wish to reference a part of a GEDCOM file from outside that file, you sho
   <Name>Arthur Pendragon</Name>
 </Person>
 ```
-
-```json
+JSON
+```
 {
     "name": "Arthur",
     "gedcom":[
