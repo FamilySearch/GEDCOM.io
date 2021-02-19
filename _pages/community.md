@@ -42,7 +42,9 @@ Become a GitHub contributor for the next version by joining the GEDCOM public re
 
 ## Issue Tracker 
 
-You can review issues being discussed for the working version of GEDCOM by going to [Issues](https://github.com/familySearch/GEDCOM/issues)
+You can review issues being discussed for the working version of GEDCOM when it becomes available.
+
+<!-- by going to [Issues](https://github.com/familySearch/GEDCOM/issues)-->
 
 <!-- ## Blog -->
 
