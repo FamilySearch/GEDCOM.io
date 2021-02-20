@@ -19,10 +19,10 @@ sidebar:
 
 ### Final Release Candidate
 
-- Release Candidate Version 7.0 PDF (coming soon)
-- Release Candidate Version 7.0 HTML (coming soon)
-<!-- - [Release Candidate Version 7.0 PDF]() -->
-<!--- [Release Candidate Version 7.0 HTML]() -->
+<!-- - Release Candidate Version 7.0 PDF (coming soon) -->
+<!-- - Release Candidate Version 7.0 HTML (coming soon) -->
+- [Release Candidate Version 7.0 PDF](/specifications/GEDCOM7rc.pdf) 
+- [Release Candidate Version 7.0 HTML](/specifications/GEDCOM7rc.html)
 
 ## GEDCOM X
 
