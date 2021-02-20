@@ -12,7 +12,6 @@ sidebar:
 
 - [Version 5.5](/specifications/ged55.pdf)
 
-
 - [Version 5.5.1](/specifications/ged551.pdf)
 
 ## Version 7
