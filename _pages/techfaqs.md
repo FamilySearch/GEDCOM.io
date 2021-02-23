@@ -7,22 +7,22 @@ toc_sticky: true
 ---
 # How do I list two places in an emigration?
 
-Have paired immigration/emigration events:
+Use paired immigration/emigration events:
 
 ```
 1 EMIG
 2 PLAC Nice, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France
-3 FROM City, Arrondissement, Department, Provence, Country
+3 FORM City, Arrondissement, Department, Provence, Country
 2 DATE 3 MAR 1903
 1 IMMI
 2 PLAC Manhattan, New York,  New York, USA
-3 FROM Borough, City, State, Country
+3 FORM Borough, City, State, Country
 2 DATE 8 MAR 1903
 ```
 
 # How do I record a stillborn child?
 
-Use a `PHRASE` under the `AGE` at death
+Use a `PHRASE` under the `AGE` at death:
 
 ```
 1 DEAT
@@ -32,14 +32,14 @@ Use a `PHRASE` under the `AGE` at death
 
 # How do I record a miscarriage?
 
-Not all researchers wish to include miscarriages in their families, but some do. For those who do, we recommend a non-pointer `CHIL` if no details are known:
+For researchers who want to include a miscarriage as a child in a family, we recommend a non-pointer `CHIL` if no details are known:
 
 ```
 1 CHIL @VOID@
 2 PHRASE Miscarried after 6 months
 ```
 
-or an `INDI` with `NO BIRT` if there is more to say about the child:
+If there is more to say about the child, we recommend an `INDI` with `NO BIRT`:
 
 ```
 0 @EX1@ INDI
@@ -48,27 +48,38 @@ or an `INDI` with `NO BIRT` if there is more to say about the child:
 2 PHRASE Miscarried after 6 months
 ```
 
+For researchers who want to record a miscarriage, but do not want to include the child in a family, we recommend a family event:
+
+```
+0 @F1@ FAM
+1 WIFE @I1@
+1 HUSB @I2@
+1 EVEN
+2 TYPE Miscarriage
+2 DATE 13 JUN 1948
+```
+
 # Why can an attribute have an age?
 
-One case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time
+One case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time:
 
 ```
 1 EDUC Ph.D. in Computer Science
 2 AGE 26y
 ```
 
-Another case is when an attribute was expected to be temporary and observed at a particular time; for example, physical descriptions tend to be temporary
+Another case is when an attribute was expected to be temporary and observed at a particular time; for example, physical descriptions tend to be temporary:
 
 ```
 1 DESC Mostly bald with bushy mustachios
 2 AGE 38y
 ```
 
-When birth date and date range of attribute are both known, `DATE` is generally better than `AGE`, but sometimes sources contain claims like "I weighed 6 stone when I was 12" without clear dates, hence the provision of `AGE` for attributes.
+When birth date and date range of attribute are both known, `DATE` is generally better than `AGE`, but sometimes sources contain claims like "I earned my degree when I was 15" without clear dates, hence the provision of `AGE` for attributes.
 
 # How do I record illegitimate children?
 
-This is one of many relationship situations with many possible technical complications, the best solutions are being discussed for possible revision in subsequent versions of GECDOM.
+This is one of many relationship situations with many possible technical complications, the best solutions to which are being discussed for possible revision in subsequent versions of GECDOM.
 
 At present, the best available tool is `INDI.FAMC.PEDI`, one for each family:
 
@@ -86,20 +97,23 @@ Because the nature of `BIRTH` is unclear (is it about the biological progenitors
 
 # How do I mark a parent-child relationship as confidential?
 
-There is no standard way to do this. However, this is an excellent use of the simplest form of extension: using a standard tag (`RESN` in this case) in a non-standard location (`FAMC` and `CHIL` in this case).
+The standard `RESN` tag is used to mark data confidential but it is not a substructure under the `FAM.FAMC` or `FAM.CHIL` tags. You can implement a custom extension tag, perhaps `_RESN`, and add a `SCHMA` entry to indicate the extension has the same meaning as `RESN`:
 
 ```
+0 HEAD
+1 SCHMA
+2 TAG _RESN https://gedcom.io/terms/v7/RESN
 0 @I2@ INDI
 1 FAMC @F3@
-2 RESN CONFIDENTIAL
+2 _RESN CONFIDENTIAL
 0 @F3@ FAM
 1 CHIL @I2@
-2 RESN CONFIDENTIAL
+2 _RESN CONFIDENTIAL
 ```
 
-Note that with all confidential communications, it is important not only to mark the data as confidential but also to ensure that the recipient of the data understands in what cases they are to remove the confidential data and agrees to do so. `RESN` communicates the confidential nature, but does not enforce the desired behavior.
+Note that with all confidential communications, it is important not only to mark the data as confidential but also to ensure that the recipient of the data understands in what cases they are to remove the confidential data and agrees to do so. `_RESN` communicates the confidential nature, but does not enforce the desired behavior.
 
-# There are so many languages; how do I pick LANG payloads?
+# How do I choose LANG payloads?
 
 If you know the GEDCOM 5.5.1 language name, [FHISO has a look-up table](https://github.com/fhiso/legacy-format/blob/master/languages.tsv). You can also look at the lists embedded in the reference 5.5.1-to-7.0 converter program.
 
@@ -107,11 +121,18 @@ If you know the language you want, [r12a has a very flexible search function](ht
 
 You can also look through the [IANA registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) manually and assemble the appropriate tags as outlined in [BCP 47](https://tools.ietf.org/html/bcp47), though that's something of an expert-mode approach.
 
-# What does `SEX X` mean?
+# How do I record the sex of an intersex person?
 
-It is what is officially known as [intersex](https://en.wikipedia.org/wiki/Intersex), and is used in some countries on the birth records of children who do not obviously conform to the traditional biological definitions of male or female at birth.
+The enumerated value on the `SEX` tag in GEDCOM 7.0 was amended to include "X" to describe [intersex](https://en.wikipedia.org/wiki/Intersex) individuals:
 
-The `SEX` structure is only for anatomical or biological sex at birth. For any related concept that might change and/or manifest later in life, an individual attribute should be used instead.
+```
+0 @I1@ INDI
+1 SEX X
+```
+
+Birth records in some jurisdictions use intersex as the sex value for a child who does not conform to the traditional biological definitions of male or female at birth.
+
+The `SEX` tag is only for anatomical or biological sex at birth. For any related concept that might change and/or manifest later in life, an individual attribute should be used instead.
 
 # How do I record polygamous families?
 
@@ -121,32 +142,31 @@ This may result in many `FAM` records for one social family unit.
 A `FAM` record may also be used to represent the social family unit.
 If it is desirable that all the spouses appear structurally equal, they may be linked using `ASSO` pointers with `ROLE SPOU` instead of `HUSB` and `WIFE` pointers.
 
-It should be noted that some user interfaces may have more complete handling of `HUSB` and `WIFE` than they have for `ASSO`.
+Some applications may have more complete handling of `HUSB` and `WIFE` than they have for `ASSO`.
 
 # How do I record a date without a year?
 
 All dates in the `DateValue` datatype must have a year. Thus, you cannot use yearless dates as `DateValue`s.
 
-You can add any date information as a `PHRASE`, however, if you could bound the year, you could add them as a PHRASE, as e.g.
+However, you can add any date information as a `PHRASE`:
 
 ```
 2 DATE
 3 PHRASE March 3rd (year unknown)
 ```
 
-You might also consider bounding the year if possible, as e.g.
+You might also consider bounding the year if possible:
 
 ```
 2 DATE BET 1820 AND 1840
 3 PHRASE March 3rd (year unknown)
 ```
 
-
 # How do I link to individual structures in my GEDCOM?
 
 Inside a GEDCOM file, pointers do this using the cross-reference identifiers. However, cross-reference identifiers are *not* durable across import-export cycles and should not be used outside of a GEDCOM file.
 
-If you wish to reference a part of a GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files.
+If you wish to reference a part of a GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files:
 
 ```
 0 @I23@ INDI
@@ -162,6 +182,7 @@ HTML
 ```
 <span gedlink="somefile.ged?UID=4bd2c474-ec84-43cb-86ef-b51ab09c2ed2">King Author</span>
 ```
+
 XML
 ```
 <Person>
@@ -172,6 +193,7 @@ XML
   <Name>Arthur Pendragon</Name>
 </Person>
 ```
+
 JSON
 ```
 {
@@ -184,4 +206,48 @@ JSON
         }
     ]
 }
+```
+
+# How do I flag a primary or profile photo?
+
+Make it the first [MULTIMEDIA_LINK](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_LINK).
+As noted in the specification,
+
+> Unless otherwise specified, the first is the most-preferred value.
+> For example, the display name would be the first name structure,
+> the profile image the first image structure.
+
+The only "otherwise specified" in the current draft is for `FAM`.`CHIL`, where the specification says
+
+> The preferred order of the `CHIL` (children) pointers within a `FAM` (family) structure is chronological by birth.
+
+# How do I record nick names?
+
+Use the `NICK` part type under the [PERSONAL_NAME_STRUCTURE](https://gedcom.io/specifications/GEDCOM7rc.html#PERSONAL_NAME_STRUCTURE):
+
+```
+1 NAME Bill /Miller/
+2 NICK Bill
+2 SURN Miller
+```
+
+When recording a name with an embedded nick name, such as "William 'Bill' Miller", use two `NAME` records:
+
+```
+1 NAME William /Miller/
+2 GIVN William
+2 SURN Miller
+1 NAME Bill /Miller/
+2 TYPE AKA
+2 NICK Bill
+2 SURN Miller
+```
+
+For systems that are limited to a single personal name, there is no satisfactory solution. Such systems may export names with an embedded nick name:
+
+```
+1 NAME William "Bill" /Miller/
+2 GIVN William
+2 NICK Bill
+2 SURN Miller
 ```
