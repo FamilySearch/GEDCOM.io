@@ -140,7 +140,7 @@ becomes this 7.0
 1 CHAN 5 JAN 2020
 ```
 
-Note that `REFN` and `CHAN` are not documented as substructures of the `NOTE_STRUCTURE` in 7.0, but are permitted there as extensions.
+<!-- Note that `REFN` and `CHAN` are not documented as substructures of the `NOTE_STRUCTURE` in 7.0, but are permitted there as extensions. -->
 
 ## non-pointer OBJE and SOUR substructures
 
