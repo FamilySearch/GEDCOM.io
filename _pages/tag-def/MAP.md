@@ -1,0 +1,38 @@
+---
+title: MAP
+permalink: /terms/v7/MAP.html
+layout: none
+redirect-from:
+  - /terms/v7/MAP
+...
+
+```
+
+%YAML 1.2
+---
+type: structure
+
+tag: MAP
+
+superstructures: [PLAC]
+
+substructures:
+  LATI: "{1:1}"
+  LONG: "{1:1}"
+
+payload: None
+
+descriptions:
+  - Tag abbreviated from "Map"
+  - |
+    A representative point for a location, as defined by LATI and LONG
+    substructures.
+    
+    Note that MAP provides neither a notion of accuracy (for example, the
+    MAP for a birth event may be some distance from the point where the
+    birth occurred) nor a notion of region size (for example, the MAP for a
+    place "Belarus" may be anywhere within that nation's 200,000 square
+    kilometer area).
+...
+
+```

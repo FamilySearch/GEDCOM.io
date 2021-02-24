@@ -1,0 +1,34 @@
+---
+title: HEIGHT
+permalink: /terms/v7/HEIGHT.html
+layout: none
+redirect-from:
+  - /terms/v7/HEIGHT
+...
+
+```
+
+%YAML 1.2
+---
+type: structure
+
+tag: HEIGHT
+
+superstructures: [CROP]
+
+substructures:
+
+payload: Integer
+
+descriptions:
+  - |
+    How many pixels to display vertically for the image. See CROP for more.
+    
+    HEIGHT is a number of pixels. The correct tag for the height of an
+    individual is the DSCR attribute.
+    
+        0 @I45@ INDI
+        1 DSCR brown eyes, 5ft 10in, 198 pounds
+...
+
+```
