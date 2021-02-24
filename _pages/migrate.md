@@ -5,11 +5,11 @@ toc: true
 toc_label: "Issues on this Page"
 toc_sticky: true
 ---
-# GEDCOM 5.5.1 had an X tag, but 7.0 does not
+# How do I replace GEDCOM 5.5.1 tags that were removed in GEDCOM 7.0?
 
 ## ROMN, FONE
 
-These were replaced by the more versatile `TRAN`
+These were replaced by the more versatile `TRAN`.
 
 Thus, this 5.5.1:
 
@@ -46,7 +46,7 @@ The full mapping of 5.5.1 types is is
 
 - `ROMN`.`TYPE pinyin` = `TRAN`.`LANG und-Latn-pinyin`
     
-    Note: pinyin could be either `zh-Latn-pinyin` or `bo-Latn-pinyin`; thus, from 5.5.1 alone we can't reduce the language, only the script and variant, hence the `und` (undetermined) language above.
+    Note: pinyin could be either `zh-Latn-pinyin` or `bo-Latn-pinyin`; thus, from 5.5.1 alone we can't deduce the language, only the script and variant, hence the `und` (undetermined) language above.
 
 - `ROMN`.`TYPE romanji` = `TRAN`.`LANG jp-Latn`
 
@@ -56,7 +56,7 @@ The full mapping of 5.5.1 types is is
 ## AFN, RFN, RIN
 
 These have been replaced by `EXID` and `REFN`.
-Thus this 5.5.1
+Thus this 5.5.1:
 
 ```
 0 @5@ INDI
@@ -65,7 +65,7 @@ Thus this 5.5.1
 1 RFN MySystem:5431
 ```
 
-becomes this 7.0
+becomes this 7.0:
 
 ```
 0 @5@ INDI
@@ -77,116 +77,138 @@ becomes this 7.0
 2 TYPE https://gedcom.io/RFN#MySystem
 ```
 
-<!-- **FIX ME**: pick the right URIs for AFN and RFN -->
-
-<!-- **Question**: Should AFN and RFN also be REFN because they identify records, not subjects? -->
+> **FIX ME**: pick the right URIs for AFN and RFN
 
 ## SUBN
 
-These were defined to be specific to the Ancestral File or the TempleReady systems. As these systems are no longer in use, this record and its corresponding pointer has been removed. If other applications were using this record for some other purpose, they should switch to an extension to handle that purpose.
+These were defined to be specific to the Ancestral File and TempleReady systems. As these systems are no longer in use, this record and its corresponding pointer have been removed. If other applications were using this record for some other purpose, they should switch to an extension to handle that purpose.
 
 ## RELA
 
 This has been replaced by `ROLE`.
-`ROLE` is an enumerated value where `RELA` was free text, so unless you know the correct mapping to the enumertion it is likely you'd convert as `OTHER`:
+`ROLE` is an enumerated value where `RELA` was free text.
 
-This 5.5.1
+If the 5.5.1 `RELA` value maps to one of the 7.0 `ROLE` enumerations, use the `ROLE` enumeration.
+
+This 5.5.1:
 
 ```
-0 @6@ INDI
-1 ASSO @7@
+0 @I1@ INDI
+1 ASSO @I2@
+2 RELA Witness
+```
+
+becomes this 7.0:
+
+```
+0 @I1@ INDI
+1 ASSO @I2@
+2 ROLE WITN
+```
+
+If the 5.5.1 `RELA` value is not equivalent to one of the 7.0 `ROLE` enumerations, use the `OTHER` enumeration with a `PHRASE` subrecord.
+
+This 5.5.1:
+
+```
+0 @I1@ INDI
+1 ASSO @I2@
 2 RELA Honorary uncle
 ```
 
-becomes this 7.0
+becomes this 7.0:
 
 ```
-0 @6@ INDI
-1 ASSO @7@
+0 @I1@ INDI
+1 ASSO @I2@
 2 ROLE OTHER
 3 PHRASE Honorary uncle
 ```
 
-
 ## NOTE_RECORD
 
-5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity has been removed from 7.0.
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity and has been removed from GEDCOM 7.0.
 
-Any NOTE_RECORD in 5.5.1 should be replaced with a NOTE_STRUCTURE in 7.0. Most systems we surveyed did not use pointers to the same NOTE_RECORD from multiple locations, but those that did should duplicate the NOTE_RECORD's payload and substructures in each NOTE_STRUCTURE in each of those locations.
+Any NOTE_RECORD in 5.5.1 should be replaced with a [SHARED_NOTE_RECORD](https://gedcom.io/specifications/GEDCOM7rc.html#SHARED_NOTE_RECORD) in 7.0.
 
-This 5.5.1
+This 5.5.1:
 
 ```
-0 @8@ NOTE From the Scottish surname Gordon, of uncertain origin
-1 REFN Name origin Gordon
-2 TYPE Name origins
+0 @I8@ INDI
+1 NAME Gordon //
+2 NOTE @N1@
+0 @N1@ NOTE From the Scottish surname Gordon, of uncertain origin
 1 SOUR Wikipedia "Gordon_(given_name)", retrieved JAN 2021
 1 CHAN 5 JAN 2021
-0 @9@ INDI
+```
+
+becomes this 7.0:
+
+```
+0 @I8@ INDI
 1 NAME Gordon //
-2 NOTE @8@
+2 SNOTE @N1@
+0 @N1@ SNOTE From the Scottish surname Gordon, of uncertain origin
+1 SOUR Wikipedia "Gordon_(given_name)", retrieved JAN 2021
+1 CHAN 5 JAN 2021
 ```
 
-becomes this 7.0
+## Non-pointer OBJE Substructures
+
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from GEDCOM 7.0.
+
+A non-pointer `OBJE` substructure should be converted to an `OBJE` pointer with an associated `OBJE` record.
+
+This 5.5.1:
 
 ```
-0 @9@ INDI
-1 NAME Gordon //
-2 NOTE From the Scottish surname Gordon, of uncertain origin
-3 REFN Gordon
-4 TYPE Name origins
-3 SOUR @VOID@
-4 PHRASE Wikipedia "Gordon_(given_name)", retrieved JAN 2021
-1 CHAN 5 JAN 2020
+0 @I1@ INDI
+1 NAME John /Smith/
+1 OBJE
+2 FILE d:\Media\1896-02-04-John-Smith.jpg
+3 FORM jpg
+2 TITL John Smith, February 4, 1896
 ```
 
-<!-- Note that `REFN` and `CHAN` are not documented as substructures of the `NOTE_STRUCTURE` in 7.0, but are permitted there as extensions. -->
-
-## non-pointer OBJE and SOUR substructures
-
-5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity has been removed from 7.0.
-
-Non-pointer OBJE substructures should be made into OBJE records and pointed to.
-
-This 5.5.1
+becomes this 7.0:
 
 ```
-0 @10@ INDI
-1 OBJE 
-2 FILE face.jpg
-3 FORM jpeg
-4 MEDI photo
-2 TITL studio portrait from 1880
+0 @I1@ INDI
+1 NAME John /Smith/
+1 OBJE @O1@
+
+0 @O1@
+1 FILE file:///d//Media/1896-02-04-John-Smith.jpg
+2 FORM jpg
+2 TITL John Smith, February 4, 1896
 ```
 
-becomes this 7.0
+Take care to convert the `TITL` tag correctly. In the GEDCOM 5.5.1 MULTIMEDIA_LINK structure, the `TITL` tag is a substructure of the `OBJE` tag, but in the [MULTIMEDIA_RECORD](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_RECORD) in both GEDCOM 5.5.1 and GEDCCOM 7.0, the `TITL` tag is a substructure of the `FILE` tag.
+
+## Non-pointer SOUR Substructures
+
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from GEDCOM 7.0.
+
+This 5.5.1:
 
 ```
-0 @10@ INDI
-1 OBJE @11@
-0 @11@ OBJE
-1 FILE face.jpg
-2 FORM jpeg
-3 MEDI PHOTO
-1 TITL studio portrait from 1880
+1 DEAT
+2 DATE 1910
+2 SOUR Letter from Alice Smith, 13 April 1946
+3 PAGE According to his grand-daughter, who was present.
 ```
 
-
-Non-pointer SOUR substructures may be made into SOUR records, as outlined above, or into `@VOID@` pointer with one or more `PHRASE` containing the original payload.
-
-This 5.5.1
+becomes this 7.0:
 
 ```
-1 SOUR Roadside marker near mile marker 12 of I 90 in Ohio
-```
+1 DEAT
+2 DATE 1910
+2 SOUR @S1@
+3 PAGE According to his grand-daughter, who was present.
 
-becomes this 7.0
-
+0 @S1@ SOUR
+1 TITL Letter from Alice Smith, 13 April 1946
 ```
-1 SOUR @VOID@
-2 PHRASE Roadside marker near mile marker 12 of I 90 in Ohio
-```
-
 
 ## Age Words
 
@@ -199,7 +221,13 @@ GEDCOM 5.5.1 defined three words for ages:
 These have been removed from 7.0 in preference for their simpler and more expressive year-based forms.
 A `PHRASE` may be used to clarify the age category of a person.
 
-Thus 5.5.1's `2 AGE CHILD` should become 7.0's 
+This 5.5.1:
+
+```
+2 AGE CHILD
+```
+
+becomes this 7.0:
 
 ```
 2 AGE < 8y
@@ -207,38 +235,3 @@ Thus 5.5.1's `2 AGE CHILD` should become 7.0's
 ```
 
 See also [How do I record a stillborn child?](#how-do-i-record-a-stillborn-child)
-
-## Multi-file OBJE
-
-GEDCOM 5.5.1 allowed multiple files in the same OBJE. The explanation given for this was
-
->  The file reference occurs one to many times so that multiple files
-can be grouped together, each pertaining to the same context. For example, if you wanted to associate a sound clip and a photo, you would reference each multimedia file and indicate the format using the FORM tag subordinate to each file reference.
-
-However, it was not defined how this grouping differed from having multiple `MULTIMEDIA_LINK` in a single structure.
-Conversations with various GEDCOM producers and consumers suggested no consensus on the meaning of multi-FILE OBJE as opposed to multiple single-file OBJE, so support for multi-file OBJE was removed from 5.5.1.
-Thus, this 5.5.1
-
-```
-0 @XYZ@ INDI
-1 OBJE @O1@
-0 @O1@ OBJE
-1 FILE image.jpg
-2 FORM jpg
-1 FILE sound.wav
-2 FORM wav
-```
-
-should be covered to this 7.0
-
-```
-0 @XYZ@ INDI
-1 OBJE @O1_1@
-1 OBJE @O1_2@
-0 @O1_1@ OBJE
-1 FILE image.jpg
-2 FORM image/jpeg
-0 @O1_2@ OBJE
-1 FILE sound.wav
-2 FORM audio/vnd.wave
-```
