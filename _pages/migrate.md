@@ -74,10 +74,8 @@ becomes this 7.0:
 1 REFN 9876
 2 TYPE RIN
 1 EXID 5431
-2 TYPE https://gedcom.io/RFN#MySystem
+2 TYPE https://gedcom.io/terms/v7/RFN#MySystem
 ```
-
-> **FIX ME**: pick the right URIs for AFN and RFN
 
 ## SUBN
 
@@ -233,5 +231,3 @@ becomes this 7.0:
 2 AGE < 8y
 3 PHRASE Child
 ```
-
-See also [How do I record a stillborn child?](#how-do-i-record-a-stillborn-child)
