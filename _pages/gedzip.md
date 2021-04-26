@@ -1,5 +1,5 @@
 ---
-title: GEDZip
+title: GEDCOM Zip
 permalink: /gedzip/
 sidebar:
   nav: "gedzip"
