@@ -37,12 +37,12 @@ GEDCOM-X has a distinct family history data format. It was also created by The C
 
 ## What's New ?
 
-Because information about your family is important, FamilySearch is committed to the continued improvement of the GEDCOM Standard. GEDCOM Version 7.0, announced at RootsTech Connect 2021, will allow your users to manage and share information more efficiently. GEDCOM Version 7.0 incorporates the added ability to include valuable photos and other files when they download a GEDCOM 7.0 file from your desktop program or website. All of this information will be packaged in a ZIP format, this features is called GEDZip. Future updates to the GEDCOM Standard will continue to expand the capabilities of the GEDZip program. 
+Because information about your family is important, FamilySearch is committed to the continued improvement of the GEDCOM Standard. GEDCOM Version 7.0, announced at RootsTech Connect 2021, will allow your users to manage and share information more efficiently. GEDCOM Version 7.0 incorporates the added ability to include valuable photos and other files when they download a GEDCOM 7.0 file from your desktop program or website. All of this information will be packaged in a ZIP format, this features is called GEDCOM Zip. Future updates to the GEDCOM Standard will continue to expand the capabilities of the GEDCOM Zip file format. 
 
 This renewed commitment to the GEDCOM Standard will increase the use and exchange of genealogical data through file transfers. Preservation options will increase along with many other valuable services. Barriers to entry will be lowered allowing for more innovators to participate. Software companies and developers will be able to address the needs of their users that may be restricted by the current GEDCOM specification so that changes can happen according to the collective voice of the marketplace. All of this will directly benefit those who rely on genealogical desktop programs and websites to organize and store their family tree information. 
 
 
-## What is GEDZip?
+## What is GEDCOM Zip?
 
-GEDZip is an added feature of GEDCOM Version 7.0 for using a standard Zip archive file format to combine existing family tree data on a desktop program or website with external images and other files. The GEDZip file can be unzipped after transfer making the genealogical data and associate external files available together to a different desktop program or website. The exact procedures for downloading or uploading external files will vary according to the individual desktop program or website’s implementation of the GEDCOM Standard.
+GEDCOM Zip is an added feature of GEDCOM Version 7.0 for using a standard Zip archive file format to combine existing family tree data on a desktop program or website with external images and other files. The GEDCOM Zip file can be unzipped after transfer making the genealogical data and associate external files available together to a different desktop program or website. The exact procedures for downloading or uploading external files will vary according to the individual desktop program or website’s implementation of the GEDCOM Standard.
 
