@@ -5,14 +5,14 @@ sidebar:
   nav: "gedzip"
 ---
 
-## The GEDZip File Type
+## The GEDCOM Zip File Type
 
 It is often useful to transmit a GEDCOM document together with a set of external
-files. The GEDZIP file format is provided for this purpose.
-A GEDZIP file is a zip archive, as defined by [http://www.pkware.com/appnote](http://www.pkware.com/appnote)
+files. The GEDCOM Zip file format is provided for this purpose.
+A GEDCOM ZIP file is a zip archive, as defined by [http://www.pkware.com/appnote](http://www.pkware.com/appnote)
 and standardized by ISO/IEC 21320-1:2015.
 
-*Note — A few details about the zip archive format are useful to fully understand GEDZIP :*
+*Note — A few details about the zip archive format are useful to fully understand GEDCOM Zip :*
 - An archive can contain one or more files.
 - Files within an archive can be added, removed, or updated
 individually without needing to re-process the rest of the archive.
@@ -22,8 +22,8 @@ individually without needing to re-process the rest of the archive.
 and may contain directories.
 - Directory separators are / internally and are converted to the
 appropriate form by the zip processing tool during zipping and
-unzipping. Because of this, unzipping a GEDZIP in any local directory
-results in all GEDZIP FILE (p.58) references working as-is for the
+unzipping. Because of this, unzipping a GEDCOM Zip in any local directory
+results in all GEDCOM Zip FILE (p.58) references working as-is for the
 resulting gedcom.ged without the need for any additional
 processing.
 
