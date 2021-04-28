@@ -1,5 +1,5 @@
 ---
-title: GEDCOM Zip
+title: GEDCOM Package
 permalink: /gedzip/
 sidebar:
   nav: "gedzip"
@@ -22,7 +22,7 @@ individually without needing to re-process the rest of the archive.
 and may contain directories.
 - Directory separators are / internally and are converted to the
 appropriate form by the zip processing tool during zipping and
-unzipping. Because of this, unzipping a GEDCOM Zip in any local directory
+unzipping. Because of this, unzipping a GEDCOM Package in any local directory
 results in all GEDCOM Package FILE (p.58) references working as-is for the
 resulting gedcom.ged without the need for any additional
 processing.
