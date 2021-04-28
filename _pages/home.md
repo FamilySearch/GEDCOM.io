@@ -12,7 +12,7 @@ feature_row:
   - image_path: mm-multimedia-feature.png
     alt: "multimedia"
     title: "All Media In One Place"
-    excerpt: "Maintain, store, and share everything from one file: a GEDZip file."
+    excerpt: "Maintain, store, and share everything from one file: a GEDCOM Package file."
     url: "/gedzip/"
     btn_label: "Learn More"
   - image_path: mm-new-feature2.png
