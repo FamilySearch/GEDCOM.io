@@ -1,6 +1,5 @@
 ---
-title: FamilySearch GEDCOM
-for genealogical data exchange
+title: FamilySearch GEDCOM - genealogical data exchange
 layout: splash
 permalink: /
 header:
