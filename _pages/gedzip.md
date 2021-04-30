@@ -1,15 +1,15 @@
 ---
-title: GEDCOM Package
+title: FamilySearch GEDZip
 permalink: /gedzip/
 sidebar:
   nav: "gedzip"
 ---
 
-## The GEDCOM Package File Type
+## The FamilySearch GEDZip File Type
 
 It is often useful to transmit a GEDCOM document together with a set of external
-files. The GEDCOM Package file format is provided for this purpose.
-A GEDCOM Package file is a Zip archive, as defined by [http://www.pkware.com/appnote](http://www.pkware.com/appnote)
+files. The FamilySearch GEDZip file format is provided for this purpose.
+A FamilySearch GEDZip file is a Zip archive, as defined by [http://www.pkware.com/appnote](http://www.pkware.com/appnote)
 and standardized by ISO/IEC 21320-1:2015.
 
 *Note — A few details about the zip archive format are useful to fully understand GEDCOM Package :*
@@ -22,8 +22,8 @@ individually without needing to re-process the rest of the archive.
 and may contain directories.
 - Directory separators are / internally and are converted to the
 appropriate form by the zip processing tool during zipping and
-unzipping. Because of this, unzipping a GEDCOM Package in any local directory
-results in all GEDCOM Package FILE (p.58) references working as-is for the
+unzipping. Because of this, unzipping a FamilySearch GEDZip in any local directory
+results in all FamilySearch GEDZip FILE (p.58) references working as-is for the
 resulting gedcom.ged without the need for any additional
 processing.
 
