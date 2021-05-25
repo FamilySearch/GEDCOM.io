@@ -1,11 +1,11 @@
 ---
-title: Migrating 5.5.1 to 7.0
+title: Migrating v5.5.1 to v7.0
 permalink: /migrate/
 toc: true
 toc_label: "Issues on this Page"
 toc_sticky: true
 ---
-# How do I replace GEDCOM 5.5.1 tags that were removed in GEDCOM 7.0?
+# How do I replace GEDCOM 5.5.1 tags that were removed in FamilySearch GEDCOM 7.0?
 
 ## ROMN, FONE
 
@@ -125,7 +125,7 @@ becomes this 7.0:
 
 ## NOTE_RECORD
 
-GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity and has been removed from GEDCOM 7.0.
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity and has been removed from v7.0.
 
 Any NOTE_RECORD in 5.5.1 should be replaced with a [SHARED_NOTE_RECORD](https://gedcom.io/specifications/GEDCOM7rc.html#SHARED_NOTE_RECORD) in 7.0.
 
@@ -153,7 +153,7 @@ becomes this 7.0:
 
 ## Non-pointer OBJE Substructures
 
-GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from GEDCOM 7.0.
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from v7.0.
 
 A non-pointer `OBJE` substructure should be converted to an `OBJE` pointer with an associated `OBJE` record.
 
@@ -181,11 +181,11 @@ becomes this 7.0:
 2 TITL John Smith, February 4, 1896
 ```
 
-Take care to convert the `TITL` tag correctly. In the GEDCOM 5.5.1 MULTIMEDIA_LINK structure, the `TITL` tag is a substructure of the `OBJE` tag, but in the [MULTIMEDIA_RECORD](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_RECORD) in both GEDCOM 5.5.1 and GEDCCOM 7.0, the `TITL` tag is a substructure of the `FILE` tag.
+Take care to convert the `TITL` tag correctly. In the GEDCOM 5.5.1 MULTIMEDIA_LINK structure, the `TITL` tag is a substructure of the `OBJE` tag, but in the [MULTIMEDIA_RECORD](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_RECORD) in both GEDCOM 5.5.1 and FamilySearch GEDCCOM 7.0, the `TITL` tag is a substructure of the `FILE` tag.
 
 ## Non-pointer SOUR Substructures
 
-GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from GEDCOM 7.0.
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from v7.0.
 
 This 5.5.1:
 
