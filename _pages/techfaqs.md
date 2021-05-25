@@ -79,7 +79,7 @@ When birth date and date range of attribute are both known, `DATE` is generally 
 
 # How do I record illegitimate children?
 
-This is one of many relationship situations with many possible technical complications, the best solutions to which are being discussed for possible revision in subsequent versions of GECDOM.
+This is one of many relationship situations with many possible technical complications, the best solutions to which are being discussed for possible revision in subsequent versions of FamilySearch GECDOM.
 
 At present, the best available tool is `INDI.FAMC.PEDI`, one for each family:
 
@@ -162,11 +162,11 @@ You might also consider bounding the year if possible:
 3 PHRASE March 3rd (year unknown)
 ```
 
-# How do I link to individual structures in my GEDCOM?
+# How do I link to individual structures within a FamilySearch GEDCOM file?
 
 Inside a GEDCOM file, pointers do this using the cross-reference identifiers. However, cross-reference identifiers are *not* durable across import-export cycles and should not be used outside of a GEDCOM file.
 
-If you wish to reference a part of a GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files:
+If you wish to reference a part of a FamilySearch GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files:
 
 ```
 0 @I23@ INDI
