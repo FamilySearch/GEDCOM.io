@@ -5,7 +5,7 @@ sidebar:
   nav: "gedzip"
 ---
 
-## The FamilySearch GEDZip File Type
+## FamilySearch GEDZip
 
 It is often useful to transmit a GEDCOM document together with a set of external
 files. The FamilySearch GEDZip file format is provided for this purpose.
@@ -22,8 +22,8 @@ individually without needing to re-process the rest of the archive.
 and may contain directories.
 - Directory separators are / internally and are converted to the
 appropriate form by the zip processing tool during zipping and
-unzipping. Because of this, unzipping a FamilySearch GEDZip in any local directory
-results in all FamilySearch GEDZip FILE (p.58) references working as-is for the
+unzipping. Because of this, unzipping a GEDZip file in any local directory
+results in all GEDZip FILE (p.58) references working as-is for the
 resulting gedcom.ged without the need for any additional
 processing.
 
