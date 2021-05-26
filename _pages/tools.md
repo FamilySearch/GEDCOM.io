@@ -10,7 +10,7 @@ sidebar:
 
 ## v5.5.1 to v7.0 Conversion Code
 
-The first code to be available from the marketplace is made public and offers powerful instruction for how situations encoded in v5.5.1 will look in v7.0.
+The first conversion program available from the marketplace which includes sample scenarios that shows how v5.5.1 code will be encoded in v7.0.
 
 ## Other Development Tools
 
