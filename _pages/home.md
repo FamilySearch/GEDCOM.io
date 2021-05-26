@@ -24,7 +24,7 @@ feature_row:
   - image_path: mm-public-feature1.png
     alt: "public access"
     title: "GitHub Public Repository"
-    excerpt: "Join the public repository and contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want. The public repository is coming soon."
+    excerpt: "Join the public repository and contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want."
     
 ---
 
