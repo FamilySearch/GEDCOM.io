@@ -16,13 +16,8 @@ sidebar:
 
 ## Version 7
 
-### Final Release Candidate
-
-<!-- - Release Candidate Version 7.0 PDF (coming soon) -->
-<!-- - Release Candidate Version 7.0 HTML (coming soon) -->
-- [Release Candidate Version 7.0 PDF](/specifications/gedcom7-rc.pdf) 
-- [Release Candidate Version 7.0 HTML](/specifications/GEDCOM7rc.html)
-
+- [FamilySearch GEDCOM Version 7.0 PDF](/specifications/FamilySearchGEDCOMv7.pdf) 
+- [FamilySearch GEDCOM Version 7.0 HTML](/specifications/FamilySearchGEDCOMv7.html)
 ## GEDCOM X
 
 - [GEDCOM X](http://gedcomx.org)
