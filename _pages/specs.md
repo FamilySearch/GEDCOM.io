@@ -18,7 +18,7 @@ sidebar:
 
 - [FamilySearch GEDCOM Version 7.0 PDF](/specifications/FamilySearchGEDCOMv7.pdf) 
 - [FamilySearch GEDCOM Version 7.0 HTML](/specifications/FamilySearchGEDCOMv7.html)
-- [FamilySearch GEDCOM Changelog](/changelog/
+- [FamilySearch GEDCOM Changelog](/changelog/)
 - 
 ## GEDCOM X
 
