@@ -1,3 +1,10 @@
+---
+title: FamilySearch GEDCOM Changelog
+permalink: /changelog/
+sidebar:
+  nav: "changelog"
+---
+
 # Version 7.0.0
 
 As a major release and the first update to the specification in 20 years, there a many changes in this version.
