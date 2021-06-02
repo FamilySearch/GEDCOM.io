@@ -25,4 +25,28 @@ sidebar:
 
 - [GEDCOM X](http://gedcomx.org)
 
+<script> 
+let url = '//assets.adobedtm.com/05064fe6cab0/c247cd0acad1/launch-7e623b6eec86.min.js'
 
+// import _satellite library
+const script = document.createElement('script')
+script.src = url
+script.async = true
+script.onload = sendPageView// you won't be able to use `window._satellite` until this has loaded
+const child = document.querySelector('script')
+const parentNode = child.parentNode
+parentNode.insertBefore(script, child)
+
+// Now that the library is loaded, call a page view event
+function sendPageView() {
+  // build the payload with any data you need
+  const payload = {
+    // example; consult Kurt for what you should be sending
+    site_id: 'GEDCOM.io',
+    site_language: 'en',
+    page_channel: 'GEDCOM.io',
+    page_detail: 'specs',
+  }
+  window._satellite.track('page_view', payload)
+}
+</script>
