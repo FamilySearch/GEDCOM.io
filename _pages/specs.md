@@ -42,7 +42,7 @@ function sendPageView() {
   // build the payload with any data you need
   const payload = {
     // example; consult Kurt for what you should be sending
-    site_id: 'GEDCOM.io',
+    site_id: 'FamilySearch',
     site_language: 'en',
     page_channel: 'GEDCOM.io',
     page_detail: 'specs',
