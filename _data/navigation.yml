@@ -14,7 +14,7 @@ specs:
     children:
       - title: "Version 7"
         url: "/specs/#version-7"
-      - title: "Version 5"
+      - title: "Previous Versions"
         url: "/specs/#version-5"
       - title: "GEDCOM X"
         url: "/specs/#gedcom-x"
