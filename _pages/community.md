@@ -8,6 +8,22 @@ sidebar:
   
   *Community has links to current issues, discussions, the blog,  groups to join, and information about contributing to this project.*
 
+## General Group
+
+This is the wide open discussion and mailing group related to GEDCOM in general.  Join the group by:
+1. Visit the [GEDCOM General Google Group](https://groups.google.com/g/gedcomgeneral)
+2. Click on the Join Group arrow on the far right next to the group
+3. Enter your display name and subscription settings
+4. Press Join group at the bottom right of the dialog
+
+## Public Repository
+
+Become a GitHub contributor for the next version by joining the [FamilySearch GEDCOM](https://github.com/familysearch/GEDCOM) public repository when it becomes available.
+
+## Issue Tracker 
+
+You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/issues) for the working version of FamilySearch GEDCOM when it becomes available.
+
 ## Project Teams
 
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
@@ -24,33 +40,10 @@ sidebar:
 
 If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
-
-## General Group
-
-This is the wide open discussion and mailing group related to GEDCOM in general.  Join the group by:
-1. entering the url
-https://groups.google.com/search?q=GEDCOMGeneral
-2. Click on the Join Group arrow on the far right next to the group
-3. Enter your display name and subscription settings
-4. Press Join group at the bottom right of the dialog
-
- Visit the [GEDCOM General Google Group](https://groups.google.com/search?q=GEDCOMGeneral) if you are ready to proceed.
-
-## Public Repository
-
-Become a GitHub contributor for the next version by joining the FamilySearch GEDCOM public repository when it becomes available.
-
-## Issue Tracker 
-
-You can review issues being discussed for the working version of FamilySearch GEDCOM when it becomes available.
-
-<!-- by going to [Issues](https://github.com/familySearch/GEDCOM/issues)-->
-
 <!-- ## Blog -->
 
 <!-- Frequently review the [blog](/blog) for important posts about the project -->
-
-
+<!-- 
 ## Atom Feed
 
-The bottom of every page has a feed that you can read with the appropriate software
+The bottom of every page has a feed that you can read with the appropriate software -->

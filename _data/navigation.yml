@@ -21,7 +21,6 @@ specs:
 tools:
    - title: "Tools"
      children:
-
 guides:
    - title: "Guides"
      children:
@@ -31,18 +30,17 @@ guides:
         url: "/guides/#technical-faqs"
       - title: "Migrating 5 to 7"
         url: "/guides/#migrating-5-to-7"
-        
 community:
   - title: Community
     children:
-      - title: "Project Teams"
-        url: "/community/#project-teams"
       - title: "General Group"
         url: "/community/#general-group"
       - title: "Public Repository"
         url: "/community/#public-repository"
       - title: "Issue Tracker"
         url: "/community/#issue-tracker"
+      - title: "Project Teams"
+        url: "/community/#project-teams"
     
 
  
