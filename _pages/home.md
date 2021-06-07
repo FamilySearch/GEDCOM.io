@@ -26,7 +26,7 @@ feature_row:
     title: "GitHub Public Repository"
     excerpt: "Join the public repository and contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want."
     url: "http://github.com/familysearch/GEDCOM"
-    btn_label: "Join Repo"
+    btn_label: "GitHub Repository"
 ---
 
 {% include feature_row %}
