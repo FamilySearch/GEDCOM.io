@@ -1,0 +1,32 @@
+---
+title: STAE
+permalink: /terms/v7/STAE.html
+layout: none
+redirect-from:
+  - /terms/v7/STAE
+...
+
+```
+
+%YAML 1.2
+---
+type: structure
+
+uri: https://gedcom.io/terms/v7/STAE
+
+standard tag: STAE
+
+descriptions:
+  - State
+  - A geographical division of a larger jurisdictional area, such as a state
+    within the United States of America. See ADDRESS_STRUCTURE for more.
+
+payload: http://www.w3.org/2001/XMLSchema#string
+
+substructures: []
+
+superstructures:
+  "https://gedcom.io/terms/v7/ADDR": "{0:1}"
+...
+
+```

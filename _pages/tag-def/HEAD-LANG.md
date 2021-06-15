@@ -1,0 +1,35 @@
+---
+title: HEAD-LANG
+permalink: /terms/v7/HEAD-LANG.html
+layout: none
+redirect-from:
+  - /terms/v7/HEAD-LANG
+...
+
+```
+
+%YAML 1.2
+---
+type: structure
+
+uri: https://gedcom.io/terms/v7/HEAD-LANG
+
+standard tag: LANG
+
+descriptions:
+  - Language
+  - |
+    The language in which the Text-typed payloads of all structures in the
+    document appear, except as superseded by a https://gedcom.io/terms/v7/LANG.
+    
+    The payload of the LANG structure is a language tag, as defined by BCP 47.
+
+payload: http://www.w3.org/2001/XMLSchema#Language
+
+substructures: []
+
+superstructures:
+  "HEAD pseudostructure": "{0:1}"
+...
+
+```
