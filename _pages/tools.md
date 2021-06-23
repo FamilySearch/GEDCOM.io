@@ -10,8 +10,16 @@ sidebar:
 
 ## v5.5.1 to v7.0 Conversion Code
 
-The first conversion program available from the marketplace which includes sample scenarios that shows how v5.5.1 code will be encoded in v7.0.  
-Visit [Conversion Code Repo](https://github.com/tychonievich/gedcom7-code)
+| Language | License | Site | Notes |
+|----------|---------|------|-------|
+| C | public domain | <https://github.com/gedcom7code/c-converter> | Command-line |
+
+## v7.0 parsers
+
+| Language | License | Site | Notes |
+|----------|---------|------|-------|
+| Javascript | public domain | <https://github.com/gedcom7code/js-parser> | DOM-style, no valdiation, with SCHMA handling |
+
 
 ## Other Development Tools
 
