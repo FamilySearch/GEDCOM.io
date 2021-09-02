@@ -17,8 +17,12 @@ sidebar:
 
 ## Previous Versions
 
-- [Version 5.5](/specifications/ged55.pdf)
+- [Version 5.6 (XML)](/specifications/ged55.pdf)
 - [Version 5.5.1](/specifications/ged551.pdf)
+- [Version 5.5](/specifications/ged55.pdf)
+- [Version 5.4](/specifications/ged551.pdf)
+- [Version 4.0](/specifications/ged551.pdf)
+- [Version 3.0](/specifications/ged551.pdf)
 
 ## GEDCOM X
 
