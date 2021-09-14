@@ -30,6 +30,9 @@ Use a `PHRASE` under the `AGE` at death:
 3 PHRASE Stillborn
 ```
 
+Note that the `PHRASE` must be in the default language (if any) specified in
+the `<<HEADER>>`.
+
 # How do I record a miscarriage?
 
 For researchers who want to include a miscarriage as a child in a family, we recommend a non-pointer `CHIL` if no details are known:
