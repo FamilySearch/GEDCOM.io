@@ -166,47 +166,7 @@ You might also consider bounding the year if possible:
 
 Inside a GEDCOM file, pointers do this using the cross-reference identifiers. However, cross-reference identifiers are *not* durable across import-export cycles and should not be used outside of a GEDCOM file.
 
-If you wish to reference a part of a FamilySearch GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. The following show a few examples, using all three kinds of identifiers in three different external files:
-
-```
-0 @I23@ INDI
-1 NAME Arthur /Pendragon/
-1 REFN King Arthur
-2 TYPE English Royalty
-1 EXID K1
-2 TYPE https://example.com/MyIds
-1 UID 4bd2c474-ec84-43cb-86ef-b51ab09c2ed2
-```
-
-HTML
-```
-<span gedlink="somefile.ged?UID=4bd2c474-ec84-43cb-86ef-b51ab09c2ed2">King Author</span>
-```
-
-XML
-```
-<Person>
-  <InGed>
-    <File>somefile.ged</File>
-    <EXID type="https://example.com/MyIds">K1</EXID>
-  </InGed>
-  <Name>Arthur Pendragon</Name>
-</Person>
-```
-
-JSON
-```
-{
-    "name": "Arthur",
-    "gedcom":[
-        {
-            "file": "somefile.ged",
-            "REFN": "King Arthur",
-            "TYPE": "English Royalty"
-        }
-    ]
-}
-```
+If you wish to reference a part of a FamilySearch GEDCOM file from outside that file, you should use one of the durable identifier structures: `UID`, `REFN`, or `EXID`. There is currently no standard way to do this, so any implementation will need to decide how the links will be navigated. 
 
 # How do I flag a primary or profile photo?
 
