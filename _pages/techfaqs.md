@@ -170,16 +170,17 @@ If you wish to reference a part of a FamilySearch GEDCOM file from outside that 
 
 # How do I flag a primary or profile photo?
 
-Make it the first [MULTIMEDIA_LINK](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_LINK).
+There is not standard tag for this purpose in version 7.0.
+The first [MULTIMEDIA_LINK](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_LINK) in a structure
+is the "most-preferred" external object, but that does not necessarily mean it is either an image or a profile image.
+
 As noted in the specification,
 
-> Unless otherwise specified, the first is the most-preferred value.
-> For example, the display name would be the first name structure,
-> the profile image the first image structure.
+> The order of substructures of a single type indicates user preference, with the first substructure being the most-preferred value, unless a different meaning is explicitly indicated in the structure’s definition.
 
-The only "otherwise specified" in the current draft is for `FAM`.`CHIL`, where the specification says
+The only "different meaning" in the current draft is for `FAM`.`CHIL`, where the specification says
 
-> The preferred order of the `CHIL` (children) pointers within a `FAM` (family) structure is chronological by birth.
+> The order of the CHIL (children) pointers within a FAM (family) structure should be chronological by birth; this is an exception to the usual “most preferred value first” rule.
 
 # How do I record nick names?
 
