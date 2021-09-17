@@ -191,7 +191,7 @@ Use the `NICK` part type under the [PERSONAL_NAME_STRUCTURE](https://gedcom.io/s
 2 SURN Miller
 ```
 
-When recording a name with an embedded nick name, such as "William 'Bill' Miller", use two `NAME` records:
+The name type `AKA` can also be used to indicate that a `NAME` structure is not the primary name.
 
 ```
 1 NAME William /Miller/
@@ -203,7 +203,7 @@ When recording a name with an embedded nick name, such as "William 'Bill' Miller
 2 SURN Miller
 ```
 
-For systems that are limited to a single personal name, there is no satisfactory solution. Such systems may export names with an embedded nick name:
+It is also possible to presented the nick name inline with the other name parts:
 
 ```
 1 NAME William "Bill" /Miller/
