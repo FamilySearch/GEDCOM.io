@@ -21,6 +21,7 @@ sidebar:
 - [Version 5.5.1](/specifications/ged551.pdf)
 - [Version 5.5](/specifications/ged55.pdf)
 - [Version 5.4](/specifications/Gedcom5.4.pdf)
+- [Version 5.0](/specifications/Gedcom5.0.pdf)
 - [Version 4.0](/specifications/Gedcom4.0.pdf)
 - [Version 3.0](/specifications/Gedcom3.0.pdf)
 
