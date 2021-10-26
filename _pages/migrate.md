@@ -212,8 +212,8 @@ becomes this 7.0:
 
 GEDCOM 5.5.1 defined three words for ages:
 
-- `CHILD` was defined to mean `< 8y`
-- `INFANT` was defined to mean `< 1y`
+- `CHILD` was defined to mean `<8y`
+- `INFANT` was defined to mean `<1y`
 - `STILLBORN` was defined to mean `0y` and also to imply the existence of a `DEAT` event
 
 These have been removed from 7.0 in preference for their simpler and more expressive year-based forms.
@@ -228,6 +228,6 @@ This 5.5.1:
 becomes this 7.0:
 
 ```
-2 AGE < 8y
+2 AGE <8y
 3 PHRASE Child
 ```
