@@ -171,20 +171,20 @@ If you wish to reference a part of a FamilySearch GEDCOM file from outside that 
 # How do I flag a primary or profile photo?
 
 There is not standard tag for this purpose in version 7.0.
-The first [MULTIMEDIA_LINK](https://gedcom.io/specifications/GEDCOM7rc.html#MULTIMEDIA_LINK) in a structure
+The first [MULTIMEDIA_LINK](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#MULTIMEDIA_LINK) in a structure
 is the "most-preferred" external object, but that does not necessarily mean it is either an image or a profile image.
 
 As noted in the specification,
 
-> The order of substructures of a single type indicates user preference, with the first substructure being the most-preferred value, unless a different meaning is explicitly indicated in the structure’s definition.
+> The order of substructures of a single type indicates user preference, with the first substructure being the most-preferred value, unless a different meaning is explicitly indicated in the structure's definition.
 
 The only "different meaning" in the current draft is for `FAM`.`CHIL`, where the specification says
 
-> The order of the CHIL (children) pointers within a FAM (family) structure should be chronological by birth; this is an exception to the usual “most preferred value first” rule.
+> The order of the CHIL (children) pointers within a FAM (family) structure should be chronological by birth; this is an exception to the usual "most preferred value first" rule.
 
-# How do I record nick names?
+# How do I record nicknames?
 
-Use the `NICK` part type under the [PERSONAL_NAME_STRUCTURE](https://gedcom.io/specifications/GEDCOM7rc.html#PERSONAL_NAME_STRUCTURE):
+Use the `NICK` part type under the [PERSONAL_NAME_STRUCTURE](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#PERSONAL_NAME_STRUCTURE):
 
 ```
 1 NAME Bill /Miller/
@@ -204,7 +204,7 @@ The name type `AKA` can also be used to indicate that a `NAME` structure is not 
 2 SURN Miller
 ```
 
-It is also possible to presented the nick name inline with the other name parts:
+It is also possible to presented the nickname inline with the other name parts:
 
 ```
 1 NAME William "Bill" /Miller/
