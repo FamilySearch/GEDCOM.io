@@ -55,7 +55,7 @@ The full mapping of 5.5.1 types is is
 
 ## AFN, RFN, RIN
 
-These have been replaced by `EXID` and `REFN`.
+These have been replaced by `EXID`.
 Thus this 5.5.1:
 
 ```
@@ -70,11 +70,11 @@ becomes this 7.0:
 ```
 0 @5@ INDI
 1 EXID 123456789
-2 TYPE https://www.familysearch.org/wiki/en/Ancestral_File
-1 REFN 9876
-2 TYPE RIN
+2 TYPE https://gedcom.io/terms/v7/AFN
+1 EXID 9876
+2 TYPE https://gedcom.io/terms/v7/RIN#MySystem
 1 EXID 5431
-2 TYPE https://gedcom.io/terms/v7/RFN#MySystem
+2 TYPE https://gedcom.io/terms/v7/RFN
 ```
 
 ## SUBN
