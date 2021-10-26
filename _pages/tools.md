@@ -14,6 +14,7 @@ sidebar:
 |----------|---------|------|-------|
 | C | public domain | <https://github.com/gedcom7code/c-converter> | Command-line |
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | under development |
 
 ## v7.0 parsers
 
