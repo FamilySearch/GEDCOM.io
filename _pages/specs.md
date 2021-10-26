@@ -17,6 +17,9 @@ sidebar:
 
 ## Previous Versions
 
+Previous versions of GEDCOM are listed below, but these older specifications may contain now-obsolete links
+or email addresses.  The current contact email address for all GEDCOM versions below is <GEDCOM@familysearch.org>.
+
 - [Version 5.6 (XML)](/specifications/Gedcom5.6.pdf)
 - [Version 5.5.1](/specifications/ged551.pdf)
 - [Version 5.5](/specifications/ged55.pdf)
