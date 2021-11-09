@@ -41,6 +41,7 @@ The following files are provided for testing.
 | [minimal70.ged](/testfiles/gedcom70/minimal70.ged) | This file is the smallest legal FamilySearch GEDCOM 7.0 file. |
 | [remarriage.ged](/testfiles/gedcom70/remarriage.ged) | This file contains a couple who married, divorced, and then later remarried. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
+| [spaces.ged](/testfiles/gedcom70/spaces.ged) | This file contains empty DATE and EVEN payloads, with and without spaces. |
 | [voidptr.ged](/testfiles/gedcom70/voidptr.ged) | This file contains several @VOID@ references. |
 
 ## Other Development Tools
