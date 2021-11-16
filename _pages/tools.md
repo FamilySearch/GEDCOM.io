@@ -46,4 +46,4 @@ The following files are provided for testing.
 ## Other Development Tools
 
 Other development, conversions tools and sample files will be posted here as they become available.
-If you have a FamilySearch GEDCOM 7 tool that we should list, post an announcement of the tool on the [GEDCOM General Google Group](https://groups.google.com/g/gedcomgeneral).
+If you have a FamilySearch GEDCOM 7 tool that we should list, post an announcement of the tool on the [GEDCOM Discussions](https://github.com/FamilySearch/GEDCOM/discussions).
