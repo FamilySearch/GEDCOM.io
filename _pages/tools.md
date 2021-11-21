@@ -39,7 +39,8 @@ The following files are provided for testing.
 | [extension-record.ged](/testfiles/gedcom70/extension-record.ged) | This file contains a _LOC record, which is referenced from an individual with a _LOC tag. |
 | [long-url.ged](/testfiles/gedcom70/long-url.ged) | This file contains a URL of a submitter that is very long, to test the ability to parse very long lines. |
 | [minimal70.ged](/testfiles/gedcom70/minimal70.ged) | This file is the smallest legal FamilySearch GEDCOM 7.0 file. |
-| [remarriage.ged](/testfiles/gedcom70/remarriage.ged) | This file contains a couple who married, divorced, and then later remarried. |
+| [remarriage1.ged](/testfiles/gedcom70/remarriage1.ged) | This file contains a couple who married, divorced, and then later remarried, stored as one family. |
+| [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
 | [voidptr.ged](/testfiles/gedcom70/voidptr.ged) | This file contains several @VOID@ references. |
 
