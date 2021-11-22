@@ -24,7 +24,6 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 
 ## Project Teams
 
-- **Steering Committee** - consider patch updates to the current spec as well as timing and process decisions for upcoming versions.
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
 - **Names** - consider changing personal names from being specified in the Name tag and optional subordinate tags to a new set of subordinate tags.
 - **Relationships** - support for varying definitions of families,  roles and relationships.
