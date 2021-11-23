@@ -8,17 +8,15 @@ sidebar:
   
   *Community has links to current issues, discussions, the blog,  groups to join, and information about contributing to this project.*
 
-## General Group
+## Discussions page
 
-This is the wide open discussion and mailing group related to GEDCOM in general.  Join the group by:
-1. Visit the [GEDCOM General Google Group](https://groups.google.com/g/gedcomgeneral)
-2. Click on the Join Group arrow on the far right next to the group
-3. Enter your display name and subscription settings
-4. Press Join group at the bottom right of the dialog
-
+This is the open discussion and mailing group related to GEDCOM in general.
+The discussions are visible to all at [FamilySearch/GEDCOM Discussions](https://github.com/FamilySearch/GEDCOM/discussions);
+you can post to it after creating a free github account.
+Subscribe to the mailing list via the "Watch" button at the top of the page.
 ## Public Repository
 
-Become a GitHub contributor for the next version by joining the [FamilySearch GEDCOM](https://github.com/familysearch/GEDCOM) public repository when it becomes available.
+Become a GitHub contributor for the next version by contributing to the [FamilySearch GEDCOM](https://github.com/familysearch/GEDCOM) public repository.
 
 ## Issue Tracker 
 
