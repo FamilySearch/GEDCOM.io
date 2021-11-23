@@ -42,13 +42,13 @@ The full mapping of 5.5.1 types is is
 
 - `FONE`.`TYPE hangul` = `TRAN`.`LANG ko-hang`
 
-- `FONE`.`TYPE kana` = `TRAN`.`LANG jp-hrkt`
+- `FONE`.`TYPE kana` = `TRAN`.`LANG ja-hrkt`
 
 - `ROMN`.`TYPE pinyin` = `TRAN`.`LANG und-Latn-pinyin`
     
     Note: pinyin could be either `zh-Latn-pinyin` or `bo-Latn-pinyin`; thus, from 5.5.1 alone we can't deduce the language, only the script and variant, hence the `und` (undetermined) language above.
 
-- `ROMN`.`TYPE romanji` = `TRAN`.`LANG jp-Latn`
+- `ROMN`.`TYPE romanji` = `TRAN`.`LANG ja-Latn`
 
 - `ROMN`.`TYPE wadegiles` = `TRAN`.`LANG zh-Latn-wadegile`
 
