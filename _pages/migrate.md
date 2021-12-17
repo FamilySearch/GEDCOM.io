@@ -59,10 +59,12 @@ These have been replaced by `EXID`.
 Thus this 5.5.1:
 
 ```
+0 HEAD
+1 SOUR MySystem
 0 @5@ INDI
 1 AFN 123456789
 1 RIN 9876
-1 RFN MySystem:5431
+1 RFN Resource:5431
 ```
 
 becomes this 7.0:
@@ -74,7 +76,7 @@ becomes this 7.0:
 1 EXID 9876
 2 TYPE https://gedcom.io/terms/v7/RIN#MySystem
 1 EXID 5431
-2 TYPE https://gedcom.io/terms/v7/RFN
+2 TYPE https://gedcom.io/terms/v7/RFN#Resource
 ```
 
 ## SUBN
