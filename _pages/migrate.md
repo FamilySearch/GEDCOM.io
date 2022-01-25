@@ -218,7 +218,7 @@ GEDCOM 5.5.1 defined three words for ages:
 
 - `CHILD` was defined to mean `< 8y`
 - `INFANT` was defined to mean `< 1y`
-- `STILLBORN` was defined to mean `0y` and also to imply the existence of a `DEAT` event
+- `STILLBORN` was defined to mean "died just prior, at, or near birth, 0 years" (page 42) and "approximately 0 days old" (page 68); thus, it may mean either `0y` or `0d`.
 
 These have been removed from 7.0 in preference for their simpler and more expressive year-based forms.
 A `PHRASE` may be used to clarify the age category of a person.
@@ -235,3 +235,12 @@ becomes this 7.0:
 2 AGE < 8y
 3 PHRASE Child
 ```
+
+The English word "stillborn" and its parallels in other languages are used to mean death at various ages depending on the culture of the person using the term. It may mean anywhere from "died in the womb" to "died within a few days of birth while still too young to perform a particular religious rite for infants." Note that the `STILLBORN` value of `SLGC`.`STAT` is [defined](https://www.churchofjesuschrist.org/study/ensign/1987/09/i-have-a-question/can-we-put-the-names-of-our-miscarried-or-stillborn-children-on-our-family-group-records?lang=eng) by The Church of Jesus Christ of Latter-day Saints for purposes of handling temple ordinances and remains in FamilySearch GEDCOM 7.
+
+It is recommended that if `AGE STILLBORN` appears under any event in 5.5.1, then to maximize compatibility with various uses of stillbirth you should do all of the following when converting to 7.0:
+
+1. Ensure there is a `DEAT` event with `AGE 0y` (unless a different `DEAT`.`AGE` was already present), and
+2. Ensure there is a `BIRT` event with `TYPE Stillborn` (unless a different birth type was already present), and
+3. Remove the original `AGE STILLBORN` line entirely, optionally adding a `NOTE Stillborn` to preserve the information that this event was tagged with that "age".
+
