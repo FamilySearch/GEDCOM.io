@@ -17,7 +17,7 @@ uri: https://gedcom.io/terms/v7/month-NIVO
 standard tag: NIVO
 
 descriptions:
-  - Nivose
+  - Nivôse
 ...
 
 ```

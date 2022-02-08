@@ -17,7 +17,7 @@ uri: https://gedcom.io/terms/v7/month-FLOR
 standard tag: FLOR
 
 descriptions:
-  - Floreal
+  - Floréal
 ...
 
 ```

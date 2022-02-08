@@ -17,7 +17,7 @@ uri: https://gedcom.io/terms/v7/month-PLUV
 standard tag: PLUV
 
 descriptions:
-  - Pluviose
+  - Pluviôse
 ...
 
 ```

@@ -29,21 +29,21 @@ descriptions:
     resource identifiers", which may or may not have been registered and hence
     may or may not be a unique resource identifier.
     
-    The fragment identifier of this URI (the part after the #) is the
+    The fragment identifer of this URI (the part after the #) is the
     registered resource identifier; the payload of the EXID is the record
     identifier within that resource. If there is no fragment identifier,
     the EXID may represent either a registered number of a submitter of
     Ancestral File data (see https://gedcom.io/terms/v7/AFN) or may have been
     created by a user omitting to indicate the resource in 5.5.1 or earlier.
     
-    It is recommended that the 5.5.1 structure
+    It is recommend that the 5.5.1 structure
     
         2 RFN xyz:123abc
     
     be converted to 7.0 structures
     
-        2 EXID 123abc
-        3 TYPE https://gedcom.io/terms/v7/RFN#xyz
+        2 EXID xyz
+        3 TYPE https://gedcom.io/terms/v7/RFN#123abc
 
 ...
 
