@@ -189,7 +189,7 @@ Similarly, the `FORM` tag must be converted correctly.  In the GEDCOM 5.5.1 MULT
 
 ## Non-pointer SOUR Substructures
 
-GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from v7.0.
+GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity and has been removed from v7.0.
 
 This 5.5.1:
 
@@ -197,7 +197,7 @@ This 5.5.1:
 1 DEAT
 2 DATE 1910
 2 SOUR Letter from Alice Smith, 13 April 1946
-3 PAGE According to his grand-daughter, who was present.
+3 TEXT My father passed away back in 1910.
 ```
 
 becomes this 7.0:
@@ -206,10 +206,10 @@ becomes this 7.0:
 1 DEAT
 2 DATE 1910
 2 SOUR @S1@
-3 PAGE According to his grand-daughter, who was present.
 
 0 @S1@ SOUR
 1 TITL Letter from Alice Smith, 13 April 1946
+1 TEXT My father passed away back in 1910.
 ```
 
 ## Age Words
