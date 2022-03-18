@@ -13,6 +13,10 @@ Genealogical (family tree) data is important! It contains significant informatio
 
 The FamilySearch GEDCOM specification is not a stand-alone specification. It is used by genealogical software products to create a file that can be imported and exported by other programs to assist in sharing information. A GEDCOM file is created by using the procedures specified by the genealogical software product used. Software companies provide support for their own products, and the way they implement the GEDCOM specification may vary, including which version they support.
 
+## Are GEDCOM Files still being used by FamilySearch ?
+
+FamilySearch Contributors can submit their trees to FamilySearch Genealogies using GEDCOM files to make information available to help other researchers. These submissions remain in the submitters control, preserved indefinitely, to review, edit or remove as seen fit. ( see FamilySearch.org/mytrees )
+
 ## Who owns the copyright to FamilySearch GEDCOM?
 The Church of Jesus Christ of Latter-day Saints copyrighted the GEDCOM standards in 1987, 1989, 1992, 1993, 1995, 1999, 2019, and 2021.
 
