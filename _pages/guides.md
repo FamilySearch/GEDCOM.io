@@ -25,3 +25,8 @@ Go to [Technical FAQs](/techfaqs)
 This guide has many tips on situtations where coding was done one way in version 5.5.1 and is recommended to code it a little differently in version 7.
 
 Go to [Migrating v5.5.1 to v7.0](/migrate)
+
+## FamilySearch GEDCOM Compatible Guide
+Benfits and Guidelines for developing and testing for GEDCOM compatilibity.
+
+Go to [FamilySearch GEDCOM Compatible Guide](/compatible)
