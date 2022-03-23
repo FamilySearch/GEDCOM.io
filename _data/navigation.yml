@@ -18,6 +18,19 @@ specs:
         url: "/specs/#version-5"
       - title: "GEDCOM X"
         url: "/specs/#gedcom-x"
+Compatible:
+  - title: Compatible Guide
+    children:
+      - title: "Requirements"
+        url: "/compatible/#"
+      - title: "Compliance Self-test"
+        url: "/Development Tools/#"
+      - title: "Sample Files"
+        url: "/compatible/#samples"
+      - title: "Sample Files"
+        url: "/compatible/#samples"
+      - title: "Implementation Progress"
+        url: "/compatible/#progess"
 tools:
    - title: "Tools"
      children:
