@@ -9,17 +9,19 @@ sidebar:
 
 ## Compatible Requirements
 
-### READ FAMILYSEARCH GEDCOM FILE
-The vendor needs to demonstrate the ability to read a sample FamilySearch GEDCOM file and display the contents in there own environement.
-
-### WRITE FAMILYSEARCH GEDCOM FILE
-The vendor needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and prove that it can be read by a FamilySearch GEDCOM Compatible product.
-
-### PACKAGE GEDZIP
+* READ FAMILYSEARCH GEDCOM FILE
+> The vendor needs to demonstrate the ability to read a sample FamilySearch GEDCOM file and display the contents in there own environement.
 
 
-### UNPACKAGE GEDZIP
-
+* WRITE FAMILYSEARCH GEDCOM FILE
+> The vendor needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and prove that it can be read by a FamilySearch GEDCOM Compatible product.
+>
+* PACKAGE GEDZIP
+>
+The vendor needs to demonstrate the ability to make according to specifications a .gdz file that includes the .ged file that points to both include local and online resources using the multimedia link as defined by the FamilySearch GEDCOM specification.
+>
+* UNPACKAGE GEDZIP
+>
 The vendor needs to demonstrate unzipping a .gdz file and how the unpackages resources are accessible with the FamilySearch Compatible product that was use to unzip the file and how the multimedia links do point to both included local and online resources.
 
 
