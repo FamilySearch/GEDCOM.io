@@ -42,7 +42,7 @@ guides:
       - title: "Migrating 5 to 7"
         url: "/guides/#migrating-5-to-7"
       - title: "Compatible Guide"
-        url: "/guides/#compatible"
+        url: "/guides/#compatible-guide"
 community:
   - title: Community
     children:
