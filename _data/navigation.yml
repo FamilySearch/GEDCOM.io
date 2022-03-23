@@ -22,13 +22,13 @@ compatible:
   - title: Compatible Guide
     children:
       - title: "Requirements"
-        url: "/compatible/#Requirements"
+        url: "/compatible/#requirements"
       - title: "Compliance Self-test"
-        url: "/compatible/#Compliance"
+        url: "/compatible/#compliance"
       - title: "Sample Files"
-        url: "/compatible/#Sample Files"
+        url: "/compatible/#samples"
       - title: "Implementation Progress"
-        url: "/compatible/#Implementation Progess"
+        url: "/compatible/#progess"
 tools:
    - title: "Tools"
      children:
@@ -41,6 +41,8 @@ guides:
         url: "/guides/#technical-faqs"
       - title: "Migrating 5 to 7"
         url: "/guides/#migrating-5-to-7"
+      - title: "Compatible Guide"
+        url: "/guides/#compatible"
 community:
   - title: Community
     children:
