@@ -10,7 +10,7 @@ sidebar:
 ## Compatibility Requirements
 
 * READ FAMILYSEARCH GEDCOM FILE
-> The vendor needs to demonstrate the ability to read a sample FamilySearch GEDCOM file and display the contents in their own environement.
+> The vendor needs to demonstrate the ability to read a sample FamilySearch GEDCOM file and display the contents in their own environment.
 
 
 * WRITE FAMILYSEARCH GEDCOM FILE
