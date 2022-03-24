@@ -18,7 +18,7 @@ sidebar:
 >
 * PACKAGE GEDZIP
 >
-The vendor needs to demonstrate the ability to make according to specifications a .gdz file that includes the .ged file that points to both include local and online resources using the multimedia link as defined by the FamilySearch GEDCOM specification.
+The vendor needs to demonstrate the ability to make according to specifications a .gdz file that includes the .ged file that points to both included local and online resources using the multimedia link as defined by the FamilySearch GEDCOM specification.
 >
 * UNPACKAGE GEDZIP
 >
