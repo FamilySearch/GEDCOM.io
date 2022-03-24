@@ -26,7 +26,7 @@ This guide has many tips on situtations where coding was done one way in version
 
 Go to [Migrating v5.5.1 to v7.0](/migrate)
 
-## FamilySearch GEDCOM Compatible Guide
-Benfits and Guidelines for developing and testing for GEDCOM compatilibity.
+## FamilySearch GEDCOM Compatibility Guide
+The FamilySearch GEDCOM Compatibility Guide provides guidance for developing and testing for GEDCOM compatilibity.
 
-Go to [FamilySearch GEDCOM Compatible Guide](/compatible)
+Go to [FamilySearch GEDCOM Compatibility Guide](/compatibility)
