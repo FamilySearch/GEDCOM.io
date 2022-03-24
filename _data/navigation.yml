@@ -18,17 +18,6 @@ specs:
         url: "/specs/#version-5"
       - title: "GEDCOM X"
         url: "/specs/#gedcom-x"
-compatible:
-  - title: Compatible Guide
-    children:
-      - title: "Requirements"
-        url: "/compatible/#requirements"
-      - title: "Compliance Self-test"
-        url: "/compatible/#compliance"
-      - title: "Sample Files"
-        url: "/compatible/#samples"
-      - title: "Implementation Progress"
-        url: "/compatible/#progess"
 tools:
    - title: "Tools"
      children:
@@ -40,9 +29,9 @@ guides:
       - title: "Technical FAQs"
         url: "/guides/#technical-faqs"
       - title: "Migrating 5 to 7"
-        url: "/guides/#migrating-5-to-7"
-      - title: "Compatible Guide"
-        url: "/guides/#compatible-guide"
+        url: "/guides/#migrating-v5x-to-v7x"
+      - title: "Compatibility Guide"
+        url: "/guides/#familysearch-gedcom-compatibility-guide"
 community:
   - title: Community
     children:
@@ -54,6 +43,3 @@ community:
         url: "/community/#issue-tracker"
       - title: "Project Teams"
         url: "/community/#project-teams"
-    
-
- 
