@@ -464,9 +464,9 @@
 1 ALIA @I3@
 2 PHRASE Alias
 1 ANCI @U1@
-1 ANCI @U2@
+1 ANCI @VOID@
 1 DESI @U1@
-1 DESI @U2@
+1 DESI @VOID@
 1 REFN 1
 2 TYPE User-generated identifier
 1 REFN 10
