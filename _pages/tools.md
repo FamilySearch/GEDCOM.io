@@ -44,6 +44,7 @@ The following files are provided for testing.
 | [escapes.ged](/testfiles/gedcom70/escapes.ged) | This file contains @ characters that are doubled only when they appear at the start of a line string. |
 | [extension-record.ged](/testfiles/gedcom70/extension-record.ged) | This file contains a _LOC record, which is referenced from an individual with a _LOC tag. |
 | [long-url.ged](/testfiles/gedcom70/long-url.ged) | This file contains a URL of a submitter that is very long, to test the ability to parse very long lines. |
+| [maximal70.ged](/testfiles/gedcom70/maximal70.ged) | This file attempts to exercise all standard tags in various locations, and all standard enumeration values. |
 | [minimal70.ged](/testfiles/gedcom70/minimal70.ged) | This file is the smallest legal FamilySearch GEDCOM 7.0 file. |
 | [remarriage1.ged](/testfiles/gedcom70/remarriage1.ged) | This file contains a couple who married, divorced, and then later remarried, stored as one family. |
 | [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
