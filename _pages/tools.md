@@ -14,7 +14,7 @@ sidebar:
 |----------|---------|------|-------|
 | C | public domain | <https://github.com/gedcom7code/c-converter> | Command-line |
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
-| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | under development |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
 
 ## v7.0 parsers
 
@@ -28,6 +28,12 @@ sidebar:
 |----------|---------|------|-------|
 | Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | in beta |
 
+## Compatability Checkers
+
+| Language | License | Site | Notes |
+|----------|---------|------|-------|
+| C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Command-line |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatability> | Under development |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
