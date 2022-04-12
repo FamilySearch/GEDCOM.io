@@ -244,3 +244,20 @@ It is recommended that if `AGE STILLBORN` appears under any event in 5.5.1, then
 2. Ensure there is a `BIRT` event with `TYPE Stillborn` (unless a different birth type was already present), and
 3. Remove the original `AGE STILLBORN` line entirely, optionally adding a `NOTE Stillborn` to preserve the information that this event was tagged with that "age".
 
+## Ordinance Status Values
+
+Some GEDCOM 5.5.1 ordinance status values were renamed in Family Search GEDCOM 7.0:
+
+- `DNS/CAN` was changed to `DNS_CAN`.
+- `PRE-1970` was changed to `PRE_1970`.
+
+# FAMC.STAT, NAME.TYPE, PEDI, RESN Values
+
+The values in GEDCOM 5.5.1 appear in all lower case, but must be all upper case in Family Search GEDCOM 7.0.
+
+Examples:
+
+- `FAMC`.`STAT challenged` becomes `FAMC`.`STAT CHALLENGED`.
+- `NAME`.`TYPE birth` becomes `NAME`.`TYPE BIRTH`.
+- `PEDI birth` becomes `PEDI BIRTH`.
+- `RESN confidential` becomes `RESN CONFIDENTIAL`.
