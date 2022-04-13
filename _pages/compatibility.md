@@ -10,11 +10,11 @@ sidebar:
 ## Compatibility Requirements
 
 * READ FAMILYSEARCH GEDCOM FILE
-> The vendor needs to demonstrate the ability to read a sample FamilySearch GEDCOM file and display the contents in their own environment.
+> The vendor needs to demonstrate the ability to read the maximal70.ged sample FamilySearch GEDCOM 7 file and display the contents in their own environment.
 
 
 * WRITE FAMILYSEARCH GEDCOM FILE
-> The vendor needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and prove that it can be read by a FamilySearch GEDCOM Compatible product.
+> The vendor needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and demonstrate that it can be read by a FamilySearch GEDCOM Compatible product by using the Compatiblity Checker Web Tool.
 >
 * PACKAGE GEDZIP
 >
