@@ -518,7 +518,7 @@
 3 MEDI AUDIO
 2 TITL Object title
 2 TRAN media/derived.oga
-3 FORM auto/ogg
+3 FORM audio/ogg
 2 TRAN media/transcript.vtt
 3 FORM text/vtt
 1 REFN 1
