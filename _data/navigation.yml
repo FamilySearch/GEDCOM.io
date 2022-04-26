@@ -36,9 +36,9 @@ community:
   - title: Community
     children:
       - title: "General Group"
-        url: "/community/#general-group"
-      - title: "Public Repository"
-        url: "/community/#public-repository"
+        url: "/community/#discussion-page"
+      - title: "Public GEDCOM Repositories"
+        url: "/community/#public-gedcom-repo"
       - title: "Issue Tracker"
         url: "/community/#issue-tracker"
       - title: "Project Teams"
