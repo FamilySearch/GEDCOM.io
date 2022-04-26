@@ -35,10 +35,10 @@ guides:
 community:
   - title: Community
     children:
-      - title: "General Group"
-        url: "/community/#discussion-page"
+      - title: "Discussions Group"
+        url: "/community/#discussions-group"
       - title: "Public GEDCOM Repositories"
-        url: "/community/#public-gedcom-repo"
+        url: "/community/#public-gedcom-repositories"
       - title: "Issue Tracker"
         url: "/community/#issue-tracker"
       - title: "Project Teams"
