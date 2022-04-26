@@ -23,12 +23,12 @@ feature_row:
     btn_label: "Learn More"
   - image_path: mm-public-feature1.png
     alt: "public access"
-    title: "GitHub Public Repository"
-    excerpt: "Join the public repository and contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want."
+    title: "GitHub Public Repositories"
+    excerpt: "Join the public repository for the GEDCOM 7 File Specification.   Contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want.  
     url: "http://github.com/familysearch/GEDCOM"
-    btn_label: "GitHub Repository"
----
+    btn_label: "GEDCOM Specification Repository"
 
+---
 {% include feature_row %}
 
 
