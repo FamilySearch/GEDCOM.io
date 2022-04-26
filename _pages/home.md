@@ -27,8 +27,8 @@ feature_row:
     excerpt: "Join the public repository for the GEDCOM 7 File Specification.   Contribute with issues, pull requests, and comments. Copy, review, and use the published specification for programming whatever genealogical software you want.  
     url: "http://github.com/familysearch/GEDCOM"
     btn_label: "GEDCOM Specification Repository"
- ---
 
+---
 {% include feature_row %}
 
 
