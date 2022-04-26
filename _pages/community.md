@@ -14,9 +14,12 @@ This is the open discussion and mailing group related to GEDCOM in general.
 The discussions are visible to all at [FamilySearch/GEDCOM Discussions](https://github.com/FamilySearch/GEDCOM/discussions);
 you can post to it after creating a free github account.
 Subscribe to the mailing list via the "Watch" button at the top of the page.
-## Public Repositories
+
+## Public FamilySearch GEDCOM Specification Repository
 
 Become a GitHub GEDCOM Contributor for the next version by contributing to the [FamilySearch GEDCOM Specification](https://github.com/familysearch/GEDCOM) public repository.
+
+## Public FamilySearch GEDCOM.io Website Repository
 
 Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https://github.com/familysearch/GEDCOM.io) public repository.
 
