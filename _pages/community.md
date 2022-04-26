@@ -8,14 +8,14 @@ sidebar:
   
   *Community has links to current issues, discussions, the blog,  groups to join, and information about contributing to this project.*
 
-## Discussions page
+## Discussions Group
 
 This is the open discussion and mailing group related to GEDCOM in general.
 The discussions are visible to all at [FamilySearch/GEDCOM Discussions](https://github.com/FamilySearch/GEDCOM/discussions);
 you can post to it after creating a free github account.
 Subscribe to the mailing list via the "Watch" button at the top of the page.
 
-## Public FamilySearch GEDCOM Specification Repository
+## Public GEDCOM Repository
 
 Become a GitHub GEDCOM Contributor for the next version by contributing to the [FamilySearch GEDCOM Specification](https://github.com/familysearch/GEDCOM) public repository.
 
