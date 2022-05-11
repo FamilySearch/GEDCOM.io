@@ -37,7 +37,7 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 
 If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
-## Addition Areas of Participation
+## Additional Areas of Participation
 
 - **Tools** - identify software tools, sample code and sample files that will be helpful to create and upgrade FamilySearch GEDCOM processing.
 - **Guides** - author and/or maintain FAQs, best practices, reference implementation guides, and other information that will be helpful to software developers.
