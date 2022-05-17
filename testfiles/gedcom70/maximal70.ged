@@ -237,7 +237,7 @@
 2 SPFX de
 2 SURN Allen
 2 NSFX jr.
-2 TRAN John /Doe/
+2 TRAN npfx John /spfx Doe/ nsfx
 3 LANG en-GB
 3 NPFX npfx
 3 GIVN John
