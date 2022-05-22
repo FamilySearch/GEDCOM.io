@@ -46,6 +46,7 @@ Support for the following structures are required for *all* categories: `CONT`, 
 * `<<FAMILY_ATTRIBUTE_STRUCTURE>>` structures: `NCHI`, `RESI`, `FACT`, and `TYPE`.
 * `<<FAMILY_EVENT_STRUCTURE>>` structures: `ANUL`, `CENS`, `DIV`, `DIVF`, `ENGA`, `MARB`, `MARC`, `MARL`, `MARS`, `EVEN`, and `TYPE`.
 * Detailed source citations: `<<EVENT_DETAIL>>.SOUR`, `INDI`.`NAME`.`SOUR`, and `NOTE`.`SOUR`, where `<<EVENT_DETAIL>>` refers to all required individual and family attributes and events.
+* Detailed notes: `<<EVENT_DETAIL>>.NOTE`, where `<<EVENT_DETAIL>>` refers to all required individual and family attributes and events.
 
 ### Memories Compatibility
 
