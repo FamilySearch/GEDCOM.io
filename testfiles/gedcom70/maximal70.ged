@@ -5,7 +5,7 @@
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
 1 SOUR https://gedcom.io/
-2 VERS 0.1
+2 VERS 0.2
 2 NAME GEDCOM Steering Committee
 2 CORP FamilySearch
 3 ADDR Family History Department, 15 East South Temple Street, Salt Lake City, UT 84150 USA
@@ -29,7 +29,7 @@
 4 TIME 8:38
 3 COPR copyright statement
 1 DEST https://gedcom.io/
-1 DATE 7 NOV 2021
+1 DATE 22 MAY 2022
 2 TIME 15:43:20.48Z
 1 SUBM @U1@
 1 COPR another copyright statement
@@ -301,6 +301,7 @@
 2 TYPE bles type
 1 BURI
 2 TYPE buri type
+2 DATE 30 MAR 2022
 1 CENS
 2 TYPE cens type
 1 CHRA
@@ -374,8 +375,10 @@
 3 ADOP WIFE
 1 BIRT
 2 TYPE birth type
+2 DATE 1 JAN 2000
 1 CHR
 2 TYPE chr type
+2 DATE 9 JAN 2000
 2 AGE 8d
 3 PHRASE Age phrase
 1 EVEN Event
@@ -393,15 +396,19 @@
 1 BAPL
 2 STAT BIC
 3 DATE 27 MAR 2022
+2 DATE 27 MAR 2022
 1 CONL
 2 STAT INFANT
 3 DATE 27 MAR 2022
+2 DATE 27 MAR 2022
 1 ENDL
 2 STAT CHILD
 3 DATE 27 MAR 2022
+2 DATE 27 MAR 2022
 1 INIL
 2 STAT EXCLUDED
 3 DATE 27 MAR 2022
+2 DATE 27 MAR 2022
 1 SLGC
 2 DATE 27 MAR 2022
 3 TIME 15:47
