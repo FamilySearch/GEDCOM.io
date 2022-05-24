@@ -18,7 +18,7 @@
 2 DATE 1998
 1 CHIL @I1@
 0 @I1@ INDI
-1 NAME Lt. Cmndr. Joseph /Allen/ jr.
+1 NAME Lt. Cmndr. Joseph "John" /de Allen/ jr.
 1 NAME John /Doe/
 1 NAME Aka
 1 NAME Immigrant Name
@@ -34,7 +34,6 @@
 2 DATE 1 JAN 2000
 1 CHR
 2 DATE 9 JAN 2000
-1 FAMC @F2@
 1 FAMC @F2@
 1 FAMS @VOID@
 1 FAMS @F1@
