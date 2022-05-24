@@ -13,7 +13,7 @@ sidebar:
 > The vendor needs to demonstrate the ability to both read and write a FamilySearch GEDCOM file.  The [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file can be used to determine a [compatbility score](https://magikeygedcomconverter.azurewebsites.net/Compatability).
 
 * READ FAMILYSEARCH GEDCOM FILE
-> The vendor only needs to demonstrate the ability to read the [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file and display the contents in their own environment.
+> The vendor only needs to demonstrate the ability to read the [maximal70.ged](../testfiles/gedcom70/maximal70.ged) file and display the contents in their own environment.
 
 
 * WRITE FAMILYSEARCH GEDCOM FILE
