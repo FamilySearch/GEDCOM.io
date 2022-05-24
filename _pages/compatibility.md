@@ -17,7 +17,7 @@ sidebar:
 
 
 * WRITE FAMILYSEARCH GEDCOM FILE
-> The vendor only needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and prove that it is valid FamilySearch GEDCOM 7. For example, the [GEDCOM validator](http://ged-inline.elasticbeanstalk.com/) can be used, although it is still in beta.
+> The vendor needs to demonstrate the ability to write a sample FamilySearch GEDCOM file and prove that it is valid FamilySearch GEDCOM 7. For example, the [GEDCOM validator](http://ged-inline.elasticbeanstalk.com/) can be used, although it is still in beta.
 >
 * PACKAGE GEDZIP
 >
