@@ -31,6 +31,8 @@
 1 CHIL @I4@
 1 CHIL @VOID@
 0 @F2@ FAM
+1 MARR
+2 DATE 1998
 1 CHIL @I1@
 0 @I1@ INDI
 1 NAME Lt. Cmndr. Joseph /Allen/ jr.
@@ -131,7 +133,6 @@
 2 DATE 9 JAN 2000
 1 EVEN Event
 2 TYPE Event type
-1 FAMC @F2@
 1 FAMC @F2@
 1 FAMS @VOID@
 1 FAMS @F1@
