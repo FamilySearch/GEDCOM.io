@@ -28,12 +28,12 @@ sidebar:
 |----------|---------|------|-------|
 | Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | in beta |
 
-## Compatability Checkers
+## Compatibility Checkers
 
 | Language | License | Site | Notes |
 |----------|---------|------|-------|
 | C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Command-line |
-| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatability> | Under development |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Under development |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 

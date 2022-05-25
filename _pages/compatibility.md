@@ -10,7 +10,7 @@ sidebar:
 ## Compatibility Requirements
 
 * READ/WRITE FAMILYSEARCH GEDCOM FILE
-> The vendor needs to demonstrate the ability to both read and write a FamilySearch GEDCOM file.  The [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file can be used to determine a [compatbility score](https://magikeygedcomconverter.azurewebsites.net/Compatability).
+> The vendor needs to demonstrate the ability to both read and write a FamilySearch GEDCOM file.  The [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file can be used to determine a [compatibility score](https://magikeygedcomconverter.azurewebsites.net/Compatibility).
 
 * READ FAMILYSEARCH GEDCOM FILE
 > The vendor needs to demonstrate the ability to read the [maximal70.ged](../testfiles/gedcom70/maximal70.ged) file and display the contents in their own environment.
@@ -61,7 +61,7 @@ SOUR.OBJE
 where `<<EVENT_DETAIL>>` refers to all events in the Tree Compability level supported by the implementation.
 Note that `SUBM.OBJE` support is not required for Level 2.
 
-### Latter-day Saints Services Compatbility
+### Latter-day Saints Services Compatibility
 
 The implementation must support at least Level 1 of Tree Compatibility, and also support the following structures:
 `BAPL`, `CONL`, `<<LDS_ORDINANCE_DETAIL>>`.`DATE`, `ENDL`, `INIL`, `SLGC`, `SLGS`, and `TEMP`.
