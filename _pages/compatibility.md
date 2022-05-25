@@ -10,7 +10,7 @@ sidebar:
 ## Compatibility Requirements
 
 * READ/WRITE FAMILYSEARCH GEDCOM FILE
-> The vendor needs to demonstrate the ability to both read and write a FamilySearch GEDCOM file.  The [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file can be used to determine a [compatibility score](https://magikeygedcomconverter.azurewebsites.net/Compatibility).
+> The vendor needs to demonstrate the ability to both read and write a FamilySearch GEDCOM file and prove that the result is valid FamilySearch GEDCOM 7.  The [maximal70.ged](..\testfiles\gedcom70\maximal70.ged) file can be used to determine a [compatibility score](https://magikeygedcomconverter.azurewebsites.net/Compatibility), and the [GEDCOM validator](http://ged-inline.elasticbeanstalk.com/) can be used to show validity, although it is still in beta.
 
 * READ FAMILYSEARCH GEDCOM FILE
 > The vendor needs to demonstrate the ability to read the [maximal70.ged](../testfiles/gedcom70/maximal70.ged) file and display the contents in their own environment.
