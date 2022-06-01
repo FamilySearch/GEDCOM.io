@@ -27,7 +27,7 @@ descriptions:
     Permitted months are
     
       Code   Name
-      ------ ---------------------
+      ------ ----------------------
       VEND   Vendémiaire
       BRUM   Brumaire
       FRIM   Frimaire
@@ -40,7 +40,7 @@ descriptions:
       MESS   Messidor
       THER   Thermidor
       FRUC   Fructidor
-      COMP   Jour Complementairs
+      COMP   Jour Complémentaires
     
     No epoch marker is permitted in this calendar.
     

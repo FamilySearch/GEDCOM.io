@@ -17,7 +17,7 @@ uri: https://gedcom.io/terms/v7/month-COMP
 standard tag: COMP
 
 descriptions:
-  - Jour Complementairs
+  - Jour Complémentaires
 ...
 
 ```
