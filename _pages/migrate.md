@@ -79,6 +79,9 @@ becomes this 7.0:
 2 TYPE https://gedcom.io/terms/v7/RFN#Resource
 ```
 
+See [EXID TYPE Base URIs](exid-type/index.md) for the table of currently registered base URIs
+for `EXID`.`TYPE`.
+
 ## SUBN
 
 These were defined to be specific to the Ancestral File and TempleReady systems. As these systems are no longer in use, this record and its corresponding pointer have been removed. If other applications were using this record for some other purpose, they should switch to an extension to handle that purpose.
