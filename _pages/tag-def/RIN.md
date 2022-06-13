@@ -36,7 +36,7 @@ descriptions:
     EXID is the record identifier within that resource. If there is no fragment
     identifier, the EXID was an RIN given without a source system identifier.
     
-    It is recommend that the 5.5.1 structure
+    It is recommended that the 5.5.1 structure
     
         2 RIN 123abc
     
