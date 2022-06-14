@@ -36,7 +36,7 @@ descriptions:
     Ancestral File data (see https://gedcom.io/terms/v7/AFN) or may have been
     created by a user omitting to indicate the resource in 5.5.1 or earlier.
     
-    It is recommend that the 5.5.1 structure
+    It is recommended that the 5.5.1 structure
     
         2 RFN xyz:123abc
     
