@@ -16,7 +16,7 @@ Thus, this 5.5.1:
 ```
 1 NAME /橘/ 逸勢
 2 ROMN /Tachibana/ no Hayanari
-3 TYPE romanji
+3 TYPE romaji
 2 FONE /たちばな/ の はやなり
 3 TYPE kana
 ```
@@ -48,7 +48,7 @@ The full mapping of 5.5.1 types is is
     
     Note: pinyin could be either `zh-Latn-pinyin` or `bo-Latn-pinyin`; thus, from 5.5.1 alone we can't deduce the language, only the script and variant, hence the `und` (undetermined) language above.
 
-- `ROMN`.`TYPE romanji` = `TRAN`.`LANG ja-Latn`
+- `ROMN`.`TYPE romaji` = `TRAN`.`LANG ja-Latn`
 
 - `ROMN`.`TYPE wadegiles` = `TRAN`.`LANG zh-Latn-wadegile`
 
