@@ -22,18 +22,13 @@ sidebar:
 |----------|---------|------|-------|
 | Javascript | public domain | <https://github.com/gedcom7code/js-parser> | DOM-style, no validation, with SCHMA handling |
 
-## Validators
+## Development Aids
 
 | Language | License | Site | Notes |
 |----------|---------|------|-------|
-| Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | in beta |
-
-## Compatibility Checkers
-
-| Language | License | Site | Notes |
-|----------|---------|------|-------|
-| C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Command-line |
-| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Under development |
+| Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | GEDCOM file validator website |
+| C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker website |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
