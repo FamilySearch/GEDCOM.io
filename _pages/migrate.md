@@ -254,7 +254,7 @@ Some GEDCOM 5.5.1 ordinance status values were renamed in Family Search GEDCOM 7
 - `DNS/CAN` was changed to `DNS_CAN`.
 - `PRE-1970` was changed to `PRE_1970`.
 
-# FAMC.STAT, NAME.TYPE, PEDI, RESN Values
+## FAMC.STAT, NAME.TYPE, PEDI, RESN Values
 
 The values in GEDCOM 5.5.1 appear in all lower case, but must be all upper case in Family Search GEDCOM 7.0.
 
@@ -264,3 +264,40 @@ Examples:
 - `NAME`.`TYPE birth` becomes `NAME`.`TYPE BIRTH`.
 - `PEDI birth` becomes `PEDI BIRTH`.
 - `RESN confidential` becomes `RESN CONFIDENTIAL`.
+
+## SURN Values
+
+GEDCOM 5.5.1 defined the `SURN` structure as appearing at most once per `NAME`, and defined its
+payload as `[ <NAME_PIECE> | <NAME_PIECE_SURNAME>, <NAME_PIECE> ]`, where different surnames are
+separated by a comma.
+
+FamilySearch GEDCOM 7.0 on the other hand allows the `SURN` structure to appear multiple times,
+with payload `<Text>`, meaning any comma is not a delimeter but part of the actual name piece.
+
+Thus, this 5.5.1:
+
+```
+1 NAME Juan /Hernandez Martinez/
+2 GIVN Juan
+2 SURN Hernandez, Martinez
+```
+
+becomes this 7.0:
+
+```
+1 NAME Juan /Hernandez Martinez/
+2 GIVN Juan
+2 SURN Hernandez
+2 SURN Martinez
+```
+
+Note that FamilySearch GEDCOM 7.0 explicitly does not define how the meaning of multiple `SURN` parts
+differs from the meaning of a single part with a concatenated larger payload such as
+
+```
+1 NAME Juan /Hernandez Martinez/
+2 GIVN Juan
+2 SURN Hernandez Martinez
+```
+
+but applications might use the difference to express at least a user preference.
