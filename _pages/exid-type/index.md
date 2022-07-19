@@ -9,6 +9,9 @@ the full URI. For a few examples, see [Migrating v5.5.1 to v7.0](../migrate/#afn
 Applications can use base URIs beyond those listed in this table,
 but additional URIs may not be recognized by other applications.
 
+The set of registered EXID types in JSON format can be found in
+[exid-types.json](https://github.com/FamilySearch/GEDCOM/blob/main/exid-types.json).
+
 Type of Identifier                 | Base URI
 ---------------------------------- | ------------
 Ancestral File Number              | <https://gedcom.io/terms/v7/AFN>
