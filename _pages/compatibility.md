@@ -27,7 +27,7 @@ The vendor needs to demonstrate the ability to make according to specifications 
 >
 The vendor needs to demonstrate unzipping a .gdz file and how the unpackaged resources are accessible with the FamilySearch GEDCOM Compatible product that was used to unzip the file and how the multimedia links do point to both included local and online resources.
 
-<!-- ## Compatibility Categories
+Compatibility Categories
 
 Like [FamilySearch API compatibility](https://www.familysearch.org/developers/docs/certification), FamilySearch GEDCOM file compatibility can be broken down into several categories.
 
@@ -65,7 +65,8 @@ Note that `SUBM.OBJE` support is not required for Level 2.
 
 The implementation must support at least Level 1 of Tree Compatibility, and also support the following structures:
 `BAPL`, `CONL`, `<<LDS_ORDINANCE_DETAIL>>`.`DATE`, `ENDL`, `INIL`, `SLGC`, `SLGS`, and `TEMP`.
--->
+
+
 ## Development Tools
 There are sample code for converting, parsing, and validating. These tools are authored and maintained by third parties and may vary in license, quality, and correctness. Learn about them and access the code by choosing the [Tools](/tools/) menu item.
 
