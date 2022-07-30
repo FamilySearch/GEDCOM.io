@@ -27,7 +27,7 @@ The vendor needs to demonstrate the ability to make according to specifications 
 >
 The vendor needs to demonstrate unzipping a .gdz file and how the unpackaged resources are accessible with the FamilySearch GEDCOM Compatible product that was used to unzip the file and how the multimedia links do point to both included local and online resources.
 
-Compatibility Categories
+## Compatibility Categories
 
 Like [FamilySearch API compatibility](https://www.familysearch.org/developers/docs/certification), FamilySearch GEDCOM file compatibility can be broken down into several categories.
 
