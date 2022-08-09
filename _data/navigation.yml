@@ -21,6 +21,8 @@ specs:
 tools:
    - title: "Tools"
      children:
+       - title: "Developer tools"
+         url: "/tools/"
 guides:
    - title: "Guides"
      children:
