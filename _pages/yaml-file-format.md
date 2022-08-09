@@ -55,8 +55,6 @@ The valid `type`s are
 - `datatype`
 - `uri`
 
-    > **Question**: is `uri` noted here better than the existing `legacy` for registering non-tagged URIs like EXID.TYPEs?
-
 | Key | Value Type | Required by `type` | Permitted by `type` |
 |-----|------------|-------------|--------------|
 | `calendars` | `seq` of *uri* | `month` | |
