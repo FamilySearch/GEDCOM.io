@@ -325,6 +325,6 @@ Thus, this 5.5.1:
 
 must be converted to
 ```
-2 DATE BET 1880 and 1900
+2 DATE BET 1880 AND 1900
 ```
 to be legal in 7.0.
