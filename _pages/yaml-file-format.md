@@ -169,7 +169,7 @@ Notes about specific items follow:
 
 - `used by` lists structure types that are known to use this concepts as an enumeration value.
     
-    The list may be incomplete, as a new structure type might be defined re-uses and existing enumeration value.
+    The list may be incomplete, as a new structure type might be defined that re-uses an existing enumeration value.
 
     > **Question**: Should <https://gedcom.io/terms/v7/CHR> have a `used by` entry with <https://gedcom.io/terms/v7/NO> and <https://gedcom.io/terms/v7/SOUR-EVEN> in the list? If not, is there another way to denote that relationship? If so, should we rename "`used by`" to a more descriptive phrase like "`enumerated by`" or "`enumeration value of`"?
 
