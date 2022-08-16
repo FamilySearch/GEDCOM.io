@@ -301,3 +301,30 @@ differs from the meaning of a single part with a concatenated larger payload suc
 ```
 
 but applications might use the difference to express at least a user preference.
+
+## Date Ranges
+
+GEDCOM 5.5.1 defined the ability to specify date ranges with `BET <DATE> AND <DATE>` but
+simply defined the semantics without any explicit constraint on order:
+```
+BET = Event happened some time between date 1 AND date 2. For example, bet 1904 and 1915
+      indicates that the event state (perhaps a single day) existed somewhere between 1904 and
+      1915 inclusive.
+```
+
+FamilySearch GEDCOM 7.0 on the other hand explicitly defines the semantics as
+```
+BET x Exact date unknown, but no earlier than x.
+AND x Exact date unknown, but no later than x.
+```
+
+Thus, this 5.5.1:
+```
+2 DATE BET 1900 AND 1880
+```
+
+must be converted to
+```
+2 DATE BET 1880 AND 1900
+```
+to be legal in 7.0.
