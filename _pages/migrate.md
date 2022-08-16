@@ -320,7 +320,7 @@ AND x Exact date unknown, but no later than x.
 
 Thus, this 5.5.1:
 ```
-2 DATE BET 1900 and 1880
+2 DATE BET 1900 AND 1880
 ```
 
 must be converted to
