@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-FOSTER
@@ -18,6 +20,9 @@ standard tag: FOSTER
 
 descriptions:
   - The child was included in a foster or guardian family
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-PEDI"
 ...
 
 ```

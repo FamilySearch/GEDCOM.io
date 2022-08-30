@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: calendar
 
 uri: https://gedcom.io/terms/v7/cal-HEBREW
@@ -67,6 +69,21 @@ descriptions:
     No epoch marker is permitted in this calendar.
     
     The URI for this calendar is https://gedcom.io/terms/v7/cal-HEBREW
+
+months:
+  - "https://gedcom.io/terms/v7/month-TSH"
+  - "https://gedcom.io/terms/v7/month-CSH"
+  - "https://gedcom.io/terms/v7/month-KSL"
+  - "https://gedcom.io/terms/v7/month-TVT"
+  - "https://gedcom.io/terms/v7/month-SHV"
+  - "https://gedcom.io/terms/v7/month-ADR"
+  - "https://gedcom.io/terms/v7/month-ADS"
+  - "https://gedcom.io/terms/v7/month-NSN"
+  - "https://gedcom.io/terms/v7/month-IYR"
+  - "https://gedcom.io/terms/v7/month-SVN"
+  - "https://gedcom.io/terms/v7/month-TMZ"
+  - "https://gedcom.io/terms/v7/month-AAV"
+  - "https://gedcom.io/terms/v7/month-ELL"
 ...
 
 ```

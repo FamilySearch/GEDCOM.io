@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/NAME-TYPE
@@ -18,18 +20,12 @@ standard tag: TYPE
 
 descriptions:
   - Type
-  - An enumerated value indicating the type of the name.
+  - An enumerated value from set https://gedcom.io/terms/v7/enumset-NAME-TYPE
+    indicating the type of the name.
 
 payload: https://gedcom.io/terms/v7/type-Enum
 
-enumeration values:
-  AKA: https://gedcom.io/terms/v7/enum-AKA
-  BIRTH: https://gedcom.io/terms/v7/enum-BIRTH
-  IMMIGRANT: https://gedcom.io/terms/v7/enum-IMMIGRANT
-  MAIDEN: https://gedcom.io/terms/v7/enum-MAIDEN
-  MARRIED: https://gedcom.io/terms/v7/enum-MARRIED
-  OTHER: https://gedcom.io/terms/v7/enum-OTHER
-  PROFESSIONAL: https://gedcom.io/terms/v7/enum-PROFESSIONAL
+enumeration set: "https://gedcom.io/terms/v7/enumset-NAME-TYPE"
 
 substructures:
   "https://gedcom.io/terms/v7/PHRASE": "{0:1}"

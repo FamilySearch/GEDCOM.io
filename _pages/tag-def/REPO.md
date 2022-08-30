@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/REPO
@@ -26,7 +28,7 @@ descriptions:
     number of the source at that repository. The call number of that source
     should be recorded using a CALN substructure.
 
-payload: @<XREF:REPO>@
+payload: "@<https://gedcom.io/terms/v7/record-REPO>@"
 
 substructures:
   "https://gedcom.io/terms/v7/CALN": "{0:M}"

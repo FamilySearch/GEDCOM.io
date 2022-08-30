@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/DESI
@@ -21,9 +23,9 @@ descriptions:
   - Indicates an interest in research to identify additional descendants of
     this individual. See also ANCI.
 
-payload: @<XREF:SUBM>@
+payload: "@<https://gedcom.io/terms/v7/record-SUBM>@"
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"

@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: datatype
+lang: en-US
+
+type: data type
 
 uri: https://gedcom.io/terms/v7/type-Name
 
@@ -33,7 +35,7 @@ descriptions:
     specification does not provide any standard way of representing names that
     contain U+002F.
     
-    The URI for the PersonalName datatype is
+    The URI for the PersonalName data type is
     https://gedcom.io/terms/v7/type-Name.
 ...
 

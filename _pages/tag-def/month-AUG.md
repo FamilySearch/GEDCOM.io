@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: enumeration
+lang: en-US
+
+type: month
 
 uri: https://gedcom.io/terms/v7/month-AUG
 
@@ -18,6 +20,10 @@ standard tag: AUG
 
 descriptions:
   - August
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-GREGORIAN"
+  - "https://gedcom.io/terms/v7/cal-JULIAN"
 ...
 
 ```

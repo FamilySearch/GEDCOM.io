@@ -10,7 +10,7 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: legacy
+type: uri
 
 uri: https://gedcom.io/terms/v7/AFN
 

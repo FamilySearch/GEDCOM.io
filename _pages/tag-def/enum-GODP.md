@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-GODP
@@ -18,6 +20,9 @@ standard tag: GODP
 
 descriptions:
   - Godparent or related role in other religions
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ROLE"
 ...
 
 ```

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-VIDEO
@@ -18,6 +20,9 @@ standard tag: VIDEO
 
 descriptions:
   - Motion picture recording
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-MEDI"
 ...
 
 ```

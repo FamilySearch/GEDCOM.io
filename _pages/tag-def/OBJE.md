@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/OBJE
@@ -28,7 +30,7 @@ descriptions:
     The optional TITL substructure supersedes any OBJE.FILE.TITL substructures
     included in the MULTIMEDIA_RECORD.
 
-payload: @<XREF:OBJE>@
+payload: "@<https://gedcom.io/terms/v7/record-OBJE>@"
 
 substructures:
   "https://gedcom.io/terms/v7/CROP": "{0:1}"

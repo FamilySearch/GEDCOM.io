@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/SNOTE
@@ -21,9 +23,9 @@ descriptions:
   - A pointer to a note that is shared by multiple structures. See
     NOTE_STRUCTURE for more.
 
-payload: @<XREF:SNOTE>@
+payload: "@<https://gedcom.io/terms/v7/record-SNOTE>@"
 
-substructures: []
+substructures: {}
 
 superstructures:
   "HEAD pseudostructure": "{0:1}"

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/MIME
@@ -68,7 +70,7 @@ descriptions:
 
 payload: http://www.w3.org/ns/dcat#mediaType
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/NOTE": "{0:1}"

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-ADOP-WIFE
@@ -18,6 +20,9 @@ standard tag: WIFE
 
 descriptions:
   - Adopted by the WIFE of the FAM pointed to by FAMC.
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ADOP"
 ...
 
 ```

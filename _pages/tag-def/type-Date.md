@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: datatype
+lang: en-US
+
+type: data type
 
 uri: https://gedcom.io/terms/v7/type-Date
 
@@ -20,7 +22,7 @@ descriptions:
     approximate dates, date periods, and dates expressed in different
     calendars.
     
-    Technically, there are 3 distinct date datatypes:
+    Technically, there are 3 distinct date data types:
     
     -   DateValue is a generic type that can express many kinds of dates.
     -   DateExact is used for timestamps and other fully-known dates.
@@ -111,12 +113,13 @@ descriptions:
         2 DATE
         3 PHRASE 5 January (year unknown)
     
-    The URI for the DateValue datatype is https://gedcom.io/terms/v7/type-Date.
+    The URI for the DateValue data type is
+    https://gedcom.io/terms/v7/type-Date.
     
-    The URI for the DateExact datatype is
+    The URI for the DateExact data type is
     https://gedcom.io/terms/v7/type-Date#exact.
     
-    The URI for the DatePeriod datatype is
+    The URI for the DatePeriod data type is
     https://gedcom.io/terms/v7/type-Date#period.
 ...
 

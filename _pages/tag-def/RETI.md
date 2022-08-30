@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/RETI
@@ -49,6 +51,10 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-EVEN"
+  - "https://gedcom.io/terms/v7/g7:enumset-EVENATTR"
 ...
 
 ```

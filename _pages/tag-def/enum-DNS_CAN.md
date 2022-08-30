@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-DNS_CAN
@@ -17,7 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-DNS_CAN
 standard tag: DNS_CAN
 
 descriptions:
+  - "Applies to: SLGS"
   - This ordinance is not authorized, and the previous ordinance is cancelled.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

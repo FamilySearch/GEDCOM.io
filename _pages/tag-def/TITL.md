@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/TITL
@@ -47,12 +49,15 @@ descriptions:
 
 payload: http://www.w3.org/2001/XMLSchema#string
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/FILE": "{0:1}"
   "https://gedcom.io/terms/v7/OBJE": "{0:1}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-EVENATTR"
 ...
 
 ```

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-06-07" />
+  <meta name="dcterms.date" content="2022-08-30" />
   <title>The FamilySearch GEDCOM Specification</title>
   <style>
     code{white-space: pre-wrap;}
@@ -81,7 +81,7 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @page {
     @top-left { content: "The FamilySearch GEDCOM Specification"; font-size: 70%; }
-    @top-right { content: "7.0.9"; font-size: 70%; }
+    @top-right { content: "7.0.10"; font-size: 70%; }
     }
   </style>
   <style type="text/css">
@@ -442,7 +442,7 @@ code .sc { color: #2879a4 !important; }
 
 <header>
 <h1 class="title">The FamilySearch GEDCOM Specification</h1>
-<h3 class="subtitle">7.0.9</h3>
+<h3 class="subtitle">7.0.10</h3>
 
 <div class="author">
 <p>Prepared by the</p>
@@ -451,7 +451,7 @@ code .sc { color: #2879a4 !important; }
 </div>
 </div>
 
-<p class="date"> 7 June 2022</p>
+<p class="date">30 August 2022</p>
 
 <div class="contact">
 <strong>Suggestions and Correspondence:</strong>
@@ -487,72 +487,72 @@ GEDCOM@FamilySearch.org
 <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Contents</h2>
 <ul>
-<li><a href="#introduction">Introduction</a>
+<li><a href="#introduction" id="toc-introduction">Introduction</a>
 <ul>
-<li><a href="#purpose-and-content-of-the-familysearch-gedcom-specification">Purpose and Content of <em>The FamilySearch GEDCOM Specification</em></a></li>
-<li><a href="#purpose-for-version-7.x">Purpose for Version 7.x</a></li>
-<li><a href="#a-guide-to-version-numbers">A Guide to Version Numbers</a></li>
-<li><a href="#uris-and-prefix-notation">URIs and Prefix Notation</a></li>
+<li><a href="#purpose-and-content-of-the-familysearch-gedcom-specification" id="toc-purpose-and-content-of-the-familysearch-gedcom-specification">Purpose and Content of <em>The FamilySearch GEDCOM Specification</em></a></li>
+<li><a href="#purpose-for-version-7.x" id="toc-purpose-for-version-7.x">Purpose for Version 7.x</a></li>
+<li><a href="#a-guide-to-version-numbers" id="toc-a-guide-to-version-numbers">A Guide to Version Numbers</a></li>
+<li><a href="#uris-and-prefix-notation" id="toc-uris-and-prefix-notation">URIs and Prefix Notation</a></li>
 </ul></li>
-<li><a href="#container"><span class="toc-section-number">1</span> Hierarchical container format</a>
+<li><a href="#container" id="toc-container"><span class="toc-section-number">1</span> Hierarchical container format</a>
 <ul>
-<li><a href="#characters"><span class="toc-section-number">1.1</span> Characters</a></li>
-<li><a href="#structures"><span class="toc-section-number">1.2</span> Structures</a></li>
-<li><a href="#lines"><span class="toc-section-number">1.3</span> Lines</a></li>
-<li><a href="#the-header"><span class="toc-section-number">1.4</span> The Header and Trailer</a></li>
-<li><a href="#extensions"><span class="toc-section-number">1.5</span> Extensions</a>
+<li><a href="#characters" id="toc-characters"><span class="toc-section-number">1.1</span> Characters</a></li>
+<li><a href="#structures" id="toc-structures"><span class="toc-section-number">1.2</span> Structures</a></li>
+<li><a href="#lines" id="toc-lines"><span class="toc-section-number">1.3</span> Lines</a></li>
+<li><a href="#the-header" id="toc-the-header"><span class="toc-section-number">1.4</span> The Header and Trailer</a></li>
+<li><a href="#extensions" id="toc-extensions"><span class="toc-section-number">1.5</span> Extensions</a>
 <ul>
-<li><a href="#extension-tags"><span class="toc-section-number">1.5.1</span> Extension Tags</a></li>
-<li><a href="#requirements-and-recommendations"><span class="toc-section-number">1.5.2</span> Requirements and Recommendations</a></li>
-<li><a href="#extension-versus-standard"><span class="toc-section-number">1.5.3</span> Extension versus Standard</a></li>
+<li><a href="#extension-tags" id="toc-extension-tags"><span class="toc-section-number">1.5.1</span> Extension Tags</a></li>
+<li><a href="#requirements-and-recommendations" id="toc-requirements-and-recommendations"><span class="toc-section-number">1.5.2</span> Requirements and Recommendations</a></li>
+<li><a href="#extension-versus-standard" id="toc-extension-versus-standard"><span class="toc-section-number">1.5.3</span> Extension versus Standard</a></li>
 </ul></li>
-<li><a href="#removing-data"><span class="toc-section-number">1.6</span> Removing data</a></li>
+<li><a href="#removing-data" id="toc-removing-data"><span class="toc-section-number">1.6</span> Removing data</a></li>
 </ul></li>
-<li><a href="#datatypes"><span class="toc-section-number">2</span> Data types</a>
+<li><a href="#datatypes" id="toc-datatypes"><span class="toc-section-number">2</span> Data types</a>
 <ul>
-<li><a href="#text"><span class="toc-section-number">2.1</span> Text</a></li>
-<li><a href="#integer"><span class="toc-section-number">2.2</span> Integer</a></li>
-<li><a href="#enumeration"><span class="toc-section-number">2.3</span> Enumeration</a></li>
-<li><a href="#date"><span class="toc-section-number">2.4</span> Date</a></li>
-<li><a href="#time"><span class="toc-section-number">2.5</span> Time</a></li>
-<li><a href="#age"><span class="toc-section-number">2.6</span> Age</a></li>
-<li><a href="#list"><span class="toc-section-number">2.7</span> List</a></li>
-<li><a href="#personal-name"><span class="toc-section-number">2.8</span> Personal Name</a></li>
-<li><a href="#language"><span class="toc-section-number">2.9</span> Language</a></li>
-<li><a href="#media-type"><span class="toc-section-number">2.10</span> Media Type</a></li>
-<li><a href="#special"><span class="toc-section-number">2.11</span> Special</a></li>
+<li><a href="#text" id="toc-text"><span class="toc-section-number">2.1</span> Text</a></li>
+<li><a href="#integer" id="toc-integer"><span class="toc-section-number">2.2</span> Integer</a></li>
+<li><a href="#enumeration" id="toc-enumeration"><span class="toc-section-number">2.3</span> Enumeration</a></li>
+<li><a href="#date" id="toc-date"><span class="toc-section-number">2.4</span> Date</a></li>
+<li><a href="#time" id="toc-time"><span class="toc-section-number">2.5</span> Time</a></li>
+<li><a href="#age" id="toc-age"><span class="toc-section-number">2.6</span> Age</a></li>
+<li><a href="#list" id="toc-list"><span class="toc-section-number">2.7</span> List</a></li>
+<li><a href="#personal-name" id="toc-personal-name"><span class="toc-section-number">2.8</span> Personal Name</a></li>
+<li><a href="#language" id="toc-language"><span class="toc-section-number">2.9</span> Language</a></li>
+<li><a href="#media-type" id="toc-media-type"><span class="toc-section-number">2.10</span> Media Type</a></li>
+<li><a href="#special" id="toc-special"><span class="toc-section-number">2.11</span> Special</a></li>
 </ul></li>
-<li><a href="#gedcom-structures"><span class="toc-section-number">3</span> Genealogical structures</a>
+<li><a href="#gedcom-structures" id="toc-gedcom-structures"><span class="toc-section-number">3</span> Genealogical structures</a>
 <ul>
-<li><a href="#a-metasyntax-for-structure-organization"><span class="toc-section-number">3.1</span> A Metasyntax for Structure Organization</a></li>
-<li><a href="#structure-organization"><span class="toc-section-number">3.2</span> Structure Organization</a>
+<li><a href="#a-metasyntax-for-structure-organization" id="toc-a-metasyntax-for-structure-organization"><span class="toc-section-number">3.1</span> A Metasyntax for Structure Organization</a></li>
+<li><a href="#structure-organization" id="toc-structure-organization"><span class="toc-section-number">3.2</span> Structure Organization</a>
 <ul>
-<li><a href="#document"><span class="toc-section-number">3.2.1</span> Document</a></li>
-<li><a href="#records"><span class="toc-section-number">3.2.2</span> Records</a></li>
-<li><a href="#substructures"><span class="toc-section-number">3.2.3</span> Substructures</a></li>
+<li><a href="#document" id="toc-document"><span class="toc-section-number">3.2.1</span> Document</a></li>
+<li><a href="#records" id="toc-records"><span class="toc-section-number">3.2.2</span> Records</a></li>
+<li><a href="#substructures" id="toc-substructures"><span class="toc-section-number">3.2.3</span> Substructures</a></li>
 </ul></li>
-<li><a href="#structure-meaning"><span class="toc-section-number">3.3</span> Structure Meaning</a>
+<li><a href="#structure-meaning" id="toc-structure-meaning"><span class="toc-section-number">3.3</span> Structure Meaning</a>
 <ul>
-<li><a href="#events"><span class="toc-section-number">3.3.1</span> Events</a></li>
-<li><a href="#attributes"><span class="toc-section-number">3.3.2</span> Attributes</a></li>
-<li><a href="#latter-day-saint-ordinances"><span class="toc-section-number">3.3.3</span> Latter-day Saint Ordinances</a></li>
-<li><a href="#structure-types"><span class="toc-section-number">3.3.4</span> Structure types</a></li>
+<li><a href="#events" id="toc-events"><span class="toc-section-number">3.3.1</span> Events</a></li>
+<li><a href="#attributes" id="toc-attributes"><span class="toc-section-number">3.3.2</span> Attributes</a></li>
+<li><a href="#latter-day-saint-ordinances" id="toc-latter-day-saint-ordinances"><span class="toc-section-number">3.3.3</span> Latter-day Saint Ordinances</a></li>
+<li><a href="#structure-types" id="toc-structure-types"><span class="toc-section-number">3.3.4</span> Structure types</a></li>
 </ul></li>
-<li><a href="#enumeration-values"><span class="toc-section-number">3.4</span> Enumeration Values</a></li>
+<li><a href="#enumeration-values" id="toc-enumeration-values"><span class="toc-section-number">3.4</span> Enumeration Values</a></li>
 </ul></li>
-<li><a href="#gedzip"><span class="toc-section-number">4</span> The FamilySearch GEDZIP file format</a></li>
-<li><a href="#contributors"><span class="toc-section-number">5</span> Contributors</a></li>
-<li><a href="#A-calendars"><span class="toc-section-number">6</span> Appendix A: Known Calendars and Dates</a>
+<li><a href="#gedzip" id="toc-gedzip"><span class="toc-section-number">4</span> The FamilySearch GEDZIP file format</a></li>
+<li><a href="#contributors" id="toc-contributors"><span class="toc-section-number">5</span> Contributors</a></li>
+<li><a href="#A-calendars" id="toc-A-calendars"><span class="toc-section-number">6</span> Appendix A: Known Calendars and Dates</a>
 <ul>
-<li><a href="#known-calendars"><span class="toc-section-number">6.1</span> Known Calendars</a>
+<li><a href="#known-calendars" id="toc-known-calendars"><span class="toc-section-number">6.1</span> Known Calendars</a>
 <ul>
-<li><a href="#GREGORIAN"><code>GREGORIAN</code></a></li>
-<li><a href="#JULIAN"><code>JULIAN</code></a></li>
-<li><a href="#FRENCH_R"><code>FRENCH_R</code></a></li>
-<li><a href="#HEBREW"><code>HEBREW</code></a></li>
+<li><a href="#GREGORIAN" id="toc-GREGORIAN"><code>GREGORIAN</code></a></li>
+<li><a href="#JULIAN" id="toc-JULIAN"><code>JULIAN</code></a></li>
+<li><a href="#FRENCH_R" id="toc-FRENCH_R"><code>FRENCH_R</code></a></li>
+<li><a href="#HEBREW" id="toc-HEBREW"><code>HEBREW</code></a></li>
 </ul></li>
-<li><a href="#dual-dates"><span class="toc-section-number">6.2</span> Dual dates</a></li>
-<li><a href="#calendars-in-date-ranges-and-date-periods"><span class="toc-section-number">6.3</span> Calendars in date ranges and date periods</a></li>
+<li><a href="#dual-dates" id="toc-dual-dates"><span class="toc-section-number">6.2</span> Dual dates</a></li>
+<li><a href="#calendars-in-date-ranges-and-date-periods" id="toc-calendars-in-date-ranges-and-date-periods"><span class="toc-section-number">6.3</span> Calendars in date ranges and date periods</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -681,6 +681,21 @@ GEDCOM@FamilySearch.org
 <h2 data-number="1.2" id="structures"><span class="header-section-number">1.2</span> Structures</h2>
 <p>A <strong>structure</strong> consists of a structure type, an optional <strong>payload</strong>, and a collection of substructures. The payload is a value expressed as a string using 1 of several data types, as described in <a href="#datatypes">Chapter 2</a>.</p>
 <p>Every structure is either a <strong>record</strong>, meaning it is not contained in any other structure’s collection of substructures, or it is a <strong>substructure</strong> of exactly 1 other structure. The other structure is called its <strong>superstructure</strong>. Each substructure either refines the meaning of its superstructure, provides metadata about its superstructure, or introduces new data that is closely related to its superstructure.</p>
+<p>Each <strong>structure type</strong> is identified by a URI and defines several properties of any structure with that type, including</p>
+<ul>
+<li><p>The meaning of structures of this type.</p></li>
+<li><p>The payload type of the structure’s payload, which shall be one of</p>
+<ul>
+<li>no payload, or</li>
+<li>a pointer to a record with a specific structure type, or</li>
+<li>a <a href="#datatypes">data type</a>; if an <a href="#enumeration">enumeration</a> or <a href="#list">list of enumerations</a>, also a set of permitted enumeration values.</li>
+</ul></li>
+<li><p>Which structure types may appear as substructures of the structure and with what <strong>cardinality</strong> they may appear. Cardinality is specified by two flags:</p>
+<ul>
+<li>whether a substructure of this type is required or not; and</li>
+<li>whether multiple substructures of this type are permitted or not.</li>
+</ul></li>
+</ul>
 <p>The collection of substructures is partially ordered. Substructures with the same structure type are in a fixed order, but substructures with different structure types may be reordered. The order of substructures of a single type indicates user preference, with the first substructure being the most-preferred value, unless a different meaning is explicitly indicated in the structure’s definition.</p>
 <p>A structure must have either a non-empty payload or at least 1 substructure. Empty payloads and missing payloads are considered equivalent. The remainder of this document uses “payload” as shorthand for “non-empty payload”.</p>
 <div class="note">
@@ -722,7 +737,31 @@ GEDCOM@FamilySearch.org
 <p>The <strong>cross-reference identifier</strong> matches production <a href="#lines" class="close"><code>Xref</code></a> (but not <a href="#lines" class="close"><code>voidPtr</code></a>) and indicates that this is a structure to which pointer-type payloads may point. Each cross-reference identifier must be unique within a given data document. Cross-reference identifiers are not retained between data streams and should not be made visible to the user to avoid them referring to transient data within notes or other durable data.</p>
 <p>Each record to which other structures point must have a cross-reference identifier. A record to which no structures point may have a cross-reference identifier, but does not need to have one. A substructure or pseudo-structure must not have a cross-reference identifier.</p>
 <p>The <strong>tag</strong> matches production <a href="#lines" class="close"><code>Tag</code></a> and encodes the structure’s type. Tags that match the production <a href="#lines" class="close"><code>stdTag</code></a> are defined in this document. Tags that match <a href="#lines" class="close"><code>extTag</code></a> are defined according to <a href="#extensions">Extensions</a>.</p>
-<p>The <strong>line value</strong> matches production <a href="#lines" class="close"><code>LineVal</code></a> and encodes the structure’s payload. Line value content is sufficient to distinguish between pointers and line strings. Pointers are encoded as the cross-reference identifier of the pointed-to structure. Each non-pointer payload may be encoded in 1 or more line strings (line continuations encode multi-line payloads in several line strings). The exact encoding of non-pointer payloads is dependent on the datatype of the payload, as determined by the structure type. The datatype of non-pointer payloads cannot be fully determined by line value content alone.</p>
+<p>The same tag may be used to represent multiple structure types. The structure type of each structure is identified by its tag and the type of its superstructure. The mapping between (superstructure type, tag) pairs and structure types is given elsewhere in this document (for standard structure types and tags) or the [schema] and extension authors’ documentation (for extension structure types and tags).</p>
+<div class="example">
+<p>The tag <a href="#ADOP"><code>ADOP</code></a> is used in this document to represent two structure types. Which one is meant can be identified by the superstructure type as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Superstructure type</th>
+<th>Structure type identified by tag <code>ADOP</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>g7:record-INDI</code></td>
+<td><a href="#ADOP" class="close"><code>g7:ADOP</code></a></td>
+</tr>
+<tr class="even">
+<td><a href="#ADOP-FAMC"><code>g7:ADOP-FAMC</code></a></td>
+<td><a href="#FAMC-ADOP"><code>g7:FAMC-ADOP</code></a></td>
+</tr>
+</tbody>
+</table>
+<p>An <a href="#extensions">extension-defined substructure</a> could also be used to place either of these structure types in extension superstructures.</p>
+<p>The <a href="#ADOP" class="close"><code>ADOP</code></a> tag is also used in the set of enumerated values permitted by the <a href="#DATA-EVEN"><code>g7:DATA-EVEN</code></a>, <a href="#SOUR-EVEN"><code>g7:SOUR-EVEN</code></a>, and <a href="#NO"><code>g7:NO</code></a> structure types.</p>
+</div>
+<p>The <strong>line value</strong> matches production <a href="#lines"><code>LineVal</code></a> and encodes the structure’s payload. Line value content is sufficient to distinguish between pointers and line strings. Pointers are encoded as the cross-reference identifier of the pointed-to structure. Each non-pointer payload may be encoded in 1 or more line strings (line continuations encode multi-line payloads in several line strings). The exact encoding of non-pointer payloads is dependent on the data type of the payload, as determined by the structure type. The data type of non-pointer payloads cannot be fully determined by line value content alone.</p>
 <p>Note that production <a href="#lines" class="close"><code>LineVal</code></a> does not match the empty string. Because empty payloads and missing payloads are considered equivalent, both a structure with no payload and a structure with the empty string as its payload are encoded with no <a href="#lines" class="close"><code>LineVal</code></a> and no space after the <a href="#lines" class="close"><code>Tag</code></a>.</p>
 <div class="example">
 <p>The payload of a <code>MARR</code> structure has type <code>[Y|&lt;NULL&gt;]</code>, which is optional but if present cannot be the empty string. The payload of a <code>EVEN</code> structure has type <a href="#text"><code>Text</code></a>, which is not optional but can be the empty string. The <a href="#lines" class="close"><code>Line</code></a> encoding a no-payload <a href="#MARR"><code>MARR</code></a> is “<code>1 MARR</code>” and the <a href="#lines" class="close"><code>Line</code></a> encoding an empty-payload <code>EVEN</code> is “<code>1 EVEN</code>”; both <a href="#lines" class="close"><code>Line</code></a>s have no <a href="#lines" class="close"><code>LineVal</code></a> and no trailing space.</p>
@@ -773,6 +812,7 @@ GEDCOM@FamilySearch.org
 <p>A <strong>standard structure</strong> is a structure whose type, tag, meaning, superstructure, and cardinality within the superstructure are described in this document. This includes records such as <code>INDI</code> and substructures such as <a href="#INDI-NAME"><code>INDI</code>.<code>NAME</code></a>.</p>
 <p>The recommended way to go beyond the set of standard structure types in this specification or to expand their usage is to submit a feature request on the <a href="https://github.com/FamilySearch/GEDCOM/issues">FamilySearch GEDCOM development page</a> so that the ramifications of the proposed addition and its interplay with other proposals may be discussed and the addition may be included in a subsequent version of this specification.</p>
 <p>This specification also provides multiple ways for extension authors to go beyond the specification without submitting a feature request, which are described in the remainder of this section.</p>
+<p>Extensions can introduce new structure types, new enumeration values, new calendars with their associated months, and new data types. They can also extend existing structures with new permitted substructure types and extend existing enumeration-type payloads with new permitted values. Extensions cannot change existing meanings, cardinalities, or calendars.</p>
 <p>A <strong>tagged extension structure</strong> is a structure whose tag matches production <a href="#lines"><code>extTag</code></a>. Tagged extension structures may appear as records or substructures of any other structure. Their meaning is defined by their tag, as is discussed more fully in the section <a href="#extension-tags">Extension Tags</a>.</p>
 <p>Any substructure of a tagged extension structure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> is an <strong>extension-defined substructure</strong>. Substructures of an extension-defined substructure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> are also extension-defined substructures. The meaning and use of each extension-defined substructure is defined by the tagged extension structure it occurs within, not by its tag alone nor by this specification.</p>
 <div class="example">
@@ -789,7 +829,7 @@ GEDCOM@FamilySearch.org
 <li>Both uses of <code>_LOC</code> are tagged extension structures, as is <code>_POP</code>.</li>
 <li><code>_LOC</code>.<code>NAME</code> and <code>_LOC</code>.<code>NAME</code>.<code>DATE</code> are both extension-defined substructures. Their meaning is defined by the specification defining <code>_LOC</code>.</li>
 <li><code>_POP</code>.<code>DATE</code> is an extension-defined substructure. Its meaning is defined by the specification defining <code>_POP</code>.</li>
-<li>Even though both <a href="#DATE"><code>DATE</code></a>s appear to have <code>g7:type-DATE</code> payloads, we can’t know that is the intended datatype without consulting the defining specifications of <code>_LOC</code> and <code>_POP</code>, respectively. The first might be a <code>g7:type-DATE#period</code> and the second a <code>g7:type-DATE#exact</code>, for example.</li>
+<li>Even though both <a href="#DATE"><code>DATE</code></a>s appear to have <code>g7:type-DATE</code> payloads, we can’t know that is the intended data type without consulting the defining specifications of <code>_LOC</code> and <code>_POP</code>, respectively. The first might be a <code>g7:type-DATE#period</code> and the second a <code>g7:type-DATE#exact</code>, for example.</li>
 </ul>
 </div>
 <p>If an extension-defined substructure has a tag that is also used by one or more standard structures, its meaning and payload type should match at least one of those standard structure types.</p>
@@ -870,8 +910,9 @@ GEDCOM@FamilySearch.org
 </tr>
 </tbody>
 </table>
+<p>Note that at the time of writing, the <a href="https://xmlns.com/foaf/spec/20140114.html">FOAF</a> URIs used in this example are not URLs.</p>
 </div>
-<p>The meaning of a documented extension tag is identified by its URI, not its tag. Documented extension tags can be changed freely by modifying the schema, though it is recommended that documented extension tags not be changed. However, a tag change may be necessary if a product picks the same tags for URIs that another product uses for different URIs.</p>
+<p>The meaning of a documented extension tag is identified by its superstructure type and its URI, not its tag. As such each documented extension tag needs its own URI: it is its URI, not its tag, that defines its meaning. Documented extension tags can be changed freely by modifying the schema, though it is recommended that documented extension tags not be changed. However, a tag change may be necessary if a product picks the same tags for URIs that another product uses for different URIs. A given schema should map only one tag to each URI.</p>
 <div class="example">
 <p>The following 2 document fragments are semantically equivalent and a system importing one may export it as the other without change of meaning.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="fu">HEAD</span></span>
@@ -885,7 +926,12 @@ GEDCOM@FamilySearch.org
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@I0@ </span><span class="fu">INDI</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="dt">1 </span><span class="fu">_SI </span>example.person</span></code></pre></div>
 </div>
-<p>An extension tag that is not given a URI in the schema structure is called an <strong>undocumented extension tag</strong>. The meaning of an undocumented extension tag is identified by its tag.</p>
+<p>It is recommended that the URIs used for documented extension tags be URLs that can be used to access documentation for the meaning of the tag.</p>
+<div class="note">
+<p>The W3C has an <a href="http://www.w3.org/TR/cooluris/">interest group note</a> that discusses several ways of achieving this URI/URL mapping, including how a single webpage can describe multiple tags using either HTTP redirects (which requires some server setup) or what they call “Hash URIs” (which require no setup).</p>
+<p>That interest group note also explains why it might be desirable to have a separate URIs for a concept and the document describing that concept. Because of the structure of the schema, that separation is less important for FamilySearch GEDCOM 7 than it is for the semantic web, but it remains good advice where feasible.</p>
+</div>
+<p>An extension tag that is not given a URI in the schema structure is called an <strong>undocumented extension tag</strong>. The meaning of an undocumented extension tag is identified by its superstructure type and its tag.</p>
 <h3 data-number="1.5.2" id="requirements-and-recommendations"><span class="header-section-number">1.5.2</span> Requirements and Recommendations</h3>
 <ul>
 <li>It is recommended that applications not use undocumented extension tags.</li>
@@ -924,7 +970,7 @@ GEDCOM@FamilySearch.org
 <p>There may be situations where data needs to be removed from a dataset, such as when a user requests its deletion or marks it as confidential and not for export.</p>
 <p>In general, removed data should result in removed structures.</p>
 <p>Pointers to a removed structure should be replaced with <a href="#lines"><code>voidPtr</code></a>s.</p>
-<p>If removal of a structure makes the superstructure invalid because the superstructure required the substructure, the structure should instead be retained and have its payload changed to a <a href="#lines" class="close"><code>voidPtr</code></a> if a pointer, or to a datatype-appropriate empty value if a non-pointer.</p>
+<p>If removal of a structure makes the superstructure invalid because the superstructure required the substructure, the structure should instead be retained and have its payload changed to a <a href="#lines" class="close"><code>voidPtr</code></a> if a pointer, or to a data type-appropriate empty value if a non-pointer.</p>
 <p>If removing a structure leaves its superstructure with no payload and no substructures, the superstructure should also be removed.</p>
 <p>A structure can also be removed if it provides no new information. For example,</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@I1@ </span><span class="fu">INDI</span></span>
@@ -939,26 +985,54 @@ GEDCOM@FamilySearch.org
 <div class="sourceCode" id="cb16"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@I1@ </span><span class="fu">INDI</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dt">1 </span><span class="fu">NAME </span>John /Doe/</span></code></pre></div>
 <h1 data-number="2" id="datatypes"><span class="header-section-number">2</span> Data types</h1>
-<p>Every line value (with any continuation pseudo-structures) is a string. However, those strings can encode 1 of several conceptual datatypes.</p>
+<p>Every line value (with any continuation pseudo-structures) is a string. However, those strings can encode 1 of several conceptual data types.</p>
 <h2 data-number="2.1" id="text"><span class="header-section-number">2.1</span> Text</h2>
 <p>A free-text string is text in a human language. Conceptually, it may be either a user-generated string or a source-generated string. Programmatically, both are treated as unconstrained sequences of characters with an associated language.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="va">anychar</span> <span class="cf">=</span> <span class="ch">%x09-10FFFF</span> <span class="co">; but not banned, as with all ABNF rules</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="va">Text</span>    <span class="cf">=</span> <span class="cf">*</span>anychar</span></code></pre></div>
-<p>The URI for the <a href="#text" class="close"><code>Text</code></a> datatype is <code>xsd:string</code>.</p>
+<p>The URI for the <a href="#text" class="close"><code>Text</code></a> data type is <code>xsd:string</code>.</p>
 <h2 data-number="2.2" id="integer"><span class="header-section-number">2.2</span> Integer</h2>
 <p>An integer is a non-empty sequence of ASCII decimal digits and represents a non-negative integer in base-10. Leading zeros have no semantic meaning and should be omitted.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="va">Integer</span> <span class="cf">=</span> <span class="cf">1*</span>digit</span></code></pre></div>
 <p>Negative integers are not supported by this specification.</p>
-<p>The URI for the <a href="#integer" class="close"><code>Integer</code></a> datatype is <code>xsd:nonNegativeInteger</code>.</p>
+<p>The URI for the <a href="#integer" class="close"><code>Integer</code></a> data type is <code>xsd:nonNegativeInteger</code>.</p>
 <h2 data-number="2.3" id="enumeration"><span class="header-section-number">2.3</span> Enumeration</h2>
 <p>An enumeration is a selection from a set of options. They are represented as a string matching the same production as a tag.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">Enum</span>    <span class="cf">=</span> Tag</span></code></pre></div>
 <p>Each structure type with an enumeration payload also defines specific payload values it permits. These permitted payloads match production <a href="#lines"><code>stdTag</code></a> and should each have a defined URI. Payload values that match production <a href="#lines" class="close"><code>extTag</code></a> are always permitted in structures with an enumeration payload and have their URI defined by the schema.</p>
 <p>Each enumeration value has a distinct meaning as identified by its corresponding URI.</p>
-<p>The URI for the <a href="#enumeration" class="close"><code>Enum</code></a> datatype is <code>g7:type-Enum</code>.</p>
+<p>The URI of a given tag in an enumeration payload is determined by the tag itself and by the structure type of the structure it is in the payload of.</p>
+<div class="example">
+<p>The tag <a href="#HUSB"><code>HUSB</code></a> is used in this document to represent two enumeration values. Which one is meant can be identified by the structure type it appears in as follows:</p>
+<table>
+
+
+
+
+<thead>
+<tr class="header">
+<th>Containing structure type</th>
+<th>Enumeration value identified by tag <code>HUSB</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="#FAMC-ADOP"><code>g7:FAMC-ADOP</code></a></td>
+<td><code>g7:enum-ADOP-HUSB</code></td>
+</tr>
+<tr class="even">
+<td><a href="#ROLE"><code>g7:ROLE</code></a></td>
+<td><code>g7:enum-HUSB</code></td>
+</tr>
+</tbody>
+</table>
+<p>An <a href="#extensions">extension</a> could also place either of these enumeration values in an extension structure type; the extension authors should document which one they permit.</p>
+<p>The <a href="#HUSB" class="close"><code>HUSB</code></a> tag is also used to identify two different structure types, <a href="#FAM-HUSB"><code>g7:FAM-HUSB</code></a> and <a href="#HUSB" class="close"><code>g7:HUSB</code></a>.</p>
+</div>
+<p>The URI for the <a href="#enumeration"><code>Enum</code></a> data type is <code>g7:type-Enum</code>.</p>
 <h2 data-number="2.4" id="date"><span class="header-section-number">2.4</span> Date</h2>
 <p>The date formats defined in this specification include the ability to store approximate dates, date periods, and dates expressed in different calendars.</p>
-<p>Technically, there are 3 distinct date datatypes:</p>
+<p>Technically, there are 3 distinct date data types:</p>
 <ul>
 <li><a href="#date" class="close"><code>DateValue</code></a> is a generic type that can express many kinds of dates.</li>
 <li><a href="#date" class="close"><code>DateExact</code></a> is used for timestamps and other fully-known dates.</li>
@@ -1053,9 +1127,9 @@ GEDCOM@FamilySearch.org
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="dt">3 </span><span class="fu">PHRASE </span>5 January (year unknown)</span></code></pre></div>
 </div>
 </div>
-<p>The URI for the <a href="#date"><code>DateValue</code></a> datatype is <code>g7:type-Date</code>.</p>
-<p>The URI for the <a href="#date" class="close"><code>DateExact</code></a> datatype is <code>g7:type-Date#exact</code>.</p>
-<p>The URI for the <a href="#date" class="close"><code>DatePeriod</code></a> datatype is <code>g7:type-Date#period</code>.</p>
+<p>The URI for the <a href="#date"><code>DateValue</code></a> data type is <code>g7:type-Date</code>.</p>
+<p>The URI for the <a href="#date" class="close"><code>DateExact</code></a> data type is <code>g7:type-Date#exact</code>.</p>
+<p>The URI for the <a href="#date" class="close"><code>DatePeriod</code></a> data type is <code>g7:type-Date#period</code>.</p>
 <h2 data-number="2.5" id="time"><span class="header-section-number">2.5</span> Time</h2>
 <p>Time is represented on a 24-hour clock (for example, 23:00 rather than 11:00 PM). It may be represented either in event-local time or in Coordinated Universal Time (UTC). UTC is indicated by including a <code>Z</code> (U+005A) after the time value; event-local time is indicated by its absence.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="va">Time</span>     <span class="cf">=</span>  hour <span class="st">&quot;:&quot;</span> minute <span class="cf">[</span><span class="st">&quot;:&quot;</span> second <span class="cf">[</span><span class="st">&quot;.&quot;</span> fraction<span class="cf">]]</span> <span class="cf">[</span><span class="ss">%s&quot;Z&quot;</span><span class="cf">]</span></span>
@@ -1067,7 +1141,7 @@ GEDCOM@FamilySearch.org
 <div class="note">
 <p>The above grammar prohibits end-of-day instant <code>24:00:00</code> and leap-seconds. It allows both <code>02:50</code> and <code>2:50</code> as the same time.</p>
 </div>
-<p>The URI for the <a href="#time" class="close"><code>Time</code></a> datatype is <code>g7:type-Time</code>.</p>
+<p>The URI for the <a href="#time" class="close"><code>Time</code></a> data type is <code>g7:type-Time</code>.</p>
 <h2 data-number="2.6" id="age"><span class="header-section-number">2.6</span> Age</h2>
 <p>Ages are represented by counts of years, months, weeks, and days.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="va">Age</span>         <span class="cf">=</span> <span class="cf">[</span>ageBound D<span class="cf">]</span> ageDuration</span>
@@ -1124,9 +1198,9 @@ GEDCOM@FamilySearch.org
 <div class="note">
 <p>Versions 5.5 and 5.5.1 allowed a few specific phrases inside <a href="#age"><code>Age</code></a> payloads. Age phrases were moved to the <a href="#PHRASE" class="close"><code>PHRASE</code></a> substructure in 7.0.</p>
 </div>
-<p>The URI for the <a href="#age" class="close"><code>Age</code></a> datatype is <code>g7:type-Age</code>.</p>
+<p>The URI for the <a href="#age" class="close"><code>Age</code></a> data type is <code>g7:type-Age</code>.</p>
 <h2 data-number="2.7" id="list"><span class="header-section-number">2.7</span> List</h2>
-<p>A list is a meta-syntax representing a sequence of values with another datatype. Two list datatypes are used in this document: List:Text and List:Enum. Lists are serialized in a comma-separated form, delimited by a comma (U+002C <code>,</code>) and any number of spaces (U+0020) between each item. It is recommended that a comma-space pair (U+002C U+0020) be used as the delimiter.</p>
+<p>A list is a meta-syntax representing a sequence of values with another data type. Two list data types are used in this document: List:Text and List:Enum. Lists are serialized in a comma-separated form, delimited by a comma (U+002C <code>,</code>) and any number of spaces (U+0020) between each item. It is recommended that a comma-space pair (U+002C U+0020) be used as the delimiter.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="va">List</span>      <span class="cf">=</span> listItem <span class="cf">*(</span>listDelim listItem<span class="cf">)</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="va">listItem</span>  <span class="cf">=</span> <span class="st">&quot;&quot;</span> <span class="cf">/</span> nocommasp <span class="cf">/</span> nocommasp <span class="cf">*</span>nocomma nocommasp</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="va">listDelim</span> <span class="cf">=</span> <span class="cf">*</span>D <span class="st">&quot;,&quot;</span> <span class="cf">*</span>D</span>
@@ -1140,8 +1214,8 @@ GEDCOM@FamilySearch.org
 <p>A <code>List:Text</code> with value “<code>, , one, more,</code>” has 5 <a href="#text"><code>Text</code></a>-type values: 2 empty strings, the string “<code>one</code>”, the string “<code>more</code>”, and 1 more empty string.</p>
 </div>
 <p>There is no escaping mechanism to allow lists of entries that begin or end with spaces or that contain comma characters.</p>
-<p>The URI for the <code>List:Text</code> datatype is <code>g7:type-List#Text</code>.</p>
-<p>The URI for the <code>List:Enum</code> datatype is <code>g7:type-List#Enum</code>.</p>
+<p>The URI for the <code>List:Text</code> data type is <code>g7:type-List#Text</code>.</p>
+<p>The URI for the <code>List:Enum</code> data type is <code>g7:type-List#Enum</code>.</p>
 <h2 data-number="2.8" id="personal-name"><span class="header-section-number">2.8</span> Personal Name</h2>
 <p>A personal name is mostly free-text. It should be the name as written in the culture of the individual and should not contain line breaks, repeated spaces, or characters not part of the written form of a name (except for U+002F as explained below).</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="va">PersonalName</span> <span class="cf">=</span> nameStr</span>
@@ -1150,13 +1224,13 @@ GEDCOM@FamilySearch.org
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="va">nameChar</span>     <span class="cf">=</span> <span class="ch">%x20-2E</span> <span class="cf">/</span> <span class="ch">%x30-10FFFF</span>  <span class="co">; any but &#39;/&#39; and &#39;\t&#39;</span></span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="va">nameStr</span>      <span class="cf">=</span> <span class="cf">1*</span>nameChar</span></code></pre></div>
 <p>The character U+002F (<code>/</code>, slash or solidus) has special meaning in a personal name, being used to delimit the portion of the name that most closely matches the concept of a surname, family name, or the like. This specification does not provide any standard way of representing names that contain U+002F.</p>
-<p>The URI for the <a href="#personal-name" class="close"><code>PersonalName</code></a> datatype is <code>g7:type-Name</code>.</p>
+<p>The URI for the <a href="#personal-name" class="close"><code>PersonalName</code></a> data type is <code>g7:type-Name</code>.</p>
 <h2 data-number="2.9" id="language"><span class="header-section-number">2.9</span> Language</h2>
-<p>The language datatype represents a human language or family of related languages, as defined in <a href="https://www.rfc-editor.org/info/bcp47">BCP 46</a>. It consists of a sequence of language subtags separated by hyphens, where language subtags are <a href="https://www.iana.org/assignments/language-subtag-registry">registered by the IANA</a>.</p>
+<p>The language data type represents a human language or family of related languages, as defined in <a href="https://www.rfc-editor.org/info/bcp47">BCP 46</a>. It consists of a sequence of language subtags separated by hyphens, where language subtags are <a href="https://www.iana.org/assignments/language-subtag-registry">registered by the IANA</a>.</p>
 <p>The ABNF grammar for language tags is given in BCP 47, section 2.1, production <code>Language-Tag</code>.</p>
-<p>The URI for the <code>Language</code> datatype is <code>xsd:Language</code>.</p>
+<p>The URI for the <code>Language</code> data type is <code>xsd:Language</code>.</p>
 <h2 data-number="2.10" id="media-type"><span class="header-section-number">2.10</span> Media Type</h2>
-<p>The media type datatype represents the encoding of information in bytes or characters, as defined in <a href="https://www.rfc-editor.org/info/rfc2045">RFC 2045</a> and <a href="http://www.iana.org/assignments/media-types/">registered by the IANA</a>.</p>
+<p>The media type data type represents the encoding of information in bytes or characters, as defined in <a href="https://www.rfc-editor.org/info/rfc2045">RFC 2045</a> and <a href="http://www.iana.org/assignments/media-types/">registered by the IANA</a>.</p>
 <p>The official grammar for media type is given in RFC 2045, section 5.1. However, that document does not give stand-alone ABNF, instead referring to registration rules and describing some components in English. The programmatic parts of the media type grammar can be summarized as follows:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="va">MediaType</span>    <span class="cf">=</span> mt-type <span class="st">&quot;/&quot;</span> mt-subtype <span class="cf">*(</span><span class="st">&quot;;&quot;</span> mt-parameter<span class="cf">)</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1172,10 +1246,10 @@ GEDCOM@FamilySearch.org
 <span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="va">mt-qstring</span>   <span class="cf">=</span> <span class="ch">%x22</span> <span class="cf">*(</span>mt-qtext <span class="cf">/</span> mt-qpair<span class="cf">)</span> <span class="ch">%x22</span></span>
 <span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="va">mt-qtext</span>     <span class="cf">=</span> <span class="ch">%x09-0A</span> <span class="cf">/</span> <span class="ch">%x20-21</span> <span class="cf">/</span> <span class="ch">%x23-5B</span> <span class="cf">/</span> <span class="ch">%x5D-7E</span> <span class="co">; not CR &quot;\</span></span>
 <span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="va">mt-qpair</span>     <span class="cf">=</span> <span class="st">&quot;\&quot;</span> <span class="ch">%x09-7E</span></span></code></pre></div>
-<p>The URI for the <a href="#media-type"><code>MediaType</code></a> datatype is <code>dcat:mediaType</code>.</p>
+<p>The URI for the <a href="#media-type"><code>MediaType</code></a> data type is <code>dcat:mediaType</code>.</p>
 <h2 data-number="2.11" id="special"><span class="header-section-number">2.11</span> Special</h2>
-<p>The special datatype is a string conforming to a case-specific standard or constraints. The constraints on each special datatype instance are either unique to that structure type or are not simply expressed. For example, the payload of an <a href="#IDNO"><code>IDNO</code></a> structure may obey different rules for each possible <a href="#TYPE"><code>TYPE</code></a> substructure.</p>
-<p>Each special datatype is distinct. The URI for the generic datatype subsuming all <a href="#special" class="close"><code>Special</code></a> datatypes is <code>xsd:string</code> (the same as the <a href="#text"><code>Text</code></a> datatype).</p>
+<p>The special data type is a string conforming to a case-specific standard or constraints. The constraints on each special data type instance are either unique to that structure type or are not simply expressed. For example, the payload of an <a href="#IDNO"><code>IDNO</code></a> structure may obey different rules for each possible <a href="#TYPE"><code>TYPE</code></a> substructure.</p>
+<p>Each special data type is distinct. The URI for the generic data type subsuming all <a href="#special" class="close"><code>Special</code></a> data types is <code>xsd:string</code> (the same as the <a href="#text"><code>Text</code></a> data type).</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="va">Special</span> <span class="cf">=</span> Text</span></code></pre></div>
 <h1 data-number="3" id="gedcom-structures"><span class="header-section-number">3</span> Genealogical structures</h1>
 <p>This chapter describes a set of structure types for exchanging family-based lineage-linked genealogical information. Lineage-linked data pertains to individuals linked in family relationships across multiple generations.</p>
@@ -1223,7 +1297,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <li><p>An optional payload descriptor; if present this is 1 of the following:</p>
 <ul>
 <li><code>@&lt;XREF:</code>tag<code>&gt;@</code> means a pointer to a structure with this cross-reference template; <code>@VOID@</code> is also permitted.</li>
-<li><code>&lt;</code>datatype<code>&gt;</code> means a non-pointer payload, as described in <a href="#datatypes">Data types</a>. If the datatype allows the empty string, the payload may be omitted.</li>
+<li><code>&lt;</code>data type<code>&gt;</code> means a non-pointer payload, as described in <a href="#datatypes">Data types</a>. If the data type allows the empty string, the payload may be omitted.</li>
 <li><code>[</code>text<code>|&lt;NULL&gt;]</code> means the payload is optional but if present must be the given text.</li>
 </ul>
 <p>If there is a payload descriptor, a payload that matches the payload is required of the described structure unless the descriptor says the payload is optional.</p>
@@ -1232,6 +1306,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <li><p>The URI of this structure type.</p>
 <p>Pseudo-structures do not have a URI.</p></li>
 </ul></li>
+<li><p>Within the metasyntax, the order in which substructures are presented within a structure and the order in which choices are presented within an option set are not significant unless otherwise specified in the text next to the metasyntax block.</p></li>
 </ul>
 <p>The context of a structure’s superstructure may be necessary in addition to the structure’s standard tag to fully determine its structure type. To refer to a structure in the context of its superstructure, tags are written with intervening periods. For example, <a href="#GEDC-VERS"><code>GEDC</code>.<code>VERS</code></a> refers to a structure with tag <a href="#VERS"><code>VERS</code></a> and a superstructure with tag <a href="#GEDC"><code>GEDC</code></a>.</p>
 <h2 data-number="3.2" id="structure-organization"><span class="header-section-number">3.2</span> Structure Organization</h2>
@@ -1240,6 +1315,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <div class="sourceCode" id="cb30"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="kw">&lt;&lt;<a href="#HEADER">HEADER</a>&gt;&gt;</span>                               <span class="ch">{1:1}</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="kw">&lt;&lt;<a href="#RECORD">RECORD</a>&gt;&gt;</span>                               <span class="ch">{0:M}</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="fu">TRLR </span>                                    <span class="ch">{1:1} </span></span></code></pre></div>
+<p>The order of these is significant: the <a href="#HEADER"><code>HEADER</code></a> must come first and <a href="#TRLR"><code>TRLR</code></a> must be last, with any <a href="#RECORD" class="close"><code>RECORD</code></a>s in between.</p>
 <h4 class="unnumbered" id="RECORD"><code>RECORD</code> :=</h4>
 <div class="sourceCode" id="cb31"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">[</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="kw">&lt;&lt;<a href="#FAMILY_RECORD">FAMILY_RECORD</a>&gt;&gt;</span>                        <span class="ch">{1:1}</span></span>
@@ -1286,7 +1362,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#NOTE_STRUCTURE">NOTE_STRUCTURE</a>&gt;&gt;</span>                    <span class="ch">{0:1}</span></span></code></pre></div>
 <p>The header pseudo-structure provides metadata about the entire dataset. A few substructures of note:</p>
 <ul>
-<li><a href="#GEDC"><code>GEDC</code></a> identifies the specification that this document conforms to.</li>
+<li><a href="#GEDC"><code>GEDC</code></a> identifies the specification that this document conforms to. It is recommended that <a href="#GEDC" class="close"><code>GEDC</code></a> be the first substructure of the header.</li>
 <li><a href="#SCHMA"><code>SCHMA</code></a> gives the meaning of extension tags; see <a href="#extensions">Extensions</a> for more.</li>
 <li><a href="#SOUR"><code>SOUR</code></a> describes the originating software.
 <ul>
@@ -1505,7 +1581,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">TIME </span>&lt;<a href="#cb22-1">Time</a>&gt;                        <span class="ch">{0:1} </span> <span class="at"><a href="#TIME">g7:TIME</a></span></span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#NOTE_STRUCTURE">NOTE_STRUCTURE</a>&gt;&gt;</span>                    <span class="ch">{0:M}</span></span></code></pre></div>
 <p>The date of the most recent modification of the superstructure, optionally with notes about that modification.</p>
-<p>The <a href="#NOTE"><code>NOTE</code></a> substructure may describe previous changes as well as the most recent, although only the most recent change is described by the <a href="#DATE"><code>DATE</code></a> substructure.</p>
+<p>The <a href="#NOTE"><code>NOTE</code></a> substructure may describe previous changes as well as the most recent, although only the most recent change is described by the <a href="#DATE" class="close"><code>DATE</code></a> substructure.</p>
 <h4 class="unnumbered" id="CREATION_DATE"><code>CREATION_DATE</code> :=</h4>
 <div class="sourceCode" id="cb46"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CREA </span>                                    <span class="ch">{1:1} </span> <span class="at"><a href="#CREA">g7:CREA</a></span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">DATE </span>&lt;<a href="#cb20-2">DateExact</a>&gt;                      <span class="ch">{1:1} </span> <span class="at"><a href="#DATE-exact">g7:DATE-exact</a></span></span>
@@ -1600,11 +1676,11 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#FAMILY_EVENT_DETAIL">FAMILY_EVENT_DETAIL</a>&gt;&gt;</span>               <span class="ch">{0:1}</span></span>
 <span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">MARS </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#MARS">g7:MARS</a></span></span>
+<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">MARR </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#MARR">g7:MARR</a></span></span>
 <span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#FAMILY_EVENT_DETAIL">FAMILY_EVENT_DETAIL</a>&gt;&gt;</span>               <span class="ch">{0:1}</span></span>
 <span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">MARR </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#MARR">g7:MARR</a></span></span>
+<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">MARS </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#MARS">g7:MARS</a></span></span>
 <span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#FAMILY_EVENT_DETAIL">FAMILY_EVENT_DETAIL</a>&gt;&gt;</span>               <span class="ch">{0:1}</span></span>
 <span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
@@ -1713,98 +1789,98 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>Substructures shared by most individual events and attributes.</p>
 <h4 class="unnumbered" id="INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code> :=</h4>
 <div class="sourceCode" id="cb54"><pre class="sourceCode gedstruct long"><code class="sourceCode gedstruct"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="cf">[</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BAPM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BAPM">g7:BAPM</a></span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">ADOP </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#ADOP">g7:ADOP</a></span></span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BARM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BARM">g7:BARM</a></span></span>
-<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BASM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BASM">g7:BASM</a></span></span>
-<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BLES </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BLES">g7:BLES</a></span></span>
-<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BURI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BURI">g7:BURI</a></span></span>
-<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CENS </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#INDI-CENS">g7:INDI-CENS</a></span></span>
-<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#ADOP-FAMC">g7:ADOP-FAMC</a></span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">ADOP </span>&lt;<a href="#cb19-1">Enum</a>&gt;                        <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC-ADOP">g7:FAMC-ADOP</a></span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">+3 </span><span class="fu">PHRASE </span>&lt;<a href="#cb17-2">Text</a>&gt;                   <span class="ch">{0:1} </span> <span class="at"><a href="#PHRASE">g7:PHRASE</a></span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BAPM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BAPM">g7:BAPM</a></span></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BARM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BARM">g7:BARM</a></span></span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BASM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BASM">g7:BASM</a></span></span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BIRT </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BIRT">g7:BIRT</a></span></span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC">g7:FAMC</a></span></span>
 <span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CHRA </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CHRA">g7:CHRA</a></span></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BLES </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BLES">g7:BLES</a></span></span>
 <span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CONF </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CONF">g7:CONF</a></span></span>
+<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BURI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BURI">g7:BURI</a></span></span>
 <span id="cb54-31"><a href="#cb54-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-32"><a href="#cb54-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb54-33"><a href="#cb54-33" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CREM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CREM">g7:CREM</a></span></span>
+<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CENS </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#INDI-CENS">g7:INDI-CENS</a></span></span>
 <span id="cb54-35"><a href="#cb54-35" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-36"><a href="#cb54-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb54-37"><a href="#cb54-37" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">DEAT </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#DEAT">g7:DEAT</a></span></span>
+<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CHR </span>[Y|&lt;NULL&gt;]                           <span class="ch">{1:1} </span> <span class="at"><a href="#CHR">g7:CHR</a></span></span>
 <span id="cb54-39"><a href="#cb54-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-40"><a href="#cb54-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-41"><a href="#cb54-41" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">EMIG </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#EMIG">g7:EMIG</a></span></span>
-<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">FCOM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#FCOM">g7:FCOM</a></span></span>
-<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-48"><a href="#cb54-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-49"><a href="#cb54-49" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-50"><a href="#cb54-50" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">GRAD </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#GRAD">g7:GRAD</a></span></span>
-<span id="cb54-51"><a href="#cb54-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-52"><a href="#cb54-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-53"><a href="#cb54-53" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-54"><a href="#cb54-54" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">IMMI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#IMMI">g7:IMMI</a></span></span>
-<span id="cb54-55"><a href="#cb54-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-56"><a href="#cb54-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-57"><a href="#cb54-57" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-58"><a href="#cb54-58" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">NATU </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#NATU">g7:NATU</a></span></span>
-<span id="cb54-59"><a href="#cb54-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-60"><a href="#cb54-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-61"><a href="#cb54-61" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-62"><a href="#cb54-62" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">ORDN </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#ORDN">g7:ORDN</a></span></span>
-<span id="cb54-63"><a href="#cb54-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-64"><a href="#cb54-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-65"><a href="#cb54-65" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-66"><a href="#cb54-66" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">PROB </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#PROB">g7:PROB</a></span></span>
-<span id="cb54-67"><a href="#cb54-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-68"><a href="#cb54-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-69"><a href="#cb54-69" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-70"><a href="#cb54-70" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">RETI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#RETI">g7:RETI</a></span></span>
-<span id="cb54-71"><a href="#cb54-71" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-72"><a href="#cb54-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-73"><a href="#cb54-73" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-74"><a href="#cb54-74" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">WILL </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#WILL">g7:WILL</a></span></span>
-<span id="cb54-75"><a href="#cb54-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-76"><a href="#cb54-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-77"><a href="#cb54-77" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-78"><a href="#cb54-78" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">ADOP </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#ADOP">g7:ADOP</a></span></span>
-<span id="cb54-79"><a href="#cb54-79" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-80"><a href="#cb54-80" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-81"><a href="#cb54-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#ADOP-FAMC">g7:ADOP-FAMC</a></span></span>
-<span id="cb54-82"><a href="#cb54-82" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">ADOP </span>&lt;<a href="#cb19-1">Enum</a>&gt;                        <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC-ADOP">g7:FAMC-ADOP</a></span></span>
-<span id="cb54-83"><a href="#cb54-83" aria-hidden="true" tabindex="-1"></a>        <span class="dt">+3 </span><span class="fu">PHRASE </span>&lt;<a href="#cb17-2">Text</a>&gt;                   <span class="ch">{0:1} </span> <span class="at"><a href="#PHRASE">g7:PHRASE</a></span></span>
-<span id="cb54-84"><a href="#cb54-84" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-85"><a href="#cb54-85" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">BIRT </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#BIRT">g7:BIRT</a></span></span>
-<span id="cb54-86"><a href="#cb54-86" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-87"><a href="#cb54-87" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-88"><a href="#cb54-88" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC">g7:FAMC</a></span></span>
-<span id="cb54-89"><a href="#cb54-89" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
-<span id="cb54-90"><a href="#cb54-90" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CHR </span>[Y|&lt;NULL&gt;]                           <span class="ch">{1:1} </span> <span class="at"><a href="#CHR">g7:CHR</a></span></span>
-<span id="cb54-91"><a href="#cb54-91" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
-<span id="cb54-92"><a href="#cb54-92" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
-<span id="cb54-93"><a href="#cb54-93" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC">g7:FAMC</a></span></span>
+<span id="cb54-41"><a href="#cb54-41" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{0:1} </span> <span class="at"><a href="#FAMC">g7:FAMC</a></span></span>
+<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CHRA </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CHRA">g7:CHRA</a></span></span>
+<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CONF </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CONF">g7:CONF</a></span></span>
+<span id="cb54-48"><a href="#cb54-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-49"><a href="#cb54-49" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-50"><a href="#cb54-50" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-51"><a href="#cb54-51" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CREM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#CREM">g7:CREM</a></span></span>
+<span id="cb54-52"><a href="#cb54-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-53"><a href="#cb54-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-54"><a href="#cb54-54" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-55"><a href="#cb54-55" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">DEAT </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#DEAT">g7:DEAT</a></span></span>
+<span id="cb54-56"><a href="#cb54-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-57"><a href="#cb54-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-58"><a href="#cb54-58" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-59"><a href="#cb54-59" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">EMIG </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#EMIG">g7:EMIG</a></span></span>
+<span id="cb54-60"><a href="#cb54-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-61"><a href="#cb54-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-62"><a href="#cb54-62" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-63"><a href="#cb54-63" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">FCOM </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#FCOM">g7:FCOM</a></span></span>
+<span id="cb54-64"><a href="#cb54-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-65"><a href="#cb54-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-66"><a href="#cb54-66" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-67"><a href="#cb54-67" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">GRAD </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#GRAD">g7:GRAD</a></span></span>
+<span id="cb54-68"><a href="#cb54-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-69"><a href="#cb54-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-70"><a href="#cb54-70" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-71"><a href="#cb54-71" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">IMMI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#IMMI">g7:IMMI</a></span></span>
+<span id="cb54-72"><a href="#cb54-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-73"><a href="#cb54-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-74"><a href="#cb54-74" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-75"><a href="#cb54-75" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">NATU </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#NATU">g7:NATU</a></span></span>
+<span id="cb54-76"><a href="#cb54-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-77"><a href="#cb54-77" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-78"><a href="#cb54-78" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-79"><a href="#cb54-79" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">ORDN </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#ORDN">g7:ORDN</a></span></span>
+<span id="cb54-80"><a href="#cb54-80" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-81"><a href="#cb54-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-82"><a href="#cb54-82" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-83"><a href="#cb54-83" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">PROB </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#PROB">g7:PROB</a></span></span>
+<span id="cb54-84"><a href="#cb54-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-85"><a href="#cb54-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-86"><a href="#cb54-86" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-87"><a href="#cb54-87" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">RETI </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#RETI">g7:RETI</a></span></span>
+<span id="cb54-88"><a href="#cb54-88" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-89"><a href="#cb54-89" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
+<span id="cb54-90"><a href="#cb54-90" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
+<span id="cb54-91"><a href="#cb54-91" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">WILL </span>[Y|&lt;NULL&gt;]                          <span class="ch">{1:1} </span> <span class="at"><a href="#WILL">g7:WILL</a></span></span>
+<span id="cb54-92"><a href="#cb54-92" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
+<span id="cb54-93"><a href="#cb54-93" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb54-94"><a href="#cb54-94" aria-hidden="true" tabindex="-1"></a><span class="cf">|</span></span>
 <span id="cb54-95"><a href="#cb54-95" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">EVEN </span>&lt;<a href="#cb17-2">Text</a>&gt;                              <span class="ch">{1:1} </span> <span class="at"><a href="#INDI-EVEN">g7:INDI-EVEN</a></span></span>
 <span id="cb54-96"><a href="#cb54-96" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb17-2">Text</a>&gt;                           <span class="ch">{1:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
@@ -1918,7 +1994,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">SURN </span>Allen</span>
 <span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">NSFX </span>jr.</span></code></pre></div>
 </div>
-<p>This specification does not define how the meaning of multiple parts with the same tag differs from the meaning of a single part with a concatenated larger payload. However, some applications allow the user to chose whether to combine or split name parts, meaning the tag quantity should be treated as expressing at least a user preference. Even when multiple <a href="#SURN"><code>SURN</code></a> tags are used, the <a href="#personal-name"><code>PersonalName</code></a> datatype identifies a single surname substring between its slashes.</p>
+<p>This specification does not define how the meaning of multiple parts with the same tag differs from the meaning of a single part with a concatenated larger payload. However, some applications allow the user to chose whether to combine or split name parts, meaning the tag quantity should be treated as expressing at least a user preference. Even when multiple <a href="#SURN"><code>SURN</code></a> tags are used, the <a href="#personal-name"><code>PersonalName</code></a> data type identifies a single surname substring between its slashes.</p>
 <h4 class="unnumbered" id="PERSONAL_NAME_STRUCTURE"><code>PERSONAL_NAME_STRUCTURE</code> :=</h4>
 <div class="sourceCode" id="cb64"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">NAME </span>&lt;<a href="#cb25-1">PersonalName</a>&gt;                      <span class="ch">{1:1} </span> <span class="at"><a href="#INDI-NAME">g7:INDI-NAME</a></span></span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb19-1">Enum</a>&gt;                           <span class="ch">{0:1} </span> <span class="at"><a href="#NAME-TYPE">g7:NAME-TYPE</a></span></span>
@@ -1931,7 +2007,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#SOURCE_CITATION">SOURCE_CITATION</a>&gt;&gt;</span>                   <span class="ch">{0:M}</span></span></code></pre></div>
 <p>Names of individuals are represented in the manner the name is normally spoken, with the family name, surname, or nearest cultural parallel thereunto separated by slashes (U+002F <code>/</code>). Based on the dynamic nature or unknown compositions of naming conventions, it is difficult to provide a more detailed name piece structure to handle every case. The <a href="#PERSONAL_NAME_PIECES"><code>PERSONAL_NAME_PIECES</code></a> are provided optionally for systems that cannot operate effectively with less structured information. The Personal Name payload shall be seen as the primary name representation, with name pieces as optional auxiliary information; in particular it is recommended that all name parts in <a href="#PERSONAL_NAME_PIECES" class="close"><code>PERSONAL_NAME_PIECES</code></a> appear within the <a href="#personal-name" class="close"><code>PersonalName</code></a> payload in some form, possibly adjusted for gender-specific suffixes or the like. It is permitted for the payload to contain information not present in any name piece substructure.</p>
 <p>The name may be translated or transliterated into different languages or scripts using the <a href="#TRAN"><code>TRAN</code></a> substructure. It is recommended, but not required, that if the name pieces are used, the same pieces are used in each translation and transliteration.</p>
-<p>A <a href="#TYPE"><code>TYPE</code></a> is used to specify the particular variation that this name is. For example; it could indicate that this name is a name taken at immigration or that it could be an ‘also known as’ name. See <a href="#enum-TYPE">the NAME.TYPE enumeration</a> for more.</p>
+<p>A <a href="#TYPE"><code>TYPE</code></a> is used to specify the particular variation that this name is. For example; it could indicate that this name is a name taken at immigration or that it could be an ‘also known as’ name. See <code>g7:enumset-NAME-TYPE</code> for more.</p>
 <div class="note">
 <p>Alternative approaches to representing names are being considered for future versions of this specification.</p>
 </div>
@@ -2258,7 +2334,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <tr class="odd">
 <td><code>NATI</code></td>
 <td>nationality<br /><a href="#NATI"><code>g7:NATI</code></a></td>
-<td>The national heritage of an individual.</td>
+<td>An individual’s national heritage or origin, or other folk, house, kindred, lineage, or tribal interest.</td>
 </tr>
 <tr class="even">
 <td><code>NCHI</code></td>
@@ -2393,7 +2469,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="ADOP"><code>ADOP</code> (Adoption) <code class="uri">g7:ADOP</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="FAMC-ADOP"><code>ADOP</code> (Adoption) <code class="uri">g7:FAMC-ADOP</code></h4>
-<p>An <a href="#enum-ADOP">enumerated value</a> indicating which parent(s) in the family adopted this individual.</p>
+<p>An enumerated value from set <code>g7:enumset-ADOP</code> indicating which parent(s) in the family adopted this individual.</p>
 <h4 class="unnumbered" id="ADR1"><code>ADR1</code> (Address Line 1) <code class="uri">g7:ADR1</code></h4>
 <p>The first line of the address, used for indexing. This structure’s payload should be a single line of text equal to the first line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
 <h4 class="unnumbered" id="ADR2"><code>ADR2</code> (Address Line 2) <code class="uri">g7:ADR2</code></h4>
@@ -2535,9 +2611,9 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">DATE </span>4 NOV 1837</span></code></pre></div>
 </div>
 <h4 class="unnumbered" id="DATA-EVEN"><code>EVEN</code> (Event) <code class="uri">g7:DATA-EVEN</code></h4>
-<p>A list of <a href="#enum-EVEN">enumerated values</a> indicating the types of events that were recorded in a particular source. Each event type is separated by a comma and space. For example, a parish register of births, deaths, and marriages would be <code>BIRT, DEAT, MARR</code>.</p>
+<p>A list of enumerated values from set <code>g7:enumset-EVENATTR</code> indicating the types of events that were recorded in a particular source. Each event type is separated by a comma and space. For example, a parish register of births, deaths, and marriages would be <code>BIRT, DEAT, MARR</code>.</p>
 <h4 class="unnumbered" id="SOUR-EVEN"><code>EVEN</code> (Event) <code class="uri">g7:SOUR-EVEN</code></h4>
-<p>An <a href="#enum-SOUR.EVEN">enumerated value</a> indicating the type of event or attribute which was responsible for the source entry being recorded. For example, if the entry was created to record a birth of a child, then the type would be <a href="#BIRT"><code>BIRT</code></a> regardless of the assertions made from that record, such as the mother’s name or mother’s birth date.</p>
+<p>An enumerated value from set <code>g7:enumset-EVENATTR</code> indicating the type of event or attribute which was responsible for the source entry being recorded. For example, if the entry was created to record a birth of a child, then the type would be <a href="#BIRT"><code>BIRT</code></a> regardless of the assertions made from that record, such as the mother’s name or mother’s birth date.</p>
 <h4 class="unnumbered" id="EXID"><code>EXID</code> (External Identifier) <code class="uri">g7:EXID</code></h4>
 <p>An identifier for the subject of the superstructure. The identifier is maintained by some external authority; the authority owning the identifier is provided in the TYPE substructure; see <a href="#EXID-TYPE"><code>EXID</code>.<code>TYPE</code></a> for more.</p>
 <p>Depending on the maintaining authority, an <a href="#EXID" class="close"><code>EXID</code></a> may be a unique identifier for the subject, an identifier for 1 of several views of the subject, or an identifier for the externally-maintained copy of the same information as is contained in this structure. However, unlike <a href="#UID"><code>UID</code></a> and <a href="#REFN"><code>REFN</code></a>, <a href="#EXID" class="close"><code>EXID</code></a> does not identify a structure; structures with the same <a href="#EXID" class="close"><code>EXID</code></a> may have originated independently rather than by edits from the same starting point.</p>
@@ -2689,7 +2765,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="MARS"><code>MARS</code> (Marriage settlement) <code class="uri">g7:MARS</code></h4>
 <p>A <a href="#family-events">Family Event</a>. See also <a href="#FAMILY_EVENT_STRUCTURE" class="close"><code>FAMILY_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="MEDI"><code>MEDI</code> (Medium) <code class="uri">g7:MEDI</code></h4>
-<p>An <a href="#enum-MEDI">enumerated value</a> providing information about the media or the medium in which information is stored.</p>
+<p>An enumerated value from set <code>g7:enumset-MEDI</code> providing information about the media or the medium in which information is stored.</p>
 <h4 class="unnumbered" id="MIME"><code>MIME</code> (Media type) <code class="uri">g7:MIME</code></h4>
 <p>Indicates the media type of the payload of the superstructure, as defined by <a href="https://www.rfc-editor.org/info/bcp13">BCP 13</a>.</p>
 <p>As of version 7.0, only 2 media types are supported by this structure:</p>
@@ -2738,7 +2814,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="NMR"><code>NMR</code> (Number of marriages) <code class="uri">g7:NMR</code></h4>
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE" class="close"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="NO"><code>NO</code> (Did not happen) <code class="uri">g7:NO</code></h4>
-<p>An <a href="#enum-NO">enumerated value</a> identifying an event type which did not occur to the superstructure’s subject. See <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for more.</p>
+<p>An enumerated value from set <code>g7:enumset-EVEN</code> identifying an event type which did not occur to the superstructure’s subject. See <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for more.</p>
 <h4 class="unnumbered" id="NOTE"><code>NOTE</code> (Note) <code class="uri">g7:NOTE</code></h4>
 <p>A <a href="#NOTE_STRUCTURE"><code>NOTE_STRUCTURE</code></a>, containing additional information provided by the submitter for understanding the enclosing data.</p>
 <p>When a substructure of <a href="#HEAD"><code>HEAD</code></a>, it should describe the contents of the document in terms of “ancestors or descendants of” so that the person receiving the data knows what genealogical information the document contains.</p>
@@ -2768,12 +2844,12 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="dt">3 </span><span class="fu">PAGE </span>His grand-daughter Lydia told me this in 1980</span></code></pre></div>
 </div>
 <h4 class="unnumbered" id="PEDI"><code>PEDI</code> (Pedigree) <code class="uri">g7:PEDI</code></h4>
-<p>An <a href="#enum-PEDI">enumerated value</a> indicating the type of child-to-family relationship represented by the superstructure.</p>
+<p>An enumerated value from set <code>g7:enumset-PEDI</code> indicating the type of child-to-family relationship represented by the superstructure.</p>
 <h4 class="unnumbered" id="PHON"><code>PHON</code> (Phone) <code class="uri">g7:PHON</code></h4>
 <p>A telephone number. Telephone numbers have many regional variations and can contain non-digit characters. Users should be encouraged to use internationalized telephone numbers rather than local versions. As a starting point for this recommendation, there are international standards that use a “‘+’” shorthand for the international prefix (for example, in place of “011” in the US or “00” in the UK). Examples are <code>+1 (555) 555-1234</code> (US) or <code>+44 20 1234 1234</code> (UK).</p>
 <p>See ITU standards <a href="https://www.itu.int/rec/T-REC-E.123">E.123</a> and <a href="https://www.itu.int/rec/T-REC-E.164">E.164</a> for more information.</p>
 <h4 class="unnumbered" id="PHRASE"><code>PHRASE</code> (Phrase) <code class="uri">g7:PHRASE</code></h4>
-<p>Textual information that cannot be expressed in the superstructure due to the limitations of its datatype.</p>
+<p>Textual information that cannot be expressed in the superstructure due to the limitations of its data type. A <a href="#PHRASE" class="close"><code>PHRASE</code></a> may restate information contained in the superstructure, but doing so is not recommended unless it is needed for clarity.</p>
 <div class="example">
 <p>A date interpreted from the phrase “The Feast of St John” might be</p>
 <div class="sourceCode" id="cb80"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">DATE </span>24 JUN 1852</span>
@@ -2823,7 +2899,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>When and where the record was created. For published works, this includes information such as the city of publication, name of the publisher, and year of publication.</p>
 <p>For an unpublished work, it includes the date the record was created and the place where it was created, such as the county and state of residence of a person making a declaration for a pension or the city and state of residence of the writer of a letter.</p>
 <h4 class="unnumbered" id="QUAY"><code>QUAY</code> (Quality of data) <code class="uri">g7:QUAY</code></h4>
-<p>An <a href="#enum-QUAY">enumerated value</a> indicating the credibility of a piece of information, based on its supporting evidence. Some systems use this feature to rank multiple conflicting opinions for display of most likely information first. It is not intended to eliminate the receivers’ need to evaluate the evidence for themselves.</p>
+<p>An enumerated value from set <code>g7:enumset-QUAY</code> indicating the credibility of a piece of information, based on its supporting evidence. Some systems use this feature to rank multiple conflicting opinions for display of most likely information first. It is not intended to eliminate the receivers’ need to evaluate the evidence for themselves.</p>
 <h4 class="unnumbered" id="REFN"><code>REFN</code> (Reference) <code class="uri">g7:REFN</code></h4>
 <p>A user-defined number or text that the submitter uses to identify the superstructure. For instance, it may be a record number within the submitter’s automated or manual system, or it may be a page and position number on a pedigree chart.</p>
 <p>This is metadata about the structure itself, not data about its subject. Multiple structures describing different aspects of the same subject must not have the same <a href="#REFN" class="close"><code>REFN</code></a> value.</p>
@@ -2832,7 +2908,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="INDI-RELI"><code>RELI</code> (Religion) <code class="uri">g7:INDI-RELI</code></h4>
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="RESN"><code>RESN</code> (Restriction) <code class="uri">g7:RESN</code></h4>
-<p>A <a href="#list">List</a> of <a href="#enum-RESN">enumerated value</a>s signifying access to information may be denied or otherwise restricted.</p>
+<p>A <a href="#list">List</a> of enumerated values from set <code>g7:enumset-RESN</code> signifying access to information may be denied or otherwise restricted.</p>
 <p>The <a href="#RESN" class="close"><code>RESN</code></a> structure is provided to assist software in filtering data that should not be exported or otherwise used in a particular context. It is recommended that tools provide an interface to allow users to filter data on export such that certain <a href="#RESN" class="close"><code>RESN</code></a> structure payload entries result in the <a href="#RESN" class="close"><code>RESN</code></a> structure and its superstructure being removed from the export. Such removal must abide by some constraints: see <a href="#removing-data">Removing data</a> for more.</p>
 <p>This is metadata about the structure itself, not data about its subject.</p>
 <h4 class="unnumbered" id="REPO"><code>REPO</code> (Repository) <code class="uri">g7:REPO</code></h4>
@@ -2856,7 +2932,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="RETI"><code>RETI</code> (Retirement) <code class="uri">g7:RETI</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="ROLE"><code>ROLE</code> (Role) <code class="uri">g7:ROLE</code></h4>
-<p>An <a href="#enum-ROLE">enumerated value</a> indicating what role this person played in an event or person’s life.</p>
+<p>An enumerated value from set <code>g7:enumset-ROLE</code> indicating what role this person played in an event or person’s life.</p>
 <div class="example">
 <p>The following indicates a child’s birth record as the source of the mother’s name:</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@I1@ </span><span class="fu">INDI</span></span>
@@ -2881,8 +2957,9 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>A date to be used as a sorting hint. It is intended for use when the actual date is unknown, but the display order may be dependent on date.</p>
 <p>If both a <a href="#DATE"><code>DATE</code></a> and <a href="#SDATE" class="close"><code>SDATE</code></a> are present in the same structure, the <a href="#SDATE" class="close"><code>SDATE</code></a> should be used for sorting and positioning while the <a href="#DATE" class="close"><code>DATE</code></a> should be displayed as the date of the structure.</p>
 <p><a href="#SDATE" class="close"><code>SDATE</code></a> and its substructures (including <a href="#PHRASE"><code>PHRASE</code></a>, <a href="#TIME"><code>TIME</code></a>, and any extension structures) should be used only as sorting hints, not to convey historical meaning.</p>
+<p>It is recommended to use a payload that matches <code>[[day D] month D] year [D epoch]</code>. Other DateValue forms may have unreliable effects on sorting. Including a month and day is encouraged to help different applications sort dates the same way, as the relative ordering of dates with different levels of precision is not well defined.</p>
 <h4 class="unnumbered" id="SEX"><code>SEX</code> (Sex) <code class="uri">g7:SEX</code></h4>
-<p>An <a href="#enum-SEX">enumerated value</a> that indicates the sex of the individual at birth.</p>
+<p>An enumerated value from set <code>g7:enumset-SEX</code> that indicates the sex of the individual at birth.</p>
 <h4 class="unnumbered" id="SLGC"><code>SLGC</code> (Sealing, child) <code class="uri">g7:SLGC</code></h4>
 <p>A <a href="#latter-day-saint-ordinances">Latter-Day Saint Ordinance</a>. See also <a href="#LDS_INDIVIDUAL_ORDINANCE"><code>LDS_INDIVIDUAL_ORDINANCE</code></a>.</p>
 <h4 class="unnumbered" id="SLGS"><code>SLGS</code> (Sealing, spouse) <code class="uri">g7:SLGS</code></h4>
@@ -2904,9 +2981,9 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="STAE"><code>STAE</code> (State) <code class="uri">g7:STAE</code></h4>
 <p>A geographical division of a larger jurisdictional area, such as a state within the United States of America. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
 <h4 class="unnumbered" id="ord-STAT"><code>STAT</code> (Status) <code class="uri">g7:ord-STAT</code></h4>
-<p>An <a href="#enum-Temple.STAT">enumerated value</a> assessing of the state or condition of an ordinance.</p>
+<p>An enumerated value from set <code>g7:enumset-ord-STAT</code> assessing of the state or condition of an ordinance.</p>
 <h4 class="unnumbered" id="FAMC-STAT"><code>STAT</code> (Status) <code class="uri">g7:FAMC-STAT</code></h4>
-<p>An <a href="#enum-FAMC.STAT">enumerated value</a> assessing of the state or condition of a researcher’s belief in a family connection.</p>
+<p>An enumerated value from set <code>g7:enumset-FAMC-STAT</code> assessing of the state or condition of a researcher’s belief in a family connection.</p>
 <h4 class="unnumbered" id="SUBM"><code>SUBM</code> (Submitter) <code class="uri">g7:SUBM</code></h4>
 <p>A contributor of information in the substructure. This is metadata about the structure itself, not data about its subject.</p>
 <h4 class="unnumbered" id="record-SUBM"><code>SUBM</code> (Submitter) <code class="uri">g7:record-SUBM</code></h4>
@@ -2960,7 +3037,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="PLAC-TRAN"><code>TRAN</code> (Translation) <code class="uri">g7:PLAC-TRAN</code></h4>
 <p>A type of <a href="#TRAN"><code>TRAN</code></a> substructure specific to places. Each <a href="#PLAC-TRAN" class="close"><code>PLAC</code>.<code>TRAN</code></a> must have a <a href="#LANG"><code>LANG</code></a> substructure. See also <a href="#PLAC"><code>PLAC</code></a>.</p>
 <div class="example">
-<p>The following presents a place in Japanese with a romanji transliteration and English translation</p>
+<p>The following presents a place in Japanese with a romaji transliteration and English translation</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">PLAC </span>千代田, 東京, 日本</span>
 <span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="dt">3 </span><span class="fu">FORM </span>区, 都, 国</span>
 <span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="dt">3 </span><span class="fu">LANG </span>ja</span>
@@ -3019,7 +3096,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>See also <code>FACT</code> and <code>EVEN</code> for additional examples.</p>
 </div>
 <h4 class="unnumbered" id="NAME-TYPE"><code>TYPE</code> (Type) <code class="uri">g7:NAME-TYPE</code></h4>
-<p>An <a href="#enum-TYPE">enumerated value</a> indicating the type of the name.</p>
+<p>An enumerated value from set <code>g7:enumset-NAME-TYPE</code> indicating the type of the name.</p>
 <h4 class="unnumbered" id="EXID-TYPE"><code>TYPE</code> (Type) <code class="uri">g7:EXID-TYPE</code></h4>
 <p>The authority issuing the <a href="#EXID"><code>EXID</code></a>, represented as a URI. It is recommended that this be a URL.</p>
 <p>If the authority maintains stable URLs for each identifier it issues, it is recommended that the <a href="#TYPE"><code>TYPE</code></a> payload be selected such that appending the <a href="#EXID" class="close"><code>EXID</code></a> payload to it yields that URL. However, this is not required and a different URI for the set of issued identifiers may be used instead.</p>
@@ -3062,7 +3139,8 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>If an invalid or no longer existing web address is present upon import, it should be preserved as-is on export.</p>
 <h2 data-number="3.4" id="enumeration-values"><span class="header-section-number">3.4</span> Enumeration Values</h2>
 <p>Unless otherwise specified in the enumeration description in this section, each enumeration values defined in this section has a URI constructed by concatenating <code>g7:enum-</code> to the enumeration value; for example, the <a href="#HUSB"><code>HUSB</code></a> enumeration value has the URI <code>http://gedcom.io/terms/v7/enum-HUSB</code>.</p>
-<h3 class="unlisted unnumbered" id="enum-ADOP"><code>FAMC</code>.<code>ADOP</code></h3>
+<p>Each set of enumeration values has its own URI.</p>
+<h3 class="unlisted unnumbered" id="g7enumset-adop"><code class="uri">g7:enumset-ADOP</code></h3>
 <table>
 
 
@@ -3089,11 +3167,11 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </tr>
 </tbody>
 </table>
-<h3 class="unlisted unnumbered" id="enum-EVEN"><code>DATA</code>.<code>EVEN</code></h3>
-<p>A comma-separated list of event- and attribute-type tag names. See <a href="#events">Events</a> and <a href="#attributes">Attributes</a>.</p>
-<h3 class="unlisted unnumbered" id="enum-SOUR.EVEN"><code>SOUR</code>.<code>EVEN</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-even"><code class="uri">g7:enumset-EVEN</code></h3>
+<p>An event-type tag name, but not the generic <code>EVEN</code> tag. See <a href="#events">Events</a>.</p>
+<h3 class="unlisted unnumbered" id="g7enumset-evenattr"><code class="uri">g7:enumset-EVENATTR</code></h3>
 <p>An event- or attribute-type tag name. See <a href="#events">Events</a> and <a href="#attributes">Attributes</a>.</p>
-<h3 class="unlisted unnumbered" id="enum-MEDI"><code>MEDI</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-medi"><code class="uri">g7:enumset-MEDI</code></h3>
 <table>
 
 
@@ -3164,7 +3242,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </tr>
 </tbody>
 </table>
-<h3 class="unlisted unnumbered" id="enum-PEDI"><code>PEDI</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-pedi"><code class="uri">g7:enumset-PEDI</code></h3>
 <table>
 
 
@@ -3208,9 +3286,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <div class="note">
 <p><code>SEALING</code> implies that a <a href="#SLGC"><code>SLGC</code></a> event was performed, and it is recommended that this enumeration value only be used when the <a href="#SLGC" class="close"><code>SLGC</code></a> event is present in the GEDCOM file. <code>ADOPTED</code>, on the other hand, only implies a social relationship which may or may not have any associated <a href="#ADOP"><code>ADOP</code></a> event.</p>
 </div>
-<h3 class="unlisted unnumbered" id="enum-NO"><code>NO</code></h3>
-<p>A single event-type tag name, but not the generic <code>EVEN</code> tag. See <a href="#events">Events</a>.</p>
-<h3 class="unlisted unnumbered" id="enum-QUAY"><code>QUAY</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-quay"><code class="uri">g7:enumset-QUAY</code></h3>
 <table>
 
 
@@ -3245,7 +3321,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <div class="note">
 <p>The structures for representing the strength of and confidence in various claims are known to be inadequate and are likely to change in a future version of this specification.</p>
 </div>
-<h3 class="unlisted unnumbered" id="enum-RESN"><code>RESN</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-resn"><code class="uri">g7:enumset-RESN</code></h3>
 <table>
 
 
@@ -3276,7 +3352,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <div class="example">
 <p>The line <code>1 RESN CONFIDENTIAL, LOCKED</code> means the superstructure’s data is both considered confidential <em>and</em> read-only.</p>
 </div>
-<h3 class="unlisted unnumbered" id="enum-ROLE"><code>ROLE</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-role"><code class="uri">g7:enumset-ROLE</code></h3>
 <table>
 
 
@@ -3352,7 +3428,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </tbody>
 </table>
 <p>These should be interpreted in the context of the recorded event and its primary participants. For example, if you cite a child’s birth record as the source of the mother’s name, the value for this field is “<code>MOTH</code>.” If you describe the groom of a marriage, the role is “<a href="#HUSB"><code>HUSB</code></a>.”</p>
-<h3 class="unlisted unnumbered" id="enum-SEX"><code>SEX</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-sex"><code class="uri">g7:enumset-SEX</code></h3>
 <table>
 
 
@@ -3384,7 +3460,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </tbody>
 </table>
 <p>This can describe an individual’s reproductive or sexual anatomy at birth. Related concepts of gender identity or sexual preference are not currently given their own tag. Cultural or personal gender preference may be indicated using the <code>FACT</code> tag.</p>
-<h3 class="unlisted unnumbered" id="enum-FAMC.STAT"><code>FAMC</code>.<code>STAT</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-famc-stat"><code class="uri">g7:enumset-FAMC-STAT</code></h3>
 <table>
 
 
@@ -3414,9 +3490,11 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <div class="note">
 <p>The structures for representing the strength of and confidence in various claims are known to be inadequate and are likely to change in a future version of this specification.</p>
 </div>
-<h3 class="unlisted unnumbered" id="enum-Temple.STAT">(Latter-Day Saint Ordinance).<code>STAT</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-ord-stat"><code class="uri">g7:enumset-ord-STAT</code></h3>
 <p>These values were formerly used by The Church of Jesus Christ of Latter-day Saints for coordinating between temples and members. They are no longer used in that way, meaning their interpretation is subject to individual user interpretation</p>
 <table>
+
+
 
 
 
@@ -3424,61 +3502,87 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <thead>
 <tr class="header">
 <th>Value</th>
+<th>Applies to</th>
 <th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Status</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>BIC</code></td>
-<td style="text-align: left;">Born in the covenant, receiving blessing of child to parent sealing.</td>
+<td><code>SLGC</code></td>
+<td style="text-align: left;">Born in the covenant, so child to parent sealing ordinance is not required.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="even">
 <td><code>CANCELED</code></td>
+<td><code>SLGS</code></td>
 <td style="text-align: left;">Canceled and considered invalid.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="odd">
 <td><code>CHILD</code></td>
-<td style="text-align: left;">Died before 8 years old.</td>
+<td>All but <code>SLGC</code></td>
+<td style="text-align: left;">Died before 8 years old, so ordinances other than child to parent sealing are not required.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="even">
 <td><code>COMPLETED</code></td>
+<td>All</td>
 <td style="text-align: left;">Completed, but the date is not known.</td>
+<td style="text-align: left;">Deprecated, use <code>DATE BEF date</code> instead. This status was defined for use with <a href="https://www.churchofjesuschrist.org/study/ensign/1994/02/news-of-the-church/templeready-now-available">TempleReady</a> which is no longer in use.</td>
 </tr>
 <tr class="odd">
 <td><code>EXCLUDED</code></td>
+<td>All</td>
 <td style="text-align: left;">Patron excluded this ordinance from being cleared in this submission.</td>
+<td style="text-align: left;">Deprecated. This status was defined for use with TempleReady which is no longer in use.</td>
 </tr>
 <tr class="even">
 <td><code>DNS</code></td>
+<td><code>SLGC</code>, <code>SLGS</code></td>
 <td style="text-align: left;">This ordinance is not authorized.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="odd">
 <td><code>DNS_CAN</code></td>
+<td><code>SLGS</code></td>
 <td style="text-align: left;">This ordinance is not authorized, and the previous ordinance is cancelled.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="even">
 <td><code>INFANT</code></td>
+<td>All but <code>SLGC</code></td>
 <td style="text-align: left;">Died before less than 1 year old, baptism or endowment not required.</td>
+<td style="text-align: left;">Deprecated. Use <code>CHILD</code> instead.</td>
 </tr>
 <tr class="odd">
 <td><code>PRE_1970</code></td>
-<td style="text-align: left;">Ordinance was likely completed because another ordinance for this person was converted from temple records of work completed before 1970.</td>
+<td>All</td>
+<td style="text-align: left;">Ordinance was likely completed because an ordinance for this person was converted from temple records of work completed before 1970.</td>
+<td style="text-align: left;">Deprecated. Use <code>DATE BEF 1970</code> instead.</td>
 </tr>
 <tr class="even">
 <td><code>STILLBORN</code></td>
-<td style="text-align: left;">Stillborn, so ordinances not required.</td>
+<td>All</td>
+<td style="text-align: left;">Born dead, so no ordinances are required.</td>
+<td style="text-align: left;">Current</td>
 </tr>
 <tr class="odd">
 <td><code>SUBMITTED</code></td>
+<td>All</td>
 <td style="text-align: left;">Ordinance was previously submitted.</td>
+<td style="text-align: left;">Deprecated. This status was defined for use with TempleReady which is no longer in use.</td>
 </tr>
 <tr class="even">
 <td><code>UNCLEARED</code></td>
+<td>All</td>
 <td style="text-align: left;">Data for clearing the ordinance request was insufficient.</td>
+<td style="text-align: left;">Deprecated. This status was defined for use with TempleReady which is no longer in use.</td>
 </tr>
 </tbody>
 </table>
-<h3 class="unlisted unnumbered" id="enum-TYPE"><code>NAME</code>.<code>TYPE</code></h3>
+<h3 class="unlisted unnumbered" id="g7enumset-name-type"><code class="uri">g7:enumset-NAME-TYPE</code></h3>
 <table>
 
 

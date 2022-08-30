@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/ALIA
@@ -30,7 +32,7 @@ descriptions:
     mutually linked by symmetric pairs of ALIA pointers. A future version of
     this specification may adjust the definition of ALIA.
 
-payload: @<XREF:INDI>@
+payload: "@<https://gedcom.io/terms/v7/record-INDI>@"
 
 substructures:
   "https://gedcom.io/terms/v7/PHRASE": "{0:1}"

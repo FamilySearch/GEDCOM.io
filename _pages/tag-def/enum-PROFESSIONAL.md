@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-PROFESSIONAL
@@ -18,6 +20,9 @@ standard tag: PROFESSIONAL
 
 descriptions:
   - Name used professionally (pen, screen, stage name).
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
 ...
 
 ```

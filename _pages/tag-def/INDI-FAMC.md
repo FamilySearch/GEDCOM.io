@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/INDI-FAMC
@@ -22,7 +24,7 @@ descriptions:
     a STAT substructure to show individuals who are not children of the family.
     See FAM and FAMC.STAT for more.
 
-payload: @<XREF:FAM>@
+payload: "@<https://gedcom.io/terms/v7/record-FAM>@"
 
 substructures:
   "https://gedcom.io/terms/v7/FAMC-STAT": "{0:1}"

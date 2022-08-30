@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-1
@@ -19,6 +21,9 @@ standard tag: 1
 descriptions:
   - Questionable reliability of evidence (interviews, census, oral genealogies,
     or potential for bias, such as an autobiography)
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-QUAY"
 ...
 
 ```

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-LOCKED
@@ -18,6 +20,9 @@ standard tag: LOCKED
 
 descriptions:
   - Some systems may ignore changes to this data.
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-RESN"
 ...
 
 ```

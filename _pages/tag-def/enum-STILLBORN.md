@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-STILLBORN
@@ -17,7 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-STILLBORN
 standard tag: STILLBORN
 
 descriptions:
-  - Stillborn, so ordinances not required.
+  - "Applies to: All"
+  - Born dead, so no ordinances are required.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-COMPLETED
@@ -17,7 +19,13 @@ uri: https://gedcom.io/terms/v7/enum-COMPLETED
 standard tag: COMPLETED
 
 descriptions:
+  - "Applies to: All"
   - Completed, but the date is not known.
+  - "Status: Deprecated, use DATE BEF date instead. This status was defined for
+    use with TempleReady which is no longer in use."
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

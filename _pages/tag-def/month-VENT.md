@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: enumeration
+lang: en-US
+
+type: month
 
 uri: https://gedcom.io/terms/v7/month-VENT
 
@@ -18,6 +20,9 @@ standard tag: VENT
 
 descriptions:
   - Ventôse
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-FRENCH_R"
 ...
 
 ```
