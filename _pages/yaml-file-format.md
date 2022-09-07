@@ -8,14 +8,14 @@ sidebar:
 
 # YAML descriptions
 
-This page documents the organization of YAML documents delivered at the URIs of the standard tags in the FamilySearch GEDCOM 7 specification and the gedcom.io extension tag registry. The YAML documents are not part of the standard itself, and while the intent is that they remain stable and usable in the long term, if a valid reason arises they may be changed independently of the versioning process.
+This page documents the organization of YAML documents delivered at the URIs of the standard tags in the FamilySearch GEDCOM 7 specification and the extension tag registry. The YAML documents are not part of the standard itself, and while the intent is that they remain stable and usable in the long term, if a valid reason arises they may be changed independently of the versioning process.
 
 YAML documents in this form are used to define
 
 - Structure types
-- Enumeration values
-- Calendars
-- Months
+- Enumeration values and sets
+- Calendars and months
+- Payload datatypes
 - Known payloads for URI-valued structures
 
 For ease of presentation, we call whatever a YAML document is describing a "concept".
@@ -38,11 +38,23 @@ Strings without newlines may presented in any [flow style](https://yaml.org/spec
 [Sequences](https://yaml.org/spec/1.2.2/#821-block-sequences) and [mappings](https://yaml.org/spec/1.2.2/#822-block-mappings) should be in the block style unless they are empty, in which case a [flow style](https://yaml.org/spec/1.2.2/#74-flow-collection-styles) should be used instead.
 The top-level mapping should have a blank line between each mapping entry.
 
-To ease machine identification of YAML blocks, [document markers](https://yaml.org/spec/1.2.2/#912-document-markers) are recommended. In particular, documents should begin with a YAML directive "`%YAML 1.2`" a and directives end marker "`---`" and should end with a document end marker "`...`".
+To ease machine identification of YAML blocks, [document markers](https://yaml.org/spec/1.2.2/#912-document-markers) are recommended. In particular, documents should begin with both the YAML directive "`%YAML 1.2`" and the directives end marker "`---`", and should end with the document end marker "`...`".
 
 ## YAML document schema
 
 Each YAML document is a `map` with `str` keys.
+
+The following shorthand types are used in this document:
+
+| Name | YAML type | Other constraints |
+|------|-----------|-------------------|
+| Cardinality Marker | `str` | A cardinality marker as defined in the FamilySearch GEDCOM 7 specification |
+| `extTag` | `str`| Matching `extTag` from the FamilySearch GEDCOM 7 specification |
+| Language Tag | `str` | A valid language tag, as defined in BCP 47 |
+| `stdTag` | `str`| Matching `stdTag` from the FamilySearch GEDCOM 7 specification |
+| `Tag` | `str`| Matching `Tag` from the FamilySearch GEDCOM 7 specification |
+| URI | `str` | A valid URI, as defined by RFC 3986 |
+
 
 ### Required keys
 
@@ -50,7 +62,7 @@ Three keys are always present:
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>lang</code></td></tr>
-    <tr><th>Type</th><td>language tag</td></tr>
+    <tr><th>Type</th><td>Language Tag</td></tr>
     <tr><th>Required by</th><td>all</td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -60,7 +72,7 @@ Three keys are always present:
     
 -   <table><tbody>
     <tr><th>Key</th><td><code>type</code></td></tr>
-    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Type</th><td><code>str</code> from a limited set (see below)</td></tr>
     <tr><th>Required by</th><td>all</td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -72,7 +84,7 @@ Three keys are always present:
     - `enumeration set`
     - `calendar`
     - `month`
-    - `datatype`
+    - `data type`
     - `uri`
     
     Which other keys are present depends on the `type`.
@@ -154,10 +166,10 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Key</th><td><code>extension tags</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>extTag</code></td></tr>
     <tr><th>Required by</th><td>*</td></tr>
-    <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code>, and <code>uri</code></td></tr>
+    <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
-    \* Required for `calendar`, `enumeration`, `month`, and `structure` if no `standard tag` is provided
+    \* Required instead of allowed if no `standard tag` is provided
 
     A list, with the most-preferred tag first, of extension tags known to be used by applications for this concept.
 
@@ -189,7 +201,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>months</code></td></tr>
-    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: calendar</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -201,7 +213,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>payload</code></td></tr>
-    <tr><th>Type</th><td>a payload type</td></tr>
+    <tr><th>Type</th><td>`null` or `str`; see below fore more</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -218,17 +230,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
     <tr><th>Required by</th><td>*</td></tr>
-    <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code>, and <code>uri</code></td></tr>
+    <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
-    \* Required for `calendar`, `enumeration`, `month`, and `structure` if no `extension tag` is provided
+    \* Required instead of allowed if no `extension tag` is provided
 
 
     The standard tag of this concept, as given in an official GEDCOM standard document.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
-    <tr><th>Type</th><td><code>map</code> with URI keys and cardinality marker values</td></tr>
+    <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -249,9 +261,12 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Key</th><td><code>value of</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: enumeration</code></td></tr>
-    <tr><th>Allowed by</th><td>all</td></tr>
+    <tr><th>Allowed by</th><td><code>type: structure</code>*</td></tr>
     </tbody></table>
+    
+    \* Note that potentially any concept could be referred to in an enumeration set, and hence any YAML file could include the `value of` key. So far, all known examples are either `type: enumeration` or `type: structure`.
 
     A list (in no particular order) of enumeration sets that are known to contain this concepts as an enumeration value.
     
     The list may be incomplete, as a new enumeration set might be defined that re-uses an existing enumeration value.
+    
