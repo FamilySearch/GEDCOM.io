@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-BIRTH
@@ -18,6 +20,10 @@ standard tag: BIRTH
 
 descriptions:
   - Associated with birth, such as a birth name or birth parents.
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
+  - "https://gedcom.io/terms/v7/g7:enumset-PEDI"
 ...
 
 ```

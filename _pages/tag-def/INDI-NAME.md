@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/INDI-NAME
@@ -28,9 +30,11 @@ descriptions:
     PERSONAL_NAME_PIECES are provided optionally for systems that cannot
     operate effectively with less structured information. The Personal Name
     payload shall be seen as the primary name representation, with name pieces
-    as optional auxiliary information, meaning in particular that all name
-    parts in PERSONAL_NAME_PIECES should appear within the <PersonalName>
-    payload.
+    as optional auxiliary information; in particular it is recommended that all
+    name parts in PERSONAL_NAME_PIECES appear within the PersonalName payload
+    in some form, possibly adjusted for gender-specific suffixes or the like.
+    It is permitted for the payload to contain information not present in any
+    name piece substructure.
     
     The name may be translated or transliterated into different languages or
     scripts using the TRAN substructure. It is recommended, but not required,
@@ -39,8 +43,8 @@ descriptions:
     
     A TYPE is used to specify the particular variation that this name is. For
     example; it could indicate that this name is a name taken at immigration or
-    that it could be an ‘also known as’ name. See the NAME.TYPE enumeration for
-    more.
+    that it could be an ‘also known as’ name. See
+    https://gedcom.io/terms/v7/enumset-NAME-TYPE for more.
     
     Alternative approaches to representing names are being considered for
     future versions of this specification.

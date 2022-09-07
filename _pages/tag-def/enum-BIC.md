@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-BIC
@@ -17,7 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-BIC
 standard tag: BIC
 
 descriptions:
-  - Born in the covenant, receiving blessing of child to parent sealing.
+  - "Applies to: SLGC"
+  - Born in the covenant, so child to parent sealing ordinance is not required.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

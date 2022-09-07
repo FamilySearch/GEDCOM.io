@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-INFANT
@@ -17,7 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-INFANT
 standard tag: INFANT
 
 descriptions:
+  - "Applies to: All but SLGC"
   - Died before less than 1 year old, baptism or endowment not required.
+  - "Status: Deprecated. Use CHILD instead."
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: enumeration
+lang: en-US
+
+type: month
 
 uri: https://gedcom.io/terms/v7/month-IYR
 
@@ -18,6 +20,9 @@ standard tag: IYR
 
 descriptions:
   - Iyar (אִייָר)
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...
 
 ```

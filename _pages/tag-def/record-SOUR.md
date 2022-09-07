@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/record-SOUR
@@ -53,7 +55,7 @@ substructures:
   "https://gedcom.io/terms/v7/TITL": "{0:1}"
   "https://gedcom.io/terms/v7/UID": "{0:M}"
 
-superstructures: []
+superstructures: {}
 ...
 
 ```

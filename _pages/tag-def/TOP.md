@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/TOP
@@ -23,7 +25,7 @@ descriptions:
 
 payload: http://www.w3.org/2001/XMLSchema#nonNegativeInteger
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/CROP": "{0:1}"

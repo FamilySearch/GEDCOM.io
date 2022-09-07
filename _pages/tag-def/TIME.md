@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/TIME
@@ -22,7 +24,7 @@ descriptions:
 
 payload: https://gedcom.io/terms/v7/type-Time
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/DATE": "{0:1}"

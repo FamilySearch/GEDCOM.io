@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: datatype
+lang: en-US
+
+type: data type
 
 uri: https://gedcom.io/terms/v7/type-Age
 
@@ -61,7 +63,7 @@ descriptions:
     Versions 5.5 and 5.5.1 allowed a few specific phrases inside Age payloads.
     Age phrases were moved to the PHRASE substructure in 7.0.
     
-    The URI for the Age datatype is https://gedcom.io/terms/v7/type-Age.
+    The URI for the Age data type is https://gedcom.io/terms/v7/type-Age.
 ...
 
 ```

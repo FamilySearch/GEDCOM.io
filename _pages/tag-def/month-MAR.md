@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: enumeration
+lang: en-US
+
+type: month
 
 uri: https://gedcom.io/terms/v7/month-MAR
 
@@ -18,6 +20,10 @@ standard tag: MAR
 
 descriptions:
   - March
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-GREGORIAN"
+  - "https://gedcom.io/terms/v7/cal-JULIAN"
 ...
 
 ```

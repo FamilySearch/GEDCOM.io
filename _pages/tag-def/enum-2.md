@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-2
@@ -18,6 +20,9 @@ standard tag: 2
 
 descriptions:
   - Secondary evidence, data officially recorded sometime after the event
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-QUAY"
 ...
 
 ```

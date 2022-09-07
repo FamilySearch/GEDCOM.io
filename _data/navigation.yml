@@ -21,6 +21,16 @@ specs:
 tools:
    - title: "Tools"
      children:
+       - title: "Conversion tools"
+         url: "/tools/#v551-to-v70-conversion-code"
+       - title: "Parsers"
+         url: "/tools/#v70-parsers"
+       - title: "Development Aids"
+         url: "/tools/#development-aids"
+       - title: "Example files"
+         url: "/tools/#example-familysearch-gedcom-70-files"
+       - title: "Other tools"
+         url: "/tools/#other-development-tools"
 guides:
    - title: "Guides"
      children:

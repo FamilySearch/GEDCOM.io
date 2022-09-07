@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: datatype
+lang: en-US
+
+type: data type
 
 uri: https://gedcom.io/terms/v7/type-Time
 
@@ -32,7 +34,7 @@ descriptions:
     The above grammar prohibits end-of-day instant 24:00:00 and leap-seconds.
     It allows both 02:50 and 2:50 as the same time.
     
-    The URI for the Time datatype is https://gedcom.io/terms/v7/type-Time.
+    The URI for the Time data type is https://gedcom.io/terms/v7/type-Time.
 ...
 
 ```

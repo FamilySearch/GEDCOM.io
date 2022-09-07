@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: calendar
 
 uri: https://gedcom.io/terms/v7/cal-JULIAN
@@ -33,6 +35,20 @@ descriptions:
     followed by year 1.
     
     The URI for this calendar is https://gedcom.io/terms/v7/cal-JULIAN
+
+months:
+  - "https://gedcom.io/terms/v7/month-JAN"
+  - "https://gedcom.io/terms/v7/month-FEB"
+  - "https://gedcom.io/terms/v7/month-MAR"
+  - "https://gedcom.io/terms/v7/month-APR"
+  - "https://gedcom.io/terms/v7/month-MAY"
+  - "https://gedcom.io/terms/v7/month-JUN"
+  - "https://gedcom.io/terms/v7/month-JUL"
+  - "https://gedcom.io/terms/v7/month-AUG"
+  - "https://gedcom.io/terms/v7/month-SEP"
+  - "https://gedcom.io/terms/v7/month-OCT"
+  - "https://gedcom.io/terms/v7/month-NOV"
+  - "https://gedcom.io/terms/v7/month-DEC"
 ...
 
 ```

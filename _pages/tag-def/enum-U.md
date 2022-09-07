@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-U
@@ -18,6 +20,9 @@ standard tag: U
 
 descriptions:
   - Cannot be determined from available sources
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-SEX"
 ...
 
 ```

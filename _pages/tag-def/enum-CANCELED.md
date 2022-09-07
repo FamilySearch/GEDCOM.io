@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-CANCELED
@@ -17,7 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-CANCELED
 standard tag: CANCELED
 
 descriptions:
+  - "Applies to: SLGS"
   - Canceled and considered invalid.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/PLAC-TRAN
@@ -22,7 +24,7 @@ descriptions:
     A type of TRAN substructure specific to places. Each PLAC.TRAN must have a
     LANG substructure. See also PLAC.
     
-    The following presents a place in Japanese with a romanji transliteration
+    The following presents a place in Japanese with a romaji transliteration
     and English translation
     
         2 PLAC 千代田, 東京, 日本

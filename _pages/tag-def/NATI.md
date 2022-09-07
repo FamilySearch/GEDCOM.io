@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/NATI
@@ -20,7 +22,8 @@ descriptions:
   - Nationality
   - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
   - nationality
-  - The national heritage of an individual.
+  - An individual’s national heritage or origin, or other folk, house, kindred,
+    lineage, or tribal interest.
 
 payload: http://www.w3.org/2001/XMLSchema#string
 
@@ -48,6 +51,9 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-EVENATTR"
 ...
 
 ```

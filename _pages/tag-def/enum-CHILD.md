@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-CHILD
@@ -17,7 +19,13 @@ uri: https://gedcom.io/terms/v7/enum-CHILD
 standard tag: CHILD
 
 descriptions:
-  - Died before 8 years old.
+  - "Applies to: All but SLGC"
+  - Died before 8 years old, so ordinances other than child to parent sealing
+    are not required.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

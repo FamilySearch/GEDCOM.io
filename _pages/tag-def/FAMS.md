@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/FAMS
@@ -20,7 +22,7 @@ descriptions:
   - Family spouse
   - The family in which an individual appears as a partner. See FAM for more.
 
-payload: @<XREF:FAM>@
+payload: "@<https://gedcom.io/terms/v7/record-FAM>@"
 
 substructures:
   "https://gedcom.io/terms/v7/NOTE": "{0:M}"

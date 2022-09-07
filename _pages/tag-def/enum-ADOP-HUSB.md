@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-ADOP-HUSB
@@ -18,6 +20,9 @@ standard tag: HUSB
 
 descriptions:
   - Adopted by the HUSB of the FAM pointed to by FAMC.
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ADOP"
 ...
 
 ```

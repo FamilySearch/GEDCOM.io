@@ -10,7 +10,9 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: enumeration
+lang: en-US
+
+type: month
 
 uri: https://gedcom.io/terms/v7/month-TVT
 
@@ -18,6 +20,9 @@ standard tag: TVT
 
 descriptions:
   - Tevet (טֵבֵת)
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...
 
 ```

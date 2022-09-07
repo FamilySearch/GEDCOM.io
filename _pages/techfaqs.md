@@ -212,3 +212,44 @@ It is also possible to presented the nickname inline with the other name parts:
 2 NICK Bill
 2 SURN Miller
 ```
+
+# How do I record a preferred name among given names?
+
+In many customs a person is given a series of given names, where one of them (often not the first one)
+is the name the individual will commonly be known by.
+
+For example, the Wikipedia entry for [German name](https://en.wikipedia.org/wiki/German_name) explains:
+
+> It is common to give a child several given names, one of them intended for everyday use and known as
+> the "Rufname" ("appellation name" or "call name").  This _Rufname_ is often underlined on official documents,
+> as it is sometimes the second or third name in the sequence of given names on official record,
+> even though it is the given name in daily use from childhood.
+
+FamilySearch GEDCOM 7.0 and earlier GEDCOM versions including 5.5.1 do not explicitly define a standard way
+to denote this concept, and so a variety of mechanisms have been used by implementations over time.  For example,
+for the name "Amalie <u>Emmy</u> Noether", some implementations might use an extension tag such as `_RUFNAME`:
+
+```
+1 NAME Amalie Emmy /Noether/
+2 GIVN Amalie Emmy
+2 _RUFNAME Emmy
+2 SURN Noether
+```
+
+Such extensions can, however, result in loss of data since they are not standardized and so can be dropped
+by other implementations.  A more interoperable form using only standard tags is:
+
+```
+1 NAME Emmy /Noether/
+2 GIVN Emmy
+2 SURN Noether
+1 NAME Amalie Emmy /Noether/
+2 TYPE birth
+2 GIVN Amalie Emmy
+2 SURN Noether
+```
+
+The above example denotes that the second form is the actual birth name, but the first form was also used by
+the person.  Although the specification does not define any semantics to the order among NAME structures,
+some implementations are known to infer that the first NAME occuring is a "preferred" one to use
+for display.

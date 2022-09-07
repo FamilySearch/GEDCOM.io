@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-OTHER
@@ -18,6 +20,12 @@ standard tag: OTHER
 
 descriptions:
   - A value not listed here; should have a PHRASE substructure
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-MEDI"
+  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
+  - "https://gedcom.io/terms/v7/g7:enumset-PEDI"
+  - "https://gedcom.io/terms/v7/g7:enumset-ROLE"
 ...
 
 ```

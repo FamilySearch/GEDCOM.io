@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: structure
 
 uri: https://gedcom.io/terms/v7/LANG
@@ -64,7 +66,7 @@ descriptions:
 
 payload: http://www.w3.org/2001/XMLSchema#Language
 
-substructures: []
+substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/NAME-TRAN": "{1:1}"

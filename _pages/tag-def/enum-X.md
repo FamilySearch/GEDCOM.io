@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-X
@@ -18,6 +20,9 @@ standard tag: X
 
 descriptions:
   - Does not fit the typical definition of only Male or only Female
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-SEX"
 ...
 
 ```

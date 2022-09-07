@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-MOTH
@@ -18,6 +20,9 @@ standard tag: MOTH
 
 descriptions:
   - Mother; implies PARENT
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ROLE"
 ...
 
 ```

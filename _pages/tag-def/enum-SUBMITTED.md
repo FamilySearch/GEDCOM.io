@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-SUBMITTED
@@ -17,7 +19,13 @@ uri: https://gedcom.io/terms/v7/enum-SUBMITTED
 standard tag: SUBMITTED
 
 descriptions:
+  - "Applies to: All"
   - Ordinance was previously submitted.
+  - "Status: Deprecated. This status was defined for use with TempleReady which
+    is no longer in use."
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
 ...
 
 ```

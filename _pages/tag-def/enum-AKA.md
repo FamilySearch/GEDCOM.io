@@ -10,6 +10,8 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en-US
+
 type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-AKA
@@ -18,6 +20,9 @@ standard tag: AKA
 
 descriptions:
   - Also known as, alias, etc.
+
+value of:
+  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
 ...
 
 ```
