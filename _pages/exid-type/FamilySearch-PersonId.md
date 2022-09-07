@@ -10,11 +10,13 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en
+
 type: uri
 
 uri: https://gedcom.io/exid-type/FamilySearch-PersonId
 
-descriptions:
+specification:
   - FamilySearch Person ID
   - |
     This URI is defined for use as the https://gedcom.io/terms/v7/TYPE of an
