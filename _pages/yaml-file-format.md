@@ -48,11 +48,23 @@ Each YAML document is a `map` with `str` keys.
 
 Three keys are always present:
 
-- `lang`<br/>
+-   <table><tbody>
+    <tr><th>Key</th><td><code>lang</code></td></tr>
+    <tr><th>Type</th><td>language tag</td></tr>
+    <tr><th>Required by</th><td>all</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
     A language tag, as specified in BCP 47.
     The entire YAML document is presented in this language.
     
-- `type`<br/>
+-   <table><tbody>
+    <tr><th>Key</th><td><code>type</code></td></tr>
+    <tr><th>Type</th><td>`str` tag</td></tr>
+    <tr><th>Required by</th><td>all</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
     One of the following string values:
 
     - `structure`
@@ -69,7 +81,13 @@ Three keys are always present:
     Types for assisting in knowing which extensions a given application supports
     and for finding a translation of the YAML document into other languages are expected.
 
-- `uri`<br/>
+-   <table><tbody>
+    <tr><th>Key</th><td><code>uri</code></td></tr>
+    <tr><th>Type</th><td>URI</td></tr>
+    <tr><th>Required by</th><td>all</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
     The URI that identifies the concept documented in this YAML file.
 
 ### Other keys
@@ -78,7 +96,7 @@ The following keys may appear in a YAML file.
 Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>enumeration set</code></td></tr>
+    <tr><th>Key</th><td><code>enumeration set</code></td></tr>
     <tr><th>Type</th><td>URI</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code> with <code>payload</code> either <code>g7:type-Enum</code> or <code>g7:type-List#Enum</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -87,7 +105,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The URI of the set of enumeration values permitted in the paylaod of this structure.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>calendars</code></td></tr>
+    <tr><th>Key</th><td><code>calendars</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: month</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -98,7 +116,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list may be incomplete, as a new calendar might be defined that uses an existing month.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>specification</code></td></tr>
+    <tr><th>Key</th><td><code>specification</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
     <tr><th>Required by</th><td>all except <code>type: enumeration set</code></td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
@@ -109,7 +127,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The specification are generally programmer-centric; for user-centric text, see `label` and `help text`
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>documentation</code></td></tr>
+    <tr><th>Key</th><td><code>documentation</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
@@ -118,7 +136,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     One or more external URLs where additional documentation can be found. If there is no such URL, this entry should be omitted.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>enumeration values</code></td></tr>
+    <tr><th>Key</th><td><code>enumeration values</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: enumeration set</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -133,7 +151,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list may be incomplete, as a new enumeration values might be defined that may be included in existing structures.
     
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>extension tags</code></td></tr>
+    <tr><th>Key</th><td><code>extension tags</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>extTag</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code>, and <code>uri</code></td></tr>
@@ -145,7 +163,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     For example, 7.0's `UID` structure is fully compatible with the common 5.5.1 extension identified by tag `_UID`.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>help text</code></td></tr>
+    <tr><th>Key</th><td><code>help text</code></td></tr>
     <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
@@ -156,7 +174,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     Help text may be lengthy; for brief text to use in UI elements, see `label`.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>label</code></td></tr>
+    <tr><th>Key</th><td><code>label</code></td></tr>
     <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
@@ -168,7 +186,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `help text`.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>months</code></td></tr>
+    <tr><th>Key</th><td><code>months</code></td></tr>
     <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td><code>type: calendar</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -180,7 +198,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list should be taken as exhaustive. Extensions may not add new months to existing calendars.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>payload</code></td></tr>
+    <tr><th>Key</th><td><code>payload</code></td></tr>
     <tr><th>Type</th><td>a payload type</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -195,7 +213,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     - A string of the form `@<`URI`>@`, meaning the payload is a pointer to a structure whose type is given by the URI.
     
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>standard tag</code></td></tr>
+    <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code>, and <code>uri</code></td></tr>
@@ -204,7 +222,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The standard tag of this concept, as given in an official GEDCOM standard document.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
+    <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
     <tr><th>Type</th><td><code>map</code> with URI keys and cardinality marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -223,7 +241,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
 
 -   <table><tbody>
-    <tr><th>Tag</th><td><code>value of</code></td></tr>
+    <tr><th>Key</th><td><code>value of</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: enumeration</code></td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
