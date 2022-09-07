@@ -60,7 +60,7 @@ Three keys are always present:
     
 -   <table><tbody>
     <tr><th>Key</th><td><code>type</code></td></tr>
-    <tr><th>Type</th><td>`str` tag</td></tr>
+    <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td>all</td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
