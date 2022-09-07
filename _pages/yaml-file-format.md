@@ -24,84 +24,107 @@ For ease of presentation, we call whatever a YAML document is describing a "conc
 
 The files are provided in [YAML 1.2](https://yaml.org).
 YAML was chosen because it is readily parseable in many programming languages
-and it *can* be presented in a human-readable way.
+and it can be formatted in a human-readable way.
 Because YAML provides many formatting options, using a readable style is an option, not a guarantee, and should be considered when preparing the YAML documents.
 
 The YAML should use only [untagged nodes](https://yaml.org/spec/1.2.2/#resolved-tags) with types `seq`, `map`, and `str` from the [fail safe schema](https://yaml.org/spec/1.2.2/#failsafe-schema)
 and `null` from the [JSON schema](https://yaml.org/spec/1.2.2/#json-schema).
 
-Long strings should be wrapped to keep the YAML under 80 columns if feasible.
+Long strings should be wrapped on whitespace to keep the YAML under 80 columns if feasible.
 Strings containing newlines should be presented using the [literal block style](https://yaml.org/spec/1.2.2/#literal-style).
-Strings without newlines may presented in and [flow style](https://yaml.org/spec/1.2.2/#73-flow-scalar-styles)
+Strings without newlines may presented in any [flow style](https://yaml.org/spec/1.2.2/#73-flow-scalar-styles)
 (though note the restrictions on [plain style strings](https://yaml.org/spec/1.2.2/#plain-style)).
 
 [Sequences](https://yaml.org/spec/1.2.2/#821-block-sequences) and [mappings](https://yaml.org/spec/1.2.2/#822-block-mappings) should be in the block style unless they are empty, in which case a [flow style](https://yaml.org/spec/1.2.2/#74-flow-collection-styles) should be used instead.
 The top-level mapping should have a blank line between each mapping entry.
 
-To ease machine identification of YAML blocks, [document markers](https://yaml.org/spec/1.2.2/#912-document-markers) are recommended. In particular, documents should begin with a YAML directive "`%YAML 1.2`" and directives end marker "`---`" and end with a document end marker "`...`".
+To ease machine identification of YAML blocks, [document markers](https://yaml.org/spec/1.2.2/#912-document-markers) are recommended. In particular, documents should begin with a YAML directive "`%YAML 1.2`" a and directives end marker "`---`" and should end with a document end marker "`...`".
 
-## YAML document schemata
+## YAML document schema
 
 Each YAML document is a `map` with `str` keys.
-Each has a key "`type`" with one of a small set of strings, listed below, as its value.
-For readability, the `type` should be the first entry in the YAML document and both the key and value should be provided as plain scalars.
 
-The valid `type`s are
+### Required keys
 
-- `structure`
-- `enumeration`
-- `calendar`
-- `month`
-- `datatype`
-- `uri`
+Three keys are always present:
 
-| Key | Value Type | Required by `type` | Permitted by `type` |
-|-----|------------|-------------|--------------|
-| `calendars` | `seq` of *uri* | `month` | |
-| `descriptions` | `seq` of `str` | all | |
-| `documentation` | `seq` of *uri* | | all |
-| `enumeration values` | `map` of *tag* to *uri*  | | `structure` |
-| `explanation` | `map` of *lang* to `str` | | all |
-| `extension tags` | `seq` of *extTag* | | `structure`, `enumeration`, `calendar`, `month` |
-| `label` | `map` of *lang* to `str` | | all |
-| `months` | `seq` of *uri* | `calendar` | |
-| `payload` | *type* | `structure` |
-| `standard tag` | *stdTag* | *special* | *special* | 
-| `substructures` | `map` of *uri* to *card* | `structure` | |
-| `superstructures` | `map` of *uri*\* to *card* | `structure` | |
-| `type` | `str` from a set listed here | all | |
-| `uri` | *uri* | all | |
-| `used by` | `seq` of *uri* | `enumeration` | |
+- `lang`<br/>
+    A language tag, as specified in BCP 47.
+    The entire YAML document is presented in this language.
+    
+- `type`<br/>
+    One of the following string values:
 
-\* `superstructures` (only) permits the string "`HEAD psuedostructure`" as if it were a URI
+    - `structure`
+    - `enumeration`
+    - `enumeration set`
+    - `calendar`
+    - `month`
+    - `datatype`
+    - `uri`
+    
+    Which other keys are present depends on the `type`.
 
-In the above table,
+    It is anticipated that additional types will be added in the future.
+    Types for assisting in knowing which extensions a given application supports
+    and for finding a translation of the YAML document into other languages are expected.
 
-- *stdTag* means a `str` matching production `stdTag`
-- *extTag* means a `str` matching production `extTag`
-- *tag* means a `str` matching production `tag`
-- *uri* means a `str` that is a URI
-- *lang* means a `str` in the datatype Language
-- *type* means one of the following:
-    - `null`
-    - a `str` that is the URI of a datatype
-    - a `str` that is the URI of a structure type delimited by `@` characters
-    - the specific `str` "`Y|<NULL>'"
-- *card* means one of the following four `str`: "`{0:1}`", "`{0:M}`", "`{1:1}`", or "`{1:M}`"
+- `uri`<br/>
+    The URI that identifies the concept documented in this YAML file.
 
-Notes about specific items follow:
+### Other keys
 
-- `calendars` is a list (in no particular order) of the URIs of calendars that use this month.
+The following keys may appear in a YAML file.
+Their names may be changed a YAML file with a `lang` other than `en`.
+
+-   <table><tbody>
+    <tr><th>Tag</th><td>`enumeration set`</td></tr>
+    <tr><th>Type</th><td>URI</td></tr>
+    <tr><th>Required by</th><td>`type: structure` with `payload` either `g7:type-Enum` or `g7:type-List#Enum`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+    
+    The URI of the set of enumeration values permitted in the paylaod of this structure.
+
+-   <table><tbody>
+    <tr><th>Tag</th><td>`calendars`</td></tr>
+    <tr><th>Type</th><td>`seq` of URI</td></tr>
+    <tr><th>Required by</th><td>`type: month`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+    
+    A list (in no particular order) of the URIs of calendars that use this month.
     
     The list may be incomplete, as a new calendar might be defined that uses an existing month.
 
-- `descriptions` is a list (in no particular order) of descriptions of the concept the YAML document is defining. Descriptions may be given in any language; it is recommended that at least one English-language description be included.
+-   <table><tbody>
+    <tr><th>Tag</th><td>`specification`</td></tr>
+    <tr><th>Type</th><td>`seq` of `str`</td></tr>
+    <tr><th>Required by</th><td>all except `type: enumeration set`</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
     
-    Descriptions are generally programmer-centric; for user-centric text, see `label` and `explanation`
+    A list (in no particular order) of descriptions of the concept the YAML document is defining.
+    
+    The specification are generally programmer-centric; for user-centric text, see `label` and `help text`
 
-- `documentation` may provide one or more external URLs where additional documentation can be found. If there is no such URL, this entry should be omitted.
+-   <table><tbody>
+    <tr><th>Tag</th><td>`documentation`</td></tr>
+    <tr><th>Type</th><td>`seq` of URI</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
 
-- `enumeration values` is used when the `payload` is <https://gedcom.io/terms/v7/type-Enum> or <https://gedcom.io/terms/v7/type-List#Enum> and provides a list of URIs of enumeration values supported by the structure.
+    One or more external URLs where additional documentation can be found. If there is no such URL, this entry should be omitted.
+
+-   <table><tbody>
+    <tr><th>Tag</th><td>`enumeration values`</td></tr>
+    <tr><th>Type</th><td>`seq` of URI</td></tr>
+    <tr><th>Required by</th><td>`type: enumeration set`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
+    A list (in no particular order) of URIs of enumeration values supported by the structure.
 
     The listed URIs needn't identify only enumeration values:
     some structures explicitly enumerate other concepts,
@@ -109,68 +132,103 @@ Notes about specific items follow:
 
     The list may be incomplete, as a new enumeration values might be defined that may be included in existing structures.
     
-    > **Question**: should we change this to a list of URIs instead of its current mapping from tag to URI, removing the chance that an incorrect tag is placed in the entry?
+-   <table><tbody>
+    <tr><th>Tag</th><td>`extension tags`</td></tr>
+    <tr><th>Type</th><td>`seq` of `extTag`</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>`type`s `calendar`, `enumeration`, `month`, `structure`, and `uri`</td></tr>
+    </tbody></table>
 
-- `explanation` provides recommended detailed descriptions to show to users, potentially in several languages.
-
-    Explanations are user-centric; for programmer-centric explanations of the concept, see `description`.
-    
-    Explanations may be lengthy; for brief text to use in UI elements, see `label`.
-
-- `extension tags` are provided in-order, with the most-preferred tag first.
+    A list, with the most-preferred tag first, of extension tags known to be used by applications for this concept.
 
     Standard structures may have an `extension tags` entry to list *fully compatible* extensions that predated the standard and can be converted to the `standard tag` without any other modification.
+    For example, 7.0's `UID` structure is fully compatible with the common 5.5.1 extension identified by tag `_UID`.
 
-- `label` provides recommended brief names or labels to show to users, potentially in several languages.
+-   <table><tbody>
+    <tr><th>Tag</th><td>`help text`</td></tr>
+    <tr><th>Type</th><td>`str`</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
 
-    Labels are user-centric; for programmer-centric explanations of the concept, see `description`.
+    A recommended detailed description to show to users. For programmer-centric explanations of the concept, see `specification`.
     
-    Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `explanation`.
+    Help text may be lengthy; for brief text to use in UI elements, see `label`.
 
-- `months` is a list of all of the months used in the given calendar. They are listed in the order they appear in a year to facilitate chronological sorting.
+-   <table><tbody>
+    <tr><th>Tag</th><td>`label`</td></tr>
+    <tr><th>Type</th><td>`str`</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    A recommended brief name or label to show to users.
+    Labels are user-centric; for programmer-centric explanations of the concept, see `specification`.
+    
+    Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `help text`.
+
+-   <table><tbody>
+    <tr><th>Tag</th><td>`months`</td></tr>
+    <tr><th>Type</th><td>`str`</td></tr>
+    <tr><th>Required by</th><td>`type: calendar`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
+    A list of all of the months used in the given calendar. Months are listed in the order they appear in a year to facilitate chronological sorting.
+    Some calendars include leap months, so it may be that not all months appear every year in the given calendar.
     
     The list should be taken as exhaustive. Extensions may not add new months to existing calendars.
 
-- `payload` indicates the payload type of the given structure.
-    Datatypes and "`Y|<NULL>'" have the same meaning they do in the standard.
-    `null` means no payload is permitted.
-    Pointers are indicated by `@<`URI`>@` instead of `@<XREF:`tag`>@` to support extensions as well as standard structures.
-    
-- `standard tag` may only be used for concepts given a tag in the standard document itself.
+-   <table><tbody>
+    <tr><th>Tag</th><td>`payload`</td></tr>
+    <tr><th>Type</th><td>a payload type</td></tr>
+    <tr><th>Required by</th><td>`type: structure`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
 
-- `substructures` and `superstructures` express how structures may be nested, and with what cardinality.
+    Indicates the payload type of the given structure.
+    This will be one of
+    
+    - `null`, meaning no payload is permitted
+    - The special string "`Y|<NULL>`", meaning the payload is either "`Y`" or omitted
+    - The URI of a datatype, meaning a payload of this type is required
+    - A string of the form `@<`URI`>@`, meaning the payload is a pointer to a structure whose type is given by the URI.
+    
+-   <table><tbody>
+    <tr><th>Tag</th><td>`standard tag`</td></tr>
+    <tr><th>Type</th><td>`stdTag`</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>`type`s `calendar`, `enumeration`, `month`, `structure`, and `uri`</td></tr>
+    </tbody></table>
+
+    The standard tag of this concept, as given in an official GEDCOM standard document.
+
+-   <table><tbody>
+    <tr><th>Tag</th><td>`substructure` and `superstucture`</td></tr>
+    <tr><th>Type</th><td>`map` with URI keys and cardinality marker values</td></tr>
+    <tr><th>Required by</th><td>`type: structure`</td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
+    These express how structures may be nested, and with what cardinality.
+    Structure types are given by URI; cardinalities are expressed using the same strings as the standard (i.e. "`{0:1}`", "`{1:1}`", "`{0:M}`", and "`{1:M}`")
     
     Because new structures may be added over time in any order,
     *x* may be a substructure of *y* if
     either *x*'s `superstructures` includes *y* 
     or *y*'s `substructures` includes *x*.
     
-    The cardinality of a substructure/superstructure relationship must be the same if it is listed in both a `substructures` entry and a  superstructures` entry.
+    If the relationship is listed in both a `substructures` entry and a `superstructures` entry, the two must have the same cardinality.
     
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
 
+-   <table><tbody>
+    <tr><th>Tag</th><td>`value of`</td></tr>
+    <tr><th>Type</th><td>`seq` of URI</td></tr>
+    <tr><th>Required by</th><td>`type: enumeration`</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
 
-- `type` is one of the following values:
-
-    | `type` | YAML describes |
-    |--------|---------|
-    | `structure`   | a structure type   |
-    | `enumeration` | an enumeration value |
-    | `calendar`    | a calendar |
-    | `month`       | month in some calendar |
-    | `datatype`    | payload datatype |
-    | `uri`         | another URI of general interest, such as a known `EXID`.`TYPE |
-
-- `uri` is the canonical URI of the concept the YAML document describes.
+    A list (in no particular order) of enumeration sets that are known to contain this concepts as an enumeration value.
     
-    In general this will not be the same as the URL of the document that describes it; for example the document with URL <https://gedcom.io/terms/v7/type-List.html> describes the datatype with URI `https://gedcom.io/terms/v7/type-List`.
-    
-    > **Question**: How (if at all) should we handle cases where two implementers create distinct URIs for the same concept?
-
-- `used by` lists structure types that are known to use this concepts as an enumeration value.
-    
-    The list may be incomplete, as a new structure type might be defined that re-uses an existing enumeration value.
-
-    > **Question**: Should <https://gedcom.io/terms/v7/CHR> have a `used by` entry with <https://gedcom.io/terms/v7/NO> and <https://gedcom.io/terms/v7/SOUR-EVEN> in the list? If not, is there another way to denote that relationship? If so, should we rename "`used by`" to a more descriptive phrase like "`enumerated by`" or "`enumeration value of`"?
-
-
+    The list may be incomplete, as a new enumeration set might be defined that re-uses an existing enumeration value.
