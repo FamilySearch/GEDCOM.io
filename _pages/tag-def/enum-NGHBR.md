@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-NGHBR
 
 standard tag: NGHBR
 
-descriptions:
+specification:
   - Neighbor
 
 value of:

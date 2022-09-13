@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-APR
 
 standard tag: APR
 
-descriptions:
+specification:
   - April
 
 calendars:

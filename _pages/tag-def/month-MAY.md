@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-MAY
 
 standard tag: MAY
 
-descriptions:
+specification:
   - May
 
 calendars:

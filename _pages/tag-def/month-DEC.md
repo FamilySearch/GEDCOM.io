@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-DEC
 
 standard tag: DEC
 
-descriptions:
+specification:
   - December
 
 calendars:

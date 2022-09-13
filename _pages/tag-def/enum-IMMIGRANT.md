@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-IMMIGRANT
 
 standard tag: IMMIGRANT
 
-descriptions:
+specification:
   - Name assumed at the time of immigration.
 
 value of:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/ASSO
 
 standard tag: ASSO
 
-descriptions:
+specification:
   - Associates
   - A pointer to an associated individual. See ASSOCIATION_STRUCTURE for more.
   - |

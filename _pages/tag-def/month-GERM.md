@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-GERM
 
 standard tag: GERM
 
-descriptions:
+specification:
   - Germinal
 
 calendars:

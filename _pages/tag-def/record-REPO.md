@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/record-REPO
 
 standard tag: REPO
 
-descriptions:
+specification:
   - Repository
   - See REPOSITORY_RECORD.
   - |

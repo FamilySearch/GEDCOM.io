@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-CONFIDENTIAL
 
 standard tag: CONFIDENTIAL
 
-descriptions:
+specification:
   - This data was marked as confidential by the user.
 
 value of:

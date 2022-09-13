@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/REFN
 
 standard tag: REFN
 
-descriptions:
+specification:
   - Reference
   - |
     A user-defined number or text that the submitter uses to identify the

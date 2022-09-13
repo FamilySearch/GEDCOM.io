@@ -10,11 +10,13 @@ redirect-from:
 
 %YAML 1.2
 ---
+lang: en
+
 type: uri
 
 uri: https://gedcom.io/terms/v7/RIN
 
-descriptions:
+specification:
   - Record ID Number
   - |
     This URI is defined to support conversion from GEDCOM 5.5.1 to FamilySearch

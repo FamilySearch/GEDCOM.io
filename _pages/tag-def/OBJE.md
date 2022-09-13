@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/OBJE
 
 standard tag: OBJE
 
-descriptions:
+specification:
   - Object
   - See MULTIMEDIA_LINK.
   - |

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/FAM-CENS
 
 standard tag: CENS
 
-descriptions:
+specification:
   - Census
   - An Family Event.
   - census

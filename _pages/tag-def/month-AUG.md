@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-AUG
 
 standard tag: AUG
 
-descriptions:
+specification:
   - August
 
 calendars:

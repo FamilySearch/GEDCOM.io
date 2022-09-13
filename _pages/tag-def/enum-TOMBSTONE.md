@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-TOMBSTONE
 
 standard tag: TOMBSTONE
 
-descriptions:
+specification:
   - Burial marker or related memorial
 
 value of:

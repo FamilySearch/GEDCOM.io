@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-WITN
 
 standard tag: WITN
 
-descriptions:
+specification:
   - Witness
 
 value of:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-JUN
 
 standard tag: JUN
 
-descriptions:
+specification:
   - June
 
 calendars:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/ANCI
 
 standard tag: ANCI
 
-descriptions:
+specification:
   - Ancestor interest
   - Indicates an interest in additional research for ancestors of this
     individual. (See also DESI).

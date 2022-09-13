@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/CAST
 
 standard tag: CAST
 
-descriptions:
+specification:
   - Caste
   - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
   - caste

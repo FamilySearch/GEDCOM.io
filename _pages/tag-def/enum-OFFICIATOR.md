@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-OFFICIATOR
 
 standard tag: OFFICIATOR
 
-descriptions:
+specification:
   - Officiator of the event
 
 value of:

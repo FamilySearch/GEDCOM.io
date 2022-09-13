@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/SURN
 
 standard tag: SURN
 
-descriptions:
+specification:
   - Surname
   - A family name passed on or used by members of a family.
 

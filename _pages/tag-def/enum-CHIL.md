@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-CHIL
 
 standard tag: CHIL
 
-descriptions:
+specification:
   - Child
 
 value of:

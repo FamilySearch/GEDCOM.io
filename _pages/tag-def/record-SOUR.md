@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/record-SOUR
 
 standard tag: SOUR
 
-descriptions:
+specification:
   - Source
   - A description of an entire source. See SOURCE_RECORD for more.
   - |

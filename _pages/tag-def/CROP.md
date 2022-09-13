@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/CROP
 
 standard tag: CROP
 
-descriptions:
+specification:
   - Crop
   - |
     A subregion of an image to display. It is only valid when the

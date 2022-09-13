@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/MARB
 
 standard tag: MARB
 
-descriptions:
+specification:
   - Marriage banns
   - A Family Event. See also FAMILY_EVENT_STRUCTURE.
   - marriage bann

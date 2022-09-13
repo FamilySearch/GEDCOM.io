@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-VENT
 
 standard tag: VENT
 
-descriptions:
+specification:
   - Ventôse
 
 calendars:

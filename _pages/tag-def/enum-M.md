@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-M
 
 standard tag: M
 
-descriptions:
+specification:
   - Male
 
 value of:

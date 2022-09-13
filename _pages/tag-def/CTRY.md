@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/CTRY
 
 standard tag: CTRY
 
-descriptions:
+specification:
   - Country
   - The name of the country that pertains to the associated address. See
     ADDRESS_STRUCTURE for more.

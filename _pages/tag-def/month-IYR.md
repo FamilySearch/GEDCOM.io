@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-IYR
 
 standard tag: IYR
 
-descriptions:
+specification:
   - Iyar (אִייָר)
 
 calendars:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/ALIA
 
 standard tag: ALIA
 
-descriptions:
+specification:
   - Alias
   - |
     A single individual may have facts distributed across multiple individual

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-PHOTO
 
 standard tag: PHOTO
 
-descriptions:
+specification:
   - Photograph
 
 value of:

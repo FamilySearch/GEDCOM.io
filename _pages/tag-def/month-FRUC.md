@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-FRUC
 
 standard tag: FRUC
 
-descriptions:
+specification:
   - Fructidor
 
 calendars:

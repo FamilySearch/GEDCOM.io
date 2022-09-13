@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/CHIL
 
 standard tag: CHIL
 
-descriptions:
+specification:
   - Child
   - The child in a family, whether biological, adopted, foster, sealed, or
     other relationship.

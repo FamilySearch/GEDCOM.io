@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-AAV
 
 standard tag: AAV
 
-descriptions:
+specification:
   - Av (אָב)
 
 calendars:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/DESI
 
 standard tag: DESI
 
-descriptions:
+specification:
   - Descendant Interest
   - Indicates an interest in research to identify additional descendants of
     this individual. See also ANCI.

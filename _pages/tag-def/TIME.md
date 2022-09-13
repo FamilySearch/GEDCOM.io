@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/TIME
 
 standard tag: TIME
 
-descriptions:
+specification:
   - Time
   - A Time value in a 24-hour clock format.
 

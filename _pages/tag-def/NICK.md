@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/NICK
 
 standard tag: NICK
 
-descriptions:
+specification:
   - Nickname
   - A descriptive or familiar name that is used instead of, or in addition to,
     one’s proper name.

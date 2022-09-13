@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/RESN
 
 standard tag: RESN
 
-descriptions:
+specification:
   - Restriction
   - |
     A [List] of enumerated values from set

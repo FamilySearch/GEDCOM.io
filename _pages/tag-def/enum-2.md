@@ -16,9 +16,9 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-2
 
-standard tag: 2
+standard tag: '2'
 
-descriptions:
+specification:
   - Secondary evidence, data officially recorded sometime after the event
 
 value of:

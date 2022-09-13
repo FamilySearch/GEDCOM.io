@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-MANUSCRIPT
 
 standard tag: MANUSCRIPT
 
-descriptions:
+specification:
   - Written pages
 
 value of:

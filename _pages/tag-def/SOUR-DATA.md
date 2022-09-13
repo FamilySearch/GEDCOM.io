@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/SOUR-DATA
 
 standard tag: DATA
 
-descriptions:
+specification:
   - Data
   - See https://gedcom.io/terms/v7/DATA.
 

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-NSN
 
 standard tag: NSN
 
-descriptions:
+specification:
   - Nisan (נִיסָן)
 
 calendars:

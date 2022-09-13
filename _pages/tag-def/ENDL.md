@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/ENDL
 
 standard tag: ENDL
 
-descriptions:
+specification:
   - Endowment, Latter-Day Saint
   - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
   - endowment

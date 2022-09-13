@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-CARD
 
 standard tag: CARD
 
-descriptions:
+specification:
   - A card or file entry
 
 value of:

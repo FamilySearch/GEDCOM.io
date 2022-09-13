@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/DEST
 
 standard tag: DEST
 
-descriptions:
+specification:
   - Destination
   - An identifier for the system expected to receive this document. See
     HEAD.SOUR for guidance on choosing identifiers.

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/PAGE
 
 standard tag: PAGE
 
-descriptions:
+specification:
   - Page
   - |
     A specific location within the information referenced. For a published

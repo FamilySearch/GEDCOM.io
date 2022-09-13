@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-ELL
 
 standard tag: ELL
 
-descriptions:
+specification:
   - Elul (אֱלוּל)
 
 calendars:

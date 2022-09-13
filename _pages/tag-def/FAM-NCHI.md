@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/FAM-NCHI
 
 standard tag: NCHI
 
-descriptions:
+specification:
   - Number of children
   - A Family Attribute. See also FAMILY_ATTRIBUTE_STRUCTURE.
   - number of children

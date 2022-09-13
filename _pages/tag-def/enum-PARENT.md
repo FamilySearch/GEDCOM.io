@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-PARENT
 
 standard tag: PARENT
 
-descriptions:
+specification:
   - Parent
 
 value of:

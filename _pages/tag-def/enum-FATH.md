@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-FATH
 
 standard tag: FATH
 
-descriptions:
+specification:
   - Father; implies PARENT
 
 value of:

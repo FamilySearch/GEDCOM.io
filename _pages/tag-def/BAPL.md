@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/BAPL
 
 standard tag: BAPL
 
-descriptions:
+specification:
   - Baptism, Latter-Day Saint
   - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
   - baptism

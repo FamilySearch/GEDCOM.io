@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/COPR
 
 standard tag: COPR
 
-descriptions:
+specification:
   - Copyright
   - A copyright statement, as appropriate for the copyright laws applicable to
     this data.

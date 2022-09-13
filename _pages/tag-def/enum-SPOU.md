@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-SPOU
 
 standard tag: SPOU
 
-descriptions:
+specification:
   - Spouse
 
 value of:

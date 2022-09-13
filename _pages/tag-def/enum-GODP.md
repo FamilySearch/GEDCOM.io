@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-GODP
 
 standard tag: GODP
 
-descriptions:
+specification:
   - Godparent or related role in other religions
 
 value of:

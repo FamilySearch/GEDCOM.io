@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/FAM-RESI
 
 standard tag: RESI
 
-descriptions:
+specification:
   - Residence
   - |
     A Family Attribute. See also FAMILY_ATTRIBUTE_STRUCTURE.

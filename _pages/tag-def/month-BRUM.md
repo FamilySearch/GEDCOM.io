@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-BRUM
 
 standard tag: BRUM
 
-descriptions:
+specification:
   - Brumaire
 
 calendars:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/INDI-EVEN
 
 standard tag: EVEN
 
-descriptions:
+specification:
   - Event
   - |
     An event: a noteworthy happening related to an individual or family. If a

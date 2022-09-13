@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-JUL
 
 standard tag: JUL
 
-descriptions:
+specification:
   - July
 
 calendars:

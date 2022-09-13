@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/OCCU
 
 standard tag: OCCU
 
-descriptions:
+specification:
   - Occupation
   - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
   - occupation

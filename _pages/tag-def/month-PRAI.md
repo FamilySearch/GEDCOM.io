@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-PRAI
 
 standard tag: PRAI
 
-descriptions:
+specification:
   - Prairial
 
 calendars:

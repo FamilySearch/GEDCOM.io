@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/TITL
 
 standard tag: TITL
 
-descriptions:
+specification:
   - Title
   - |
     The title, formal or informal, of the superstructure.

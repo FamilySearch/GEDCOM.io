@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/SUBM-LANG
 
 standard tag: LANG
 
-descriptions:
+specification:
   - Language
   - |
     A language the subject of that record understands.

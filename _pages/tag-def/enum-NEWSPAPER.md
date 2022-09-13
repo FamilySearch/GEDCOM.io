@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-NEWSPAPER
 
 standard tag: NEWSPAPER
 
-descriptions:
+specification:
   - Printed newspaper
 
 value of:

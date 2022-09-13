@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-TMZ
 
 standard tag: TMZ
 
-descriptions:
+specification:
   - Tammuz (תַּמּוּז)
 
 calendars:

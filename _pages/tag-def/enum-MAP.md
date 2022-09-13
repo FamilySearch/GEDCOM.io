@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-MAP
 
 standard tag: MAP
 
-descriptions:
+specification:
   - Cartographic map
 
 value of:

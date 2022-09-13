@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-FILM
 
 standard tag: FILM
 
-descriptions:
+specification:
   - Microfilm
 
 value of:

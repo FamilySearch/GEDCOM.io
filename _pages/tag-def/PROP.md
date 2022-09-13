@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/PROP
 
 standard tag: PROP
 
-descriptions:
+specification:
   - Property
   - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
   - property

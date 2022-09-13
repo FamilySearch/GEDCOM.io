@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-SEALING
 
 standard tag: SEALING
 
-descriptions:
+specification:
   - The child was sealed to parents other than birth parents
 
 value of:

@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-FRIEND
 
 standard tag: FRIEND
 
-descriptions:
+specification:
   - Friend
 
 value of:

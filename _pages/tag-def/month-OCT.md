@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-OCT
 
 standard tag: OCT
 
-descriptions:
+specification:
   - October
 
 calendars:

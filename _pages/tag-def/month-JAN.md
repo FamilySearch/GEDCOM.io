@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/month-JAN
 
 standard tag: JAN
 
-descriptions:
+specification:
   - January
 
 calendars:

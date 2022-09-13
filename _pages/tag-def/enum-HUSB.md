@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-HUSB
 
 standard tag: HUSB
 
-descriptions:
+specification:
   - Husband; implies SPOU
 
 value of:

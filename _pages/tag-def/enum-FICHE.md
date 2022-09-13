@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-FICHE
 
 standard tag: FICHE
 
-descriptions:
+specification:
   - Microfiche
 
 value of:

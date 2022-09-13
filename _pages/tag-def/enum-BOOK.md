@@ -18,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-BOOK
 
 standard tag: BOOK
 
-descriptions:
+specification:
   - A bound book
 
 value of:
