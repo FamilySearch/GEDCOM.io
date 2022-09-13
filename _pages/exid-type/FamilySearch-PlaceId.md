@@ -10,11 +10,13 @@ redirect-from:
 
 %YAML 1.2
 ---
-type: legacy
+lang: en
+
+type: uri
 
 uri: https://gedcom.io/exid-type/FamilySearch-PlaceId
 
-descriptions:
+specification:
   - FamilySearch Place ID
   - |
     This URI is defined for use as the https://gedcom.io/terms/v7/TYPE of an
