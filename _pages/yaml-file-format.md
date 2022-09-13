@@ -6,8 +6,6 @@ sidebar:
 ...
 
 
-# YAML descriptions
-
 This page documents the organization of YAML documents delivered at the URIs of the standard tags in the FamilySearch GEDCOM 7 specification and the extension tag registry. The YAML documents are not part of the standard itself, and while the intent is that they remain stable and usable in the long term, if a valid reason arises they may be changed independently of the versioning process.
 
 YAML documents in this form are used to define
@@ -20,7 +18,7 @@ YAML documents in this form are used to define
 
 For ease of presentation, we call whatever a YAML document is describing a "concept".
 
-## Readable YAML
+# Readable YAML
 
 The files are provided in [YAML 1.2](https://yaml.org).
 YAML was chosen because it is readily parseable in many programming languages
@@ -40,7 +38,7 @@ The top-level mapping should have a blank line between each mapping entry.
 
 To ease machine identification of YAML blocks, [document markers](https://yaml.org/spec/1.2.2/#912-document-markers) are recommended. In particular, documents should begin with both the YAML directive "`%YAML 1.2`" and the directives end marker "`---`", and should end with the document end marker "`...`".
 
-## YAML document schema
+# YAML document schema
 
 Each YAML document is a `map` with `str` keys.
 
@@ -56,7 +54,7 @@ The following shorthand types are used in this document:
 | URI | `str` | A valid URI, as defined by RFC 3986 |
 
 
-### Required keys
+## Required keys
 
 Three keys are always present:
 
@@ -102,7 +100,7 @@ Three keys are always present:
 
     The URI that identifies the concept documented in this YAML file.
 
-### Other keys
+## Other keys
 
 The following keys may appear in a YAML file.
 Their names may be changed a YAML file with a `lang` other than `en`.
