@@ -548,8 +548,13 @@
 2 TYPE http://example.com
 1 NOTE American English
 2 MIME text/plain
-2 LANG en-GB
+2 LANG en-US
 2 TRAN British English
+3 MIME text/plain
+3 LANG en-GB
+2 TRAN Canadian English
+3 MIME text/plain
+3 LANG en-CA
 2 SOUR @S1@
 3 PAGE 1
 2 SOUR @S2@
