@@ -28,11 +28,11 @@ specification:
     -   DateExact is used for timestamps and other fully-known dates.
     -   DatePeriod is used to express time intervals that span multiple days.
     
-        DateValue   = date / DatePeriod / dateRange / dateApprox / ""
+        DateValue   = [ date / DatePeriod / dateRange / dateApprox ]
         DateExact   = day D month D year  ; in Gregorian calendar
-        DatePeriod  = %s"FROM" D date [D %s"TO" D date]
-                    / %s"TO" D date
-                    / ""
+        DatePeriod  = [ %s"TO" D date ]
+                    / %s"FROM" D date [ D %s"TO" D date ]
+                    ; note both DateValue and DatePeriod can be the empty string
     
         date        = [calendar D] [[day D] month D] year [D epoch]
         dateRange   = %s"BET" D date D %s"AND" D date
@@ -73,9 +73,13 @@ specification:
     
       TO x          Lasted for multiple days, ending on x.
     
-      BET xAFT x    Exact date unknown, but no earlier than x.
+      BET x         Exact date unknown, but no earlier than x.
     
-      AND xBEF x    Exact date unknown, but no later than x.
+      AND x         Exact date unknown, but no later than x.
+    
+      BEF x         Exact date unknown, but no later than x.
+    
+      AFT x         Exact date unknown, but no earlier than x.
     
       ABT x         Exact date unknown, but near x.
     
