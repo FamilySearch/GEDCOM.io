@@ -5,7 +5,7 @@
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
 1 SOUR https://gedcom.io/
-2 VERS 0.3
+2 VERS 0.4
 2 NAME GEDCOM Steering Committee
 2 CORP FamilySearch
 3 ADDR Family History Department, 15 East South Temple Street, Salt Lake City, UT 84150 USA
@@ -25,7 +25,7 @@
 3 WWW http://gedcom.io
 3 WWW http://gedcom.info
 2 DATA HEAD-SOUR-DATA
-3 DATE 27 MAR 2022
+3 DATE 1 NOV 2022
 4 TIME 8:38
 3 COPR copyright statement
 1 DEST https://gedcom.io/
