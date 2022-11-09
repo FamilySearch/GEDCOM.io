@@ -27,7 +27,7 @@ Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https:
 
 This project has been created to develop the PERSONAL_NAME_STRUCTURE, with aims of supporting a much wider range of human names and of supporting applications that process them. The GEDCOM 5.5.1 standard defined a PERSONAL_NAME_STRUCTURE. This was refined slightly in GEDCOM 7.0. It works well for most North-American and some European names, but it unable to properly represent names from many other cultures.
 
-Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name)) public repository.
+Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name) public repository.
 
 ## Issue Tracker 
 
