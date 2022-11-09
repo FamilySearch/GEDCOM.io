@@ -29,7 +29,7 @@ tools:
          url: "/tools/#development-aids"
        - title: "Example files"
          url: "/tools/#example-familysearch-gedcom-70-files"
-        - title: "Extension Registry"
+       - title: "Extension Registry"
          url: "/tools/#yaml-file-format"
        - title: "Other tools"
          url: "/tools/#other-development-tools"
