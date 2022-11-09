@@ -23,6 +23,12 @@ Become a GitHub GEDCOM Contributor for the next version by contributing to the [
 
 Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https://github.com/familysearch/GEDCOM.io) public repository.
 
+## Public GEDCOM-name Repository
+
+This project has been created to develop the PERSONAL_NAME_STRUCTURE, with aims of supporting a much wider range of human names and of supporting applications that process them. The GEDCOM 5.5.1 standard defined a PERSONAL_NAME_STRUCTURE. This was refined slightly in GEDCOM 7.0. It works well for most North-American and some European names, but it unable to properly represent names from many other cultures.
+
+Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name)) public repository.
+
 ## Issue Tracker 
 
 You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/issues) for the working version of FamilySearch GEDCOM.
@@ -30,7 +36,6 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 ## Project Teams
 
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
-- **Names** - consider changing personal names from being specified in the Name tag and optional subordinate tags to a new set of subordinate tags.
 - **Relationships** - support for varying definitions of families,  roles and relationships.
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records.
 - **Sources** - More source-centric capabilities including multi-person events and multi-purpose sources.
