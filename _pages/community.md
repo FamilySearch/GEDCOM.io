@@ -31,6 +31,10 @@ Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/f
 
 ## Public GEDCOM-registries Repository
 
+Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful extension registry. The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located.
+
+In addition to general interoperability gains, this might assist in an extension-to-standard workflow (#17) and in defining additional calendars (#38, #116) and events (#117).
+
 Join the GEDCOM Name Project  by going to the [GEDCOM-registries](https://github.com/familysearch/GEDCOM-registries) public repository.
 
 ## Issue Tracker 
