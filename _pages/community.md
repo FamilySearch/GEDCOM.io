@@ -29,6 +29,10 @@ This project has been created to develop the PERSONAL_NAME_STRUCTURE, with aims 
 
 Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name) public repository.
 
+## Public GEDCOM-registries Repository
+
+Join the GEDCOM Name Project  by going to the [GEDCOM-registries](https://github.com/familysearch/GEDCOM-registries) public repository.
+
 ## Issue Tracker 
 
 You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/issues) for the working version of FamilySearch GEDCOM.
