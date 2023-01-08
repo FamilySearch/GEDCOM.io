@@ -20,5 +20,7 @@ FamilySearch Person ID             | <https://gedcom.io/exid-type/FamilySearch-P
 FamilySearch Place ID              | <https://gedcom.io/exid-type/FamilySearch-PlaceId>
 FamilySearch Source Description ID | <https://gedcom.io/exid-type/FamilySearch-SourceDescriptionId>
 FamilySearch User ID               | <https://gedcom.io/exid-type/FamilySearch-UserId>
+Find a Grave Cemetery ID           | <https://www.findagrave.com/cemetery>
+Find a Grave Memorial ID           | <https://www.findagrave.com/memorial>
 Record ID Number                   | <https://gedcom.io/terms/v7/RIN>
 Record File Number                 | <https://gedcom.io/terms/v7/RFN>
