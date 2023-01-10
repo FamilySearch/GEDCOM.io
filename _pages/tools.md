@@ -21,7 +21,8 @@ sidebar:
 | Language | License | Site | Notes |
 |----------|---------|------|-------|
 | Javascript | public domain | <https://github.com/gedcom7code/js-parser> | DOM-style, no validation, with SCHMA handling |
-| Python | MIT license | <https://github.com/DavidMStraub/python-gedcom7> | based on regular expressions generated directly from the ABNF grammar via abnf-to-regexp | 
+| Python | MIT license | <https://github.com/DavidMStraub/python-gedcom7> | based on regular expressions generated directly from the ABNF grammar via abnf-to-regexp |
+| Go | GPL3 | https://github.com/funwithbots/go-gedcom | Golang package using ABNF grammar for validation |
 
 ## Development Aids
 
