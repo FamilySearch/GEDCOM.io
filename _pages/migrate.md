@@ -328,3 +328,9 @@ must be converted to
 2 DATE BET 1880 AND 1900
 ```
 to be legal in 7.0.
+
+## WAC
+
+`WAC` has a complicated history.  Strictly speaking, it was not present in 5.5.1, but was in 5.3 and earlier
+GEDCOM versions and is still used in 5.5.1 by some implementations.  FamilySearch GEDCOM 7.0 replaces `WAC`
+with `INIL`.
