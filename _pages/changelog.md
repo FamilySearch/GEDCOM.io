@@ -5,6 +5,186 @@ sidebar:
   nav: "changelog"
 ---
 
+# Version 7.0.11
+
+- Correct error in `g7:NOTE-TRAN` cardinality.
+
+    Since 7.0.0, `g7:NOTE-TRAN` was listed with `{0:1}` in `g7:NOTE` but `{0:M}` in `g7:record-SNOTE` and defined in a way that assumed `{0:M}`. It has now been updated to `{0:M}` in `g7:NOTE-TRAN` too.
+
+- Correct error in `g7:type-Enum` definition.
+    
+    Since 7.0.0, `g7:type-Enum` was listed as having the same payload as `Tag`, but `g7:QUAY` used enumeration values that did not match that. The definition of  `g7:type-Enum` has now been updated to permit integers, like `g7:QUAY` uses.
+
+- Clarify that the same tag can be used for multiple URIs in the schema provided the meanings are non-overlapping. Recommend tags only be reused for closely related concepts, similar to how standard tags are.
+
+- Recommend that `g7:type-Date#exact` should use UTC time because it is used in places where exact machine-generated timestamps are expected.
+
+- Split shared rows in date definition table and reorder rows to be more logically organized.
+
+- Update ABNF to use `[ X ]` instead of `X / ""` to indicate `X` is optional. Both are legal ABNF, but some ABNF toolchains appear not to support the `X / ""` notation.
+
+- Various typo corrections.
+
+
+# Version 7.0.10
+
+- Collect information about structure types and present it explicitly in the document, including how tags define structure types, the limitations structure types impose on their structures, and what extensions can change. This information was all present in the text before, but in a diffuse and not very accessible way.
+
+- Half of 5.5.1's description of `g7:NATI` was inadvertently lost in 7.0; it has now been restored.
+
+- Clarify that presentation order is not significant, and sort events and attributes alphabetically in the spec for easier reference.
+
+- Clarify that documented extension tag URIs needn't be URLs.
+
+- Clarifying text and recommendations about using `g7:SDATE`, `g7:ord-STAT`, `g7:PHRASE`, 
+
+- Changes anticipating a coming extension registry:
+
+    - Add URIs for sets of enumeration values. This has changes some fragment identifiers in the HTML version of the spec and could cause hotlinks to the specific sections discussing enumeration sets to change.
+
+    - Many updates to the YAML format served at <https://gedcom.io/terms/v7/record-INDI> and at the other URIs in the specification.
+
+- Various typo corrections
+
+# Version 7.0.9
+
+- Undo 7.0.8's reversion of undocumented and unexplained use of `{0:M}` cardinality for name parts, as it has been used by some applications. Added note explaining that repeated name parts may have meaning to the user.
+
+- Improve text on name pieces being included in name payloads to use "recommended" instead of "should" for greater clarity, and note that not all substrings of the payload need to be included in a name piece
+
+- Permit removing structures that contain no data
+
+- Various typo corrections
+
+# Version 7.0.8
+
+- Revert undocumented and unexplained use of `{0:M}` cardinality for name parts in 7.0.0 through 7.0.7
+
+- Note that days per month is defined by calendar; is bounded; and may be checked to validate date entry.
+
+- Add a registry for known `EXID`.`TYPE` values
+
+- Clarify relationship between `PEDI SEALING` and `SLGC`
+
+- Clarify that only `INDI.FAMC` need a matching `FAM.CHIL`; `FAMC` under events do not.
+
+- Clarify that one implication of "The Personal Name payload shall be seen as the primary name representation, with name pieces as optional auxiliary information"  is that "all name parts in `PERSONAL_NAME_PIECES` should appear within the `<PersonalName>` payload."
+
+- Correct typo where ABNF used `NamePersonal` instead of `PersonalName`
+
+- Various grammar and spelling corrections
+
+
+# Version 7.0.7
+
+- Update the `DateValue` and `DatePeriod` ABNF to match the textual statement that these can be empty.
+
+- Update recommendations for sources
+    - As with 5.5.1, `SOURCE_RECORD`s are recommended.
+    - Note that unstructured citations can be placed in the `SOURCE_RECORD`'s `TITL` substructure.
+    - Remove extraneous `SOUR @VOID@` from example of `NOTE` vs `SNOTE`.
+    - Change recommendation of `SOUR @VOID@` from storing the formatted citation in a `NOTE` (which conflicts with the usual meaning of notes) to storing it in a `PAGE` (which aligns with `PAGE`'s definition).
+
+- Various spelling and grammar corrections.
+
+- Internal updates to the repository organization and processing system to better handle the size of the specification. These should be entirely invisible in the rendered HTML and PDF documents.
+
+
+# Version 7.0.6
+
+- Deprecate `EXID` without a `TYPE`. `EXID` is defined in terms of its `TYPE`, and an `EXID` without a `TYPE` is not meaningful. `EXID`.`TYPE` will have cardinality `{1:1}`, not `{0:1}`, in the next major release.
+
+- Add media type specification for GEDZIP.
+
+- Add term definitions for 5.5.1-compatibility `EXID`.`TYPE` values `AFN`, `RFN`, and `RIN`.
+
+- Clarifications about `LANG`
+    - Clarify that `LANG` is the primary language, not sole language, of a payload. For example, `LANG en` can be used when most of the text is in English, even if some parts are not.
+    - A documented extension tag can be used where `LANG` is not defined.
+    - Provide guidance on special language tags
+        - `und` can be used if a superstructure's `LANG` does not apply here and what does apply is not known.
+        - `mul` can be used if there is no single primary language, but is unlikely to provide practical functionality beyond `und`.
+        - `zxx` can be used for ASCII art and other non-language text, and can improve accessibility for screen readers.
+
+- Clarify that empty *payloads* are encoded as missing `LineVal`s and empty `LineVal`s are not been permitted; this has been true since 7.0.0 but was easily overlooked in the previous text.
+
+- Note cases where the same couple might be the partners in multiple `FAM` records.
+
+- Fix wording of `ADR1`, `ADR2`, and `ADR3` to no longer refer to `CONT` or line values.
+
+- Acknowledge that `SNOTE` has an identifier structure, which `NOTE` does not, and change recommendation to suggest using `SNOTE` if a `NOTE` needs an identifier.
+
+- Update contact information on the title page.
+
+- Various spelling and grammar corrections.
+
+
+# Version 7.0.5
+
+- Fix an error in the description of HEAD.LANG.
+    - Previously described HEAD.LANG as the language of all Text payloads that did not have a different LANG specified. But many Text payloads did not accept a LANG substructure, which made this factually incorrect in many instances.
+    - Revised to clarify that HEAD.LANG is a default language that may be used for Text without an explicit language.
+
+- Added a new version detection specification to define how to decide which specification a given `.ged` file conforms to
+
+- Clarification of DATE.PHRASE vs SOUR.DATA.TEXT when a language tag is desired
+
+- Clarification of the use of RESI payload (as opposed to RESI.PLAC and RESI.ADDR)
+
+- Clarification of SNOTE and its relation to the pointer-variant of 5.x NOTE
+
+- Change event.TYPE example from "MARR.TYPE Common Law" to "ORDN.TYPE Bishop" due to cultural differences in what a common-law marriage is
+
+- Various spelling and hyperlink corrections
+
+
+# Version 7.0.4
+
+- Clarify the use of standard structure types and standard tags in extensions
+    
+    The previous text was ambiguous, providing for "extended-use standard structures" with meaning "defined in this document" but without providing a definition of their meaning. It additionally failed to note uses of extensions that had part of the guides on gedcom.io since 7.0.0's release.
+    
+    The new text is clearer and provides the following:
+    
+    - We recommend extensions be posted as issues on github so they can be queued for a future minor release.
+    - When structures with `stdTag` appear under a structure with `extTag`, their meaning is defined by that containing extension.
+    - If a documented extension tag has the URI of a standard structure type, it has the same meaning as that structure type but can be used where that structure type cannot.
+    
+    See the comments on [PR 24](https://github.com/FamilySearch/GEDCOM/pull/24) and issues [13](https://github.com/FamilySearch/GEDCOM/issues/13) and [17](https://github.com/FamilySearch/GEDCOM/pull/17) for the discussion leading to this clarified text.
+
+- Clarify that extensions with enumeration values should define the meaning of those values.
+
+- Fix a few small typos.
+    
+
+# Version 7.0.3
+
+- Clarify the use of CONT as an escaped new-line that looks like a substructure of the first line of text
+
+- Clarify that "`FILE gedcom.ged`" is incompatible with GEDZIP
+
+- Fix typos in PLAC.EXID to match other EXIDs
+
+- Fix incorrect example using NAME.LANG
+
+- Standardize use of links and references to IETF documents
+
+# Version 7.0.2
+
+- Clarify that inside a document stating "`2 VERS 7.0`" is sufficient but "`2 VERS 7.0.1`" is permitted
+
+    Previously the document only said "the version number of the official specification that this document's data conforms to" which was ambiguous and could be interpreted in several ways.
+    The major number is needed to define the interpretation of present tags and the minor to define the set of tags included.
+    The patch number has no impact on the data itself, but may be included if desired.
+    
+- Update links to IETF documents to conform to recommendations from [RFC 7322](https://www.rfc-editor.org/rfc/rfc7322#section-4.8.6.2)
+
+- Correct a few typos
+
+# Version 7.0.1
+
+- Corrected a mistake in the contributors section
+
 # Version 7.0.0
 
 As a major release and the first update to the specification in 20 years, there a many changes in this version.
