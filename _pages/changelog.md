@@ -1,9 +1,29 @@
 ---
-title: FamilySearch GEDCOM Changelog
-permalink: /changelog/
-sidebar:
-  nav: "changelog"
----
+        title: FamilySearch GEDCOM Changelog
+        permalink: /changelog/
+        sidebar:
+        nav: "changelog"
+        ---
+# Version 7.0.12
+
+- Remove contradictory constraints on `BCE` by removing it from `dateRestrict`
+
+- Clarify an ambiguity with the `TIME` substructure under `DateValues` that are not single dates, either because they are ranges or approximate.
+
+- Clarify the meaning of the `PROVEN` value of `g7:enumset-FAMC-STAT` to more accurately match common usage and to document common differences in meaning.
+
+- Replace incomplete ABNF for MediaType with a reference to their definition in IETF standards and IANA registries
+
+- Document a common use case for `UID`
+
+- Document a known difference between the formal and expected meaning of an event with a `DATE AFT ...` substructure
+
+- Note that 7.0's `INIL` is the same as 5.3's `WAC`
+
+- Add Simon Orde to the contributors list; he participated in the development of 7.0.0 but was accidentally omitted from the contributors list when 7.0.0 was released.
+
+- Various typo corrections.
+
 
 # Version 7.0.11
 
@@ -24,7 +44,7 @@ sidebar:
 - Update ABNF to use `[ X ]` instead of `X / ""` to indicate `X` is optional. Both are legal ABNF, but some ABNF toolchains appear not to support the `X / ""` notation.
 
 - Various typo corrections.
-
+    
 
 # Version 7.0.10
 
@@ -233,7 +253,8 @@ These features add new semantic power to FamilySearch GEDCOM, allowing 7 to repr
 - Some common extensions are now standard:
     - `SDATE` is a sort-by date
     - `UID` is a globally-unique identifier for a record or event
-    - `INIL` is the "initiatory" ordinance of The Church of Jesus Christ of Latter-Day Saints
+    - `INIL` is the "initiatory" ordinance of The Church of Jesus Christ of Latter-Day Saints.  This
+      replaces `WAC` that existed in 5.3 and earlier.
     - `ASSO` now covers previous more-versatile `_ASSO` usage
 
 - Pointer-payload structures may now use the special pointer `@VOID@` to indicate that there is no record for it to point to in this document. This can be used to flag what has been omitted or in combination with a `PHRASE` or `NOTE` to describe what would be pointed to informally.
