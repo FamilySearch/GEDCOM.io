@@ -1,9 +1,10 @@
 ---
-        title: FamilySearch GEDCOM Changelog
-        permalink: /changelog/
-        sidebar:
-        nav: "changelog"
-        ---
+title: FamilySearch GEDCOM Changelog
+permalink: /changelog/
+sidebar:
+nav: "changelog"
+---
+
 # Version 7.0.12
 
 - Remove contradictory constraints on `BCE` by removing it from `dateRestrict`
