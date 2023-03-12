@@ -11,20 +11,23 @@ Genealogical (family tree) data is important! It contains significant informatio
 
 ## How do I create and use a FamilySearch GEDCOM file?
 
-The FamilySearch GEDCOM specification is not a stand-alone specification. It is used by genealogical software products to create a file that can be imported and exported by other programs to assist in sharing information. A GEDCOM file is created by using the procedures specified by the genealogical software product used. Software companies provide support for their own products, and the way they implement the GEDCOM specification may vary, including which version they support.
+The FamilySearch GEDCOM specification is used by genealogical software products to create a file that can be imported and exported by other programs to assist in sharing information. A GEDCOM file is created by using the procedures specified by the genealogical software product used. Software companies provide support for their own products, and the way they implement the GEDCOM specification may vary, including which version they support.
 
 ## Are GEDCOM files still being used by FamilySearch?
 
 FamilySearch Contributors can submit their trees to [FamilySearch Genealogies](https://FamilySearch.org/mytrees) using GEDCOM files to make information available to help other researchers. These submissions remain in the submitter's control, and are preserved indefinitely, to review, edit, or remove as seen fit.
 
 ## Who owns the copyright to FamilySearch GEDCOM?
-The Church of Jesus Christ of Latter-day Saints copyrighted the GEDCOM standards in 1987, 1989, 1992, 1993, 1995, 1999, 2019, and 2021.
+
+The Church of Jesus Christ of Latter-day Saints copyrighted the first GEDCOM standard in 1987, and has renewed that copyright in various forms since then.
+The current copyright notice can be found on the second page of [current PDF](https://gedcom.io/specifications/FamilySearchGEDCOMv7.pdf#page=2).
 
 ## How can I use the published specifications?
 
-The specifications may be copied for the purpose of reviewing or programming of genealogical software, provided the notice below is included:
-
-Copyright © 1987, 1989, 1992, 1993, 1995, 1999, 2019, 2021 by The Church of Jesus Christ of Latter-day Saints. All rights reserved.
+You may refer to and build software informed by the specification freely.
+If you wish to copy text from the specification itself, please see the license
+described on the second page of [current PDF](https://gedcom.io/specifications/FamilySearchGEDCOMv7.pdf#page=2)
+and available in full in [the github repository](https://github.com/FamilySearch/GEDCOM/blob/main/LICENSE).
 
 ## GEDCOM v5.5.1 was copyrighted in 2019, but I thought it was released in 1999?
 
