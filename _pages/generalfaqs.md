@@ -19,7 +19,7 @@ FamilySearch Contributors can submit their trees to [FamilySearch Genealogies](h
 
 ## Who owns the copyright to FamilySearch GEDCOM?
 
-The Church of Jesus Christ of Latter-day Saints copyrighted the first GEDCOM standard in 1987, and has renewed that copyright in various forms since then.
+The Church of Jesus Christ of Latter-day Saints copyrighted the first GEDCOM standard in 1984, and has renewed that copyright in various forms since then.
 The current copyright notice can be found on the second page of [current PDF](https://gedcom.io/specifications/FamilySearchGEDCOMv7.pdf#page=2).
 
 ## How can I use the published specifications?
