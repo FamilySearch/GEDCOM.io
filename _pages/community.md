@@ -44,8 +44,8 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
 - **Relationships** - support for varying definitions of families,  roles and relationships.
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records.
-- **Sources** - More source-centric capabilities including multi-person events and multi-purpose sources.
-- **Citations** - ability to reliably capture and exchange EE-style citations and/or Chicago-style citations or an agreed subset of both.
+- **Sources** - more source-centric capabilities including multi-person events and multi-purpose sources.
+- **Citations** - ability to reliably capture and exchange EE-style citations, Chicago-style citations, or an agreed subset of both.
 
 If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
