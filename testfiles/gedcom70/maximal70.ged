@@ -8,7 +8,9 @@
 2 VERS 0.4
 2 NAME GEDCOM Steering Committee
 2 CORP FamilySearch
-3 ADDR Family History Department, 15 East South Temple Street, Salt Lake City, UT 84150 USA
+3 ADDR Family History Department
+4 CONT 15 East South Temple Street
+4 CONT Salt Lake City, UT 84150 USA
 4 ADR1 Family History Department
 4 ADR2 15 East South Temple Street
 4 ADR3 Salt Lake City, UT 84150 USA
@@ -615,7 +617,9 @@
 3 MEDI ELECTRONIC
 0 @R1@ REPO
 1 NAME Repository 1
-1 ADDR Family History Department, 15 East South Temple Street, Salt Lake City, UT 84150 USA
+1 ADDR Family History Department
+2 CONT 15 East South Temple Street
+2 CONT Salt Lake City, UT 84150 USA
 2 ADR1 Family History Department
 2 ADR2 15 East South Temple Street
 2 ADR3 Salt Lake City, UT 84150 USA
@@ -786,7 +790,9 @@
 1 TITL Source Two
 0 @U1@ SUBM
 1 NAME GEDCOM Steering Committee
-1 ADDR Family History Department, 15 East South Temple Street, Salt Lake City, UT 84150 USA
+1 ADDR Family History Department
+2 CONT 15 East South Temple Street
+2 CONT Salt Lake City, UT 84150 USA
 2 ADR1 Family History Department
 2 ADR2 15 East South Temple Street
 2 ADR3 Salt Lake City, UT 84150 USA
