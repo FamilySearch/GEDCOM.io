@@ -23,12 +23,6 @@ Become a GitHub GEDCOM Contributor for the next version by contributing to the [
 
 Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https://github.com/familysearch/GEDCOM.io) public repository.
 
-## Public GEDCOM-name Repository
-
-This project has been created to develop the PERSONAL_NAME_STRUCTURE, with aims of supporting a much wider range of human names and of supporting applications that process them. The GEDCOM 5.5.1 standard defined a PERSONAL_NAME_STRUCTURE. This was refined slightly in GEDCOM 7.0. It works well for most North-American and some European names, but it unable to properly represent names from many other cultures.
-
-Join the GEDCOM Name Project  by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name) public repository.
-
 ## Public GEDCOM-registries Repository
 
 Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful extension registry. The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located. In addition to general interoperability gains, this will assist in an extension-to-standard workflow and in defining additional calendars and events.
@@ -41,13 +35,24 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 
 ## Project Teams
 
+If you would like additional information or request to participate in one or more of the following Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
+
+### Active Project Teams
+
+- **Names** - This project has been created to develop the `PERSONAL_NAME_STRUCTURE`, with aims of supporting a much wider range of human names and of supporting applications that process them. The GEDCOM 5.5.1 standard defined a `PERSONAL_NAME_STRUCTURE`. This was refined slightly in FamilySearch GEDCOM 7.0. It works well for most North-American and some European names, but it unable to properly represent names from many other cultures.
+
+  Join the GEDCOM Name Project by going to the [GEDCOM-name](https://github.com/fisharebest/gedcom-name) public repository.
+
+- **Citations** - This project has been created to develop the ability to reliably capture and exchange EE-style citations, Chicago-style citations, or an agreed subset of both.
+
+  Join the GEDCOM Citations Project by going to the [GEDCOM-citations](https://github.com/dthaler/gedcom-citations) public repository.
+
+### Future Project Teams
+
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
 - **Relationships** - support for varying definitions of families,  roles and relationships.
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records.
 - **Sources** - more source-centric capabilities including multi-person events and multi-purpose sources.
-- **Citations** - ability to reliably capture and exchange EE-style citations, Chicago-style citations, or an agreed subset of both.
-
-If you would like additional information or request to participate in one or more of these above Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
 ## Additional Areas of Participation
 
