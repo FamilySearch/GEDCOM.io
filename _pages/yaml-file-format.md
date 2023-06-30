@@ -161,6 +161,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list may be incomplete, as a new enumeration values might be defined that may be included in existing structures.
     
 -   <table><tbody>
+    <tr><th>Key</th><td><code>epochs</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
+    <tr><th>Required by</th><td><code>type: calendar</code></td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+
+    A list of all of the epoch markers used in the given calendar.
+    
+    The list should be taken as exhaustive. Extensions may not add new epochs to existing calendars.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>extension tags</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>extTag</code></td></tr>
     <tr><th>Required by</th><td>*</td></tr>
