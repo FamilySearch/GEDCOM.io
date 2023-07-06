@@ -112,7 +112,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
     
-    The URI of the set of enumeration values permitted in the paylaod of this structure.
+    The URI of the set of enumeration values permitted in the payload of this structure.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>calendars</code></td></tr>
