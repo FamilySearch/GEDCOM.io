@@ -22,7 +22,7 @@ specification:
   - Secondary evidence, data officially recorded sometime after the event
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-QUAY"
+  - "https://gedcom.io/terms/v7/enumset-QUAY"
 ...
 
 ```

@@ -22,7 +22,7 @@ specification:
   - The child was included in a foster or guardian family
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-PEDI"
+  - "https://gedcom.io/terms/v7/enumset-PEDI"
 ...
 
 ```

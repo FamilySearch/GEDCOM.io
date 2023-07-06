@@ -20,10 +20,12 @@ standard tag: PRIVACY
 
 specification:
   - This data is not to be shared outside of a trusted circle, generally
-    because it contains information about living individuals.
+    because it contains information about living individuals. This definition
+    is known to admit multiple interpretations, so use of the PRIVACY
+    restriction notice is not recommended.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-RESN"
+  - "https://gedcom.io/terms/v7/enumset-RESN"
 ...
 
 ```

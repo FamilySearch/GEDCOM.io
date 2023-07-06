@@ -28,7 +28,7 @@ substructures:
   "https://gedcom.io/terms/v7/TIME": "{0:1}"
 
 superstructures:
-  "HEAD pseudostructure": "{0:1}"
+  "https://gedcom.io/terms/v7/HEAD": "{0:1}"
 ...
 
 ```

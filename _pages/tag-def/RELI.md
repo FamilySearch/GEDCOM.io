@@ -84,7 +84,7 @@ superstructures:
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-EVENATTR"
+  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 ...
 
 ```

@@ -23,7 +23,7 @@ specification:
     PHRASE can be used to specify the kind of multiple birth.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-ROLE"
+  - "https://gedcom.io/terms/v7/enumset-ROLE"
 ...
 
 ```

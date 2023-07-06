@@ -22,7 +22,7 @@ specification:
   - Witness
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-ROLE"
+  - "https://gedcom.io/terms/v7/enumset-ROLE"
 ...
 
 ```

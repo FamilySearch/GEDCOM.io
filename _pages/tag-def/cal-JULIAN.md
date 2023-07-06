@@ -49,6 +49,9 @@ months:
   - "https://gedcom.io/terms/v7/month-OCT"
   - "https://gedcom.io/terms/v7/month-NOV"
   - "https://gedcom.io/terms/v7/month-DEC"
+
+epochs:
+  - BCE
 ...
 
 ```

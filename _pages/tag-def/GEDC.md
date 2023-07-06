@@ -32,7 +32,7 @@ substructures:
   "https://gedcom.io/terms/v7/GEDC-VERS": "{1:1}"
 
 superstructures:
-  "HEAD pseudostructure": "{1:1}"
+  "https://gedcom.io/terms/v7/HEAD": "{1:1}"
 ...
 
 ```

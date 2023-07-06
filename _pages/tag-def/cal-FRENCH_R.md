@@ -62,6 +62,8 @@ months:
   - "https://gedcom.io/terms/v7/month-THER"
   - "https://gedcom.io/terms/v7/month-FRUC"
   - "https://gedcom.io/terms/v7/month-COMP"
+
+epochs: []
 ...
 
 ```

@@ -22,7 +22,7 @@ specification:
   - Some systems may ignore changes to this data.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-RESN"
+  - "https://gedcom.io/terms/v7/enumset-RESN"
 ...
 
 ```

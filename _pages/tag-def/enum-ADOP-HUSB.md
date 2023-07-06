@@ -22,7 +22,7 @@ specification:
   - Adopted by the HUSB of the FAM pointed to by FAMC.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-ADOP"
+  - "https://gedcom.io/terms/v7/enumset-ADOP"
 ...
 
 ```

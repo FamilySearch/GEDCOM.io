@@ -22,8 +22,8 @@ specification:
   - Associated with birth, such as a birth name or birth parents.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
-  - "https://gedcom.io/terms/v7/g7:enumset-PEDI"
+  - "https://gedcom.io/terms/v7/enumset-NAME-TYPE"
+  - "https://gedcom.io/terms/v7/enumset-PEDI"
 ...
 
 ```

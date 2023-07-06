@@ -24,7 +24,7 @@ specification:
   - "Status: Deprecated. Use CHILD instead."
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-ord-STAT"
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
 ...
 
 ```

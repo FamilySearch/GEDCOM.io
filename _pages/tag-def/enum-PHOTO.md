@@ -22,7 +22,7 @@ specification:
   - Photograph
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-MEDI"
+  - "https://gedcom.io/terms/v7/enumset-MEDI"
 ...
 
 ```

@@ -22,7 +22,7 @@ specification:
   - Linking this child to this family has been proven.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-FAMC-STAT"
+  - "https://gedcom.io/terms/v7/enumset-FAMC-STAT"
 ...
 
 ```

@@ -22,7 +22,7 @@ specification:
   - Male
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-SEX"
+  - "https://gedcom.io/terms/v7/enumset-SEX"
 ...
 
 ```

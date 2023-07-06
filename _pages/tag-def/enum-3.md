@@ -22,7 +22,7 @@ specification:
   - Direct and primary evidence used, or by dominance of the evidence
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-QUAY"
+  - "https://gedcom.io/terms/v7/enumset-QUAY"
 ...
 
 ```

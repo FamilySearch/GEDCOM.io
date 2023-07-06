@@ -22,7 +22,7 @@ specification:
   - Maiden name, name before first marriage.
 
 value of:
-  - "https://gedcom.io/terms/v7/g7:enumset-NAME-TYPE"
+  - "https://gedcom.io/terms/v7/enumset-NAME-TYPE"
 ...
 
 ```
