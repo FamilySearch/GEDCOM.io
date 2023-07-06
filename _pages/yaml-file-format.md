@@ -162,7 +162,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     
 -   <table><tbody>
     <tr><th>Key</th><td><code>epochs</code></td></tr>
-    <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
+    <tr><th>Type</th><td><code>seq</code> of Tag</td></tr>
     <tr><th>Required by</th><td><code>type: calendar</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
