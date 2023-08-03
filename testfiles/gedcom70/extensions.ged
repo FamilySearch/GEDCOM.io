@@ -21,7 +21,7 @@
 2 CONT Standard record with an extTag           0 @U1@ _USER
 2 CONT Standard substructure                    1 NAME Aliased record
 2 CONT Standard structure with an extTag        1 _CREATOR @U1@
-2 CONT Standard structure with an extTag        1 _CREATOR @U1@
+2 CONT Standard structure with an extTag        1 _CREATOR @U2@
 2 CONT Relocated standard structure             2 _PHRASE A Family
 2 CONT Documented extension enumeration         2 PEDI _ENUMVAL
 2 CONT Undocumented extension enumeration       2 PEDI _ENUM2
