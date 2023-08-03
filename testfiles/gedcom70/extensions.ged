@@ -36,7 +36,7 @@
 2 CONT Documented calendar, month, and epoch    ... _CALENDAR 8 _MONTH 190 _EPOCH
 2 CONT Undocumented calendar, month, and epoch  ... _CAL2 23 _MON2 88 _EP2
 2 CONT Undocumented pointer with shared tag     2 _LOC @L1@
-2 CONT documented pointer with shared tag       1 _PARTY @P1@
+2 CONT Documented pointer with shared tag       1 _PARTY @P1@
 2 CONT Unambiguous extension-defined substruct. 2 ROLE NGHBR
 2 CONT Documented record with shared tag        0 @P1@ _PARTY
 2 CONT Ambiguous extension-defined substructure 1 NAME Spring Fling
