@@ -47,7 +47,7 @@
 2 CONT Standard and relocated enumerations      2 EVEN DEAT, _CHILD
 2 CONT Relocated standard structure             3 _CREATOR @U2@
 2 CONT Substructure relocated as record         0 @B1@ _BIRT
-2 CONT Standard substructure of relocate struc. 1 PLAC Some, Place, , List
+2 CONT Standard substructure of relocated stru. 1 PLAC Some, Place, , List
 0 @U1@ _USER
 1 NAME Aliased record
 0 @U2@ SUBM
