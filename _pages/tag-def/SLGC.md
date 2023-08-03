@@ -26,6 +26,8 @@ specification:
     parents in a temple ceremony of The Church of Jesus Christ of Latter-day
     Saints.
 
+label: 'Sealing, child'
+
 payload: null
 
 substructures:

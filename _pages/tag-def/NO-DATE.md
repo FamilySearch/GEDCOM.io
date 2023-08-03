@@ -23,6 +23,8 @@ specification:
   - The DatePeriod during which the event did not occur or the attribute did
     not apply.
 
+label: 'Date'
+
 payload: https://gedcom.io/terms/v7/type-Date#period
 
 substructures:

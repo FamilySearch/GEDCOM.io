@@ -25,6 +25,8 @@ specification:
   - Exiting an occupational relationship with an employer after a qualifying
     time period.
 
+label: 'Retirement'
+
 payload: Y|<NULL>
 
 substructures:

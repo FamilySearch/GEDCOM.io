@@ -24,6 +24,8 @@ specification:
   - baptism
   - Baptism, performed in infancy or later. (See also BAPL and CHR.)
 
+label: 'Baptism'
+
 payload: Y|<NULL>
 
 substructures:

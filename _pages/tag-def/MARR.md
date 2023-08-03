@@ -25,6 +25,8 @@ specification:
   - A legal, common-law, or customary event such as a wedding or marriage
     ceremony that joins 2 partners to create or extend a family unit.
 
+label: 'Marriage'
+
 payload: Y|<NULL>
 
 substructures:

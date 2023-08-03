@@ -21,6 +21,8 @@ standard tag: JUL
 specification:
   - July
 
+label: 'July'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-GREGORIAN"
   - "https://gedcom.io/terms/v7/cal-JULIAN"

@@ -24,6 +24,8 @@ specification:
   - death
   - Mortal life terminates.
 
+label: 'Death'
+
 payload: Y|<NULL>
 
 substructures:

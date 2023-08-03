@@ -25,6 +25,8 @@ specification:
     describe a source itself, while SOUR.DATA describes the content of the
     source.
 
+label: 'Data'
+
 payload: null
 
 substructures:

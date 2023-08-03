@@ -21,6 +21,8 @@ standard tag: GERM
 specification:
   - Germinal
 
+label: 'Germinal'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-FRENCH_R"
 ...

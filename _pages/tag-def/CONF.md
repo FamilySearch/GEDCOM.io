@@ -24,6 +24,8 @@ specification:
   - confirmation
   - Conferring full church membership.
 
+label: 'Confirmation'
+
 payload: Y|<NULL>
 
 substructures:

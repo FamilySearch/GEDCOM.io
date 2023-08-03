@@ -21,6 +21,8 @@ standard tag: APR
 specification:
   - April
 
+label: 'April'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-GREGORIAN"
   - "https://gedcom.io/terms/v7/cal-JULIAN"

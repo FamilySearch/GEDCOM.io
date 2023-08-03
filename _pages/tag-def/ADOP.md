@@ -25,6 +25,8 @@ specification:
   - Creation of a legally approved child-parent relationship that does not
     exist biologically.
 
+label: 'Adoption'
+
 payload: Y|<NULL>
 
 substructures:

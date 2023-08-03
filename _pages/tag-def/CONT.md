@@ -24,6 +24,8 @@ specification:
     during serialization and is never present in parsed datasets. See Lines for
     more.
 
+label: 'Continued'
+
 payload: null
 
 substructures: {}

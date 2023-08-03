@@ -30,6 +30,8 @@ specification:
     recent, although only the most recent change is described by the DATE
     substructure.
 
+label: 'Change'
+
 payload: null
 
 substructures:

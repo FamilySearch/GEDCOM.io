@@ -25,6 +25,8 @@ specification:
     names, but the list of abbreviations is no longer published by the Church
     and using abbreviations is no longer recommended.
 
+label: 'Temple'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

@@ -24,6 +24,8 @@ specification:
   - immigration
   - Entering into a new locality with the intent of residing there.
 
+label: 'Immigration'
+
 payload: Y|<NULL>
 
 substructures:

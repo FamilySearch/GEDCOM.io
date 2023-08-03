@@ -21,6 +21,8 @@ standard tag: SHV
 specification:
   - Shevat (שְׁבָט)
 
+label: 'Shevat'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

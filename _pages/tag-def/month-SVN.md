@@ -21,6 +21,8 @@ standard tag: SVN
 specification:
   - Sivan (סִיוָן)
 
+label: 'Sivan'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

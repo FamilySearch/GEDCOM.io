@@ -21,6 +21,8 @@ standard tag: TVT
 specification:
   - Tevet (טֵבֵת)
 
+label: 'Tevet'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

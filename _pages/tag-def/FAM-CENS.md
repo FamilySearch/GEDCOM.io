@@ -25,6 +25,8 @@ specification:
   - Periodic count of the population for a designated locality, such as a
     national or state census.
 
+label: 'Census'
+
 payload: Y|<NULL>
 
 substructures:

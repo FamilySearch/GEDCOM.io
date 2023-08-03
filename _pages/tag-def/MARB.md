@@ -24,6 +24,8 @@ specification:
   - marriage bann
   - Official public notice given that 2 people intend to marry.
 
+label: 'Marriage banns'
+
 payload: Y|<NULL>
 
 substructures:

@@ -23,6 +23,8 @@ specification:
   - This is a placeholder for providing a default PLAC.FORM, and must not have
     a payload.
 
+label: 'Place'
+
 payload: null
 
 substructures:

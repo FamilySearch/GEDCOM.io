@@ -21,6 +21,8 @@ standard tag: VEND
 specification:
   - Vendémiaire
 
+label: 'Vendémiaire'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-FRENCH_R"
 ...

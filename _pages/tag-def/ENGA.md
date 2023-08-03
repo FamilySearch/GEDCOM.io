@@ -24,6 +24,8 @@ specification:
   - engagement
   - Recording or announcing an agreement between 2 people to become married.
 
+label: 'Engagement'
+
 payload: Y|<NULL>
 
 substructures:

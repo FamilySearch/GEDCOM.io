@@ -23,6 +23,8 @@ specification:
   - The child in a family, whether biological, adopted, foster, sealed, or
     other relationship.
 
+label: 'Child'
+
 payload: "@<https://gedcom.io/terms/v7/record-INDI>@"
 
 substructures:

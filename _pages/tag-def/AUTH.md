@@ -25,6 +25,8 @@ specification:
     an unpublished source, this may be an individual, a government agency,
     church organization, or private organization.
 
+label: 'Author'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

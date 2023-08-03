@@ -25,6 +25,8 @@ specification:
   - The event of baptism performed at age 8 or later by priesthood authority of
     The Church of Jesus Christ of Latter-day Saints. (See also BAPM)
 
+label: 'Baptism, Latter-Day Saint'
+
 payload: null
 
 substructures:

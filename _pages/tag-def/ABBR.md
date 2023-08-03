@@ -23,6 +23,8 @@ specification:
   - A short name of a title, description, or name used for sorting, filing, and
     retrieving records.
 
+label: 'Abbreviation'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

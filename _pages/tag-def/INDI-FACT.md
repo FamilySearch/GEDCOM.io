@@ -34,6 +34,8 @@ specification:
         1 FACT Woodworking
         2 TYPE Skills
 
+label: 'Fact'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures:

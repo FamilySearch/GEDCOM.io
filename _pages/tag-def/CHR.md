@@ -24,6 +24,8 @@ specification:
   - christening
   - Baptism or naming events for a child.
 
+label: 'Christening'
+
 payload: Y|<NULL>
 
 substructures:

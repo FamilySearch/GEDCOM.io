@@ -21,6 +21,8 @@ standard tag: AAV
 specification:
   - Av (אָב)
 
+label: 'Av'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

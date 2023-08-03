@@ -30,6 +30,8 @@ specification:
     The optional TITL substructure supersedes any OBJE.FILE.TITL substructures
     included in the MULTIMEDIA_RECORD.
 
+label: 'Object'
+
 payload: "@<https://gedcom.io/terms/v7/record-OBJE>@"
 
 substructures:

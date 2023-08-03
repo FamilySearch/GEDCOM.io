@@ -41,6 +41,8 @@ specification:
         2 ASSO @I2@
         3 ROLE CLERGY
 
+label: 'Associates'
+
 payload: "@<https://gedcom.io/terms/v7/record-INDI>@"
 
 substructures:

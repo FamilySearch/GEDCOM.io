@@ -24,6 +24,8 @@ specification:
   - ordination
   - Receiving authority to act in religious matters.
 
+label: 'Ordination'
+
 payload: Y|<NULL>
 
 substructures:

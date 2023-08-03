@@ -26,6 +26,8 @@ specification:
     to the initial creation, it should not be modified after the structure is
     created.
 
+label: 'Creation'
+
 payload: null
 
 substructures:

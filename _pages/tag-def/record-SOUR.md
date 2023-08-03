@@ -36,6 +36,8 @@ specification:
     form a cycle. Applications should also ensure they can handle invalid files
     with such cycles in a safe manner.
 
+label: 'Source'
+
 payload: null
 
 substructures:

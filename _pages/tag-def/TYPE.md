@@ -53,6 +53,8 @@ specification:
     
     See also FACT and EVEN for additional examples.
 
+label: 'Type'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

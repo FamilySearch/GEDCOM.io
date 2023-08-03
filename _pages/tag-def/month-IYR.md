@@ -21,6 +21,8 @@ standard tag: IYR
 specification:
   - Iyar (אִייָר)
 
+label: 'Iyar'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

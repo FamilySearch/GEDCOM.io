@@ -22,6 +22,8 @@ specification:
   - Family child
   - The family with which this individual event is associated.
 
+label: 'Family child'
+
 payload: "@<https://gedcom.io/terms/v7/record-FAM>@"
 
 substructures: {}

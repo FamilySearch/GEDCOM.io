@@ -25,6 +25,8 @@ specification:
   - The number of times this person has participated in a family as a spouse or
     parent.
 
+label: 'Number of marriages'
+
 payload: http://www.w3.org/2001/XMLSchema#nonNegativeInteger
 
 substructures:

@@ -23,6 +23,8 @@ specification:
   - The principal date of the subject of the superstructure. The payload is a
     DateExact.
 
+label: 'Date'
+
 payload: https://gedcom.io/terms/v7/type-Date#exact
 
 substructures:

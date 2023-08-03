@@ -35,6 +35,8 @@ specification:
     recommended that the repository record store current contact information,
     if known.
 
+label: 'Repository'
+
 payload: null
 
 substructures:

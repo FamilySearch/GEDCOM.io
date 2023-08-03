@@ -29,6 +29,8 @@ specification:
     receiving the data knows what genealogical information the document
     contains.
 
+label: 'Note'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures:

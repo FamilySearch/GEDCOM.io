@@ -24,6 +24,8 @@ specification:
   - first communion
   - The first act of sharing in the Lord’s supper as part of church worship.
 
+label: 'First communion'
+
 payload: Y|<NULL>
 
 substructures:

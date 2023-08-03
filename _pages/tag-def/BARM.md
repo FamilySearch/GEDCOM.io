@@ -24,6 +24,8 @@ specification:
   - Bar Mitzvah
   - The ceremonial event held when a Jewish boy reaches age 13.
 
+label: 'Bar Mitzvah'
+
 payload: Y|<NULL>
 
 substructures:

@@ -24,6 +24,8 @@ specification:
   - annulment
   - Declaring a marriage void from the beginning (never existed).
 
+label: 'Annulment'
+
 payload: Y|<NULL>
 
 substructures:

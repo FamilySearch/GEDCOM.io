@@ -21,6 +21,8 @@ standard tag: KSL
 specification:
   - Kislev (כִּסְלֵו)
 
+label: 'Kislev'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

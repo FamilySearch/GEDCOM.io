@@ -21,6 +21,8 @@ standard tag: AUG
 specification:
   - August
 
+label: 'August'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-GREGORIAN"
   - "https://gedcom.io/terms/v7/cal-JULIAN"

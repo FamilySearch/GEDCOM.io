@@ -21,6 +21,8 @@ standard tag: NSN
 specification:
   - Nisan (נִיסָן)
 
+label: 'Nisan'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

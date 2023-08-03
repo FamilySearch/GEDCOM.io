@@ -23,6 +23,8 @@ specification:
   - The name of the business, corporation, or person that produced or
     commissioned the product.
 
+label: 'Corporate name'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures:

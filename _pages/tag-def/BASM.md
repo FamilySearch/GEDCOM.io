@@ -25,6 +25,8 @@ specification:
   - The ceremonial event held when a Jewish girl reaches age 13, also known as
     “Bat Mitzvah.”
 
+label: 'Bas Mitzvah'
+
 payload: Y|<NULL>
 
 substructures:

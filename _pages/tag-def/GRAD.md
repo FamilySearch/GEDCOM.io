@@ -24,6 +24,8 @@ specification:
   - graduation
   - Awarding educational diplomas or degrees to individuals.
 
+label: 'Graduation'
+
 payload: Y|<NULL>
 
 substructures:

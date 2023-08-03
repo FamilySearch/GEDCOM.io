@@ -61,6 +61,8 @@ specification:
         2 TYPE OTHER
         3 PHRASE given by orphanage
 
+label: 'Phrase'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

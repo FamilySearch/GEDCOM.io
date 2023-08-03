@@ -28,6 +28,8 @@ specification:
     temple ceremony of The Church of Jesus Christ of Latter-day Saints. (See
     also MARR)
 
+label: 'Sealing, spouse'
+
 payload: null
 
 substructures:

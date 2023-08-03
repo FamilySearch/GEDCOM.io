@@ -21,6 +21,8 @@ standard tag: VENT
 specification:
   - Ventôse
 
+label: 'Ventôse'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-FRENCH_R"
 ...

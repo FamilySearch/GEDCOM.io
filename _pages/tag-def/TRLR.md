@@ -23,6 +23,8 @@ specification:
   - A pseudo-structure marking the end of a dataset. See The Header and Trailer
     for more.
 
+label: 'Trailer'
+
 payload: null
 
 substructures: {}

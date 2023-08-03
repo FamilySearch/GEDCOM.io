@@ -44,6 +44,8 @@ specification:
         2 ASSO @I3@
         3 ROLE WITN
 
+label: 'Role'
+
 payload: https://gedcom.io/terms/v7/type-Enum
 
 enumeration set: "https://gedcom.io/terms/v7/enumset-ROLE"

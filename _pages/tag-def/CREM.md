@@ -22,7 +22,9 @@ specification:
   - Cremation
   - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
   - cremation
-  - Disposal of the remains of a person’s body by fire.
+  - The act of reducing a dead body to ashes by fire.
+
+label: 'Cremation'
 
 payload: Y|<NULL>
 

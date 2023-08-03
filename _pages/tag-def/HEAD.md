@@ -35,6 +35,8 @@ specification:
             from.
     -   LANG and PLAC give a default value for the rest of the document.
 
+label: 'Header'
+
 payload: null
 
 substructures:

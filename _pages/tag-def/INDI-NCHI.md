@@ -25,6 +25,8 @@ specification:
   - The number of children that this person is known to be the parent of (all
     marriages).
 
+label: 'Number of children'
+
 payload: http://www.w3.org/2001/XMLSchema#nonNegativeInteger
 
 substructures:

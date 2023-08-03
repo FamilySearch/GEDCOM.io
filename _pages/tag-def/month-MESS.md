@@ -21,6 +21,8 @@ standard tag: MESS
 specification:
   - Messidor
 
+label: 'Messidor'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-FRENCH_R"
 ...

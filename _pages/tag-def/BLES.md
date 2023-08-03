@@ -25,6 +25,8 @@ specification:
   - Bestowing divine care or intercession. Sometimes given in connection with a
     naming ceremony.
 
+label: 'Blessing'
+
 payload: Y|<NULL>
 
 substructures:

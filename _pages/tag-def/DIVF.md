@@ -24,6 +24,8 @@ specification:
   - divorce filed
   - Filing for a divorce by a spouse.
 
+label: 'Divorce filing'
+
 payload: Y|<NULL>
 
 substructures:

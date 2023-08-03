@@ -26,6 +26,8 @@ specification:
     performed by priesthood authority in a temple of The Church of Jesus Christ
     of Latter-day Saints.
 
+label: 'Endowment, Latter-Day Saint'
+
 payload: null
 
 substructures:

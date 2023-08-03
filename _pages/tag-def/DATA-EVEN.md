@@ -26,6 +26,8 @@ specification:
     a comma and space. For example, a parish register of births, deaths, and
     marriages would be BIRT, DEAT, MARR.
 
+label: 'Event'
+
 payload: https://gedcom.io/terms/v7/type-List#Enum
 
 enumeration set: "https://gedcom.io/terms/v7/enumset-EVENATTR"

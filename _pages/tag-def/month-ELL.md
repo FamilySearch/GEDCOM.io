@@ -21,6 +21,8 @@ standard tag: ELL
 specification:
   - Elul (אֱלוּל)
 
+label: 'Elul'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...

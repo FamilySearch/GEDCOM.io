@@ -28,6 +28,8 @@ specification:
   - residence
   - An address or place of residence where a family resided.
 
+label: 'Residence'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures:

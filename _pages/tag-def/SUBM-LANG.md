@@ -25,6 +25,8 @@ specification:
     
     The payload of the LANG structure is a language tag, as defined by BCP 47.
 
+label: 'Language'
+
 payload: http://www.w3.org/2001/XMLSchema#Language
 
 substructures: {}

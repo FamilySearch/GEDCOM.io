@@ -24,6 +24,8 @@ specification:
   - naturalization
   - Obtaining citizenship.
 
+label: 'Naturalization'
+
 payload: Y|<NULL>
 
 substructures:

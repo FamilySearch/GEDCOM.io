@@ -23,6 +23,8 @@ specification:
   - Indicates an interest in additional research for ancestors of this
     individual. (See also DESI).
 
+label: 'Ancestor interest'
+
 payload: "@<https://gedcom.io/terms/v7/record-SUBM>@"
 
 substructures: {}

@@ -67,6 +67,8 @@ specification:
     4.  Replace each &lt; with < and &gt; with >
     5.  Replace each &amp; with &
 
+label: 'Media type'
+
 payload: http://www.w3.org/ns/dcat#mediaType
 
 substructures: {}

@@ -25,6 +25,8 @@ specification:
   - The religious event by which a person receives membership in The Church of
     Jesus Christ of Latter-day Saints. (See also CONF)
 
+label: 'Confirmation, Latter-Day Saint'
+
 payload: null
 
 substructures:

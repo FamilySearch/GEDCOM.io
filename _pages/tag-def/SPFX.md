@@ -22,6 +22,8 @@ specification:
   - Surname prefix
   - A name piece used as a non-indexing pre-part of a surname.
 
+label: 'Surname prefix'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures: {}

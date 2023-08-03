@@ -24,6 +24,8 @@ specification:
   - divorce
   - Dissolving a marriage through civil action.
 
+label: 'Divorce'
+
 payload: Y|<NULL>
 
 substructures:

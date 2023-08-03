@@ -21,6 +21,8 @@ standard tag: OCT
 specification:
   - October
 
+label: 'October'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-GREGORIAN"
   - "https://gedcom.io/terms/v7/cal-JULIAN"

@@ -24,6 +24,8 @@ specification:
   - adult christening
   - Baptism or naming events for an adult person.
 
+label: 'Christening, adult'
+
 payload: Y|<NULL>
 
 substructures:

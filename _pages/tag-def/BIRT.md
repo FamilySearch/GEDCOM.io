@@ -24,6 +24,8 @@ specification:
   - birth
   - Entering into life.
 
+label: 'Birth'
+
 payload: Y|<NULL>
 
 substructures:

@@ -25,6 +25,8 @@ specification:
   - An individual’s national heritage or origin, or other folk, house, kindred,
     lineage, or tribal interest.
 
+label: 'Nationality'
+
 payload: http://www.w3.org/2001/XMLSchema#string
 
 substructures:

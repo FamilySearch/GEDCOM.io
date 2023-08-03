@@ -21,6 +21,8 @@ standard tag: TSH
 specification:
   - Tishrei (תִּשְׁרֵי)
 
+label: 'Tishrei'
+
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
 ...
