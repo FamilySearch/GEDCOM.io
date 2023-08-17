@@ -289,4 +289,4 @@ Certain additional information about specific aspects of a parent-child relation
 
 - `BIRT`.`FAMC` indicates the parents as pertaining to a child's birth.
 
-- `SLGC`.`FAMC` indicates a potentially-posthumous recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints
+- `SLGC`.`FAMC` indicates a recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints.
