@@ -253,3 +253,40 @@ The above example denotes that the second form is the actual birth name, but the
 the person.  Although the specification does not define any semantics to the order among NAME structures,
 some implementations are known to infer that the first NAME occuring is a "preferred" one to use
 for display.
+
+
+# How do I record information about one parent?
+
+Parent-child relationships are stored in the `INDI`.`FAMC` structure, which must point to a `FAM` not an `INDI`.
+Additional details about that relationship are stored in its `PEDI` substructure.
+To describe the relationship of an `INDI` to just one parent, make a `FAM` that has only one partner.
+
+The following example indicates that `@I1@` was part of the family `@F1@`,
+but at birth was only related to the mother, not the father.
+
+```
+0 @F1@ FAM
+1 NOTE The family as it appeared later
+1 CHIL @I1@
+1 WIFE @I2@
+1 HUSB @I3@
+0 @I1@ INDI
+1 FAMC @F1@
+2 NOTE The socially-accepted family
+1 FAMC @F2@
+2 NOTE The couple who produced the child
+0 @F2@
+1 NOTE The birth coupling; not a "family" in the social sense
+1 CHIL @I1@
+1 WIFE @I2@
+```
+
+Certain additional information about specific aspects of a parent-child relationship can be provided in other structures:
+
+- `ADOP`.`FAMC` indicates the parents involved in a child's adoption.
+
+- `ASSO` with a family relationship `ROLE` -- including like `CHIL`, `FATH`, `MOTH`, and `PARENT` -- is for indicating a person acting in that role in a non-family context, such inside a `WILL` indicating relationships the will described for its beneficiaries or inside a `MARR` indicating guests who were present in the capacity of parents.
+
+- `BIRT`.`FAMC` indicates the parents as pertaining to a child's birth.
+
+- `SLGC`.`FAMC` indicates a potentially-posthumous recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints
