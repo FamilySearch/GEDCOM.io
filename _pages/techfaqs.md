@@ -95,6 +95,23 @@ At present, the best available tool is `INDI.FAMC.PEDI`, one for each family:
 
 Because the nature of `BIRTH` is unclear (is it about the biological progenitors of the child or the social family unit into which it is born?) and a topic some researchers have strong feelings about, either or both of the above may be recorded `PEDI OTHER` instead of `PEDI BIRTH` by some researchers.
 
+# How do I provide a source citation for a parent-child relationship?
+
+Neither the `FAMC` structure of an individual record nor the `CHIL` structure of a family record supports
+having a `SOUR` citation as a substructure.  Today applications often put the `SOUR` directly under the
+individual record or the family record, where it lacks specificity in terms of which family or individual
+it applies to.
+
+If the source applies to a birth or adoption, specificity can be maintained by placing the `SOUR` citation under an `INDI.BIRT` or `INDI.ADOP`,
+as in the following example:
+
+```
+0 @I1@ INDI
+1 BIRT
+2 SOUR @S2@
+2 FAMC @F3@
+```
+
 # How do I mark a parent-child relationship as confidential?
 
 The standard `RESN` tag is used to mark data confidential but it is not a substructure under the `FAM.FAMC` or `FAM.CHIL` tags. You can implement a custom extension tag, perhaps `_RESN`, and add a `SCHMA` entry to indicate the extension has the same meaning as `RESN`:
