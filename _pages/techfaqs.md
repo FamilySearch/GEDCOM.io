@@ -102,7 +102,7 @@ having a `SOUR` citation as a substructure.  Today applications often put the `S
 individual record or the family record, where it lacks specificity in terms of which family or individual
 it applies to.
 
-To maintain specificity, the best place to put the `SOUR` citation today is under an `INDI.BIRT`
+If the source applies to a birth or adoption, specificity can be maintained by placing the `SOUR` citation under an `INDI.BIRT` or `INDI.ADOP`,
 as in the following example:
 
 ```
