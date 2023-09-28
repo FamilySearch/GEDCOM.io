@@ -40,8 +40,9 @@
 2 FORM City, County, State, Country
 1 NOTE American English
 2 MIME text/plain
-2 LANG en-GB
+2 LANG en-US
 2 TRAN British English
+3 LANG en-GB
 2 SOUR @S1@
 3 PAGE 1
 2 SOUR @S1@
@@ -494,7 +495,9 @@
 2 TYPE http://example.com
 1 EXID 456
 2 TYPE http://example.com
-1 NOTE Note text
+1 NOTE me@example.com is an example email address.
+2 CONT @@me and @I are example social media handles.
+2 CONT @@@@@ has four @ characters where only the first is escaped.
 1 SNOTE @N1@
 1 SOUR @S1@
 2 PAGE 1
@@ -593,8 +596,9 @@
 3 TITL Title
 2 NOTE American English
 3 MIME text/plain
-3 LANG en-GB
+3 LANG en-US
 3 TRAN British English
+4 LANG en-GB
 3 SOUR @S1@
 4 PAGE 1
 3 SOUR @S2@
@@ -710,8 +714,9 @@
 5 TYPE http://example.com
 4 NOTE American English
 5 MIME text/plain
-5 LANG en-GB
+5 LANG en-US
 5 TRAN British English
+6 LANG en-GB
 5 SOUR @S1@
 6 PAGE 1
 5 SOUR @S2@
@@ -723,8 +728,9 @@
 2 AGNC Agency name
 2 NOTE American English
 3 MIME text/plain
-3 LANG en-GB
+3 LANG en-US
 3 TRAN British English
+4 LANG en-GB
 3 SOUR @S1@
 4 PAGE 1
 3 SOUR @S2@
@@ -834,8 +840,9 @@
 2 TYPE http://example.com
 1 NOTE American English
 2 MIME text/plain
-2 LANG en-GB
+2 LANG en-US
 2 TRAN British English
+3 LANG en-GB
 2 SOUR @S1@
 3 PAGE 1
 2 SOUR @S2@
