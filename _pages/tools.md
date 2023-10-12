@@ -54,7 +54,7 @@ The following files are provided for testing.
 
 ## Extension Registry
 
-As part of publishing each version of the FamilySearch GEDCOM 7 specification, a set of YAML files are generated describing each structure type, enumeration set, enumeration value, calendar, and month.
+As part of publishing each version of the [FamilySearch GEDCOM 7 specification](https://gedcom.io/specs/#familysearch-gedcom-version-7), a set of YAML files are generated describing each structure type, enumeration set, enumeration value, calendar, and month.
 The format is [documented](/terms/format)
 and served at the URIs documented in the specification (e.g. <https://gedcom.io/terms/v7/HEAD>).
 
