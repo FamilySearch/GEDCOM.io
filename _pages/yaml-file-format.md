@@ -248,7 +248,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The standard tag of this concept, as given in an official GEDCOM standard document.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
+    <tr><th>Key</th><td><code>substructures</code> and <code>superstructures</code></td></tr>
     <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
