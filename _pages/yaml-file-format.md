@@ -222,7 +222,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>payload</code></td></tr>
-    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below fore more</td></tr>
+    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below for more</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
