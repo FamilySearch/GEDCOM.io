@@ -32,7 +32,7 @@
 2 CONT Pointer to record with an extTag         1 SUBM @U1@
 2 CONT Standard enumeration with an extTag      2 ROLE _CHILD
 2 CONT Standard month with an extTag            ... FRENCH_R 2 _JOUR 8
-2 CONT Standard calendar with an extTag         ... _CALENDRIER 4 JOUR 8
+2 CONT Standard calendar with an extTag         ... _CALENDRIER 4 COMP 8
 2 CONT Documented calendar, month, and epoch    ... _CALENDAR 8 _MONTH 190 _EPOCH
 2 CONT Undocumented calendar, month, and epoch  ... _CAL2 23 _MON2 88 _EP2
 2 CONT Undocumented pointer with shared tag     2 _LOC @L1@
@@ -70,7 +70,7 @@
 1 ASSO @I1@
 2 ROLE _CHILD
 1 BIRT
-2 DATE BET FRENCH_R 2 _JOUR 8 AND _CALENDRIER 4 JOUR 8
+2 DATE BET FRENCH_R 2 _JOUR 8 AND _CALENDRIER 4 COMP 8
 1 DEAT
 2 DATE _CALENDAR 8 _MONTH 190 _EPOCH
 1 GRAD
@@ -81,7 +81,7 @@
 0 @P1@ _PARTY
 1 NAME Spring Fling
 0 @L1@ _LOC
-1 SUBM @S2@
+1 SUBM @U2@
 1 DATE TO 1880
 2 PHRASE Dissolved in the 1870s
 0 SOUR
