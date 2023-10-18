@@ -257,7 +257,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     A list of URIs that can be replaced by this URI without any loss of information or change of meaning.
     This does not simply mean they *can* express the same thing,
     but rather that they express the same thing *in the same way*,
-    i.e. with no change in payloads or substructures.
+    i.e., with no change in payloads or substructures.
     
     One example use-case is an extension becoming standard and being given a URI with a gedcom.io host, in which case both the extension URI's YAML file and the standard URI's YAML file can list the other as URIs it `subsumes`.
     
