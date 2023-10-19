@@ -24,6 +24,8 @@ sidebar:
 | Python | MIT license | <https://github.com/DavidMStraub/python-gedcom7> | based on regular expressions generated directly from the ABNF grammar via abnf-to-regexp |
 | Go | GPL3 | <https://github.com/funwithbots/go-gedcom> | Golang package using ABNF grammar for validation |
 | C | public domain | <https://github.com/gedcom7code/c-parser> | Parses tree and resolves points with syntatic validation |
+| Javascript | dual licensed: unlicense and MIT license | <https://github.com/gedcom7code/js-gedcom> | DOM-style, full validation, with full SCHMA handling and registry parsing; also supports programmatic creation of GEDCOM files |
+
 
 ## Development Aids
 
@@ -32,6 +34,7 @@ sidebar:
 | Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | GEDCOM file validator website |
 | C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker website |
+| Web tool | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator website |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
@@ -51,6 +54,16 @@ The following files are provided for testing.
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
 | [spaces.ged](/testfiles/gedcom70/spaces.ged) | This file contains empty DATE and EVEN payloads, with and without spaces. |
 | [voidptr.ged](/testfiles/gedcom70/voidptr.ged) | This file contains several @VOID@ references. |
+
+## Extension Registry
+
+As part of publishing each version of the [FamilySearch GEDCOM 7 specification](https://gedcom.io/specs/#familysearch-gedcom-version-7), a set of YAML files are generated describing each structure type, enumeration set, enumeration value, calendar, and month.
+The format is [documented](/terms/format)
+and served at the URIs documented in the specification (e.g., <https://gedcom.io/terms/v7/HEAD>).
+
+The full set of YAML files, together with some synthesis information such as parsing metadata and lists of all structure types, can be found in the [GEDCOM-registries github repository](https://github.com/familysearch/gedcom-registries).
+The GEDCOM-registries repository also hosts YAML files for extensions to the specification,
+facilitating interoperability beyond the official specification.
 
 ## Other Development Tools
 
