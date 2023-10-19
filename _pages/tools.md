@@ -24,6 +24,8 @@ sidebar:
 | Python | MIT license | <https://github.com/DavidMStraub/python-gedcom7> | based on regular expressions generated directly from the ABNF grammar via abnf-to-regexp |
 | Go | GPL3 | <https://github.com/funwithbots/go-gedcom> | Golang package using ABNF grammar for validation |
 | C | public domain | <https://github.com/gedcom7code/c-parser> | Parses tree and resolves points with syntatic validation |
+| Javascript | dual licensed: unlicense and MIT license | <https://github.com/gedcom7code/js-gedcom> | DOM-style, full validation, with full SCHMA handling and registry parsing; also supports programmatic creation of GEDCOM files |
+
 
 ## Development Aids
 
@@ -32,6 +34,7 @@ sidebar:
 | Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | GEDCOM file validator website |
 | C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker website |
+| Web tool | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator website |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
