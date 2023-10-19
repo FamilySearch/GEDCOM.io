@@ -25,9 +25,9 @@ Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https:
 
 ## Public GEDCOM-registries Repository
 
-Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful extension registry. The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located. In addition to general interoperability gains, this will assist in an extension-to-standard workflow and in defining additional calendars and events.
-
-Join the GEDCOM Name Project  by going to the [GEDCOM-registries](https://github.com/familysearch/GEDCOM-registries) public repository.
+Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful
+[extension registry](https://github.com/familysearch/GEDCOM-registries).
+The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located. In addition to general interoperability gains, this will assist in an extension-to-standard workflow and in defining additional calendars and events.
 
 ## Issue Tracker 
 
