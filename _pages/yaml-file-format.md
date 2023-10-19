@@ -248,6 +248,24 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The standard tag of this concept, as given in an official GEDCOM standard document.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>subsumes</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    A list of URIs that can be replaced by this URI without any loss of information or change of meaning.
+    This does not simply mean they *can* express the same thing,
+    but rather that they express the same thing *in the same way*,
+    i.e., with no change in payloads or substructures.
+    
+    One example use-case is an extension becoming standard and being given a URI with a gedcom.io host, in which case both the extension URI's YAML file and the standard URI's YAML file can list the other as URIs it `subsumes`.
+    
+    Another example use-case is an extension that adds to another extension,
+    for example by allowing a larger set of payloads or more substructures.
+    In this case the more permissive/larger extension would say it `subsumes` the more strict/smaller extension, but not the other way around.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
     <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
