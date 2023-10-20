@@ -52,6 +52,11 @@ properties:
     "$ref": "#/definitions/uris"
   months:
     "$ref": "#/definitions/uris"
+  epochs:
+    type: array
+    items:
+      type: string
+      pattern: "^(BCE|_[A-Z0-9_]+)$"
   value of:
     "$ref": "#/definitions/uris"
   specification:
@@ -66,6 +71,8 @@ properties:
     "$ref": "#/definitions/card"
   superstructures:
     "$ref": "#/definitions/card"
+  subsumes:
+    "$ref": "#/definitions/uris"
   
 additionalProperties: false
 
@@ -80,7 +87,7 @@ allOf:
   - if: {properties: {type: {const: enumeration}}}
     then: {required: [specification, value of]}
   - if: {properties: {type: {const: calendar}}}
-    then: {required: [specification, months]}
+    then: {required: [specification, months, epochs]}
   - if: {properties: {type: {const: month}}}
     then: {required: [calendars]}
   - if: {properties: {type: {const: data type}}}
