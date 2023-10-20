@@ -211,7 +211,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>payload</code></td></tr>
-    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below fore more</td></tr>
+    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below for more</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -266,7 +266,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     In this case the more permissive/larger extension would say it `subsumes` the more strict/smaller extension, but not the other way around.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
+    <tr><th>Key</th><td><code>substructures</code> and <code>superstructures</code></td></tr>
     <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
