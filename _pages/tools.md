@@ -52,7 +52,6 @@ The following files are provided for testing.
 | [remarriage1.ged](/testfiles/gedcom70/remarriage1.ged) | This file contains a couple who married, divorced, and then later remarried, stored as one family. |
 | [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
-| [spaces.ged](/testfiles/gedcom70/spaces.ged) | This file contains empty DATE and EVEN payloads, with and without spaces. |
 | [voidptr.ged](/testfiles/gedcom70/voidptr.ged) | This file contains several @VOID@ references. |
 
 ## Extension Registry
