@@ -293,7 +293,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     
     \* Note that potentially any concept could be referred to in an enumeration set, and hence any YAML file could include the `value of` key. So far, all known examples are either `type: enumeration` or `type: structure`.
 
-    A list (in no particular order) of enumeration sets that are known to contain this concepts as an enumeration value.
+    A list (in no particular order) of enumeration sets that are known to contain this concept as an enumeration value if the enumeration value is permitted in all structures that use the enumeration set, or if this concept is onli valid in a subset of structures that use the enumeration set, then a list of structures that are known to permit this concept as a payload.
     
     The list may be incomplete, as a new enumeration set might be defined that re-uses an existing enumeration value.
     
