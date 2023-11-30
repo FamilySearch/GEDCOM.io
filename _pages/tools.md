@@ -31,10 +31,11 @@ sidebar:
 
 | Language | License | Site | Notes |
 |----------|---------|------|-------|
-| Web tool | — | <http://ged-inline.elasticbeanstalk.com/> | GEDCOM file validator website |
+| Web tool | — | <https://ged-inline.org> | GEDCOM file validator website |
 | C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker website |
 | Web tool | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator website |
+| Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator website |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
