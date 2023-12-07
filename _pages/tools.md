@@ -25,14 +25,14 @@ sidebar:
 | Go | GPL3 | <https://github.com/funwithbots/go-gedcom> | Golang package using ABNF grammar for validation |
 | C | public domain | <https://github.com/gedcom7code/c-parser> | Parses tree and resolves points with syntatic validation |
 | Javascript | dual licensed: unlicense and MIT license | <https://github.com/gedcom7code/js-gedcom> | DOM-style, full validation, with full SCHMA handling and registry parsing; also supports programmatic creation of GEDCOM files |
-
+| C# | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | GEDCOM 7 parsing, validation, and comparison library |
 
 ## Development Aids
 
 | Language | License | Site | Notes |
 |----------|---------|------|-------|
 | Web tool | — | <https://ged-inline.org> | GEDCOM file validator website |
-| C | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
+| C# | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker command-line tool |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker website |
 | Web tool | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator website |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator website |
