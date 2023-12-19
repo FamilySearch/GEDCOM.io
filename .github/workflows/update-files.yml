@@ -65,7 +65,7 @@ jobs:
       with:
         repository: FamilySearch/GEDCOM
         path: GEDCOM
-        ref: ${{ref.latesttag.outputs.tag}}
+        ref: ${{steps.latesttag.outputs.tag}}
 
     - name: Generate GEDOM-tmp.md
       working-directory: ${{github.workspace}}/GEDCOM/build
