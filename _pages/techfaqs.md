@@ -273,7 +273,7 @@ for display.
 
 # How do I reference local files?
 
-A `MULTIMEDIA_RECORD` uses `FILE` and `TRAN` structures to references one or more files, which might be files
+A `MULTIMEDIA_RECORD` uses `FILE` and `TRAN` structures to reference one or more files, which might be files
 on a local filesystem, or might be remote files referenced by URL.  FamilySearch GEDCOM 7.0 permits local files
 to be referenced in multiple ways, including:
 
