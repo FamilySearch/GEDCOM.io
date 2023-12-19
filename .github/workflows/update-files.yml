@@ -100,6 +100,7 @@ jobs:
         ls -l ../specification/gedcom.pdf
 
     - name: Prep GEDCOM.io
+      if: matrix.GEDCOM_BRANCH == 'release'
       working-directory: ${{github.workspace}}/GEDCOM/build
       run: |
          ls ../../GEDCOM.io
