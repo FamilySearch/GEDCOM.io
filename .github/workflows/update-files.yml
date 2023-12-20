@@ -119,7 +119,7 @@ jobs:
       id: diff
       working-directory: ${{github.workspace}}/GEDCOM.io
       run: |
-        git diff --quiet origin/${{matrix.BRANCH}} extracted-files || echo "::set-output name=status::changes"
+        git diff --quiet origin/${{matrix.BRANCH}} . || echo "::set-output name=status::changes"
       shell: bash
 
     - name: Create Pull Request
