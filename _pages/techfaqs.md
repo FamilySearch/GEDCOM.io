@@ -187,7 +187,7 @@ If you wish to reference a part of a FamilySearch GEDCOM file from outside that 
 
 # How do I flag a primary or profile photo?
 
-There is not standard tag for this purpose in version 7.0.
+There is no standard tag for this purpose in version 7.0.
 The first [MULTIMEDIA_LINK](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#MULTIMEDIA_LINK) in a structure
 is the "most-preferred" external object, but that does not necessarily mean it is either an image or a profile image.
 
@@ -270,3 +270,20 @@ The above example denotes that the second form is the actual birth name, but the
 the person.  Although the specification does not define any semantics to the order among NAME structures,
 some implementations are known to infer that the first NAME occuring is a "preferred" one to use
 for display.
+
+# How do I reference local files?
+
+A `MULTIMEDIA_RECORD` uses `FILE` and `TRAN` structures to reference one or more files, which might be files
+on a local filesystem, or might be remote files referenced by URL.  FamilySearch GEDCOM 7.0 permits local files
+to be referenced in multiple ways, including:
+
+* A `file:` URL with absolute path. Example: `FILE file:///path/to/file`
+* A relative path with no URI scheme. Example: `FILE path/to/file`
+
+Local `file:` URLs are not permitted in FamilySearch GEDZIP but are permitted in FamilySearch
+GEDCOM 7.0 although they should be avoided in datasets that are expected to be shared on the web or with
+unknown parties.
+
+Relative paths, however, are permitted in both GEDCOM and GEDZIP files and so may be more convenient to
+use in both cases.  Any tool that converts FamilySearch GEDCOM 7.0 to GEDZIP should convert local file URLs
+to relative paths within the resulting GEDZIP file.
