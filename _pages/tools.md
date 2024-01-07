@@ -54,6 +54,7 @@ The following files are provided for testing.
 | [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
 | [voidptr.ged](/testfiles/gedcom70/voidptr.ged) | This file contains several @VOID@ references. |
+| [xref.ged](/testfiles/gedcom70/xref.ged) | This file contains a number of different cross-reference identifier formats. |
 
 ## Extension Registry
 
