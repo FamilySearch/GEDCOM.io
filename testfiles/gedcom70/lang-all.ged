@@ -11,7 +11,9 @@
 1 LANG en
 1 LANG ja
 1 LANG es
-0 @2@ _ALL_LANGUAGES
+0 @2@ SUBM
+1 NAME GEDCOM 5.5.1
+1 NOTE This contains the language tags for every language named in the v5.5.1 spec, namely: Afrikaans, Albanian, Amharic, Anglo-Saxon, Arabic, Armenian, Assamese, Belorusian, Bengali, Braj, Bulgarian, Burmese, Cantonese, Catalan, Catalan_Spn, Church-Slavic, Czech, Danish, Dogri, Dutch, English, Esperanto, Estonian, Faroese, Finnish, French, Georgian, German, Greek, Gujarati, Hawaiian, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Khmer, Konkani, Korean, Lahnda, Lao, Latvian, Lithuanian, Macedonian, Maithili, Malayalam, Mandrin, Manipuri, Marathi, Mewari, Navaho, Nepali, Norwegian, Oriya, Pahari, Pali, Panjabi, Persian, Polish, Portuguese, Prakrit, Pusto, Rajasthani, Romanian, Russian, Sanskrit, Serb, Serbo_Croa, Slovak, Slovene, Spanish, Swedish, Tagalog, Tamil, Telugu, Thai, Tibetan, Turkish, Ukrainian, Urdu, Vietnamese, Wendic, Yiddish```
 1 LANG af
 1 LANG sq
 1 LANG am
