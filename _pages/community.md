@@ -50,9 +50,10 @@ If you would like additional information or request to participate in one or mor
 ### Future Project Teams
 
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
-- **Relationships** - support for varying definitions of families,  roles and relationships.
+- **Relationships** - allowing varying definitions of families, roles and relationships.
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records.
 - **Sources** - more source-centric capabilities including multi-person events and multi-purpose sources.
+- **DNA** - how to represent DNA information.
 
 ## Additional Areas of Participation
 
