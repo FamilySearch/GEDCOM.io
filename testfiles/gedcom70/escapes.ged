@@ -24,6 +24,6 @@
 0 @N16@ SNOTE obsolete escape, double space after
 0 @N17@ SNOTE obsolete escape, space before
 0 @N18@ SNOTE @@all in @one@thing WITH_DATES , etc
-0 @N19@ SNOTE @@ at at front and @ at after CONC and 
-1 CONT @@ at after CONT and @ inside CONT too.
+0 @N19@ SNOTE @@ at at front and @ inside line and 
+1 CONT @@ at after CONT and @ inside CONT's line too.
 0 TRLR
