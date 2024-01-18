@@ -100,15 +100,4 @@
 1 LANG vi
 1 LANG wen
 1 LANG yi
-0 @3@ _WRONG_CASE
-1 LANG sh
-1 LANG en
-0 @4@ _PHON_ROMN_PAYLOADS
-1 LANG und
-2 _PHRASE hangul
-1 LANG und
-2 _PHRASE romaji
-0 @5@ _LANGUAGE_NOT_IN_551
-1 LANG und
-2 _PHRASE Hmong
 0 TRLR
