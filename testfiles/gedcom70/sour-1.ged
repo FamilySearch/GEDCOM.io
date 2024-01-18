@@ -2,9 +2,9 @@
 1 GEDC
 2 VERS 7.0
 0 @X1@ SOUR
-1 NOTE A source described inline
+1 NOTE A source record
 0 @X2@ SOUR
-1 NOTE Another source described inline
+1 NOTE Another source record
 0 @1@ INDI
 1 SOUR @X1@
 2 NOTE The tricky bit is
