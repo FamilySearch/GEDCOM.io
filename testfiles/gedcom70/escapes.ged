@@ -10,8 +10,8 @@
 0 @N02@ SNOTE @@one leading no space
 0 @N03@ SNOTE @@ two leading
 0 @N04@ SNOTE @@two leading no space
-0 @N05@ SNOTE doubled @ internal
-0 @N06@ SNOTE doubled@internal no space
+0 @N05@ SNOTE doubled @@ internal has two @ characters, not escaped
+0 @N06@ SNOTE doubled@@internal no space
 0 @N07@ SNOTE single @ internal
 0 @N08@ SNOTE single@internal no space
 0 @N18@ SNOTE @@all in @one@thing WITH_DATES , etc
