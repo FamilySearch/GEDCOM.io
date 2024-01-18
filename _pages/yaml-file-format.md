@@ -52,7 +52,7 @@ The following shorthand types are used in this document:
 | `stdTag` | `str`| Matching `stdTag` from the FamilySearch GEDCOM 7 specification |
 | `Tag` | `str`| Matching `Tag` from the FamilySearch GEDCOM 7 specification |
 | URI | `str` | A valid URI, as defined by RFC 3986 |
-| Nested Schema Map | `map` | A valid map as defined in the [Nested schema maps](#nested-schema-maps) section below |
+
 
 ## Required keys
 
@@ -266,13 +266,13 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     In this case the more permissive/larger extension would say it `subsumes` the more strict/smaller extension, but not the other way around.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>substructures</code></td></tr>
-    <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker or Nested Schema Map values</td></tr>
+    <tr><th>Key</th><td><code>substructures</code> and <code>superstructures</code></td></tr>
+    <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
 
-    `substructures` and `superstructures` express how structures may be nested, and with what cardinality.
+    These express how structures may be nested, and with what cardinality.
     Structure types are given by URI; cardinalities are expressed using the same strings as the standard (i.e. "`{0:1}`", "`{1:1}`", "`{0:M}`", and "`{1:M}`")
     
     Because new structures may be added over time in any order,
@@ -281,13 +281,6 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     or *y*'s `substructures` includes *x*.
     
     If the relationship is listed in both a `substructures` entry and a `superstructures` entry, the two must have the same cardinality.
-
--   <table><tbody>
-    <tr><th>Key</th><td><code>superstructures</code></td></tr>
-    <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
-    <tr><th>Required by</th><td><code>type: structure</code></td></tr>
-    <tr><th>Allowed by</th><td>—</td></tr>
-    </tbody></table>
     
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
 
@@ -304,48 +297,3 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     
     The list may be incomplete, as a new enumeration set might be defined that re-uses an existing enumeration value.
     
-# Nested schema maps
-
-## Required keys
-
-Two keys are always present:
-
--   <table><tbody>
-    <tr><th>Key</th><td><code>substructures</code></td></tr>
-    <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker or Nested Schema Map values</td></tr>
-    <tr><th>Required by</th><td>all</td></tr>
-    <tr><th>Allowed by</th><td>—</td></tr>
-    </tbody></table>
-
--   <table><tbody>
-    <tr><th>Key</th><td><code>cardinality</code></td></tr>
-    <tr><th>Type</th><td>Cardinality Marker</td></tr>
-    <tr><th>Required by</th><td>all</td></tr>
-    <tr><th>Allowed by</th><td>—</td></tr>
-    </tbody></table>
-
-Example:
-
-The 7.0 specification provides an example that contains, in part:
-
-```gedcom
-0 @P1@ _LOC
-1 NAME Βυζάντιον
-2 DATE FROM 667 BCE TO 324
-```
-
-and explains that `_LOC`.`NAME` and `_LOC`.`NAME`.`DATE` are both extension-defined substructures whose
-meaning is defined by the specification defining `_LOC`.  This can be represented in a YAML document as follows,
-where the `substructures` map for the `_LOC` record contains a Nested Schema Map, along with other entries
-with Cardinality Marker values:
-
-```yaml
-substructures:
-  "https://gedcom.io/terms/v7/NAME":
-    cardinality: "{1:M}"
-    substructures:
-      "https://gedcom.io/terms/v7/DATE": "{0:1}"
-  "https://gedcom.io/terms/v7/POST": "{0:M}"
-  "https://gedcom.io/terms/v7/EVEN": "{0:M}"
-```
-
