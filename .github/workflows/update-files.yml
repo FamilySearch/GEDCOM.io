@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - BRANCH: 'master'
+          - BRANCH: 'main'
             GEDCOM_BRANCH: 'release'
           - BRANCH: 'next-minor'
             GEDCOM_BRANCH: 'next-minor'
