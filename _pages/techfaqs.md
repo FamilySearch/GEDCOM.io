@@ -65,7 +65,7 @@ When a person has events recorded in the contexts of multiple calendars within t
 as `JULIAN` and `GREGORIAN`, or `FRENCH_R` and `GREGORIAN`, their age may have been be calculated
 (and recorded) differently depending on the calendar. 
 
-Dates in gedcom can have a calendar in the payload, but ages cannot, leading to the question of how
+Dates in GEDCOM can have a calendar in the payload, but ages cannot, leading to the question of how
 gedcom can store the calendar associated with an age.
 
 One intent of the `AGE` structure is to express the age as it was listed in some source document.
