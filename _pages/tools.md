@@ -81,7 +81,7 @@ These files include:
 | [grammar.gedstruct](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/grammar.gedstruct) | This file contains all of the blocks from the specification in the structure organization metasyntax concatenated into one file. |
 | [payloads.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/payloads.tsv) | This tab-separated-values (TSV) file contains (structure type, payload type) pairs. |
 | [substructures.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/substructures.tsv) | This tab-separated-values (TSV) file contains (superstructure type, substructure tag, substructure type) triples. |
-| [tags](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/tags) | This directory contains YAML files for all URI-identified terms defined in the specifiction, including structure types, enumeration values and sets, calendar identifiers, and month names. There is a proposal to combine this directory into the [Extension Registry](#extension-registry), but that move has not fully taken place. |
+| [tags](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/tags) | This directory contains YAML files for all URI-identified terms defined in the specification, including structure types, enumeration values and sets, calendar identifiers, and month names. There is a proposal to combine this directory into the [Extension Registry](#extension-registry), but that move has not fully taken place. |
 
 ## Other Development Tools
 
