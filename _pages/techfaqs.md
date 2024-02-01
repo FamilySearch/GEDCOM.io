@@ -69,7 +69,7 @@ Dates in GEDCOM can have a calendar in the payload, but ages cannot, leading to 
 gedcom can store the calendar associated with an age.
 
 One intent of the `AGE` structure is to express the age as it was listed in some source document.
-when a `DATE` and an `AGE` are associated with the *same* event, applications reading the GEDCOM file
+When a `DATE` and an `AGE` are associated with the *same* event, applications reading the GEDCOM file
 can infer that the calendar of the `AGE` is the same as the calendar of the `DATE`, especially if
 a `SOURCE_CITATION` is provided for the event.
 
