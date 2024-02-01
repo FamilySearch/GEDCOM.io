@@ -66,6 +66,23 @@ The full set of YAML files, together with some synthesis information such as par
 The GEDCOM-registries repository also hosts YAML files for extensions to the specification,
 facilitating interoperability beyond the official specification.
 
+## Machine-Readable Specification Files
+
+Machine-readable files are automatically generated from the specification, as discussed in a
+[README file](https://github.com/FamilySearch/GEDCOM/tree/main/extracted-files/README.md).
+These files include:
+
+| File     | Notes                  |
+|----------|------------------------|
+| [cardinalities.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/cardinalities.tsv) | This tab-separated-values (TSV) file contains (superstructure type, substructure type, cardinality of substructure) triples. |
+| [enumerations.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/enumerations.tsv) | This tab-separated-values (TSV) file contains (enumeration set, enumeration value) pairs. |
+| [enumerationsets.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/enumerations.tsv) | This tab-separated-values (TSV) file contains (structure type, enmeration set) pairs. |
+| [grammar.abnf](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/grammar.abnf) | This file contains all of the ABNF blocks from the specification concatenated into one file. |
+| [grammar.gedstruct](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/grammar.gedstruct) | This file contains all of the blocks from the specification in the structure organization metasyntax concatenated into one file. |
+| [payloads.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/payloads.tsv) | This tab-separated-values (TSV) file contains (structure type, payload type) pairs. |
+| [substructures.tsv](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/substructures.tsv) | This tab-separated-values (TSV) file contains (superstructure type, substructure tag, substructure type) triples. |
+| [tags](https://github.com/FamilySearch/GEDCOM/blob/main/extracted-files/tags) | This directory contains YAML files for all URI-identified terms defined in the specification, including structure types, enumeration values and sets, calendar identifiers, and month names. The contents of this directory is mirrored into directories in the [Extension Registry](#extension-registry). |
+
 ## Other Development Tools
 
 Other development, conversions tools and sample files will be posted here as they become available.
