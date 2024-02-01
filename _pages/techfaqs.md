@@ -59,6 +59,53 @@ For researchers who want to record a miscarriage, but do not want to include the
 2 DATE 13 JUN 1948
 ```
 
+# How do I record the calendar that an age applies to?
+
+When a person has events recorded in the contexts of multiple calendars within their lifetime, such
+as `JULIAN` and `GREGORIAN`, or `FRENCH_R` and `GREGORIAN`, their age may have been be calculated
+(and recorded) differently depending on the calendar. 
+
+Dates in gedcom can have a calendar in the payload, but ages cannot, leading to the question of how
+gedcom can store the calendar associated with an age.
+
+One intent of the `AGE` structure is to express the age as it was listed in some source document.
+when a `DATE` and an `AGE` are associated with the *same* event, applications reading the GEDCOM file
+can infer that the calendar of the `AGE` is the same as the calendar of the `DATE`, especially if
+a `SOURCE_CITATION` is provided for the event.
+
+If a source document listed an age without a date, but a user or application has a way to calculate
+an estimated date based on the age and calendar used by the source document, then the calendar can
+be stored with a calculated date:
+
+```
+0 @I1@ INDI
+1 BIRT
+2 DATE JULIAN 1 SEP 1752
+1 CHR
+2 DATE CAL GREGORIAN 14 OCT 1752
+2 AGE 1m 2d
+1 DEAT
+2 DATE GREGORIAN 1 NOV 1752
+```
+
+In the following example, it is important to record the calendar associated with the age
+since the actual date would vary:
+
+```
+0 @I2 INDI
+1 NOTE The following two birthdates refer to the same day, in different calendars.
+1 BIRT
+2 DATE FRENCH_R 1 VEND 2
+1 BIRT
+2 DATE GREGORIAN 23 SEP 1793
+1 NOTE If christening was recorded as "1m 10d", the date is different per calendar.
+2 CONT "1m 10d" in Gregorian would be GREGORIAN 2 NOV 1793 or FRENCH_R 12 BRUM 2.
+2 CONT "1m 10d" in French Republican would be GREGORIAN 1 NOV 1793 or FRENCH_R 11 BRUM 2.
+1 CHR
+2 DATE CAL FRENCH_R 11 BRUM 2
+2 AGE 1m 10d
+```
+
 # Why can an attribute have an age?
 
 One case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time:
