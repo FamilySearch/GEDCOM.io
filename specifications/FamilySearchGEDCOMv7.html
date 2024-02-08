@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-08-03" />
+  <meta name="dcterms.date" content="2024-02-08" />
   <title>The FamilySearch GEDCOM Specification</title>
   <style>
 code{white-space: pre-wrap;}
@@ -11,8 +11,10 @@ span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
+
+ul.task-list[class]{list-style: none;}
 ul.task-list li input[type="checkbox"] {
+font-size: inherit;
 width: 0.8em;
 margin: 0 0.8em 0.2em -1.6em;
 vertical-align: middle;
@@ -20,7 +22,7 @@ vertical-align: middle;
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -87,7 +89,7 @@ code span.vs { color: #bf0303; }
 code span.wa { color: #bf0303; } 
 @page {
 @top-left { content: "The FamilySearch GEDCOM Specification"; font-size: 70%; }
-@top-right { content: "7.0.13"; font-size: 70%; }
+@top-right { content: "7.0.14"; font-size: 70%; }
 }
 </style>
   <style type="text/css">
@@ -448,7 +450,7 @@ code .sc { color: #2879a4 !important; }
 
 <header>
 <h1 class="title">The FamilySearch GEDCOM Specification</h1>
-<h3 class="subtitle">7.0.13</h3>
+<h3 class="subtitle">7.0.14</h3>
 
 <div class="author">
 <p>Prepared by the</p>
@@ -457,7 +459,7 @@ code .sc { color: #2879a4 !important; }
 </div>
 </div>
 
-<p class="date"> 3 August 2023</p>
+<p class="date"> 8 February 2024</p>
 
 <div class="contact">
 <strong>Suggestions and Correspondence:</strong>
@@ -470,7 +472,7 @@ GEDCOM@FamilySearch.org
 </div>
 
 <p class="copyright"><div style="page-break-after: always;page-break-before: always;">
-<p>Copyright 1984–2023 Intellectual Reserve, Inc. All rights reserved. A service provided by The Church of Jesus Christ of Latter-day Saints.</p>
+<p>Copyright 1984–2024 Intellectual Reserve, Inc. All rights reserved. A service provided by The Church of Jesus Christ of Latter-day Saints.</p>
 <p>Licensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
 <blockquote>
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0" class="uri">http://www.apache.org/licenses/LICENSE-2.0</a></p>
@@ -480,7 +482,7 @@ GEDCOM@FamilySearch.org
 <p>In accordance with the Apache 2.0 license that governs this work, any other work that is based on or derived from this work must include a readable copy of the following NOTICE. For more information, please refer to the full copy of the Apache 2.0 license.</p>
 <blockquote>
 <p>NOTICE:</p>
-<p>This work comprises, is based on, or is derived from the FAMILYSEARCH GEDCOM™ Specification, © 1984-2023 Intellectual Reserve, Inc. All rights reserved.</p>
+<p>This work comprises, is based on, or is derived from the FAMILYSEARCH GEDCOM™ Specification, © 1984-2024 Intellectual Reserve, Inc. All rights reserved.</p>
 <p>“FAMILYSEARCH GEDCOM™” and “FAMILYSEARCH®” are trademarks of Intellectual Reserve, Inc. and may not be used except as allowed by the Apache 2.0 license that governs this work or as expressly authorized in writing and in advance by Intellectual Reserve, Inc.</p>
 </blockquote>
 </div></p>
@@ -527,6 +529,7 @@ GEDCOM@FamilySearch.org
 <li><a href="#language" id="toc-language"><span class="toc-section-number">2.9</span> Language</a></li>
 <li><a href="#media-type" id="toc-media-type"><span class="toc-section-number">2.10</span> Media Type</a></li>
 <li><a href="#special" id="toc-special"><span class="toc-section-number">2.11</span> Special</a></li>
+<li><a href="#file-path" id="toc-file-path"><span class="toc-section-number">2.12</span> File Path</a></li>
 </ul></li>
 <li><a href="#gedcom-structures" id="toc-gedcom-structures"><span class="toc-section-number">3</span> Genealogical structures</a>
 <ul>
@@ -724,7 +727,7 @@ GEDCOM@FamilySearch.org
 <p>A structure is a representation of data about its <strong>subject</strong>. Examples include the entity, event, claim, or activity that the structure describes.</p>
 <p>Datasets also contain 3 types of pseudo-structures:</p>
 <ul>
-<li><p>The header resembles a record, comes first in each document, and contains metadata about the entire document in its substructures. See <a href="#the-header">The Header</a> for more.</p></li>
+<li><p>The header resembles a record, comes first in each document, and contains metadata about the entire document in its substructures. See <a href="#the-header">The Header</a> for more details.</p></li>
 <li><p>The trailer resembles a record, comes last in each document, and cannot contain substructures.</p></li>
 <li><p>A line continuation resembles a substructure, comes before any other substructures, is used to encode multi-line payloads, and cannot contain substructures.</p></li>
 </ul>
@@ -759,8 +762,12 @@ GEDCOM@FamilySearch.org
 <p>The <strong>tag</strong> matches production <a href="#lines" class="close"><code>Tag</code></a> and encodes the structure’s type. Tags that match the production <a href="#lines" class="close"><code>stdTag</code></a> are defined in this document. Tags that match <a href="#lines" class="close"><code>extTag</code></a> are defined according to <a href="#extensions">Extensions</a>.</p>
 <p>The same tag may be used to represent multiple structure types. The structure type of each structure is identified by its tag and the type of its superstructure. The mapping between (superstructure type, tag) pairs and structure types is given elsewhere in this document (for standard structure types and tags) or the [schema] and extension authors’ documentation (for extension structure types and tags).</p>
 <div class="example">
-<p>The tag <a href="#ADOP"><code>ADOP</code></a> is used in this document to represent two structure types. Which one is meant can be identified by the superstructure type as follows:</p>
+<p>The tag <a href="#ADOP" class="close"><code>ADOP</code></a> is used in this document to represent two structure types. Which one is meant can be identified by the superstructure type as follows:</p>
 <table>
+
+
+
+
 <thead>
 <tr class="header">
 <th>Superstructure type</th>
@@ -774,7 +781,7 @@ GEDCOM@FamilySearch.org
 </tr>
 <tr class="even">
 <td><a href="#ADOP-FAMC"><code>g7:ADOP-FAMC</code></a></td>
-<td><a href="#FAMC-ADOP"><code>g7:FAMC-ADOP</code></a></td>
+<td><a href="#FAMC-ADOP" class="close"><code>g7:FAMC-ADOP</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -837,7 +844,7 @@ GEDCOM@FamilySearch.org
 <p>This specification also provides multiple ways for extension authors to go beyond the specification without submitting a feature request, which are described in the remainder of this section.</p>
 <p>Extensions can introduce new structure types, new enumeration values, new calendars with their associated months, and new data types. They can also extend existing structures with new permitted substructure types and extend existing enumeration-type payloads with new permitted values. Extensions cannot change existing meanings, cardinalities, or calendars.</p>
 <p>A <strong>tagged extension structure</strong> is a structure whose tag matches production <a href="#lines"><code>extTag</code></a>. Tagged extension structures may appear as records or substructures of any other structure. Their meaning is defined by their tag, as is discussed more fully in the section <a href="#extension-tags">Extension Tags</a>.</p>
-<p>Any substructure of a tagged extension structure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> is an <strong>extension-defined substructure</strong>. Substructures of an extension-defined substructure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> are also extension-defined substructures. The meaning and use of each extension-defined substructure is defined by the tagged extension structure it occurs within, not by its tag alone nor by this specification.</p>
+<p>Any substructure of a tagged extension structure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> is an <strong>extension-defined substructure</strong>. Substructures of an extension-defined substructure that uses a tag matching <a href="#lines" class="close"><code>stdTag</code></a> are also extension-defined substructures, but this specification deprecates using a <a href="#lines" class="close"><code>stdTag</code></a> with a definition that does not match any standard type with that tag. The meaning and use of each extension-defined substructure is defined by the tagged extension structure it occurs within, not by its tag alone nor by this specification.</p>
 <div class="example">
 <p>In the following</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@P1@ </span><span class="fu">_LOC</span></span>
@@ -850,9 +857,9 @@ GEDCOM@FamilySearch.org
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">_LOC </span><span class="va">@P1@</span></span></code></pre></div>
 <ul>
 <li>Both uses of <code>_LOC</code> are tagged extension structures, as is <code>_POP</code>.</li>
-<li><code>_LOC</code>.<code>NAME</code> and <code>_LOC</code>.<code>NAME</code>.<code>DATE</code> are both extension-defined substructures. Their meaning is defined by the specification defining <code>_LOC</code>.</li>
+<li><code>_LOC</code>.<code>NAME</code> and <code>_LOC</code>.<code>NAME</code>.<code>DATE</code> are both extension-defined substructures. Their meaning is defined by the specification defining <code>_LOC</code>, but since no standard definition of <a href="#NAME"><code>NAME</code></a> permits <a href="#DATE"><code>DATE</code></a> as a substructure, such use is deprecated.</li>
 <li><code>_POP</code>.<code>DATE</code> is an extension-defined substructure. Its meaning is defined by the specification defining <code>_POP</code>.</li>
-<li>Even though both <a href="#DATE"><code>DATE</code></a>s appear to have <code>g7:type-DATE</code> payloads, we can’t know that is the intended data type without consulting the defining specifications of <code>_LOC</code> and <code>_POP</code>, respectively. The first might be a <code>g7:type-DATE#period</code> and the second a <code>g7:type-DATE#exact</code>, for example.</li>
+<li>Even though both <a href="#DATE" class="close"><code>DATE</code></a>s appear to have <code>g7:type-DATE</code> payloads, we can’t know that is the intended data type without consulting the defining specifications of <code>_LOC</code> and <code>_POP</code>, respectively. The first might be a <code>g7:type-DATE#period</code> and the second a <code>g7:type-DATE#exact</code>, for example.</li>
 </ul>
 </div>
 <p>If an extension-defined substructure has a tag that is also used by one or more standard structures, its meaning and payload type should match at least one of those standard structure types.</p>
@@ -874,6 +881,10 @@ GEDCOM@FamilySearch.org
 <li><code>_DATE</code> can not be used as a substructure of <a href="#BIRT"><code>BIRT</code></a> because <a href="#BIRT" class="close"><code>BIRT</code></a> has a documented <a href="#DATE" class="close"><code>g7:DATE</code></a> substructure with tag <a href="#DATE" class="close"><code>DATE</code></a>.</li>
 <li><a href="#BIRT" class="close"><code>BIRT</code></a> can not be used as a substructure of <code>_DATE</code> or <code>_DATE</code>.<code>PHRASE</code> because neither structure type has a documented substructure with tag <a href="#BIRT" class="close"><code>BIRT</code></a>.</li>
 </ul>
+</div>
+<p>Because all substructures have meanings defined relative to their superstructures and no records do, standard records cannot be relocated and relocated standard structures cannot be used as records.</p>
+<div class="example">
+<p>The <a href="#PLAC"><code>g7:PLAC</code></a> substructure documents where the event described in its superstructure occurred. If an application wants a record to describe the place itself it should create a new URI for that extension; reusing <a href="#PLAC" class="close"><code>g7:PLAC</code></a> for a record with no superstructure is not appropriate.</p>
 </div>
 <p>All other non-standard structures are prohibited. Examples of prohibited structures include, but are not limited to,</p>
 <ul>
@@ -980,9 +991,8 @@ GEDCOM@FamilySearch.org
 <li>It is recommended that applications not use undocumented extension tags.</li>
 <li>It is required that each tag definition’s extension tag be unique within the document.</li>
 <li>It is recommended that each documented extension tag’s URI be unique within the document.</li>
-<li>It is recommended that extension creators use URLs as their URIs and serve a page describing the meaning of an extension at its URL.</li>
+<li>It is recommended that extension creators use URLs as their URIs and serve a YAML file describing the meaning of an extension at its URL, such as a file in the <a href="https://github.com/FamilySearch/GEDCOM-registries/">GEDCOM structure registry</a>. The FamilySearch GEDCOM <a href="https://gedcom.io/terms/format">YAML file format</a> defines how the YAML file provides machine-readable documentation and metadata about extensions. For example, the <code>superstructures</code> key in the YAML file can be used to disambiguate which meaning applies within a given context, such as in the <code>_LOC</code> example above where the meaning is context-dependent.</li>
 </ul>
-<p>Future versions may include additional recommendations relating to documentation, machine-readable documentation, or embedded metadata about extensions within the schema.</p>
 <h3 data-number="1.5.3" id="extension-versus-standard"><span class="header-section-number">1.5.3</span> Extension versus Standard</h3>
 <p>Standard structures take priority over extensions. Data contained in extension tags will not be interpreted by other systems correctly unless the other system supports that particular extension. In particular, those supporting extensions should keep in mind the following:</p>
 <ul>
@@ -1001,7 +1011,7 @@ GEDCOM@FamilySearch.org
 <div class="example">
 <p>If a document has an extension <code>_HOUSEHOLD</code> that is the same as <code>FAM</code> in some situations but not in others, then it should keep the <code>_HOUSEHOLD</code> and <code>FAM</code> in sync if and only if they align.</p>
 </div></li>
-<li><p>Six standard structure types are exceptions to these rules: <a href="#NOTE"><code>NOTE</code></a>, <a href="#SNOTE"><code>SNOTE</code></a>, <a href="#INDI-EVEN"><code>INDI</code>.<code>EVEN</code></a>, <a href="#FAM-EVEN"><code>FAM</code>.<code>EVEN</code></a>, <a href="#INDI-FACT"><code>INDI</code>.<code>FACT</code></a>, and <a href="#FAM-FACT"><code>FAM</code>.<code>FACT</code></a>. Each of these allows human-readable text to describe information that cannot be captured in more-specific structures. As such, all other structures express information that could be described using 1 or more of those structure types. Extensions do not need to duplicate their information using any of those structures.</p>
+<li><p>Six standard structure types are exceptions to these rules: <a href="#NOTE"><code>NOTE</code></a>, <a href="#SNOTE"><code>SNOTE</code></a>, <a href="#INDI-EVEN"><code>INDI</code>.<code>EVEN</code></a>, <a href="#FAM-EVEN"><code>FAM</code>.<code>EVEN</code></a>, <a href="#INDI-FACT" class="close"><code>INDI</code>.<code>FACT</code></a>, and <a href="#FAM-FACT" class="close"><code>FAM</code>.<code>FACT</code></a>. Each of these allows human-readable text to describe information that cannot be captured in more-specific structures. As such, all other structures express information that could be described using 1 or more of those structure types. Extensions do not need to duplicate their information using any of those structures.</p>
 <div class="example">
 <p>If a document has an extension <code>_MEMBER</code> that indicates membership in clubs, boards, and other groups, it is not required to duplicate that information in an <a href="#INDI-FACT" class="close"><code>INDI</code>.<code>FACT</code></a> because <a href="#INDI-FACT" class="close"><code>INDI</code>.<code>FACT</code></a> is 1 of the 6 special structure types listed above.</p>
 </div>
@@ -1247,7 +1257,10 @@ GEDCOM@FamilySearch.org
 <p>Non-integer numbers should be rounded down to an integer. Thus, if someone has lived for 363.5 days, their age might be written as <code>363d</code>, <code>51w 6d</code>, <code>51w</code>, <code>0y</code>, etc.</p>
 <p>Because numbers are rounded down, <code>&gt;</code> effectively includes its endpoint; that is, the age <code>&gt; 8d</code> includes people who have lived 8 days + a few seconds.</p>
 <p>Different cultures count ages differently. Some increment years on the anniversary of birth and others at particular seasons. Some round to the nearest year, others round years down, others round years up. Because users may be unaware of these traditions or may fail to convert them to the round-down convention, errors in age of up to a year are common.</p>
-<p>Age payloads may also be omitted entirely if no suitable form is known but a substructure (such as a <a href="#PHRASE"><code>PHRASE</code></a>) is desired.</p>
+<div class="note">
+<p>Because age payloads are intended to allow recording the age as it was recorded in records that could contain errors, odd ages such as <code>8w 30d</code>, <code>1y 400d</code>, <code>1y 30m</code>, etc. are permitted. Some applications might convert these to more standard forms; if so, it is recommended that they use a <a href="#PHRASE"><code>PHRASE</code></a> substructure to hold the original form.</p>
+</div>
+<p>Age payloads may also be omitted entirely if no suitable form is known but a substructure (such as a <a href="#PHRASE" class="close"><code>PHRASE</code></a>) is desired.</p>
 <div class="note">
 <p>Versions 5.5 and 5.5.1 allowed a few specific phrases inside <a href="#age"><code>Age</code></a> payloads. Age phrases were moved to the <a href="#PHRASE" class="close"><code>PHRASE</code></a> substructure in 7.0.</p>
 </div>
@@ -1286,12 +1299,41 @@ GEDCOM@FamilySearch.org
 <p>The media type data type represents the encoding of information in bytes or characters, as defined in <a href="https://www.rfc-editor.org/info/rfc2045">RFC 2045</a> and <a href="http://www.iana.org/assignments/media-types/">registered by the IANA</a>.</p>
 <p>The official grammar for media type is given in RFC 2045, section 5.1, which defines the syntax of registered values and extension values.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="va">MediaType</span> <span class="cf">=</span> type <span class="st">&quot;/&quot;</span> subtype parameters</span></code></pre></div>
-<p>where: * <code>type</code> and <code>subtype</code> are defined in <a href="https://www.rfc-editor.org/info/rfc2045">RFC 2045</a> section 5.1, and registered values (i.e., those not beginning with “x-”) are further constrained by the definitions in <a href="https://www.rfc-editor.org/info/rfc6838">RFC 6838</a>, section 4.2. A <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">registry of media types</a> is maintained publicly by the IANA. * <code>parameters</code> is defined in <a href="https://www.rfc-editor.org/info/rfc9110">RFC 9110</a>, section 5.6.6. Note that the <code>parameters</code> definition in GEDCOM matches that used by HTTP headers which permit whitespace around the “;” delimiter, whereas email headers in RFC 2045 do not.</p>
+<p>where:</p>
+<ul>
+<li><code>type</code> and <code>subtype</code> are defined in <a href="https://www.rfc-editor.org/info/rfc2045">RFC 2045</a> section 5.1, and registered values (i.e., those not beginning with “x-”) are further constrained by the definitions in <a href="https://www.rfc-editor.org/info/rfc6838">RFC 6838</a>, section 4.2. A <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">registry of media types</a> is maintained publicly by the IANA.</li>
+<li><code>parameters</code> is defined in <a href="https://www.rfc-editor.org/info/rfc9110">RFC 9110</a>, section 5.6.6. Note that the <code>parameters</code> definition in GEDCOM matches that used by HTTP headers which permit whitespace around the “;” delimiter, whereas email headers in RFC 2045 do not.</li>
+</ul>
 <p>The URI for the <a href="#media-type"><code>MediaType</code></a> data type is <code>dcat:mediaType</code>.</p>
 <h2 data-number="2.11" id="special"><span class="header-section-number">2.11</span> Special</h2>
 <p>The special data type is a string conforming to a case-specific standard or constraints. The constraints on each special data type instance are either unique to that structure type or are not simply expressed. For example, the payload of an <a href="#IDNO"><code>IDNO</code></a> structure may obey different rules for each possible <a href="#TYPE"><code>TYPE</code></a> substructure.</p>
 <p>Each special data type is distinct. The URI for the generic data type subsuming all <a href="#special" class="close"><code>Special</code></a> data types is <code>xsd:string</code> (the same as the <a href="#text"><code>Text</code></a> data type).</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode abnf"><code class="sourceCode abnf"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="va">Special</span> <span class="cf">=</span> Text</span></code></pre></div>
+<h2 data-number="2.12" id="file-path"><span class="header-section-number">2.12</span> File Path</h2>
+<p>The file path data type describes where an digital file is located in a machine-readable way. Syntactically, the payload is a URI reference as defined by <a href="https://www.rfc-editor.org/info/rfc3986">RFC 3986</a>, or a valid URL string as defined by the <a href="https://url.spec.whatwg.org/">WHATWG URL specification</a>. That is, it can be an absolute or relative URL, optionally with a fragment string.</p>
+<p>Version 7.0 only supports the following URLs:</p>
+<ul>
+<li><p>A URL with scheme <code>ftp</code>, <code>http</code>, or <code>https</code> refers to a <strong>web-accessible file</strong>.</p></li>
+<li><p>A URL with scheme <code>file</code> refers to either a <strong>local file</strong> or a <strong>non-local file</strong>, as defined by <a href="https://www.rfc-editor.org/info/rfc8089">RFC 8089</a>. Local file URLs must not be used in <a href="#gedzip">FamilySearch GEDZIP</a> and should be avoided in datasets that are expected to be shared on the web or with unknown parties, but may be appropriate for close collaboration between parties with known similar file structures.</p></li>
+<li><p>A URI reference with all of the following:</p>
+<ul>
+<li>no scheme</li>
+<li>not beginning with <code>/</code> (U+002F)</li>
+<li>not containing any path segments equal to <code>..</code> (U+002E U+002E)</li>
+<li>not containing a reverse solidus character (U+005C <code>\</code>) or <a href="#characters"><code>banned</code></a> character, either directly or in escaped form</li>
+<li>no query or fragment</li>
+</ul>
+<p>refers to a <strong>local file</strong>. If the dataset is part of a <a href="#gedzip">GEDZIP file</a>, the URL of the local file is a zip archive filename; otherwise, the URL of a local file is resolved with <em>base</em> equal to the directory containing the dataset.</p>
+<p>It is recommended that local files use the directory prefix <code>media/</code>, but doing so is not required.</p>
+<p>For compatibility with <a href="#gedzip">GEDZIP</a> and related formats, it is recommended that the following file paths not be used:</p>
+<ul>
+<li><code>gedcom.ged</code></li>
+<li><code>MANIFEST.MF</code></li>
+<li>any URL beginning <code>META-INF/</code></li>
+</ul></li>
+</ul>
+<p>Additional URLs may be supported in future versions of this specification.</p>
+<p>The URI for the <code>FilePath</code> data type is <code>g7:type-FilePath</code>.</p>
 <h1 data-number="3" id="gedcom-structures"><span class="header-section-number">3</span> Genealogical structures</h1>
 <p>This chapter describes a set of structure types for exchanging family-based lineage-linked genealogical information. Lineage-linked data pertains to individuals linked in family relationships across multiple generations.</p>
 <p>The genealogical structures defined in this chapter are based on the general framework of the container format and data types defined in Chapters 1 and 2.</p>
@@ -1404,7 +1446,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>The header pseudo-structure provides metadata about the entire dataset. A few substructures of note:</p>
 <ul>
 <li><a href="#GEDC"><code>GEDC</code></a> identifies the specification that this document conforms to. It is recommended that <a href="#GEDC" class="close"><code>GEDC</code></a> be the first substructure of the header.</li>
-<li><a href="#SCHMA"><code>SCHMA</code></a> gives the meaning of extension tags; see <a href="#extensions">Extensions</a> for more.</li>
+<li><a href="#SCHMA"><code>SCHMA</code></a> gives the meaning of extension tags; see <a href="#extensions">Extensions</a> for more details.</li>
 <li><a href="#SOUR"><code>SOUR</code></a> describes the originating software.
 <ul>
 <li><a href="#CORP"><code>CORP</code></a> describes the corporation creating the software.</li>
@@ -1442,6 +1484,8 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </div>
 <p>The order of the <a href="#CHIL" class="close"><code>CHIL</code></a> (children) pointers within a <code>FAM</code> (family) structure should be chronological by birth; this is an exception to the usual “most preferred value first” rule. A <a href="#CHIL" class="close"><code>CHIL</code></a> with a <a href="#lines"><code>voidPtr</code></a> indicates a placeholder for an unknown child in this birth order.</p>
 <p>If a <code>FAM</code> record uses <a href="#HUSB" class="close"><code>HUSB</code></a> or <a href="#WIFE" class="close"><code>WIFE</code></a> to point to an <code>INDI</code> record, the <code>INDI</code> record must use <a href="#FAMS"><code>FAMS</code></a> to point to the <code>FAM</code> record. If a <code>FAM</code> record uses <a href="#CHIL" class="close"><code>CHIL</code></a> to point to an <code>INDI</code> record, the <code>INDI</code> record must use a <a href="#FAMC"><code>FAMC</code></a> to point to the <code>FAM</code> record.</p>
+<p>An <code>INDI</code> record should not have multiple <a href="#FAMS" class="close"><code>FAMS</code></a> substructures pointing to the same <code>FAM</code>.</p>
+<p>A <code>FAM</code> record should not have multiple <a href="#CHIL" class="close"><code>CHIL</code></a> substructures pointing to the same <code>INDI</code>; doing so implies a nonsensical birth order. An <code>INDI</code> record may have multiple <a href="#FAMC" class="close"><code>FAMC</code></a> substructures pointing to the same <code>FAM</code>, but doing so is not recommended.</p>
 <h4 class="unnumbered" id="INDIVIDUAL_RECORD"><code>INDIVIDUAL_RECORD</code> :=</h4>
 <div class="sourceCode" id="cb35"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="cf">@XREF:INDI@ </span><span class="fu">INDI </span>                        <span class="ch">{1:1} </span> <span class="at"><a href="#record-INDI">g7:record-INDI</a></span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">RESN </span>&lt;<a href="#list">List</a>:<a href="#cb20-2">Enum</a>&gt;                      <span class="ch">{0:1} </span> <span class="at"><a href="#RESN">g7:RESN</a></span></span>
@@ -1472,9 +1516,9 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#CHANGE_DATE">CHANGE_DATE</a>&gt;&gt;</span>                       <span class="ch">{0:1}</span></span>
 <span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#CREATION_DATE">CREATION_DATE</a>&gt;&gt;</span>                     <span class="ch">{0:1}</span></span></code></pre></div>
 <p>The individual record is a compilation of facts or hypothesized facts about an individual. These facts may come from multiple sources. Source citations and notes allow documentation of the source where each of the facts were discovered.</p>
-<p>A single individual may have facts distributed across multiple individual records, connected by <a href="#ALIA"><code>ALIA</code></a> (alias, in the computing sense not the pseudonym sense) pointers. See <a href="#ALIA" class="close"><code>ALIA</code></a> for more.</p>
+<p>A single individual may have facts distributed across multiple individual records, connected by <a href="#ALIA"><code>ALIA</code></a> (alias, in the computing sense not the pseudonym sense) pointers. See <a href="#ALIA" class="close"><code>ALIA</code></a> for more details.</p>
 <p>Individual records are linked to Family records by use of bi-directional pointers. Details about those links are stored as substructures of the pointers in the individual record.</p>
-<p>Other associations or relationships are represented by the <a href="#ASSO"><code>ASSO</code></a> (association) tag. The person’s relation or associate is the person being pointed to. The association or relationship is stated by the value on the subordinate <a href="#ROLE"><code>ROLE</code></a> line.</p>
+<p>Other associations or relationships are represented by the <a href="#ASSO" class="close"><code>ASSO</code></a> (association) tag. The person’s relation or associate is the person being pointed to. The association or relationship is stated by the value on the subordinate <a href="#ROLE"><code>ROLE</code></a> line.</p>
 <div class="example">
 <p>The following example refers to 2 individuals, <code>@I1@</code> and <code>@I2@</code>, where <code>@I2@</code> is a godparent of <code>@I1@</code>:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@I1@ </span><span class="fu">INDI</span></span>
@@ -1485,12 +1529,12 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="MULTIMEDIA_RECORD"><code>MULTIMEDIA_RECORD</code> :=</h4>
 <div class="sourceCode" id="cb37"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="cf">@XREF:OBJE@ </span><span class="fu">OBJE </span>                        <span class="ch">{1:1} </span> <span class="at"><a href="#record-OBJE">g7:record-OBJE</a></span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">RESN </span>&lt;<a href="#list">List</a>:<a href="#cb20-2">Enum</a>&gt;                      <span class="ch">{0:1} </span> <span class="at"><a href="#RESN">g7:RESN</a></span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FILE </span>&lt;<a href="#cb28-1">Special</a>&gt;                        <span class="ch">{1:M} </span> <span class="at"><a href="#FILE">g7:FILE</a></span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FILE </span>&lt;FilePath&gt;                       <span class="ch">{1:M} </span> <span class="at"><a href="#FILE">g7:FILE</a></span></span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">FORM </span>&lt;<a href="#cb27-1">MediaType</a>&gt;                   <span class="ch">{1:1} </span> <span class="at"><a href="#FORM">g7:FORM</a></span></span>
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">+3 </span><span class="fu">MEDI </span>&lt;<a href="#cb20-2">Enum</a>&gt;                     <span class="ch">{0:1} </span> <span class="at"><a href="#MEDI">g7:MEDI</a></span></span>
 <span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>           <span class="dt">+4 </span><span class="fu">PHRASE </span>&lt;<a href="#cb18-2">Text</a>&gt;                <span class="ch">{0:1} </span> <span class="at"><a href="#PHRASE">g7:PHRASE</a></span></span>
 <span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">TITL </span>&lt;<a href="#cb18-2">Text</a>&gt;                        <span class="ch">{0:1} </span> <span class="at"><a href="#TITL">g7:TITL</a></span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">TRAN </span>&lt;<a href="#cb28-1">Special</a>&gt;                     <span class="ch">{0:M} </span> <span class="at"><a href="#FILE-TRAN">g7:FILE-TRAN</a></span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">TRAN </span>&lt;FilePath&gt;                    <span class="ch">{0:M} </span> <span class="at"><a href="#FILE-TRAN">g7:FILE-TRAN</a></span></span>
 <span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">+3 </span><span class="fu">FORM </span>&lt;<a href="#cb27-1">MediaType</a>&gt;                <span class="ch">{1:1} </span> <span class="at"><a href="#FORM">g7:FORM</a></span></span>
 <span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#IDENTIFIER_STRUCTURE">IDENTIFIER_STRUCTURE</a>&gt;&gt;</span>              <span class="ch">{0:M}</span></span>
 <span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#NOTE_STRUCTURE">NOTE_STRUCTURE</a>&gt;&gt;</span>                    <span class="ch">{0:M}</span></span>
@@ -1626,7 +1670,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>     <span class="dt">+2 </span><span class="fu">TIME </span>&lt;<a href="#cb23-1">Time</a>&gt;                        <span class="ch">{0:1} </span> <span class="at"><a href="#TIME">g7:TIME</a></span></span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#NOTE_STRUCTURE">NOTE_STRUCTURE</a>&gt;&gt;</span>                    <span class="ch">{0:M}</span></span></code></pre></div>
 <p>The date of the most recent modification of the superstructure, optionally with notes about that modification.</p>
-<p>The <a href="#NOTE"><code>NOTE</code></a> substructure may describe previous changes as well as the most recent, although only the most recent change is described by the <a href="#DATE" class="close"><code>DATE</code></a> substructure.</p>
+<p>The <a href="#NOTE"><code>NOTE</code></a> substructure may describe previous changes as well as the most recent, although only the most recent change is described by the <a href="#DATE"><code>DATE</code></a> substructure.</p>
 <h4 class="unnumbered" id="CREATION_DATE"><code>CREATION_DATE</code> :=</h4>
 <div class="sourceCode" id="cb47"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">CREA </span>                                    <span class="ch">{1:1} </span> <span class="at"><a href="#CREA">g7:CREA</a></span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">DATE </span>&lt;<a href="#cb21-2">DateExact</a>&gt;                      <span class="ch">{1:1} </span> <span class="at"><a href="#DATE-exact">g7:DATE-exact</a></span></span>
@@ -1676,7 +1720,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb18-2">Text</a>&gt;                           <span class="ch">{1:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#FAMILY_EVENT_DETAIL">FAMILY_EVENT_DETAIL</a>&gt;&gt;</span>               <span class="ch">{0:1}</span></span>
 <span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="cf">]</span></span></code></pre></div>
-<p>Family attributes; see <a href="#family-attributes">Family Attributes</a> for more.</p>
+<p>Family attributes; see <a href="#family-attributes">Family Attributes</a> for descriptions of each family attribute type.</p>
 <div class="note">
 <p>Family attribute structures vary as follows:</p>
 <ul>
@@ -1739,7 +1783,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb52-43"><a href="#cb52-43" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb18-2">Text</a>&gt;                           <span class="ch">{1:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb52-44"><a href="#cb52-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#FAMILY_EVENT_DETAIL">FAMILY_EVENT_DETAIL</a>&gt;&gt;</span>               <span class="ch">{0:1}</span></span>
 <span id="cb52-45"><a href="#cb52-45" aria-hidden="true" tabindex="-1"></a><span class="cf">]</span></span></code></pre></div>
-<p>Family events; see <a href="#family-events">Family Events</a> for more.</p>
+<p>Family events; see <a href="#family-events">Family Events</a> for descriptions of each family event type.</p>
 <p>An event structure may be used to discuss an event even if the event is not known to have occurred. See <a href="#events">Events</a> for a discussion of how <a href="#DATE"><code>DATE</code></a>, <a href="#PLAC"><code>PLAC</code></a>, and the optional <code>Y</code> payload indicate whether the structure is asserting the event occurred. See the <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for how to state an event did not occur.</p>
 <div class="note">
 <p>Family event structures vary as follows:</p>
@@ -1825,7 +1869,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb54-55"><a href="#cb54-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb18-2">Text</a>&gt;                           <span class="ch">{1:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb54-56"><a href="#cb54-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb54-57"><a href="#cb54-57" aria-hidden="true" tabindex="-1"></a><span class="cf">]</span></span></code></pre></div>
-<p>Individual attributes; see <a href="#individual-attributes">Individual Attributes</a> for more.</p>
+<p>Individual attributes; see <a href="#individual-attributes">Individual Attributes</a> for descriptions of each individual attribute type..</p>
 <div class="note">
 <p>Individual attribute structures vary as follows:</p>
 <ul>
@@ -1937,7 +1981,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb56-96"><a href="#cb56-96" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">TYPE </span>&lt;<a href="#cb18-2">Text</a>&gt;                           <span class="ch">{1:1} </span> <span class="at"><a href="#TYPE">g7:TYPE</a></span></span>
 <span id="cb56-97"><a href="#cb56-97" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#INDIVIDUAL_EVENT_DETAIL">INDIVIDUAL_EVENT_DETAIL</a>&gt;&gt;</span>           <span class="ch">{0:1}</span></span>
 <span id="cb56-98"><a href="#cb56-98" aria-hidden="true" tabindex="-1"></a><span class="cf">]</span></span></code></pre></div>
-<p>Individual events; see <a href="#individual-events">Individual Events</a> for more.</p>
+<p>Individual events; see <a href="#individual-events">Individual Events</a> for descriptions of each individual event type.</p>
 <p>An event structure may be used to discuss an event even if the event is not known to have occurred. See <a href="#events">Events</a> for a discussion of how <a href="#DATE"><code>DATE</code></a>, <a href="#PLAC"><code>PLAC</code></a>, and the optional <code>Y</code> payload indicate whether the structure is asserting the event occurred. See the <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for how to state an event did not occur.</p>
 <div class="note">
 <p>Individual event structures vary as follows:</p>
@@ -1965,7 +2009,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#LDS_ORDINANCE_DETAIL">LDS_ORDINANCE_DETAIL</a>&gt;&gt;</span>              <span class="ch">{0:1}</span></span>
 <span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">FAMC </span><span class="va">@&lt;XREF:FAM&gt;@</span>                     <span class="ch">{1:1} </span> <span class="at"><a href="#FAMC">g7:FAMC</a></span></span>
 <span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a><span class="cf">]</span></span></code></pre></div>
-<p>Ordinances performed by members of The Church of Jesus Christ of Latter-day Saints; see <a href="#latter-day-saint-ordinances">Latter-day Saint Ordinances</a> for more.</p>
+<p>Ordinances performed by members of The Church of Jesus Christ of Latter-day Saints; see <a href="#latter-day-saint-ordinances">Latter-day Saint Ordinances</a> for descriptions of each ordinance type.</p>
 <h4 class="unnumbered" id="LDS_ORDINANCE_DETAIL"><code>LDS_ORDINANCE_DETAIL</code> :=</h4>
 <div class="sourceCode" id="cb58"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="kw">&lt;&lt;<a href="#DATE_VALUE">DATE_VALUE</a>&gt;&gt;</span>                         <span class="ch">{0:1}</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">TEMP </span>&lt;<a href="#cb18-2">Text</a>&gt;                            <span class="ch">{0:1} </span> <span class="at"><a href="#TEMP">g7:TEMP</a></span></span>
@@ -1979,7 +2023,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="LDS_SPOUSE_SEALING"><code>LDS_SPOUSE_SEALING</code> :=</h4>
 <div class="sourceCode" id="cb59"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">SLGS </span>                                    <span class="ch">{1:1} </span> <span class="at"><a href="#SLGS">g7:SLGS</a></span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#LDS_ORDINANCE_DETAIL">LDS_ORDINANCE_DETAIL</a>&gt;&gt;</span>              <span class="ch">{0:1}</span></span></code></pre></div>
-<p>Ordinances performed by members of The Church of Jesus Christ of Latter-day Saints; see <a href="#latter-day-saint-ordinances">Latter-day Saint Ordinances</a> for more.</p>
+<p>Ordinances performed by members of The Church of Jesus Christ of Latter-day Saints; see <a href="#latter-day-saint-ordinances">Latter-day Saint Ordinances</a> for descriptions of each ordinance type.</p>
 <h4 class="unnumbered" id="MULTIMEDIA_LINK"><code>MULTIMEDIA_LINK</code> :=</h4>
 <div class="sourceCode" id="cb60"><pre class="sourceCode gedstruct"><code class="sourceCode gedstruct"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">OBJE </span><span class="va">@&lt;XREF:OBJE&gt;@</span>                       <span class="ch">{1:1} </span> <span class="at"><a href="#OBJE">g7:OBJE</a></span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="fu">CROP </span>                                 <span class="ch">{0:1} </span> <span class="at"><a href="#CROP">g7:CROP</a></span></span>
@@ -2030,7 +2074,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">SPFX </span>&lt;<a href="#cb18-2">Text</a>&gt;                              <span class="ch">{0:M} </span> <span class="at"><a href="#SPFX">g7:SPFX</a></span></span>
 <span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">SURN </span>&lt;<a href="#cb18-2">Text</a>&gt;                              <span class="ch">{0:M} </span> <span class="at"><a href="#SURN">g7:SURN</a></span></span>
 <span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="dt">n </span><span class="fu">NSFX </span>&lt;<a href="#cb18-2">Text</a>&gt;                              <span class="ch">{0:M} </span> <span class="at"><a href="#NSFX">g7:NSFX</a></span></span></code></pre></div>
-<p>Optional isolated name parts; see <a href="#PERSONAL_NAME_STRUCTURE" class="close"><code>PERSONAL_NAME_STRUCTURE</code></a> for more.</p>
+<p>Optional isolated name parts; see <a href="#PERSONAL_NAME_STRUCTURE" class="close"><code>PERSONAL_NAME_STRUCTURE</code></a> for more details.</p>
 <div class="example">
 <p>“Lt. Cmndr. Joseph Allen jr.” might be presented as</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="dt">1 </span><span class="fu">NAME </span>Lt. Cmndr. Joseph /Allen/ jr.</span>
@@ -2052,7 +2096,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">+1 </span><span class="kw">&lt;&lt;<a href="#SOURCE_CITATION">SOURCE_CITATION</a>&gt;&gt;</span>                   <span class="ch">{0:M}</span></span></code></pre></div>
 <p>Names of individuals are represented in the manner the name is normally spoken, with the family name, surname, or nearest cultural parallel thereunto separated by slashes (U+002F <code>/</code>). Based on the dynamic nature or unknown compositions of naming conventions, it is difficult to provide a more detailed name piece structure to handle every case. The <a href="#PERSONAL_NAME_PIECES"><code>PERSONAL_NAME_PIECES</code></a> are provided optionally for systems that cannot operate effectively with less structured information. The Personal Name payload shall be seen as the primary name representation, with name pieces as optional auxiliary information; in particular it is recommended that all name parts in <a href="#PERSONAL_NAME_PIECES" class="close"><code>PERSONAL_NAME_PIECES</code></a> appear within the <a href="#personal-name" class="close"><code>PersonalName</code></a> payload in some form, possibly adjusted for gender-specific suffixes or the like. It is permitted for the payload to contain information not present in any name piece substructure.</p>
 <p>The name may be translated or transliterated into different languages or scripts using the <a href="#TRAN"><code>TRAN</code></a> substructure. It is recommended, but not required, that if the name pieces are used, the same pieces are used in each translation and transliteration.</p>
-<p>A <a href="#TYPE"><code>TYPE</code></a> is used to specify the particular variation that this name is. For example; it could indicate that this name is a name taken at immigration or that it could be an ‘also known as’ name. See <a href="#enumset-NAME-TYPE"><code>g7:enumset-NAME-TYPE</code></a> for more.</p>
+<p>A <a href="#TYPE"><code>TYPE</code></a> is used to specify the particular variation that this name is. For example; it could indicate that this name is a name taken at immigration or that it could be an ‘also known as’ name. See <a href="#enumset-NAME-TYPE"><code>g7:enumset-NAME-TYPE</code></a> for more details.</p>
 <div class="note">
 <p>Alternative approaches to representing names are being considered for future versions of this specification.</p>
 </div>
@@ -2517,25 +2561,25 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="ABBR"><code>ABBR</code> (Abbreviation) <code class="uri">g7:ABBR</code></h4>
 <p>A short name of a title, description, or name used for sorting, filing, and retrieving records.</p>
 <h4 class="unnumbered" id="ADDR"><code>ADDR</code> (Address) <code class="uri">g7:ADDR</code></h4>
-<p>The location of, or most relevant to, the subject of the superstructure. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The location of, or most relevant to, the subject of the superstructure. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="ADOP"><code>ADOP</code> (Adoption) <code class="uri">g7:ADOP</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="FAMC-ADOP"><code>ADOP</code> (Adoption) <code class="uri">g7:FAMC-ADOP</code></h4>
 <p>An enumerated value from set <a href="#enumset-ADOP"><code>g7:enumset-ADOP</code></a> indicating which parent(s) in the family adopted this individual.</p>
 <h4 class="unnumbered" id="ADR1"><code>ADR1</code> (Address Line 1) <code class="uri">g7:ADR1</code></h4>
-<p>The first line of the address, used for indexing. This structure’s payload should be a single line of text equal to the first line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The first line of the address, used for indexing. This structure’s payload should be a single line of text equal to the first line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <div class="deprecation">
-<p><a href="#ADR1" class="close"><code>ADR1</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p><a href="#ADR1" class="close"><code>ADR1</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 </div>
 <h4 class="unnumbered" id="ADR2"><code>ADR2</code> (Address Line 2) <code class="uri">g7:ADR2</code></h4>
-<p>The second line of the address, used for indexing. This structure’s payload should be a single line of text equal to the second line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The second line of the address, used for indexing. This structure’s payload should be a single line of text equal to the second line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <div class="deprecation">
-<p><a href="#ADR2" class="close"><code>ADR2</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p><a href="#ADR2" class="close"><code>ADR2</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 </div>
 <h4 class="unnumbered" id="ADR3"><code>ADR3</code> (Address Line 3) <code class="uri">g7:ADR3</code></h4>
-<p>The third line of the address, used for indexing. This structure’s payload should be a single line of text equal to the third line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The third line of the address, used for indexing. This structure’s payload should be a single line of text equal to the third line of the corresponding <a href="#ADDR" class="close"><code>ADDR</code></a>. See <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <div class="deprecation">
-<p><a href="#ADR3" class="close"><code>ADR3</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p><a href="#ADR3" class="close"><code>ADR3</code></a> should not be added to new files; see <a href="#ADDRESS_STRUCTURE" class="close"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 </div>
 <h4 class="unnumbered" id="AGE"><code>AGE</code> (Age at event) <code class="uri">g7:AGE</code></h4>
 <p>The age of the individual at the time an event occurred, or the age listed in the document.</p>
@@ -2551,7 +2595,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="ANUL"><code>ANUL</code> (Annulment) <code class="uri">g7:ANUL</code></h4>
 <p>A <a href="#family-events">Family Event</a>. See also <a href="#FAMILY_EVENT_STRUCTURE"><code>FAMILY_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="ASSO"><code>ASSO</code> (Associates) <code class="uri">g7:ASSO</code></h4>
-<p>A pointer to an associated individual. See <a href="#ASSOCIATION_STRUCTURE"><code>ASSOCIATION_STRUCTURE</code></a> for more.</p>
+<p>A pointer to an associated individual. See <a href="#ASSOCIATION_STRUCTURE"><code>ASSOCIATION_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="AUTH"><code>AUTH</code> (Author) <code class="uri">g7:AUTH</code></h4>
 <p>The person, agency, or entity who created the record. For a published work, this could be the author, compiler, transcriber, abstractor, or editor. For an unpublished source, this may be an individual, a government agency, church organization, or private organization.</p>
 <h4 class="unnumbered" id="BAPL"><code>BAPL</code> (Baptism, Latter-Day Saint) <code class="uri">g7:BAPL</code></h4>
@@ -2580,7 +2624,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="INDI-CENS"><code>CENS</code> (Census) <code class="uri">g7:INDI-CENS</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="CHAN"><code>CHAN</code> (Change) <code class="uri">g7:CHAN</code></h4>
-<p>The most recent change to the superstructure. This is metadata about the structure itself, not data about its subject. See <a href="#CHANGE_DATE"><code>CHANGE_DATE</code></a> for more.</p>
+<p>The most recent change to the superstructure. This is metadata about the structure itself, not data about its subject. See <a href="#CHANGE_DATE"><code>CHANGE_DATE</code></a> for more details.</p>
 <h4 class="unnumbered" id="CHIL"><code>CHIL</code> (Child) <code class="uri">g7:CHIL</code></h4>
 <p>The child in a family, whether biological, adopted, foster, sealed, or other relationship.</p>
 <h4 class="unnumbered" id="CHRA"><code>CHRA</code> (Christening, adult) <code class="uri">g7:CHRA</code></h4>
@@ -2588,19 +2632,19 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="CHR"><code>CHR</code> (Christening) <code class="uri">g7:CHR</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE" class="close"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="CITY"><code>CITY</code> (City) <code class="uri">g7:CITY</code></h4>
-<p>The name of the city used in the address. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The name of the city used in the address. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="CONF"><code>CONF</code> (Confirmation) <code class="uri">g7:CONF</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE" class="close"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="CONL"><code>CONL</code> (Confirmation, Latter-Day Saint) <code class="uri">g7:CONL</code></h4>
 <p>A <a href="#latter-day-saint-ordinances">Latter-Day Saint Ordinance</a>. See also <a href="#LDS_INDIVIDUAL_ORDINANCE"><code>LDS_INDIVIDUAL_ORDINANCE</code></a>.</p>
 <h4 class="unnumbered" id="CONT"><code>CONT</code> (Continued) <code class="uri">g7:CONT</code></h4>
-<p>A pseudo-structure to indicate a line break. The <a href="#CONT" class="close"><code>CONT</code></a> tag is generated during serialization and is never present in parsed datasets. See <a href="#lines">Lines</a> for more.</p>
+<p>A pseudo-structure to indicate a line break. The <a href="#CONT" class="close"><code>CONT</code></a> tag is generated during serialization and is never present in parsed datasets. See <a href="#lines">Lines</a> for more details.</p>
 <h4 class="unnumbered" id="COPR"><code>COPR</code> (Copyright) <code class="uri">g7:COPR</code></h4>
 <p>A copyright statement, as appropriate for the copyright laws applicable to this data.</p>
 <h4 class="unnumbered" id="CORP"><code>CORP</code> (Corporate name) <code class="uri">g7:CORP</code></h4>
 <p>The name of the business, corporation, or person that produced or commissioned the product.</p>
 <h4 class="unnumbered" id="CREA"><code>CREA</code> (Creation) <code class="uri">g7:CREA</code></h4>
-<p>The initial creation of the superstructure. This is metadata about the structure itself, not data about its subject. See <a href="#CREATION_DATE"><code>CREATION_DATE</code></a> for more.</p>
+<p>The initial creation of the superstructure. This is metadata about the structure itself, not data about its subject. See <a href="#CREATION_DATE"><code>CREATION_DATE</code></a> for more details.</p>
 <h4 class="unnumbered" id="CREM"><code>CREM</code> (Cremation) <code class="uri">g7:CREM</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="CROP"><code>CROP</code> (Crop) <code class="uri">g7:CROP</code></h4>
@@ -2615,7 +2659,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <li><a href="#CROP" class="close"><code>CROP</code></a> applied to a non-image or image without a defined pixel unit.</li>
 </ul>
 <h4 class="unnumbered" id="CTRY"><code>CTRY</code> (Country) <code class="uri">g7:CTRY</code></h4>
-<p>The name of the country that pertains to the associated address. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>The name of the country that pertains to the associated address. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="DATA"><code>DATA</code> (Data) <code class="uri">g7:DATA</code></h4>
 <p>A structure with no payload used to distinguish a description of something from metadata about it. For example, <a href="#SOUR"><code>SOUR</code></a> and its other substructures describe a source itself, while <a href="#SOUR-DATA" class="close"><code>SOUR</code>.<code>DATA</code></a> describes the content of the source.</p>
 <h4 class="unnumbered" id="SOUR-DATA"><code>DATA</code> (Data) <code class="uri">g7:SOUR-DATA</code></h4>
@@ -2624,7 +2668,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>The electronic data source or digital repository from which this dataset was exported. The payload is the name of that source, with substructures providing additional details about the source (not the export).</p>
 <h4 class="unnumbered" id="DATE"><code>DATE</code> (Date) <code class="uri">g7:DATE</code></h4>
 <p>The principal date of the subject of the superstructure. The payload is a <a href="#date"><code>DateValue</code></a>.</p>
-<p>See <a href="#DATE_VALUE"><code>DATE_VALUE</code></a> for more.</p>
+<p>See <a href="#DATE_VALUE"><code>DATE_VALUE</code></a> for more details.</p>
 <h4 class="unnumbered" id="DATE-exact"><code>DATE</code> (Date) <code class="uri">g7:DATE-exact</code></h4>
 <p>The principal date of the subject of the superstructure. The payload is a <a href="#date" class="close"><code>DateExact</code></a>.</p>
 <h4 class="unnumbered" id="HEAD-DATE"><code>DATE</code> (Date) <code class="uri">g7:HEAD-DATE</code></h4>
@@ -2678,7 +2722,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="SOUR-EVEN"><code>EVEN</code> (Event) <code class="uri">g7:SOUR-EVEN</code></h4>
 <p>An enumerated value from set <a href="#enumset-EVENATTR" class="close"><code>g7:enumset-EVENATTR</code></a> indicating the type of event or attribute which was responsible for the source entry being recorded. For example, if the entry was created to record a birth of a child, then the type would be <a href="#BIRT"><code>BIRT</code></a> regardless of the assertions made from that record, such as the mother’s name or mother’s birth date.</p>
 <h4 class="unnumbered" id="EXID"><code>EXID</code> (External Identifier) <code class="uri">g7:EXID</code></h4>
-<p>An identifier for the subject of the superstructure. The identifier is maintained by some external authority; the authority owning the identifier is provided in the TYPE substructure; see <a href="#EXID-TYPE"><code>EXID</code>.<code>TYPE</code></a> for more.</p>
+<p>An identifier for the subject of the superstructure. The identifier is maintained by some external authority; the authority owning the identifier is provided in the TYPE substructure; see <a href="#EXID-TYPE"><code>EXID</code>.<code>TYPE</code></a> for more details.</p>
 <p>Depending on the maintaining authority, an <a href="#EXID" class="close"><code>EXID</code></a> may be a unique identifier for the subject, an identifier for 1 of several views of the subject, or an identifier for the externally-maintained copy of the same information as is contained in this structure. However, unlike <a href="#UID"><code>UID</code></a> and <a href="#REFN"><code>REFN</code></a>, <a href="#EXID" class="close"><code>EXID</code></a> does not identify a structure; structures with the same <a href="#EXID" class="close"><code>EXID</code></a> may have originated independently rather than by edits from the same starting point.</p>
 <p><a href="#EXID" class="close"><code>EXID</code></a> identifiers are expected to be unique. Once assigned, an <a href="#EXID" class="close"><code>EXID</code></a> identifier should never be re-used for any other purpose.</p>
 <h4 class="unnumbered" id="record-FAM"><code>FAM</code> (Family record) <code class="uri">g7:record-FAM</code></h4>
@@ -2699,41 +2743,20 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="dt">2 </span><span class="fu">TYPE </span>Skills</span></code></pre></div>
 </div>
 <h4 class="unnumbered" id="INDI-FAMC"><code>FAMC</code> (Family child) <code class="uri">g7:INDI-FAMC</code></h4>
-<p>The family in which an individual appears as a child. It is also used with a <code>STAT</code> substructure to show individuals who are not children of the family. See <code>FAM</code> and <a href="#FAMC-STAT"><code>FAMC</code>.<code>STAT</code></a> for more.</p>
+<p>The family in which an individual appears as a child. It is also used with a <a href="#FAMC-STAT"><code>g7:FAMC-STAT</code></a> substructure to show individuals who are not children of the family. See <a href="#FAMILY_RECORD"><code>FAMILY_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="FAMC"><code>FAMC</code> (Family child) <code class="uri">g7:FAMC</code></h4>
 <p>The family with which this individual event is associated.</p>
 <h4 class="unnumbered" id="ADOP-FAMC"><code>FAMC</code> (Family child) <code class="uri">g7:ADOP-FAMC</code></h4>
 <p>The individual or couple that adopted this individual.</p>
 <p>Adoption by an individual, rather than a couple, may be represented either by pointing to a <code>FAM</code> where that individual is a <a href="#HUSB"><code>HUSB</code></a> or <a href="#WIFE"><code>WIFE</code></a> and using a <a href="#FAMC-ADOP"><code>g7:FAMC-ADOP</code></a> substructure to indicate which 1 performed the adoption; or by using a <code>FAM</code> where the adopting individual is the only <a href="#HUSB" class="close"><code>HUSB</code></a>/<a href="#WIFE" class="close"><code>WIFE</code></a>.</p>
 <h4 class="unnumbered" id="FAMS"><code>FAMS</code> (Family spouse) <code class="uri">g7:FAMS</code></h4>
-<p>The family in which an individual appears as a partner. See <code>FAM</code> for more.</p>
+<p>The family in which an individual appears as a partner. See <a href="#FAMILY_RECORD" class="close"><code>FAMILY_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="FAX"><code>FAX</code> (Facsimile) <code class="uri">g7:FAX</code></h4>
-<p>A fax telephone number appropriate for sending data facsimiles. See <a href="#PHON"><code>PHON</code></a> for more.</p>
+<p>A fax telephone number appropriate for sending data facsimiles. See <a href="#PHON"><code>PHON</code></a> for additional comments on telephone numbers.</p>
 <h4 class="unnumbered" id="FCOM"><code>FCOM</code> (First communion) <code class="uri">g7:FCOM</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="FILE"><code>FILE</code> (File reference) <code class="uri">g7:FILE</code></h4>
-<p>A reference to an external file. Syntactically, the payload is a URI reference as defined by <a href="https://www.rfc-editor.org/info/rfc3986">RFC 3986</a>, or a valid URL string as defined by the <a href="https://url.spec.whatwg.org/">WHATWG URL specification</a>. That is, it can be an absolute or relative URL, optionally with a fragment string. However, only the following URL types are used:</p>
-<ul>
-<li><p>A URL with scheme <code>ftp</code>, <code>http</code>, or <code>https</code> refers to a <strong>web-accessible file</strong>.</p></li>
-<li><p>A URL with scheme <code>file</code> refers to a <strong>machine-local file</strong> as defined by <a href="https://www.rfc-editor.org/info/rfc8089">RFC 8089</a>. Machine-local files must not be used in <a href="#gedzip">FamilySearch GEDZIP</a> nor when sharing datasets on the web or with unknown parties, but may be used for close collaboration between parties with known similar file structures.</p></li>
-<li><p>A URI reference with all of the following:</p>
-<ul>
-<li>no scheme</li>
-<li>not beginning with <code>/</code> (U+002F)</li>
-<li>not containing any path segments equal to <code>..</code> (U+002E U+002E)</li>
-<li>not containing a reverse solidus character (U+005C <code>\</code>) or <a href="#characters"><code>banned</code></a> character, either directly or in escaped form</li>
-<li>no query or fragment</li>
-</ul>
-<p>refers to a <strong>local file</strong>. If the dataset is part of a <a href="#gedzip">GEDZIP file</a>, the URL of the local file is a zip archive filename; otherwise, the URL of a local file is resolved with <em>base</em> equal to the directory containing the dataset.</p>
-<p>It is recommended that local files use the directory prefix <code>media/</code>, but doing so is not required.</p>
-<p>For compatibility with <a href="#gedzip">GEDZIP</a> and related formats, it is recommended that the following <a href="#FILE"><code>FILE</code></a> payloads not be used:</p>
-<ul>
-<li><code>gedcom.ged</code></li>
-<li><code>MANIFEST.MF</code></li>
-<li>any URL beginning <code>META-INF/</code></li>
-</ul></li>
-</ul>
-<p>The meaning of a <a href="#FILE" class="close"><code>FILE</code></a> payload with any format not listed above is not defined by this version of the specification, but may be defined in a subsequent version.</p>
+<p>A reference to an external file. See the <a href="#file-path">File Path datatype</a> for more details.</p>
 <h4 class="unnumbered" id="FORM"><code>FORM</code> (Format) <code class="uri">g7:FORM</code></h4>
 <p>The <a href="#media-type">media type</a> of the file referenced by the superstructure.</p>
 <h4 class="unnumbered" id="PLAC-FORM"><code>FORM</code> (Format) <code class="uri">g7:PLAC-FORM</code></h4>
@@ -2747,15 +2770,15 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>Any <a href="#PLAC" class="close"><code>PLAC</code></a> with no <a href="#PLAC-FORM"><code>FORM</code></a> shall be treated as if it has this <a href="#PLAC-FORM"><code>FORM</code></a>.</p>
 <h4 class="unnumbered" id="GEDC"><code>GEDC</code> (GEDCOM) <code class="uri">g7:GEDC</code></h4>
 <p>A container for information about the entire document.</p>
-<p>It is recommended that applications write <a href="#GEDC" class="close"><code>GEDC</code></a> with its required subrecord <a href="#VERS"><code>VERS</code></a> as the first substructure of <a href="#HEAD" class="close"><code>HEAD</code></a>.</p>
+<p>It is recommended that applications write <a href="#GEDC" class="close"><code>GEDC</code></a> with its required substructure <a href="#GEDC-VERS"><code>g7:GEDC-VERS</code></a> as the first substructure of <a href="#HEAD" class="close"><code>HEAD</code></a>.</p>
 <h4 class="unnumbered" id="GIVN"><code>GIVN</code> (Given name) <code class="uri">g7:GIVN</code></h4>
 <p>A given or earned name used for official identification of a person.</p>
 <h4 class="unnumbered" id="GRAD"><code>GRAD</code> (Graduation) <code class="uri">g7:GRAD</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="HEAD"><code>HEAD</code> (Header) <code class="uri">g7:HEAD</code></h4>
-<p>A pseudo-structure for storing metadata about the document. See <a href="#the-header">The Header and Trailer</a> for more.</p>
+<p>A pseudo-structure for storing metadata about the document. See <a href="#the-header">The Header and Trailer</a> for more details.</p>
 <h4 class="unnumbered" id="HEIGHT"><code>HEIGHT</code> (Height in pixels) <code class="uri">g7:HEIGHT</code></h4>
-<p>How many pixels to display vertically for the image. See <a href="#CROP"><code>CROP</code></a> for more.</p>
+<p>How many pixels to display vertically for the image. See <a href="#CROP"><code>CROP</code></a> for more details.</p>
 <div class="note">
 <p><a href="#HEIGHT" class="close"><code>HEIGHT</code></a> is a number of pixels. The correct tag for the height of an individual is the <a href="#DSCR"><code>DSCR</code></a> attribute.</p>
 <div class="example">
@@ -2766,9 +2789,9 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="HUSB"><code>HUSB</code> (Husband) <code class="uri">g7:HUSB</code></h4>
 <p>A container for information relevant to the subject of the superstructure specific to the individual described by the associated <code>FAM</code>’s <a href="#HUSB" class="close"><code>HUSB</code></a> substructure.</p>
 <h4 class="unnumbered" id="FAM-HUSB"><code>HUSB</code> (Husband) <code class="uri">g7:FAM-HUSB</code></h4>
-<p>This is a partner in a <code>FAM</code> record. See <a href="#FAMILY_RECORD"><code>FAMILY_RECORD</code></a> for more.</p>
+<p>This is a partner in a <code>FAM</code> record. See <a href="#FAMILY_RECORD"><code>FAMILY_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="IDNO"><code>IDNO</code> (Identification number) <code class="uri">g7:IDNO</code></h4>
-<p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
+<p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE" class="close"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="IMMI"><code>IMMI</code> (Immigration) <code class="uri">g7:IMMI</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="record-INDI"><code>INDI</code> (Individual) <code class="uri">g7:record-INDI</code></h4>
@@ -2808,7 +2831,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>18 degrees, 9 minutes, and 3.4 seconds North would be formatted as <code>N18.150944</code>.</p>
 </div>
 <h4 class="unnumbered" id="LEFT"><code>LEFT</code> (Left crop width) <code class="uri">g7:LEFT</code></h4>
-<p>Left is a number of pixels to not display from the left side of the image. See <a href="#CROP"><code>CROP</code></a> for more.</p>
+<p>Left is a number of pixels to not display from the left side of the image. See <a href="#CROP"><code>CROP</code></a> for more details.</p>
 <h4 class="unnumbered" id="LONG"><code>LONG</code> (Longitude) <code class="uri">g7:LONG</code></h4>
 <p>A longitudinal coordinate. The payload is either <code>E</code> (for a coordinate east of the prime meridian) or <code>W</code> (for a coordinate west of the prime meridian) followed by a decimal number of degrees. Minutes and seconds are not used and should be converted to fractional degrees prior to encoding.</p>
 <div class="example">
@@ -2881,7 +2904,8 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="NMR"><code>NMR</code> (Number of marriages) <code class="uri">g7:NMR</code></h4>
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE" class="close"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="NO"><code>NO</code> (Did not happen) <code class="uri">g7:NO</code></h4>
-<p>An enumerated value from set <a href="#enumset-EVEN"><code>g7:enumset-EVEN</code></a> identifying an event type which did not occur to the superstructure’s subject. See <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for more.</p>
+<p>An enumerated value from set <a href="#enumset-EVEN"><code>g7:enumset-EVEN</code></a> identifying an event type which did not occur to the superstructure’s subject. A specific payload <code>NO XYZ</code> should only appear where <code>XYZ</code> would be legal.</p>
+<p>See <a href="#NON_EVENT_STRUCTURE"><code>NON_EVENT_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="NOTE"><code>NOTE</code> (Note) <code class="uri">g7:NOTE</code></h4>
 <p>A <a href="#NOTE_STRUCTURE"><code>NOTE_STRUCTURE</code></a>, containing additional information provided by the submitter for understanding the enclosing data.</p>
 <p>When a substructure of <a href="#HEAD"><code>HEAD</code></a>, it should describe the contents of the document in terms of “ancestors or descendants of” so that the person receiving the data knows what genealogical information the document contains.</p>
@@ -2890,7 +2914,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="NSFX"><code>NSFX</code> (Name suffix) <code class="uri">g7:NSFX</code></h4>
 <p>Text which appears on a name line after or behind the given and surname parts of a name.</p>
 <h4 class="unnumbered" id="OBJE"><code>OBJE</code> (Object) <code class="uri">g7:OBJE</code></h4>
-<p>See <a href="#MULTIMEDIA_LINK"><code>MULTIMEDIA_LINK</code></a>.</p>
+<p>See <a href="#MULTIMEDIA_LINK" class="close"><code>MULTIMEDIA_LINK</code></a>.</p>
 <h4 class="unnumbered" id="record-OBJE"><code>OBJE</code> (Object) <code class="uri">g7:record-OBJE</code></h4>
 <p>See <a href="#MULTIMEDIA_RECORD"><code>MULTIMEDIA_RECORD</code></a>.</p>
 <h4 class="unnumbered" id="OCCU"><code>OCCU</code> (Occupation) <code class="uri">g7:OCCU</code></h4>
@@ -2957,7 +2981,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="HEAD-PLAC"><code>PLAC</code> (Place) <code class="uri">g7:HEAD-PLAC</code></h4>
 <p>This is a placeholder for providing a default <a href="#PLAC-FORM" class="close"><code>PLAC</code>.<code>FORM</code></a>, and must not have a payload.</p>
 <h4 class="unnumbered" id="POST"><code>POST</code> (Postal code) <code class="uri">g7:POST</code></h4>
-<p>A code used by a postal service to identify an area to facilitate mail handling. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>A code used by a postal service to identify an area to facilitate mail handling. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="PROB"><code>PROB</code> (Probate) <code class="uri">g7:PROB</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="PROP"><code>PROP</code> (Property) <code class="uri">g7:PROP</code></h4>
@@ -2976,7 +3000,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="RESN"><code>RESN</code> (Restriction) <code class="uri">g7:RESN</code></h4>
 <p>A <a href="#list">List</a> of enumerated values from set <a href="#enumset-RESN"><code>g7:enumset-RESN</code></a> signifying access to information may be denied or otherwise restricted.</p>
-<p>The <a href="#RESN" class="close"><code>RESN</code></a> structure is provided to assist software in filtering data that should not be exported or otherwise used in a particular context. It is recommended that tools provide an interface to allow users to filter data on export such that certain <a href="#RESN" class="close"><code>RESN</code></a> structure payload entries result in the <a href="#RESN" class="close"><code>RESN</code></a> structure and its superstructure being removed from the export. Such removal must abide by some constraints: see <a href="#removing-data">Removing data</a> for more.</p>
+<p>The <a href="#RESN" class="close"><code>RESN</code></a> structure is provided to assist software in filtering data that should not be exported or otherwise used in a particular context. It is recommended that tools provide an interface to allow users to filter data on export such that certain <a href="#RESN" class="close"><code>RESN</code></a> structure payload entries result in the <a href="#RESN" class="close"><code>RESN</code></a> structure and its superstructure being removed from the export. Such removal must abide by some constraints: see <a href="#removing-data">Removing data</a> for more details.</p>
 <p>This is metadata about the structure itself, not data about its subject.</p>
 <h4 class="unnumbered" id="REPO"><code>REPO</code> (Repository) <code class="uri">g7:REPO</code></h4>
 <p>See <a href="#SOURCE_REPOSITORY_CITATION"><code>SOURCE_REPOSITORY_CITATION</code></a>.</p>
@@ -3019,7 +3043,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <span id="cb93-7"><a href="#cb93-7" aria-hidden="true" tabindex="-1"></a><span class="dt">3 </span><span class="fu">ROLE </span>WITN</span></code></pre></div>
 </div>
 <h4 class="unnumbered" id="SCHMA"><code>SCHMA</code> (Extension schema) <code class="uri">g7:SCHMA</code></h4>
-<p>A container for storing meta-information about the extension tags used in this document. See <a href="#extensions">Extensions</a> for more.</p>
+<p>A container for storing meta-information about the extension tags used in this document. See <a href="#extensions">Extensions</a> for more details.</p>
 <h4 class="unnumbered" id="SDATE"><code>SDATE</code> (Sort date) <code class="uri">g7:SDATE</code></h4>
 <p>A date to be used as a sorting hint. It is intended for use when the actual date is unknown, but the display order may be dependent on date.</p>
 <p>If both a <a href="#DATE"><code>DATE</code></a> and <a href="#SDATE" class="close"><code>SDATE</code></a> are present in the same structure, the <a href="#SDATE" class="close"><code>SDATE</code></a> should be used for sorting and positioning while the <a href="#DATE" class="close"><code>DATE</code></a> should be displayed as the date of the structure.</p>
@@ -3032,13 +3056,13 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="SLGS"><code>SLGS</code> (Sealing, spouse) <code class="uri">g7:SLGS</code></h4>
 <p>A <a href="#latter-day-saint-ordinances">Latter-Day Saint Ordinance</a>. See also <a href="#LDS_SPOUSE_SEALING"><code>LDS_SPOUSE_SEALING</code></a>.</p>
 <h4 class="unnumbered" id="SNOTE"><code>SNOTE</code> (Shared note) <code class="uri">g7:SNOTE</code></h4>
-<p>A pointer to a note that is shared by multiple structures. See <a href="#NOTE_STRUCTURE"><code>NOTE_STRUCTURE</code></a> for more.</p>
+<p>A pointer to a note that is shared by multiple structures. See <a href="#NOTE_STRUCTURE"><code>NOTE_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="record-SNOTE"><code>SNOTE</code> (Shared note) <code class="uri">g7:record-SNOTE</code></h4>
-<p>A note that is shared by multiple structures. See <a href="#SHARED_NOTE_RECORD"><code>SHARED_NOTE_RECORD</code></a> for more.</p>
+<p>A note that is shared by multiple structures. See <a href="#SHARED_NOTE_RECORD"><code>SHARED_NOTE_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="SOUR"><code>SOUR</code> (Source) <code class="uri">g7:SOUR</code></h4>
-<p>A description of the relevant part of a source to support the superstructure’s data. See <a href="#SOURCE_CITATION"><code>SOURCE_CITATION</code></a> for more.</p>
+<p>A description of the relevant part of a source to support the superstructure’s data. See <a href="#SOURCE_CITATION"><code>SOURCE_CITATION</code></a> for more details.</p>
 <h4 class="unnumbered" id="record-SOUR"><code>SOUR</code> (Source) <code class="uri">g7:record-SOUR</code></h4>
-<p>A description of an entire source. See <a href="#SOURCE_RECORD"><code>SOURCE_RECORD</code></a> for more.</p>
+<p>A description of an entire source. See <a href="#SOURCE_RECORD"><code>SOURCE_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="HEAD-SOUR"><code>SOUR</code> (Source) <code class="uri">g7:HEAD-SOUR</code></h4>
 <p>An identifier for the product producing this dataset. A registration process for these identifiers existed for a time, but no longer does. If an existing identifier is known, it should be used. Otherwise, a URI owned by the product should be used instead.</p>
 <h4 class="unnumbered" id="SPFX"><code>SPFX</code> (Surname prefix) <code class="uri">g7:SPFX</code></h4>
@@ -3046,7 +3070,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="SSN"><code>SSN</code> (Social security number) <code class="uri">g7:SSN</code></h4>
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="STAE"><code>STAE</code> (State) <code class="uri">g7:STAE</code></h4>
-<p>A geographical division of a larger jurisdictional area, such as a state within the United States of America. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more.</p>
+<p>A geographical division of a larger jurisdictional area, such as a state within the United States of America. See <a href="#ADDRESS_STRUCTURE"><code>ADDRESS_STRUCTURE</code></a> for more details.</p>
 <h4 class="unnumbered" id="ord-STAT"><code>STAT</code> (Status) <code class="uri">g7:ord-STAT</code></h4>
 <p>An enumerated value from set <a href="#enumset-ord-STAT"><code>g7:enumset-ord-STAT</code></a> assessing of the state or condition of an ordinance.</p>
 <h4 class="unnumbered" id="FAMC-STAT"><code>STAT</code> (Status) <code class="uri">g7:FAMC-STAT</code></h4>
@@ -3054,11 +3078,11 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="SUBM"><code>SUBM</code> (Submitter) <code class="uri">g7:SUBM</code></h4>
 <p>A contributor of information in the substructure. This is metadata about the structure itself, not data about its subject.</p>
 <h4 class="unnumbered" id="record-SUBM"><code>SUBM</code> (Submitter) <code class="uri">g7:record-SUBM</code></h4>
-<p>A description of a contributor of information to the document. See <a href="#SUBMITTER_RECORD"><code>SUBMITTER_RECORD</code></a> for more.</p>
+<p>A description of a contributor of information to the document. See <a href="#SUBMITTER_RECORD"><code>SUBMITTER_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="SURN"><code>SURN</code> (Surname) <code class="uri">g7:SURN</code></h4>
 <p>A family name passed on or used by members of a family.</p>
 <h4 class="unnumbered" id="TAG"><code>TAG</code> (Extension tag) <code class="uri">g7:TAG</code></h4>
-<p>Information relating to a single extension tag as used in this document. See <a href="#extensions">Extensions</a> for more.</p>
+<p>Information relating to a single extension tag as used in this document. See <a href="#extensions">Extensions</a> for more details.</p>
 <h4 class="unnumbered" id="TEMP"><code>TEMP</code> (Temple) <code class="uri">g7:TEMP</code></h4>
 <p>The name of a temple of The Church of Jesus Christ of Latter-day Saints. Previous versions recommended using a set of abbreviations for temple names, but the list of abbreviations is no longer published by the Church and using abbreviations is no longer recommended.</p>
 <h4 class="unnumbered" id="TEXT"><code>TEXT</code> (Text from Source) <code class="uri">g7:TEXT</code></h4>
@@ -3083,7 +3107,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="INDI-TITL"><code>TITL</code> (Title) <code class="uri">g7:INDI-TITL</code></h4>
 <p>An <a href="#individual-attributes">Individual Attribute</a>. See also <a href="#INDIVIDUAL_ATTRIBUTE_STRUCTURE"><code>INDIVIDUAL_ATTRIBUTE_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="TOP"><code>TOP</code> (Top crop width) <code class="uri">g7:TOP</code></h4>
-<p>A number of pixels to not display from the top side of the image. See <a href="#CROP"><code>CROP</code></a> for more.</p>
+<p>A number of pixels to not display from the top side of the image. See <a href="#CROP"><code>CROP</code></a> for more details.</p>
 <h4 class="unnumbered" id="TRAN"><code>TRAN</code> (Translation)</h4>
 <p>A representation of the superstructure’s data in a different format.</p>
 <p>In some situations it is desirable to provide the same semantic content in multiple formats. Where this is desirable, a <a href="#TRAN" class="close"><code>TRAN</code></a> substructure is used, where the specific format is given in its language tag substructure, media type substructure, or both.</p>
@@ -3128,7 +3152,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </div>
 <p>It is recommended that text given in <code>text/html</code> should only be translated into <code>text/plain</code> if the resulting text is different from the text created by the HTML-to-text conversion process defined in <a href="#MIME"><code>g7:MIME</code></a>.</p>
 <h4 class="unnumbered" id="FILE-TRAN"><code>TRAN</code> (Translation) <code class="uri">g7:FILE-TRAN</code></h4>
-<p>A type of <a href="#TRAN"><code>TRAN</code></a> for external media files. Each <a href="#NOTE-TRAN"><code>g7:NOTE-TRAN</code></a> must have a <a href="#FORM"><code>FORM</code></a> substructure. See also <a href="#FILE"><code>FILE</code></a>.</p>
+<p>A type of <a href="#TRAN"><code>TRAN</code></a> for external media files. Each <a href="#NOTE-TRAN"><code>g7:NOTE-TRAN</code></a> must have a <a href="#FORM"><code>FORM</code></a> substructure. See also <a href="#FILE"><code>FILE</code></a> and the <a href="#file-path">File Path datatype</a>.</p>
 <div class="example">
 <p>If an mp3 audio file has been transcoded as an ogg file and a timestamped transcript has been extracted as a WebVTT file, the resulting set of files might be presented as follows:</p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode gedcom"><code class="sourceCode gedcom"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="dt">0 </span><span class="cf">@EX@ </span><span class="fu">OBJE</span></span>
@@ -3141,7 +3165,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </div>
 <p>Note that <a href="#FILE-TRAN"><code>FILE</code>.<code>TRAN</code></a> refers to translation to a different digital format, not to translation to a different human language. Files that differ in the human language of their content should each be given their own <a href="#FILE"><code>FILE</code></a> structure.</p>
 <h4 class="unnumbered" id="TRLR"><code>TRLR</code> (Trailer) <code class="uri">g7:TRLR</code></h4>
-<p>A pseudo-structure marking the end of a dataset. See <a href="#the-header">The Header and Trailer</a> for more.</p>
+<p>A pseudo-structure marking the end of a dataset. See <a href="#the-header">The Header and Trailer</a> for more details.</p>
 <h4 class="unnumbered" id="TYPE"><code>TYPE</code> (Type) <code class="uri">g7:TYPE</code></h4>
 <p>A descriptive word or phrase used to further classify the superstructure.</p>
 <p>When both a <a href="#NOTE"><code>NOTE</code></a> and free-text <a href="#TYPE" class="close"><code>TYPE</code></a> are permitted as substructures of the same structure, the displaying systems should always display the <a href="#TYPE" class="close"><code>TYPE</code></a> value when they display the data from the associated structure; <a href="#NOTE" class="close"><code>NOTE</code></a> will typically be visible only in a detailed view.</p>
@@ -3193,13 +3217,13 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <h4 class="unnumbered" id="VERS"><code>VERS</code> (Version) <code class="uri">g7:VERS</code></h4>
 <p>An identifier that represents the version level assigned to the associated product. It is defined and changed by the creators of the product.</p>
 <h4 class="unnumbered" id="GEDC-VERS"><code>VERS</code> (Version) <code class="uri">g7:GEDC-VERS</code></h4>
-<p>The version number of the official specification that this document’s data conforms to. This must include the major and minor version (for example, “<code>7.0</code>”); it may include the patch as well (for example, “<code>7.0.1</code>”), but doing so is not required. See <a href="#a-guide-to-version-numbers">A Guide to Version Numbers</a> for more.</p>
+<p>The version number of the official specification that this document’s data conforms to. This must include the major and minor version (for example, “<code>7.0</code>”); it may include the patch as well (for example, “<code>7.0.1</code>”), but doing so is not required. See <a href="#a-guide-to-version-numbers">A Guide to Version Numbers</a> for more details about version numbers.</p>
 <h4 class="unnumbered" id="WIDTH"><code>WIDTH</code> (Width in pixels) <code class="uri">g7:WIDTH</code></h4>
-<p>How many pixels to display horizontally for the image. See <a href="#CROP"><code>CROP</code></a> for more.</p>
+<p>How many pixels to display horizontally for the image. See <a href="#CROP"><code>CROP</code></a> for more details.</p>
 <h4 class="unnumbered" id="WIFE"><code>WIFE</code> (Wife) <code class="uri">g7:WIFE</code></h4>
 <p>A container for information relevant to the subject of the superstructure specific to the individual described by the associated <code>FAM</code>’s <a href="#WIFE" class="close"><code>WIFE</code></a> substructure.</p>
 <h4 class="unnumbered" id="FAM-WIFE"><code>WIFE</code> (Wife) <code class="uri">g7:FAM-WIFE</code></h4>
-<p>A partner in a <code>FAM</code> record. See <a href="#FAMILY_RECORD"><code>FAMILY_RECORD</code></a> for more.</p>
+<p>A partner in a <code>FAM</code> record. See <a href="#FAMILY_RECORD"><code>FAMILY_RECORD</code></a> for more details.</p>
 <h4 class="unnumbered" id="WILL"><code>WILL</code> (Will) <code class="uri">g7:WILL</code></h4>
 <p>An <a href="#individual-events">Individual Event</a>. See also <a href="#INDIVIDUAL_EVENT_STRUCTURE"><code>INDIVIDUAL_EVENT_STRUCTURE</code></a>.</p>
 <h4 class="unnumbered" id="WWW"><code>WWW</code> (Web address) <code class="uri">g7:WWW</code></h4>
@@ -3237,8 +3261,62 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </table>
 <h3 class="unnumbered" id="enumset-EVEN"><code class="uri">g7:enumset-EVEN</code></h3>
 <p>An event-type tag name, but not the generic <code>EVEN</code> tag. See <a href="#events">Events</a>.</p>
+<p>Most values in this enumeration set use the same tag and URI as the corresponding event, except for tags used with different URIs for <code>FAM</code> vs <code>INDI</code>; these are given generic definitions with URIs constructed by concatenating <code>g7:enum-</code> to the enumeration value:</p>
+<table>
+
+
+
+
+<thead>
+<tr class="header">
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CENS</code></td>
+<td style="text-align: left;">A census event; either <a href="#INDI-CENS"><code>g7:INDI-CENS</code></a> or <a href="#FAM-CENS"><code>g7:FAM-CENS</code></a></td>
+</tr>
+</tbody>
+</table>
 <h3 class="unnumbered" id="enumset-EVENATTR"><code class="uri">g7:enumset-EVENATTR</code></h3>
 <p>An event- or attribute-type tag name. See <a href="#events">Events</a> and <a href="#attributes">Attributes</a>.</p>
+<p>Most values in this enumeration set use the same tag and URI as the corresponding event or attribute, except for tags used with different URIs for <code>FAM</code> vs <code>INDI</code>; these are given generic definitions with URIs constructed by concatenating <code>g7:enum-</code> to the enumeration value:</p>
+<table>
+
+
+
+
+<thead>
+<tr class="header">
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>CENS</code></td>
+<td style="text-align: left;">A census event; either <a href="#INDI-CENS" class="close"><code>g7:INDI-CENS</code></a> or <a href="#FAM-CENS" class="close"><code>g7:FAM-CENS</code></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>NCHI</code></td>
+<td style="text-align: left;">A count of children; either <a href="#INDI-NCHI"><code>g7:INDI-NCHI</code></a> or <a href="#FAM-NCHI"><code>g7:FAM-NCHI</code></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>RESI</code></td>
+<td style="text-align: left;">A residence attribute; either <a href="#INDI-RESI"><code>g7:INDI-RESI</code></a> or <a href="#FAM-RESI"><code>g7:FAM-RESI</code></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>FACT</code></td>
+<td style="text-align: left;">A generic attribute; either <a href="#INDI-FACT"><code>g7:INDI-FACT</code></a> or <a href="#FAM-FACT"><code>g7:FAM-FACT</code></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>EVEN</code></td>
+<td style="text-align: left;">A generic event; either <a href="#INDI-EVEN"><code>g7:INDI-EVEN</code></a> or <a href="#FAM-EVEN"><code>g7:FAM-EVEN</code></a></td>
+</tr>
+</tbody>
+</table>
 <h3 class="unnumbered" id="enumset-MEDI"><code class="uri">g7:enumset-MEDI</code></h3>
 <table>
 
@@ -3352,7 +3430,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>The structures for foster children in particular, and family relationships in general, are known to have undesirable limitations and are likely to change in a future version of this specification.</p>
 </div>
 <div class="note">
-<p><code>SEALING</code> implies that a <a href="#SLGC"><code>SLGC</code></a> event was performed, and it is recommended that this enumeration value only be used when the <a href="#SLGC" class="close"><code>SLGC</code></a> event is present in the GEDCOM file. <code>ADOPTED</code>, on the other hand, only implies a social relationship which may or may not have any associated <a href="#ADOP"><code>ADOP</code></a> event.</p>
+<p><code>SEALING</code> implies that a <a href="#SLGC"><code>SLGC</code></a> event was performed, and it is recommended that this enumeration value only be used when the <a href="#SLGC" class="close"><code>SLGC</code></a> event is present in the GEDCOM file. <code>ADOPTED</code>, on the other hand, only implies a social relationship which may or may not have any associated <a href="#ADOP" class="close"><code>ADOP</code></a> event.</p>
 </div>
 <h3 class="unnumbered" id="enumset-QUAY"><code class="uri">g7:enumset-QUAY</code></h3>
 <table>
@@ -3570,6 +3648,8 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 </div>
 <h3 class="unnumbered" id="enumset-ord-STAT"><code class="uri">g7:enumset-ord-STAT</code></h3>
 <p>These values were formerly used by The Church of Jesus Christ of Latter-day Saints for coordinating between temples and members. They are no longer used in that way, meaning their interpretation is subject to individual user interpretation</p>
+<p>The definition of some of these values combined with the official policies of the church mean that some values only make sense under a subset of <a href="#latter-day-saint-ordinances">ordinance structures</a>. These contexts are identified in the “applies to” column below, and it is recommended that applications follow those guidelines. These recommendations were not present when these enumeration values were first introduced in version 5.3 so uses that do not conform to the “applies to” guidelines may be encountered; if so, they should be treated by applications like any other user-specified but semantically-strange data.</p>
+<p>The definition of some of these values combined with the official policies of the church and the move of the church away from using GEDCOM for handling ordinance requests make them redundant and/or no longer relevant. If so, that is indicated in the “status” column below. Like the “applies to” column, the “status” column is a recommendation, not a requirement, and applications should be prepared to encounter non-current values.</p>
 <table>
 
 
@@ -3709,7 +3789,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <p>Each GEDZIP file contains the following entries:</p>
 <ul>
 <li><p>An entry with name <code>gedcom.ged</code> containing a data stream.</p></li>
-<li><p>An entry for each <em>local file</em> <a href="#FILE"><code>FILE</code></a> structure in <code>gedcom.ged</code>, with the same zip <em>file name</em> as the corresponding <a href="#FILE" class="close"><code>FILE</code></a> payload. If there is a local file named <code>gedcom.ged</code>, it must be renamed to a new unused filename with the same extension prior to constructing the GEDZIP.</p></li>
+<li><p>An entry for each <em>local file</em> <code>g7:datatype-FilePath</code> payload in <code>gedcom.ged</code>, with the same zip <em>file name</em> as the payload. If there is a local file named <code>gedcom.ged</code>, it must be renamed to a new unused filename with the same extension prior to constructing the GEDZIP.</p></li>
 </ul>
 <p>All file names inside a GEDZIP are case-sensitive.</p>
 <p>Many other zip-based file formats (such as jar, epub, docx, GEDCOM-X) assign special meaning to the zip directory <code>META-INF</code> and the zip file names <code>MANIFEST.MF</code> and <code>META-INF/MANIFEST.MF</code>. These have no special meaning in GEDZIP and it is recommended that they not be used in a GEDZIP file, both to avoid confusing systems that look inside zip archives to determine their file type, and to leave open the possibility of their addition in a future version of this specification.</p>
@@ -3720,7 +3800,7 @@ Thus, a <code>FAM</code> record has an optional singular <a href="#CREA"><code>C
 <li>An archive can contain 1 or more files.</li>
 <li>Files within an archive can be added, removed, or updated individually without needing to re-process the rest of the archive. Libraries such as <a href="https://libzip.org">libzip</a> allow applications to operate directly on the zip archive as if it were a normal directory tree.</li>
 <li>What the zip specification calls a “file name” is actually a local path and may contain directories.</li>
-<li>Directory separators are <code>/</code> internally and are converted to the appropriate form by the zip processing tool during zipping and unzipping. Because of this, unzipping a GEDZIP in any local directory results in all GEDZIP <a href="#FILE" class="close"><code>FILE</code></a> references working as-is for the resulting <code>gedcom.ged</code> without the need for any additional processing.</li>
+<li>Directory separators are <code>/</code> internally and are converted to the appropriate form by the zip processing tool during zipping and unzipping. Because of this, unzipping a GEDZIP in any local directory results in all GEDZIP file paths working as-is for the resulting <code>gedcom.ged</code> without the need for any additional processing.</li>
 </ul>
 </div>
 <h1 data-number="5" id="contributors"><span class="header-section-number">5</span> Contributors</h1>

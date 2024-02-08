@@ -20,9 +20,9 @@ standard tag: EMIG
 
 specification:
   - Emigration
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - emigration
-  - Leaving one’s homeland with the intent of residing elsewhere.
+  - Leaving one's homeland with the intent of residing elsewhere.
 
 label: 'Emigration'
 

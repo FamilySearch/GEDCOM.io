@@ -20,7 +20,7 @@ standard tag: NATU
 
 specification:
   - Naturalization
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - naturalization
   - Obtaining citizenship.
 

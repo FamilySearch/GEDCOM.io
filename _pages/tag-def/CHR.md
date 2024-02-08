@@ -20,7 +20,7 @@ standard tag: CHR
 
 specification:
   - Christening
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - christening
   - Baptism or naming events for a child.
 

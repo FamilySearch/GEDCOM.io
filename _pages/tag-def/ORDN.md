@@ -20,7 +20,7 @@ standard tag: ORDN
 
 specification:
   - Ordination
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - ordination
   - Receiving authority to act in religious matters.
 

@@ -20,10 +20,10 @@ standard tag: CENS
 
 specification:
   - Census
-  - An Family Event.
+  - An [Family Event].
   - census
-  - Periodic count of the population for a designated locality, such as a
-    national or state census.
+  - Periodic count of the population for a designated locality, such as a national
+    or state census.
 
 label: 'Census'
 
@@ -54,10 +54,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
-
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVEN"
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 ...
 
 ```

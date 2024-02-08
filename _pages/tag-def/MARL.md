@@ -20,7 +20,7 @@ standard tag: MARL
 
 specification:
   - Marriage license
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - marriage license
   - Obtaining a legal license to marry.
 

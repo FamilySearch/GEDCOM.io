@@ -21,7 +21,7 @@ standard tag: CTRY
 specification:
   - Country
   - The name of the country that pertains to the associated address. See
-    ADDRESS_STRUCTURE for more.
+    `ADDRESS_STRUCTURE` for more details.
 
 label: 'Country'
 
