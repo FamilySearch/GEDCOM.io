@@ -33,6 +33,12 @@ The community is allowed the submissions of YAML files for extensions to a commo
 
 You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/issues) for the working version of FamilySearch GEDCOM.
 
+
+## Third-Party Implementation Progress 
+
+FamilySearch has consolidate on one page the companies and websites committed to adopting the FamilySearch GEDCOM 7 standard. A growing list of companies around the world are adopting the new FamilySearch GEDCOM 7.0 standard. As they do, users will find transferring genealogy files from one application to another easier and easier. The appeal of FamilySearch GEDCOM 7.0 is international. In Germany alone, more than a dozen companies and organizations have adopted it for their products. You can review [review](https://www.familysearch.org/en/GEDCOM/implementation-progress) for the current implementation progress of FamilySearch GEDCOM 7.
+
+
 ## Project Teams
 
 If you would like additional information or request to participate in one or more of the following Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
