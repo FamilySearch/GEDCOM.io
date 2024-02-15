@@ -20,8 +20,8 @@ standard tag: CORP
 
 specification:
   - Corporate name
-  - The name of the business, corporation, or person that produced or
-    commissioned the product.
+  - The name of the business, corporation, or person that produced or commissioned
+    the product.
 
 label: 'Corporate name'
 

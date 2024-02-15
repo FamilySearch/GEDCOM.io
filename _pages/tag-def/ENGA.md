@@ -20,7 +20,7 @@ standard tag: ENGA
 
 specification:
   - Engagement
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - engagement
   - Recording or announcing an agreement between 2 people to become married.
 

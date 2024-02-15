@@ -20,7 +20,7 @@ standard tag: BIRT
 
 specification:
   - Birth
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - birth
   - Entering into life.
 

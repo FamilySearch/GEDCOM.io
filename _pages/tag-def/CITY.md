@@ -20,7 +20,8 @@ standard tag: CITY
 
 specification:
   - City
-  - The name of the city used in the address. See ADDRESS_STRUCTURE for more.
+  - The name of the city used in the address. See `ADDRESS_STRUCTURE` for more
+    details.
 
 label: 'City'
 
