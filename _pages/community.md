@@ -38,6 +38,8 @@ You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/i
 
 FamilySearch has consolidated on one page the companies and websites committed to adopting the FamilySearch GEDCOM 7 standard. A growing list of companies around the world are adopting the new FamilySearch GEDCOM 7.0 standard. As they do, users will find transferring genealogy files from one application to another easier and easier. The appeal of FamilySearch GEDCOM 7.0 is international. In Germany alone, more than a dozen companies and organizations have adopted it for their products. You can review the [current implementation progress](https://www.familysearch.org/en/GEDCOM/implementation-progress) of FamilySearch GEDCOM 7.
 
+If you are associated with an application and want to add it to this listing or change its existing entry in this listing, send an email to <GEDCOM@FamilySearch.org>.
+
 
 ## Project Teams
 
