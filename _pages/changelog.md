@@ -353,7 +353,7 @@ Earlier versions of GEDCOM predated language tags, media types, and Unicode beca
 
 - Age phrases are now only phrases, not long-hand terms for specific age ranges
 
-- Previously registered values (APPROVED_SYSTEM_ID, RECEIVING_SYSTEM_NAME, etc) are kept as-is if present; new ones are URIs instead of having a separate registration process
+- Previously registered values (APPROVED_SYSTEM_ID, RECEIVING_SYSTEM_NAME, etc.) are kept as-is if present; new ones are URIs instead of having a separate registration process
 
 - `RESI` may have a payload, just as all other attributes may
 
