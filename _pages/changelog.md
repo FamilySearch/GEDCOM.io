@@ -247,7 +247,7 @@ nav: "changelog"
 
 # Version 7.0.0
 
-As a major release and the first update to the specification in 20 years, there a many changes in this version.
+As a major release and the first update to the specification in 20 years, there are many changes in this version.
 
 This version is the first version to use [semantic versioning](https://semver.org/).
 7 was chosen as the new major version number because 1 through 6 were each used previously, some for released standards and others for abandoned drafts.
