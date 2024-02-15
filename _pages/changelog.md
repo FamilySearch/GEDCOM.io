@@ -166,7 +166,7 @@ nav: "changelog"
         - `mul` can be used if there is no single primary language, but is unlikely to provide practical functionality beyond `und`.
         - `zxx` can be used for ASCII art and other non-language text, and can improve accessibility for screen readers.
 
-- Clarify that empty *payloads* are encoded as missing `LineVal`s and empty `LineVal`s are not been permitted; this has been true since 7.0.0 but was easily overlooked in the previous text.
+- Clarify that empty *payloads* are encoded as missing `LineVal`s and empty `LineVal`s are not permitted; this has been true since 7.0.0 but was easily overlooked in the previous text.
 
 - Note cases where the same couple might be the partners in multiple `FAM` records.
 
