@@ -329,7 +329,7 @@ Earlier versions of GEDCOM predated language tags, media types, and Unicode beca
 
 ## New Extensibility
 
-- Every standard tag now has a single "default" meaning, even if it also has additional meanings in other contexts. Tags conforming to this default meaning can now be used by extensions as substructures of structures with extention tags.
+- Every standard tag now has a single "default" meaning, even if it also has additional meanings in other contexts. Tags conforming to this default meaning can now be used by extensions as substructures of structures with extension tags.
 
 - Extension tags remain in a backwards-compatible way, but should additionally be paired with a URI to avoid name collisions and provide documentation.
 
