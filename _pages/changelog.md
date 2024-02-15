@@ -100,7 +100,7 @@ nav: "changelog"
 
 - Changes anticipating a coming extension registry:
 
-    - Add URIs for sets of enumeration values. This has changes some fragment identifiers in the HTML version of the spec and could cause hotlinks to the specific sections discussing enumeration sets to change.
+    - Add URIs for sets of enumeration values. This changed some fragment identifiers in the HTML version of the spec and could cause hotlinks to the specific sections discussing enumeration sets to change.
 
     - Many updates to the YAML format served at <https://gedcom.io/terms/v7/record-INDI> and at the other URIs in the specification.
 
