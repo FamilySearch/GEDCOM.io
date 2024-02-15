@@ -371,7 +371,7 @@ Various ambiguities were identified in version 5.5.1: some due to poor wording, 
 
 - Dual-year dates were used with widely different semantics and have been replaced by more flexibility in date phrases.
 
-- `SEX` is now unambiguously biological sex at birth; all other related concepts (gender identity, sexual preference, sex reassignment, etc) are time-varying attributes and to be stored in an individual attribute instead
+- `SEX` is now unambiguously biological sex at birth; all other related concepts (gender identity, sexual preference, sex reassignment, etc.) are time-varying attributes and to be stored in an individual attribute instead
 
     Note that new tags were not introduced for gender-related attributes. It is not yet clear what the correct set of attribute types should be given the evolving and regionally-specific understanding of these concepts. The generic `FACT` is recommended for these concepts instead. 
 
