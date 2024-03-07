@@ -123,7 +123,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td>all</td></tr>
     </tbody></table>
 
-    Contact info for the maintainer of this file. For example, it could be personal contact information
+    Contact information for the maintainer of this file. For example, it could be personal contact information
     or a mailing list.
 
 -   <table><tbody>
