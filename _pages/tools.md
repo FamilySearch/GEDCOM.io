@@ -46,11 +46,14 @@ The following files are provided for testing.
 | [age.ged](/testfiles/gedcom70/age.ged) | This file contains various test cases for `AGE` payloads. |
 | [escapes.ged](/testfiles/gedcom70/escapes.ged) | This file contains @ characters that are doubled only when they appear at the start of a line string. |
 | [extension-record.ged](/testfiles/gedcom70/extension-record.ged) | This file contains a `_LOC` record, which is referenced from an individual with a _LOC tag. |
+| [lang.ged](/testfiles/gedcom70/lang.ged) | This file contains many different `LANG` payloads. |
 | [long-url.ged](/testfiles/gedcom70/long-url.ged) | This file contains a URL of a submitter that is very long, to test the ability to parse very long lines. |
 | [maximal70.ged](/testfiles/gedcom70/maximal70.ged) | This file attempts to exercise all standard tags in various locations, and all standard enumeration values. |
 | [maximal70.gdz](/testfiles/gedcom70/maximal70.gdz) | This FamilySearch GEDZIP 7.0 file attempts to exercise all standard tags in various locations, and all standard enumeration values, and also includes a minimal local audio file.
 | [minimal70.ged](/testfiles/gedcom70/minimal70.ged) | This file is the smallest legal FamilySearch GEDCOM 7.0 file. |
 | [minimal70.gdz](/testfiles/gedcom70/minimal70.gdz) | This file is the smallest legal FamilySearch GEDZIP 7.0 file. |
+| [notes-1.ged](/testfiles/gedcom70/notes-1.ged) | This file contains many different uses of `NOTE` and `SNOTE`. |
+| [obje-1.ged](/testfiles/gedcom70/obje-1.ged) | This file contains many different uses of `OBJE` records. |
 | [remarriage1.ged](/testfiles/gedcom70/remarriage1.ged) | This file contains a couple who married, divorced, and then later remarried, stored as one family. |
 | [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
