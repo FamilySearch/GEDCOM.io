@@ -56,7 +56,6 @@ The following files are provided for testing.
 | [minimal70.gdz](/testfiles/gedcom70/minimal70.gdz) | This file is the smallest legal FamilySearch GEDZIP 7.0 file. |
 | [notes-1.ged](/testfiles/gedcom70/notes-1.ged) | This file contains many different uses of `NOTE` and `SNOTE`. |
 | [obje-1.ged](/testfiles/gedcom70/obje-1.ged) | This file contains many different uses of `OBJE` records. |
-| [rela_1.ged](/testfiles/gedcom70/rela_1.ged) | This file contains many different uses of `RELA` payloads. |
 | [remarriage1.ged](/testfiles/gedcom70/remarriage1.ged) | This file contains a couple who married, divorced, and then later remarried, stored as one family. |
 | [remarriage2.ged](/testfiles/gedcom70/remarriage2.ged) | This file contains a couple who married, divorced, and then later remarried, stored as two separate families. |
 | [same-sex-marriage.ged](/testfiles/gedcom70/same-sex-marriage.ged) | This file contains a same sex marriage. |
