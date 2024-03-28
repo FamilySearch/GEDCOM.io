@@ -295,6 +295,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>used by</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+
+    A list of [`g7:HEAD-SOUR`](https://github.com/FamilySearch/GEDCOM-registries/blob/main/structure/standard/HEAD-SOUR.yaml)
+    values of applications known to use an extension tag for this concept.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>value of</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: enumeration</code></td></tr>
