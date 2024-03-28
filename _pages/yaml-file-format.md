@@ -301,7 +301,6 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td>all</td></tr>
     </tbody></table>
 
-    \* Required instead of allowed if no `standard tag` is provided
 
     A list of [`g7:HEAD-SOUR`](https://github.com/FamilySearch/GEDCOM-registries/blob/main/structure/standard/HEAD-SOUR.yaml)
     values of applications known to use an extension tag for this concept.
