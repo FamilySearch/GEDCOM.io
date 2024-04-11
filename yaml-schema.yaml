@@ -73,6 +73,8 @@ properties:
     "$ref": "#/definitions/card"
   subsumes:
     "$ref": "#/definitions/uris"
+  contact:
+    type: string
   
 additionalProperties: false
 
