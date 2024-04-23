@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FamilySearch
-github_username:  FamilySearch
+github_username: FamilySearch
 repository: "FamilySearch/GEDCOM.io"
 
 # Build settings
@@ -44,7 +44,7 @@ permalink: /:year/:month/:day/:title
 timezone: America/Denver
 
 include:
- - "_pages"
+  - "_pages"
 
 # Analytics
 analytics:
