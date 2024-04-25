@@ -46,6 +46,7 @@ The following files are provided for testing.
 | [age.ged](/testfiles/gedcom70/age.ged) | This file contains various test cases for `AGE` payloads. |
 | [escapes.ged](/testfiles/gedcom70/escapes.ged) | This file contains @ characters that are doubled only when they appear at the start of a line string. |
 | [extension-record.ged](/testfiles/gedcom70/extension-record.ged) | This file contains a `_LOC` record, which is referenced from an individual with a _LOC tag. |
+| [extensions.ged](/testfiles/gedcom70/extensions.ged) | This file contains GEDCOM extensions of various forms. |
 | [lang.ged](/testfiles/gedcom70/lang.ged) | This file contains many different `LANG` payloads. |
 | [filename-1.ged](/testfiles/gedcom70/filename-1.ged) | This file contains many different `FILE` payloads. |
 | [long-url.ged](/testfiles/gedcom70/long-url.ged) | This file contains a URL of a submitter that is very long, to test the ability to parse very long lines. |
