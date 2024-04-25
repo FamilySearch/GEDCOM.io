@@ -33,7 +33,7 @@ jobs:
           - BRANCH: 'main'
             GEDCOM_BRANCH: 'release'
           - BRANCH: 'next-minor'
-            GEDCOM_BRANCH: 'next-minor'
+            GEDCOM_BRANCH: 'v7.1'
           - BRANCH: 'next-patch'
             GEDCOM_BRANCH: 'main'
 
