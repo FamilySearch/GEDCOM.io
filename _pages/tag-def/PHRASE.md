@@ -121,6 +121,8 @@ superstructures:
   "https://gedcom.io/terms/v7/ROLE": "{0:1}"
   "https://gedcom.io/terms/v7/SDATE": "{0:1}"
   "https://gedcom.io/terms/v7/SOUR-EVEN": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -89,6 +89,8 @@ superstructures:
   "https://gedcom.io/terms/v7/NOTE-TRAN": "{0:1}"
   "https://gedcom.io/terms/v7/TEXT": "{0:1}"
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

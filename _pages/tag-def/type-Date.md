@@ -132,6 +132,8 @@ specification:
     
     The URI for the `DatePeriod` data type is
     `https://gedcom.io/terms/v7/type-Date#period`.
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```
