@@ -39,6 +39,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/PLAC": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

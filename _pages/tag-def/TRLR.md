@@ -30,6 +30,8 @@ payload: null
 substructures: {}
 
 superstructures: {}
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

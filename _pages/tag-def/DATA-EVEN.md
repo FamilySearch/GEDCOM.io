@@ -38,6 +38,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/DATA": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

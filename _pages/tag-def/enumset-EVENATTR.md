@@ -63,6 +63,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/RELI"
   - "https://gedcom.io/terms/v7/SSN"
   - "https://gedcom.io/terms/v7/TITL"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

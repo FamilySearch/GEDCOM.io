@@ -31,6 +31,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-TOMBSTONE"
   - "https://gedcom.io/terms/v7/enum-VIDEO"
   - "https://gedcom.io/terms/v7/enum-OTHER"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

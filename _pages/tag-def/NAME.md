@@ -32,6 +32,8 @@ superstructures:
   "https://gedcom.io/terms/v7/HEAD-SOUR": "{0:1}"
   "https://gedcom.io/terms/v7/record-REPO": "{1:1}"
   "https://gedcom.io/terms/v7/record-SUBM": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

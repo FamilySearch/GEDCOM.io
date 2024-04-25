@@ -48,6 +48,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/MARL"
   - "https://gedcom.io/terms/v7/MARR"
   - "https://gedcom.io/terms/v7/MARS"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -118,6 +118,8 @@ superstructures:
   "https://gedcom.io/terms/v7/RETI": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

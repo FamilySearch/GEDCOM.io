@@ -36,6 +36,16 @@ specification:
     rather than `BOOK` or `NEWSPAPER`.
     
     </div>
+    
+    When `MEDI` is a substructure of a `https://gedcom.io/terms/v7/FORM`, it is
+    recommended that its payload describes the medium from which it was derived.
+    
+    <div class="example">
+    
+    Consider a digital photo in a multimedia record; for this asset, the
+    `FORM`.`MEDI` is recommended to be `PHOTO` rather than `ELECTRONIC`.
+    
+    </div>
 
 label: 'Medium'
 
@@ -49,6 +59,8 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/CALN": "{0:1}"
   "https://gedcom.io/terms/v7/FORM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

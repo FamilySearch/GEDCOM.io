@@ -39,6 +39,8 @@ superstructures:
   "https://gedcom.io/terms/v7/INIL": "{0:1}"
   "https://gedcom.io/terms/v7/SLGC": "{0:1}"
   "https://gedcom.io/terms/v7/SLGS": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```
