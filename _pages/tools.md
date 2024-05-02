@@ -16,7 +16,7 @@ sidebar:
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
 | TMG to GEDCOM | — | < https://www.tmgtogedcom.com> | Website |
-| Exports GEDCOM 7 files from genealogy projects managed with The Master Genealogist (TMG). It provides fast, useful GEDCOM exports for TMG users transferring data to programs that do not support direct import from TMG. TMG to GEDCOM has several advantages over the GEDCOM export feature in TMG.|
+| | | | Exports GEDCOM 7 files from genealogy projects managed with The Master Genealogist (TMG). It provides fast, useful GEDCOM exports for TMG users transferring data to programs that do not support direct import from TMG. TMG to GEDCOM has several advantages over the GEDCOM export feature in TMG.|
 
 ## v7.0 parsers
 
