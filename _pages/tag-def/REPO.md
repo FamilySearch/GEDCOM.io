@@ -39,8 +39,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-SOUR": "{0:M}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

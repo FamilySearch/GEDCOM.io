@@ -40,8 +40,6 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/ADDR": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

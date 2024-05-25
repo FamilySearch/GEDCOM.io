@@ -53,8 +53,6 @@ specification:
     
     The URI for the `List:Enum` data type is
     `https://gedcom.io/terms/v7/type-List#Enum`.
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

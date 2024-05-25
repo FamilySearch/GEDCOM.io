@@ -24,8 +24,6 @@ specification:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ROLE"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

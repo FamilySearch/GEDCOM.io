@@ -28,10 +28,10 @@ specification:
     ```abnf
     Time     =  hour ":" minute [":" second ["." fraction]] [%s"Z"]
     
-    hour     = DIGIT / ("0" / "1") DIGIT / "2" ("0" / "1" / "2" / "3")
-    minute   = ("0" / "1" / "2" / "3" / "4" / "5") DIGIT
-    second   = ("0" / "1" / "2" / "3" / "4" / "5") DIGIT
-    fraction = 1*DIGIT
+    hour     = digit / ("0" / "1") digit / "2" ("0" / "1" / "2" / "3")
+    minute   = ("0" / "1" / "2" / "3" / "4" / "5") digit
+    second   = ("0" / "1" / "2" / "3" / "4" / "5") digit
+    fraction = 1*digit
     ```
     
     <div class="note">
@@ -42,8 +42,6 @@ specification:
     </div>
     
     The URI for the `Time` data type is `https://gedcom.io/terms/v7/type-Time`.
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

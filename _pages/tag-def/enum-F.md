@@ -23,8 +23,6 @@ specification:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-SEX"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

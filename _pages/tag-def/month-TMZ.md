@@ -25,8 +25,6 @@ label: 'Tammuz'
 
 calendars:
   - "https://gedcom.io/terms/v7/cal-HEBREW"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

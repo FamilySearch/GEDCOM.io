@@ -72,8 +72,6 @@ months:
   - "https://gedcom.io/terms/v7/month-ELL"
 
 epochs: []
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

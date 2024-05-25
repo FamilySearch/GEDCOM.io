@@ -34,8 +34,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/ADOP-FAMC": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

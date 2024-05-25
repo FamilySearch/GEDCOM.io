@@ -55,8 +55,6 @@ substructures:
   "https://gedcom.io/terms/v7/WWW": "{0:M}"
 
 superstructures: {}
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

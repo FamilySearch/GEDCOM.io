@@ -89,8 +89,6 @@ superstructures:
   "https://gedcom.io/terms/v7/PLAC-TRAN": "{1:1}"
   "https://gedcom.io/terms/v7/TEXT": "{0:1}"
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

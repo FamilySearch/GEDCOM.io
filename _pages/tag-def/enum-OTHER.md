@@ -26,8 +26,6 @@ value of:
   - "https://gedcom.io/terms/v7/enumset-NAME-TYPE"
   - "https://gedcom.io/terms/v7/enumset-PEDI"
   - "https://gedcom.io/terms/v7/enumset-ROLE"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

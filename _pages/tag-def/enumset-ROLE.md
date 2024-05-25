@@ -32,8 +32,6 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-WIFE"
   - "https://gedcom.io/terms/v7/enum-WITN"
   - "https://gedcom.io/terms/v7/enum-OTHER"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```
