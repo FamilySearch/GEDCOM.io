@@ -34,8 +34,6 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/GEDC": "{1:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

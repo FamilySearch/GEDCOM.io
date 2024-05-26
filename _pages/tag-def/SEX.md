@@ -33,8 +33,6 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

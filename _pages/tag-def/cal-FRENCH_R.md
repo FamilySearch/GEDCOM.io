@@ -65,8 +65,6 @@ months:
   - "https://gedcom.io/terms/v7/month-COMP"
 
 epochs: []
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -55,8 +55,6 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/EXID": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

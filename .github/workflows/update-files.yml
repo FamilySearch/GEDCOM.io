@@ -67,7 +67,7 @@ jobs:
           path: GEDCOM
           ref: ${{steps.latesttag.outputs.tag}}
 
-      - name: Generate GEDOM-tmp.md
+      - name: Generate GEDCOM-tmp.md
         working-directory: ${{github.workspace}}/GEDCOM/build
         shell: sh
         run: |

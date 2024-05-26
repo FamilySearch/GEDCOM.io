@@ -29,8 +29,6 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-STILLBORN"
   - "https://gedcom.io/terms/v7/enum-SUBMITTED"
   - "https://gedcom.io/terms/v7/enum-UNCLEARED"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

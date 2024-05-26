@@ -80,8 +80,6 @@ specification:
     </div>
     
     The URI for the `Age` data type is `https://gedcom.io/terms/v7/type-Age`.
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

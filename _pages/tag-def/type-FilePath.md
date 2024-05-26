@@ -63,8 +63,6 @@ specification:
     
     The URI for the `FilePath` data type is
     `https://gedcom.io/terms/v7/type-FilePath`.
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

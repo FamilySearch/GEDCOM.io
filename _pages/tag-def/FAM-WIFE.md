@@ -31,8 +31,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

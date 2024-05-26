@@ -26,8 +26,6 @@ label: 'February'
 calendars:
   - "https://gedcom.io/terms/v7/cal-GREGORIAN"
   - "https://gedcom.io/terms/v7/cal-JULIAN"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

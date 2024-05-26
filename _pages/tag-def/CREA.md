@@ -41,8 +41,6 @@ superstructures:
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:1}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:1}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

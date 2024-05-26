@@ -53,8 +53,6 @@ months:
 
 epochs:
   - BCE
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```

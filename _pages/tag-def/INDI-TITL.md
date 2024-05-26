@@ -50,8 +50,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
-
-contact: "https://gedcom.io/community/"
 ...
 
 ```
