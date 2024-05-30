@@ -275,7 +275,7 @@ but at birth was only related to the mother, not the father.
 2 NOTE The socially-accepted family
 1 FAMC @F2@
 2 NOTE The couple who produced the child
-0 @F2@
+0 @F2@ FAM
 1 NOTE The birth coupling; not a "family" in the social sense
 1 CHIL @I1@
 1 WIFE @I2@
