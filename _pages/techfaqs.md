@@ -334,3 +334,40 @@ unknown parties.
 Relative paths, however, are permitted in both GEDCOM and GEDZIP files and so may be more convenient to
 use in both cases.  Any tool that converts FamilySearch GEDCOM 7.0 to GEDZIP should convert local file URLs
 to relative paths within the resulting GEDZIP file.
+
+# How do I record the URL of a source?
+
+While `EVENT_DETAIL` and `REPOSITORY_RECORD` both allow a URL to be placed in a `WWW` substructure,
+`SOURCE_CITATION`, `SOURCE_RECORD`, and `SOURCE_REPOSITORY_CITATION` do not.
+
+Some applications might put the source URL for an `EVENT_DETAIL` in a `WWW` substructure
+in parallel to a `SOURCE_CITATION`. However, since there can be multiple source citations per event, this does not allow associating the URL
+with a specific source citation.  Instead, the URL can be placed in the `PAGE` structure.  For example:
+
+```
+1 DEAT
+2 DATE 14 DEC 1799
+2 SOUR @FindAGraveSourceRecord@
+3 PAGE Memorial: 1075, URL: https://www.findagrave.com/memorial/1075
+```
+
+Similarly, some applications might put the source URL for a `SOURCE_RECORD` in a `PUBL` substructure
+as follows:
+
+```
+0 @S1@ SOUR
+1 TITL Grave of George Washington
+1 PUBL https://www.findagrave.com/memorial/1075
+```
+
+while others might put it in the `CALN` of a `SOURCE_REPOSITORY_CITATION` as follows:
+
+```
+0 @S1@ SOUR
+1 TITL Grave of George Washington
+1 REPO @FindAGraveRepositoryRecord@
+2 CALN https://www.findagrave.com/memorial/1075
+```
+
+Note that unlike the `PAGE` structure, the `CALN` structure has no current recommendation about using
+label: value pairs.
