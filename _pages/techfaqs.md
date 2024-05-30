@@ -341,15 +341,7 @@ While `EVENT_DETAIL` and `REPOSITORY_RECORD` both allow a URL to be placed in a 
 `SOURCE_CITATION`, `SOURCE_RECORD`, and `SOURCE_REPOSITORY_CITATION` do not.
 
 Some applications might put the source URL for an `EVENT_DETAIL` in a `WWW` substructure
-in parallel to a `SOURCE_CITATION` as follows:
-
-```
-1 DEAT
-2 DATE 14 DEC 1799
-2 WWW https://www.findagrave.com/memorial/1075
-2 SOUR @FindAGraveSourceRecord@
-3 PAGE Memorial: 1075
-```
+in parallel to a `SOURCE_CITATION`.
 
 However, since there can be multiple source citations per event, this does not allow associating the URL
 with a specific source citation.  Instead, the URL can be placed in the `PAGE` structure.  For example:
