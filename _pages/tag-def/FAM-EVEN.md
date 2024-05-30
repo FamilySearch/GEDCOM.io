@@ -20,7 +20,7 @@ standard tag: EVEN
 
 specification:
   - Event
-  - See https://gedcom.io/terms/v7/INDI-EVEN.
+  - See `https://gedcom.io/terms/v7/INDI-EVEN`.
 
 label: 'Event'
 
@@ -51,9 +51,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
-
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 ...
 
 ```

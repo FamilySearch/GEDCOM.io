@@ -25,13 +25,21 @@ Become a GEDCOM.io website contributor by contributing to the [GEDCOM.io](https:
 
 ## Public GEDCOM-registries Repository
 
-Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful extension registry. The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located. In addition to general interoperability gains, this will assist in an extension-to-standard workflow and in defining additional calendars and events.
-
-Join the GEDCOM Name Project  by going to the [GEDCOM-registries](https://github.com/familysearch/GEDCOM-registries) public repository.
+Now that we have a documented [YAML format](https://gedcom.io/terms/format) we have created a useful
+[extension registry](https://github.com/familysearch/GEDCOM-registries).
+The community is allowed the submissions of YAML files for extensions to a common repository where they may be easily located. In addition to general interoperability gains, this will assist in an extension-to-standard workflow and in defining additional calendars and events.
 
 ## Issue Tracker 
 
 You can review [issues being discussed](https://github.com/FamilySearch/GEDCOM/issues) for the working version of FamilySearch GEDCOM.
+
+
+## Third-Party Implementation Progress 
+
+FamilySearch has consolidated on one page the companies and websites committed to adopting the FamilySearch GEDCOM 7 standard. A growing list of companies around the world are adopting the new FamilySearch GEDCOM 7.0 standard. As they do, users will find transferring genealogy files from one application to another easier and easier. The appeal of FamilySearch GEDCOM 7.0 is international. In Germany alone, more than a dozen companies and organizations have adopted it for their products. You can review the [current implementation progress](https://www.familysearch.org/en/GEDCOM/implementation-progress) of FamilySearch GEDCOM 7.
+
+If you are associated with an application and want to add it to this listing or change its existing entry in this listing, send an email to <GEDCOM@FamilySearch.org>.
+
 
 ## Project Teams
 
@@ -50,9 +58,10 @@ If you would like additional information or request to participate in one or mor
 ### Future Project Teams
 
 - **Places** - consider changing from a comma-separated place hierarchy to a set of linked place records.
-- **Relationships** - support for varying definitions of families,  roles and relationships.
+- **Relationships** - allowing varying definitions of families, roles and relationships.
 - **Hypothesis** - sharing and collaborating on supposition of facts not yet provable with source records.
 - **Sources** - more source-centric capabilities including multi-person events and multi-purpose sources.
+- **DNA** - how to represent DNA information.
 
 ## Additional Areas of Participation
 

@@ -21,7 +21,7 @@ standard tag: DATE
 specification:
   - Date
   - The principal date of the subject of the superstructure. The payload is a
-    DateExact.
+    `DateExact`.
 
 label: 'Date'
 

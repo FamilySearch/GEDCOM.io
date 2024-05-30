@@ -20,8 +20,8 @@ standard tag: COPR
 
 specification:
   - Copyright
-  - A copyright statement, as appropriate for the copyright laws applicable to
-    this data.
+  - A copyright statement, as appropriate for the copyright laws applicable to this
+    data.
 
 label: 'Copyright'
 

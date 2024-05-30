@@ -106,15 +106,6 @@ The following keys may appear in a YAML file.
 Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>enumeration set</code></td></tr>
-    <tr><th>Type</th><td>URI</td></tr>
-    <tr><th>Required by</th><td><code>type: structure</code> with <code>payload</code> either <code>g7:type-Enum</code> or <code>g7:type-List#Enum</code></td></tr>
-    <tr><th>Allowed by</th><td>—</td></tr>
-    </tbody></table>
-    
-    The URI of the set of enumeration values permitted in the payload of this structure.
-
--   <table><tbody>
     <tr><th>Key</th><td><code>calendars</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: month</code></td></tr>
@@ -126,15 +117,14 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list may be incomplete, as a new calendar might be defined that uses an existing month.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>specification</code></td></tr>
-    <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
-    <tr><th>Required by</th><td>all except <code>type: enumeration set</code></td></tr>
+    <tr><th>Key</th><td><code>contact</code></td></tr>
+    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td>all</td></tr>
     </tbody></table>
-    
-    A list (in no particular order) of descriptions of the concept the YAML document is defining.
-    
-    The specification are generally programmer-centric; for user-centric text, see `label` and `help text`
+
+    Contact information for the maintainer of this file. For example, it could be personal contact information
+    or a mailing list.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>documentation</code></td></tr>
@@ -144,6 +134,15 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     </tbody></table>
 
     One or more external URLs where additional documentation can be found. If there is no such URL, this entry should be omitted.
+
+-   <table><tbody>
+    <tr><th>Key</th><td><code>enumeration set</code></td></tr>
+    <tr><th>Type</th><td>URI</td></tr>
+    <tr><th>Required by</th><td><code>type: structure</code> with <code>payload</code> either <code>g7:type-Enum</code> or <code>g7:type-List#Enum</code></td></tr>
+    <tr><th>Allowed by</th><td>—</td></tr>
+    </tbody></table>
+    
+    The URI of the set of enumeration values permitted in the payload of this structure.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>enumeration values</code></td></tr>
@@ -222,7 +221,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>payload</code></td></tr>
-    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below fore more</td></tr>
+    <tr><th>Type</th><td><code>null</code> or <code>str</code>; see below for more</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
     </tbody></table>
@@ -236,6 +235,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     - A string of the form `@<`URI`>@`, meaning the payload is a pointer to a structure whose type is given by the URI.
     
 -   <table><tbody>
+    <tr><th>Key</th><td><code>specification</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
+    <tr><th>Required by</th><td>all except <code>type: enumeration set</code></td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+    
+    A list (in no particular order) of descriptions of the concept the YAML document is defining.
+    
+    The specification are generally programmer-centric; for user-centric text, see `label` and `help text`
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
     <tr><th>Required by</th><td>*</td></tr>
@@ -248,7 +258,25 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The standard tag of this concept, as given in an official GEDCOM standard document.
 
 -   <table><tbody>
-    <tr><th>Key</th><td><code>substructure</code> and <code>superstucture</code></td></tr>
+    <tr><th>Key</th><td><code>subsumes</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    A list of URIs that can be replaced by this URI without any loss of information or change of meaning.
+    This does not simply mean they *can* express the same thing,
+    but rather that they express the same thing *in the same way*,
+    i.e., with no change in payloads or substructures.
+    
+    One example use-case is an extension becoming standard and being given a URI with a gedcom.io host, in which case both the extension URI's YAML file and the standard URI's YAML file can list the other as URIs it `subsumes`.
+    
+    Another example use-case is an extension that adds to another extension,
+    for example by allowing a larger set of payloads or more substructures.
+    In this case the more permissive/larger extension would say it `subsumes` the more strict/smaller extension, but not the other way around.
+
+-   <table><tbody>
+    <tr><th>Key</th><td><code>substructures</code> and <code>superstructures</code></td></tr>
     <tr><th>Type</th><td><code>map</code> with URI keys and Cardinality Marker values</td></tr>
     <tr><th>Required by</th><td><code>type: structure</code></td></tr>
     <tr><th>Allowed by</th><td>—</td></tr>
@@ -265,6 +293,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     If the relationship is listed in both a `substructures` entry and a `superstructures` entry, the two must have the same cardinality.
     
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
+
+-   <table><tbody>
+    <tr><th>Key</th><td><code>used by</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+
+    A list of [`g7:HEAD-SOUR`](https://github.com/FamilySearch/GEDCOM-registries/blob/main/structure/standard/HEAD-SOUR.yaml)
+    values of applications known to use an extension tag for this concept.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>value of</code></td></tr>

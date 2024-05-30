@@ -59,6 +59,53 @@ For researchers who want to record a miscarriage, but do not want to include the
 2 DATE 13 JUN 1948
 ```
 
+# How do I record the calendar that an age applies to?
+
+When a person has events recorded in the contexts of multiple calendars within their lifetime, such
+as `JULIAN` and `GREGORIAN`, or `FRENCH_R` and `GREGORIAN`, their age may have been be calculated
+(and recorded) differently depending on the calendar. 
+
+Dates in GEDCOM can have a calendar in the payload, but ages cannot, leading to the question of how
+gedcom can store the calendar associated with an age.
+
+One intent of the `AGE` structure is to express the age as it was listed in some source document.
+When a `DATE` and an `AGE` are associated with the *same* event, applications reading the GEDCOM file
+can infer that the calendar of the `AGE` is the same as the calendar of the `DATE`, especially if
+a `SOURCE_CITATION` is provided for the event.
+
+If a source document listed an age without a date, but a user or application has a way to calculate
+an estimated date based on the age and calendar used by the source document, then the calendar can
+be stored with a calculated date:
+
+```
+0 @I1@ INDI
+1 BIRT
+2 DATE JULIAN 1 SEP 1752
+1 CHR
+2 DATE CAL GREGORIAN 14 OCT 1752
+2 AGE 1m 2d
+1 DEAT
+2 DATE GREGORIAN 1 NOV 1752
+```
+
+In the following example, it is important to record the calendar associated with the age
+since the actual date would vary:
+
+```
+0 @I2 INDI
+1 NOTE The following two birthdates refer to the same day, in different calendars.
+1 BIRT
+2 DATE FRENCH_R 1 VEND 2
+1 BIRT
+2 DATE GREGORIAN 23 SEP 1793
+1 NOTE If christening was recorded as "1m 10d", the date is different per calendar.
+2 CONT "1m 10d" in Gregorian would be GREGORIAN 2 NOV 1793 or FRENCH_R 12 BRUM 2.
+2 CONT "1m 10d" in French Republican would be GREGORIAN 1 NOV 1793 or FRENCH_R 11 BRUM 2.
+1 CHR
+2 DATE CAL FRENCH_R 11 BRUM 2
+2 AGE 1m 10d
+```
+
 # Why can an attribute have an age?
 
 One case is when the attribute has a clear start time; for example, educational degrees tend to be awarded at a measurable time:
@@ -94,6 +141,23 @@ At present, the best available tool is `INDI.FAMC.PEDI`, one for each family:
 ```
 
 Because the nature of `BIRTH` is unclear (is it about the biological progenitors of the child or the social family unit into which it is born?) and a topic some researchers have strong feelings about, either or both of the above may be recorded `PEDI OTHER` instead of `PEDI BIRTH` by some researchers.
+
+# How do I provide a source citation for a parent-child relationship?
+
+Neither the `FAMC` structure of an individual record nor the `CHIL` structure of a family record supports
+having a `SOUR` citation as a substructure.  Today applications often put the `SOUR` directly under the
+individual record or the family record, where it lacks specificity in terms of which family or individual
+it applies to.
+
+If the source applies to a birth or adoption, specificity can be maintained by placing the `SOUR` citation under an `INDI.BIRT` or `INDI.ADOP`,
+as in the following example:
+
+```
+0 @I1@ INDI
+1 BIRT
+2 SOUR @S2@
+2 FAMC @F3@
+```
 
 # How do I mark a parent-child relationship as confidential?
 
@@ -170,7 +234,7 @@ If you wish to reference a part of a FamilySearch GEDCOM file from outside that 
 
 # How do I flag a primary or profile photo?
 
-There is not standard tag for this purpose in version 7.0.
+There is no standard tag for this purpose in version 7.0.
 The first [MULTIMEDIA_LINK](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#MULTIMEDIA_LINK) in a structure
 is the "most-preferred" external object, but that does not necessarily mean it is either an image or a profile image.
 
@@ -254,6 +318,59 @@ the person.  Although the specification does not define any semantics to the ord
 some implementations are known to infer that the first NAME occuring is a "preferred" one to use
 for display.
 
+# How do I reference local files?
+
+A `MULTIMEDIA_RECORD` uses `FILE` and `TRAN` structures to reference one or more files, which might be files
+on a local filesystem, or might be remote files referenced by URL.  FamilySearch GEDCOM 7.0 permits local files
+to be referenced in multiple ways, including:
+
+* A `file:` URL with absolute path. Example: `FILE file:///path/to/file`
+* A relative path with no URI scheme. Example: `FILE path/to/file`
+
+Local `file:` URLs are not permitted in FamilySearch GEDZIP but are permitted in FamilySearch
+GEDCOM 7.0 although they should be avoided in datasets that are expected to be shared on the web or with
+unknown parties.
+
+Relative paths, however, are permitted in both GEDCOM and GEDZIP files and so may be more convenient to
+use in both cases.  Any tool that converts FamilySearch GEDCOM 7.0 to GEDZIP should convert local file URLs
+to relative paths within the resulting GEDZIP file.
+
+# How do I record the URL of a source?
+
+While `EVENT_DETAIL` and `REPOSITORY_RECORD` both allow a URL to be placed in a `WWW` substructure,
+`SOURCE_CITATION`, `SOURCE_RECORD`, and `SOURCE_REPOSITORY_CITATION` do not.
+
+Some applications might put the source URL for an `EVENT_DETAIL` in a `WWW` substructure
+in parallel to a `SOURCE_CITATION`. However, since there can be multiple source citations per event, this does not allow associating the URL
+with a specific source citation.  Instead, the URL can be placed in the `PAGE` structure.  For example:
+
+```
+1 DEAT
+2 DATE 14 DEC 1799
+2 SOUR @FindAGraveSourceRecord@
+3 PAGE Memorial: 1075, URL: https://www.findagrave.com/memorial/1075
+```
+
+Similarly, some applications might put the source URL for a `SOURCE_RECORD` in a `PUBL` substructure
+as follows:
+
+```
+0 @S1@ SOUR
+1 TITL Grave of George Washington
+1 PUBL https://www.findagrave.com/memorial/1075
+```
+
+while others might put it in the `CALN` of a `SOURCE_REPOSITORY_CITATION` as follows:
+
+```
+0 @S1@ SOUR
+1 TITL Grave of George Washington
+1 REPO @FindAGraveRepositoryRecord@
+2 CALN https://www.findagrave.com/memorial/1075
+```
+
+Note that unlike the `PAGE` structure, the `CALN` structure has no current recommendation about using
+label: value pairs.
 
 # How do I record information about one parent?
 

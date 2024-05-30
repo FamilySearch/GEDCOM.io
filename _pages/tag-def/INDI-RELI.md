@@ -20,7 +20,7 @@ standard tag: RELI
 
 specification:
   - Religion
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
 
 label: 'Religion'
 

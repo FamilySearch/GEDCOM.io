@@ -20,8 +20,8 @@ standard tag: ANCI
 
 specification:
   - Ancestor interest
-  - Indicates an interest in additional research for ancestors of this
-    individual. (See also DESI).
+  - Indicates an interest in additional research for ancestors of this individual.
+    (See also `DESI`).
 
 label: 'Ancestor interest'
 

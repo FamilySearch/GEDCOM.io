@@ -20,7 +20,7 @@ standard tag: NCHI
 
 specification:
   - Number of children
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - number of children
   - The number of children that this person is known to be the parent of (all
     marriages).
@@ -53,9 +53,6 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
-
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 ...
 
 ```

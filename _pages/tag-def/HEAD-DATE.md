@@ -20,7 +20,7 @@ standard tag: DATE
 
 specification:
   - Date
-  - The DateExact that this document was created.
+  - The `DateExact` that this document was created.
 
 label: 'Date'
 
