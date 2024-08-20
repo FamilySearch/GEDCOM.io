@@ -20,8 +20,8 @@ standard tag: SNOTE
 
 specification:
   - Shared note
-  - A pointer to a note that is shared by multiple structures. See
-    NOTE_STRUCTURE for more.
+  - A pointer to a note that is shared by multiple structures. See `NOTE_STRUCTURE`
+    for more details.
 
 label: 'Shared note'
 
@@ -104,6 +104,8 @@ superstructures:
   "https://gedcom.io/terms/v7/record-REPO": "{0:M}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

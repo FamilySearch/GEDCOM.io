@@ -20,8 +20,8 @@ standard tag: STAE
 
 specification:
   - State
-  - A geographical division of a larger jurisdictional area, such as a state
-    within the United States of America. See ADDRESS_STRUCTURE for more.
+  - A geographical division of a larger jurisdictional area, such as a state within
+    the United States of America. See `ADDRESS_STRUCTURE` for more details.
 
 label: 'State'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/ADDR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

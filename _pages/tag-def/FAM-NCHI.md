@@ -20,7 +20,7 @@ standard tag: NCHI
 
 specification:
   - Number of children
-  - A Family Attribute. See also FAMILY_ATTRIBUTE_STRUCTURE.
+  - A [Family Attribute]. See also `FAMILY_ATTRIBUTE_STRUCTURE`.
   - number of children
   - The number of children that belong to this family.
 
@@ -54,8 +54,7 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
 
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+contact: "https://gedcom.io/community/"
 ...
 
 ```

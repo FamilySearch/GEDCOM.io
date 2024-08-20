@@ -20,8 +20,8 @@ standard tag: FAX
 
 specification:
   - Facsimile
-  - A fax telephone number appropriate for sending data facsimiles. See PHON
-    for more.
+  - A fax telephone number appropriate for sending data facsimiles. See `PHON` for
+    additional comments on telephone numbers.
 
 label: 'Facsimile'
 
@@ -84,6 +84,8 @@ superstructures:
   "https://gedcom.io/terms/v7/WILL": "{0:M}"
   "https://gedcom.io/terms/v7/record-REPO": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

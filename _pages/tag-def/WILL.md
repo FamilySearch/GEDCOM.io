@@ -20,11 +20,11 @@ standard tag: WILL
 
 specification:
   - Will
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - will
-  - A legal document treated as an event, by which a person disposes of his or
-    her estate. It takes effect after death. The event date is the date the
-    will was signed while the person was alive. (See also PROB)
+  - A legal document treated as an event, by which a person disposes of his or her
+    estate. It takes effect after death. The event date is the date the will was
+    signed while the person was alive. (See also `PROB`)
 
 label: 'Will'
 
@@ -58,6 +58,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

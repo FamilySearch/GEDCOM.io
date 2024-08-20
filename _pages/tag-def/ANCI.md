@@ -20,8 +20,8 @@ standard tag: ANCI
 
 specification:
   - Ancestor interest
-  - Indicates an interest in additional research for ancestors of this
-    individual. (See also DESI).
+  - Indicates an interest in additional research for ancestors of this individual.
+    (See also `DESI`).
 
 label: 'Ancestor interest'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

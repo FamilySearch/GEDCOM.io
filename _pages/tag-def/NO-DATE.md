@@ -20,8 +20,8 @@ standard tag: DATE
 
 specification:
   - Date
-  - The DatePeriod during which the event did not occur or the attribute did
-    not apply.
+  - The `DatePeriod` during which the event did not occur or the attribute did not
+    apply.
 
 label: 'Date'
 
@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/NO": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

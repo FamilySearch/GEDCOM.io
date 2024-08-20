@@ -20,8 +20,8 @@ standard tag: TAG
 
 specification:
   - Extension tag
-  - Information relating to a single extension tag as used in this document.
-    See Extensions for more.
+  - Information relating to a single extension tag as used in this document. See
+    [Extensions] for more details.
 
 label: 'Extension tag'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/SCHMA": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

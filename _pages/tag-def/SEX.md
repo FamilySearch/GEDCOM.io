@@ -20,7 +20,7 @@ standard tag: SEX
 
 specification:
   - Sex
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-SEX that
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-SEX` that
     indicates the sex of the individual at birth.
 
 label: 'Sex'
@@ -33,6 +33,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,7 +20,7 @@ standard tag: CHRA
 
 specification:
   - Christening, adult
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - adult christening
   - Baptism or naming events for an adult person.
 
@@ -56,6 +56,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

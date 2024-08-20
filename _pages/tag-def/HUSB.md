@@ -21,7 +21,7 @@ standard tag: HUSB
 specification:
   - Husband
   - A container for information relevant to the subject of the superstructure
-    specific to the individual described by the associated FAM’s HUSB
+    specific to the individual described by the associated `FAM`'s `HUSB`
     substructure.
 
 label: 'Husband'
@@ -46,6 +46,8 @@ superstructures:
   "https://gedcom.io/terms/v7/MARL": "{0:1}"
   "https://gedcom.io/terms/v7/MARR": "{0:1}"
   "https://gedcom.io/terms/v7/MARS": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

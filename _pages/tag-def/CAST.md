@@ -20,11 +20,11 @@ standard tag: CAST
 
 specification:
   - Caste
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - caste
-  - The name of an individual’s rank or status in society which is sometimes
-    based on racial or religious differences, or differences in wealth,
-    inherited rank, profession, or occupation.
+  - The name of an individual's rank or status in society which is sometimes based
+    on racial or religious differences, or differences in wealth, inherited rank,
+    profession, or occupation.
 
 label: 'Caste'
 
@@ -57,6 +57,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

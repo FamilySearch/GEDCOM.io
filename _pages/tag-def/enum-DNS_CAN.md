@@ -19,12 +19,14 @@ uri: https://gedcom.io/terms/v7/enum-DNS_CAN
 standard tag: DNS_CAN
 
 specification:
-  - "Applies to: SLGS"
+  - "Applies to: `SLGS`"
   - This ordinance is not authorized, and the previous ordinance is cancelled.
   - "Status: Current"
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

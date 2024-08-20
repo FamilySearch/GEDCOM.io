@@ -20,10 +20,10 @@ standard tag: ADOP
 
 specification:
   - Adoption
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - adoption
-  - Creation of a legally approved child-parent relationship that does not
-    exist biologically.
+  - Creation of a legally approved child-parent relationship that does not exist
+    biologically.
 
 label: 'Adoption'
 
@@ -58,6 +58,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,9 +20,9 @@ standard tag: FCOM
 
 specification:
   - First communion
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - first communion
-  - The first act of sharing in the Lord’s supper as part of church worship.
+  - The first act of sharing in the Lord's supper as part of church worship.
 
 label: 'First communion'
 
@@ -56,6 +56,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

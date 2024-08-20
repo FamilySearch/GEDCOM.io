@@ -20,7 +20,7 @@ standard tag: IMMI
 
 specification:
   - Immigration
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - immigration
   - Entering into a new locality with the intent of residing there.
 
@@ -56,6 +56,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

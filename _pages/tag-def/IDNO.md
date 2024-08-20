@@ -20,11 +20,11 @@ standard tag: IDNO
 
 specification:
   - Identification number
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - identifying number
-  - A number or other string assigned to identify a person within some
-    significant external system. It must have a TYPE substructure to define
-    what kind of identification number is being provided.
+  - A number or other string assigned to identify a person within some significant
+    external system. It must have a `TYPE` substructure to define what kind of
+    identification number is being provided.
 
 label: 'Identification number'
 
@@ -57,6 +57,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

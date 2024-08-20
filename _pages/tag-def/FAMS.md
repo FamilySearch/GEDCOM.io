@@ -20,7 +20,8 @@ standard tag: FAMS
 
 specification:
   - Family spouse
-  - The family in which an individual appears as a partner. See FAM for more.
+  - The family in which an individual appears as a partner. See `FAMILY_RECORD` for
+    more details.
 
 label: 'Family spouse'
 
@@ -32,6 +33,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

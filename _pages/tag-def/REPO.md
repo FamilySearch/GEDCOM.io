@@ -20,13 +20,13 @@ standard tag: REPO
 
 specification:
   - Repository
-  - See SOURCE_REPOSITORY_CITATION.
-  - This structure is used within a source record to point to a name and
-    address record of the holder of the source document. Formal and informal
-    repository name and addresses are stored in the REPOSITORY_RECORD. More
-    formal repositories, such as the Family History Library, should show a call
-    number of the source at that repository. The call number of that source
-    should be recorded using a CALN substructure.
+  - See `SOURCE_REPOSITORY_CITATION`.
+  - This structure is used within a source record to point to a name and address
+    record of the holder of the source document. Formal and informal repository
+    name and addresses are stored in the `REPOSITORY_RECORD`. More formal
+    repositories, such as the Family History Library, should show a call number of
+    the source at that repository. The call number of that source should be
+    recorded using a `CALN` substructure.
 
 label: 'Repository'
 
@@ -39,6 +39,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-SOUR": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

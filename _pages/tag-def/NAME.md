@@ -20,7 +20,7 @@ standard tag: NAME
 
 specification:
   - Name
-  - The name of the superstructure’s subject, represented as a simple string.
+  - The name of the superstructure's subject, represented as a simple string.
 
 label: 'Name'
 
@@ -32,6 +32,8 @@ superstructures:
   "https://gedcom.io/terms/v7/HEAD-SOUR": "{0:1}"
   "https://gedcom.io/terms/v7/record-REPO": "{1:1}"
   "https://gedcom.io/terms/v7/record-SUBM": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -21,17 +21,31 @@ standard tag: MEDI
 specification:
   - Medium
   - |
-    An enumerated value from set https://gedcom.io/terms/v7/enumset-MEDI
+    An enumerated value from set `https://gedcom.io/terms/v7/enumset-MEDI`
     providing information about the media or the medium in which information is
     stored.
     
-    When MEDI is a substructure of a https://gedcom.io/terms/v7/CALN, it is
-    recommended that its payload describes the medium directly found at that
-    call number rather than a medium from which it was derived.
+    When `MEDI` is a substructure of a `https://gedcom.io/terms/v7/CALN`, it is
+    recommended that its payload describes the medium directly found at that call
+    number rather than a medium from which it was derived.
     
-    Consider an asset in a repository that is a digital scan of a book of
-    compiled newspapers; for this asset, the CALN.MEDI is recommended to be
-    ELECTRONIC rather than BOOK or NEWSPAPER.
+    <div class="example">
+    
+    Consider an asset in a repository that is a digital scan of a book of compiled
+    newspapers; for this asset, the `CALN`.`MEDI` is recommended to be `ELECTRONIC`
+    rather than `BOOK` or `NEWSPAPER`.
+    
+    </div>
+    
+    When `MEDI` is a substructure of a `https://gedcom.io/terms/v7/FORM`, it is
+    recommended that its payload describes the medium from which it was derived.
+    
+    <div class="example">
+    
+    Consider a digital photo in a multimedia record; for this asset, the
+    `FORM`.`MEDI` is recommended to be `PHOTO` rather than `ELECTRONIC`.
+    
+    </div>
 
 label: 'Medium'
 
@@ -45,6 +59,8 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/CALN": "{0:1}"
   "https://gedcom.io/terms/v7/FORM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

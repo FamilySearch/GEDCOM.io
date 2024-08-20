@@ -20,7 +20,7 @@ standard tag: FORM
 
 specification:
   - Format
-  - The media type of the file referenced by the superstructure.
+  - The [media type] of the file referenced by the superstructure.
 
 label: 'Format'
 
@@ -32,6 +32,8 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/FILE": "{1:1}"
   "https://gedcom.io/terms/v7/FILE-TRAN": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,7 +20,7 @@ standard tag: NMR
 
 specification:
   - Number of marriages
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - number of marriages
   - The number of times this person has participated in a family as a spouse or
     parent.
@@ -56,6 +56,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -19,12 +19,14 @@ uri: https://gedcom.io/terms/v7/enum-CANCELED
 standard tag: CANCELED
 
 specification:
-  - "Applies to: SLGS"
+  - "Applies to: `SLGS`"
   - Canceled and considered invalid.
   - "Status: Current"
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,8 +20,8 @@ standard tag: DESI
 
 specification:
   - Descendant Interest
-  - Indicates an interest in research to identify additional descendants of
-    this individual. See also ANCI.
+  - Indicates an interest in research to identify additional descendants of this
+    individual. See also `ANCI`.
 
 label: 'Descendant Interest'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

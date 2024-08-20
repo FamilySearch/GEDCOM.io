@@ -22,17 +22,17 @@ specification:
   - External Identifier
   - |
     An identifier for the subject of the superstructure. The identifier is
-    maintained by some external authority; the authority owning the identifier
-    is provided in the TYPE substructure; see EXID.TYPE for more.
+    maintained by some external authority; the authority owning the identifier is
+    provided in the TYPE substructure; see `EXID`.`TYPE` for more details.
     
-    Depending on the maintaining authority, an EXID may be a unique identifier
+    Depending on the maintaining authority, an `EXID` may be a unique identifier
     for the subject, an identifier for 1 of several views of the subject, or an
     identifier for the externally-maintained copy of the same information as is
-    contained in this structure. However, unlike UID and REFN, EXID does not
-    identify a structure; structures with the same EXID may have originated
+    contained in this structure. However, unlike `UID` and `REFN`, `EXID` does not
+    identify a structure; structures with the same `EXID` may have originated
     independently rather than by edits from the same starting point.
     
-    EXID identifiers are expected to be unique. Once assigned, an EXID
+    `EXID` identifiers are expected to be unique. Once assigned, an `EXID`
     identifier should never be re-used for any other purpose.
 
 label: 'External Identifier'
@@ -51,6 +51,8 @@ superstructures:
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:M}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

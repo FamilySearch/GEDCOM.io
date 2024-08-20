@@ -21,15 +21,19 @@ standard tag: EMAIL
 specification:
   - Email
   - |
-    An electronic mail address, as defined by any relevant standard such as RFC
-    3696, RFC 5321, or RFC 5322.
+    An electronic mail address, as defined by any relevant standard such as [RFC
+    3696], [RFC 5321], or [RFC 5322].
     
     If an invalid email address is present upon import, it should be preserved
     as-is on export.
     
-    The version 5.5.1 specification contained a typo where this tag was
-    sometimes written EMAI and sometimes written EMAIL. EMAIL should be used in
-    version 7.0 and later.
+    <div class="note">
+    
+    The version 5.5.1 specification contained a typo where this tag was sometimes
+    written `EMAI` and sometimes written `EMAIL`. `EMAIL` should be used in version
+    7.0 and later.
+    
+    </div>
 
 label: 'Email'
 
@@ -92,6 +96,8 @@ superstructures:
   "https://gedcom.io/terms/v7/WILL": "{0:M}"
   "https://gedcom.io/terms/v7/record-REPO": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -22,10 +22,12 @@ specification:
   - "Applies to: All"
   - Ordinance was likely completed because an ordinance for this person was
     converted from temple records of work completed before 1970.
-  - "Status: Deprecated. Use DATE BEF 1970 instead."
+  - "Status: Deprecated. Use `DATE BEF 1970` instead."
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

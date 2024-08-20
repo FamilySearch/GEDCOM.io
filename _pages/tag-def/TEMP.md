@@ -21,9 +21,9 @@ standard tag: TEMP
 specification:
   - Temple
   - The name of a temple of The Church of Jesus Christ of Latter-day Saints.
-    Previous versions recommended using a set of abbreviations for temple
-    names, but the list of abbreviations is no longer published by the Church
-    and using abbreviations is no longer recommended.
+    Previous versions recommended using a set of abbreviations for temple names,
+    but the list of abbreviations is no longer published by the Church and using
+    abbreviations is no longer recommended.
 
 label: 'Temple'
 
@@ -38,6 +38,8 @@ superstructures:
   "https://gedcom.io/terms/v7/INIL": "{0:1}"
   "https://gedcom.io/terms/v7/SLGC": "{0:1}"
   "https://gedcom.io/terms/v7/SLGS": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

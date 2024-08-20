@@ -20,11 +20,10 @@ standard tag: SLGC
 
 specification:
   - Sealing, child
-  - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
+  - A [Latter-Day Saint Ordinance]. See also `LDS_INDIVIDUAL_ORDINANCE`.
   - sealing child
-  - A religious event pertaining to the sealing of a child to his or her
-    parents in a temple ceremony of The Church of Jesus Christ of Latter-day
-    Saints.
+  - A religious event pertaining to the sealing of a child to his or her parents in
+    a temple ceremony of The Church of Jesus Christ of Latter-day Saints.
 
 label: 'Sealing, child'
 
@@ -42,6 +41,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

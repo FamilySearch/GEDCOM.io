@@ -20,7 +20,7 @@ standard tag: DIV
 
 specification:
   - Divorce
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - divorce
   - Dissolving a marriage through civil action.
 
@@ -57,6 +57,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

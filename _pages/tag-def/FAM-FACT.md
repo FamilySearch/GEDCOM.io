@@ -20,7 +20,7 @@ standard tag: FACT
 
 specification:
   - Fact
-  - See https://gedcom.io/terms/v7/INDI-FACT.
+  - See `https://gedcom.io/terms/v7/INDI-FACT`.
 
 label: 'Fact'
 
@@ -52,8 +52,7 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
 
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+contact: "https://gedcom.io/community/"
 ...
 
 ```

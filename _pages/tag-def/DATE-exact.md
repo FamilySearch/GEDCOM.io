@@ -21,7 +21,7 @@ standard tag: DATE
 specification:
   - Date
   - The principal date of the subject of the superstructure. The payload is a
-    DateExact.
+    `DateExact`.
 
 label: 'Date'
 
@@ -35,6 +35,8 @@ superstructures:
   "https://gedcom.io/terms/v7/CREA": "{1:1}"
   "https://gedcom.io/terms/v7/HEAD-SOUR-DATA": "{0:1}"
   "https://gedcom.io/terms/v7/ord-STAT": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

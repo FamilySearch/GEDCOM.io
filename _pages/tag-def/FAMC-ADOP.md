@@ -20,7 +20,7 @@ standard tag: ADOP
 
 specification:
   - Adoption
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-ADOP
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-ADOP`
     indicating which parent(s) in the family adopted this individual.
 
 label: 'Adoption'
@@ -34,6 +34,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/ADOP-FAMC": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

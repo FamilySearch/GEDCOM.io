@@ -20,7 +20,7 @@ standard tag: DATE
 
 specification:
   - Date
-  - The DateExact that this document was created.
+  - The `DateExact` that this document was created.
 
 label: 'Date'
 
@@ -31,6 +31,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

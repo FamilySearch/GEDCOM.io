@@ -20,7 +20,7 @@ standard tag: ENGA
 
 specification:
   - Engagement
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - engagement
   - Recording or announcing an agreement between 2 people to become married.
 
@@ -57,6 +57,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

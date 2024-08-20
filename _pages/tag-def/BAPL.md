@@ -20,10 +20,10 @@ standard tag: BAPL
 
 specification:
   - Baptism, Latter-Day Saint
-  - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
+  - A [Latter-Day Saint Ordinance]. See also `LDS_INDIVIDUAL_ORDINANCE`.
   - baptism
-  - The event of baptism performed at age 8 or later by priesthood authority of
-    The Church of Jesus Christ of Latter-day Saints. (See also BAPM)
+  - The event of baptism performed at age 8 or later by priesthood authority of The
+    Church of Jesus Christ of Latter-day Saints. (See also [`BAPM`])
 
 label: 'Baptism, Latter-Day Saint'
 
@@ -40,6 +40,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,7 +20,7 @@ standard tag: TIME
 
 specification:
   - Time
-  - A Time value in a 24-hour clock format.
+  - A `Time` value in a 24-hour clock format.
 
 label: 'Time'
 
@@ -33,6 +33,8 @@ superstructures:
   "https://gedcom.io/terms/v7/DATE-exact": "{0:1}"
   "https://gedcom.io/terms/v7/HEAD-DATE": "{0:1}"
   "https://gedcom.io/terms/v7/SDATE": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,8 +20,8 @@ standard tag: STAT
 
 specification:
   - Status
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-FAMC-STAT
-    assessing of the state or condition of a researcher’s belief in a family
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-FAMC-STAT`
+    assessing of the state or condition of a researcher's belief in a family
     connection.
 
 label: 'Status'
@@ -35,6 +35,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/INDI-FAMC": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

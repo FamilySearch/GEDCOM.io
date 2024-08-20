@@ -20,7 +20,7 @@ standard tag: RELI
 
 specification:
   - Religion
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
 
 label: 'Religion'
 
@@ -50,6 +50,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

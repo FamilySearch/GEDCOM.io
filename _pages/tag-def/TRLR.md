@@ -20,8 +20,8 @@ standard tag: TRLR
 
 specification:
   - Trailer
-  - A pseudo-structure marking the end of a dataset. See The Header and Trailer
-    for more.
+  - A pseudo-structure marking the end of a dataset. See [The Header and Trailer]
+    for more details.
 
 label: 'Trailer'
 
@@ -30,6 +30,8 @@ payload: null
 substructures: {}
 
 superstructures: {}
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

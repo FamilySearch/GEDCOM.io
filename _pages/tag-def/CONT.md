@@ -20,9 +20,9 @@ standard tag: CONT
 
 specification:
   - Continued
-  - A pseudo-structure to indicate a line break. The CONT tag is generated
-    during serialization and is never present in parsed datasets. See Lines for
-    more.
+  - A pseudo-structure to indicate a line break. The `CONT` tag is generated during
+    serialization and is never present in parsed datasets. See [Lines] for more
+    details.
 
 label: 'Continued'
 
@@ -31,6 +31,8 @@ payload: null
 substructures: {}
 
 superstructures: {}
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,7 +20,8 @@ standard tag: WIDTH
 
 specification:
   - Width in pixels
-  - How many pixels to display horizontally for the image. See CROP for more.
+  - How many pixels to display horizontally for the image. See `CROP` for more
+    details.
 
 label: 'Width in pixels'
 
@@ -30,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/CROP": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

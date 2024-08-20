@@ -19,10 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-MOTH
 standard tag: MOTH
 
 specification:
-  - Mother; implies PARENT
+  - Mother; implies `PARENT`
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

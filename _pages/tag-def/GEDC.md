@@ -23,8 +23,8 @@ specification:
   - |
     A container for information about the entire document.
     
-    It is recommended that applications write GEDC with its required subrecord
-    VERS as the first substructure of HEAD.
+    It is recommended that applications write `GEDC` with its required substructure
+    `https://gedcom.io/terms/v7/GEDC-VERS` as the first substructure of `HEAD`.
 
 label: 'GEDCOM'
 
@@ -35,6 +35,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

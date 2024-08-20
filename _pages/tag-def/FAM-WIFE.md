@@ -20,7 +20,7 @@ standard tag: WIFE
 
 specification:
   - Wife
-  - A partner in a FAM record. See FAMILY_RECORD for more.
+  - A partner in a `FAM` record. See `FAMILY_RECORD` for more details.
 
 label: 'Wife'
 
@@ -31,6 +31,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

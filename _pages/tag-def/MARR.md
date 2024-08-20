@@ -20,10 +20,10 @@ standard tag: MARR
 
 specification:
   - Marriage
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - marriage
-  - A legal, common-law, or customary event such as a wedding or marriage
-    ceremony that joins 2 partners to create or extend a family unit.
+  - A legal, common-law, or customary event such as a wedding or marriage ceremony
+    that joins 2 partners to create or extend a family unit.
 
 label: 'Marriage'
 
@@ -58,6 +58,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

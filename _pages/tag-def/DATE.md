@@ -22,16 +22,33 @@ specification:
   - Date
   - |
     The principal date of the subject of the superstructure. The payload is a
-    DateValue.
+    `DateValue`.
     
-    See DATE_VALUE for more.
+    When the superstructure is an event, the principal date indicates when the
+    event took place.
+    
+    When the superstructure is an attribute, the principal date indicates when the
+    attribute was observed, asserted, or applied. A date period might put bounds on
+    the attributes applicability, but other date forms assume that the attribute
+    may have also applied on other dates too.
+    
+    When the superstructure is a `https://gedcom.io/terms/v7/SOUR-DATA`, the
+    principal date indicates when the data was entered into the source; or, for a
+    source like a website that changes over time, a date on which the source
+    contained the data.
+    
+    See `DATE_VALUE` for more details.
   - |
-    A date, optionally with a time and/or a phrase. If there is a TIME, it
-    asserts that the event happened at a specific time on a single day. TIME
-    should not be used with DatePeriod but may be used with other date types.
+    A date, optionally with a time and/or a phrase. If there is a `TIME`, it
+    asserts that the event happened at a specific time on a single day. `TIME`
+    should not be used with `DatePeriod` but may be used with other date types.
+    
+    <div class="note">
     
     There is currently no provision for approximate times or time phrases. Time
     phrases are expected to be added in version 7.1.
+    
+    </div>
 
 label: 'Date'
 
@@ -100,6 +117,8 @@ superstructures:
   "https://gedcom.io/terms/v7/SOUR-DATA": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

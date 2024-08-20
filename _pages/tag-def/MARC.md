@@ -20,11 +20,11 @@ standard tag: MARC
 
 specification:
   - Marriage contract
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - marriage contract
-  - Recording a formal agreement of marriage, including the prenuptial
-    agreement in which marriage partners reach agreement about the property
-    rights of 1 or both, securing property to their children.
+  - Recording a formal agreement of marriage, including the prenuptial agreement in
+    which marriage partners reach agreement about the property rights of 1 or both,
+    securing property to their children.
 
 label: 'Marriage contract'
 
@@ -59,6 +59,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

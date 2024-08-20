@@ -21,7 +21,7 @@ standard tag: CTRY
 specification:
   - Country
   - The name of the country that pertains to the associated address. See
-    ADDRESS_STRUCTURE for more.
+    `ADDRESS_STRUCTURE` for more details.
 
 label: 'Country'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/ADDR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

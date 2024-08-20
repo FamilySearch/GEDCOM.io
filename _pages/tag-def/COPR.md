@@ -20,8 +20,8 @@ standard tag: COPR
 
 specification:
   - Copyright
-  - A copyright statement, as appropriate for the copyright laws applicable to
-    this data.
+  - A copyright statement, as appropriate for the copyright laws applicable to this
+    data.
 
 label: 'Copyright'
 
@@ -32,6 +32,8 @@ substructures: {}
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
   "https://gedcom.io/terms/v7/HEAD-SOUR-DATA": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

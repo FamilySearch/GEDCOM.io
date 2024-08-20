@@ -20,8 +20,8 @@ standard tag: TOP
 
 specification:
   - Top crop width
-  - A number of pixels to not display from the top side of the image. See CROP
-    for more.
+  - A number of pixels to not display from the top side of the image. See `CROP`
+    for more details.
 
 label: 'Top crop width'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/CROP": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

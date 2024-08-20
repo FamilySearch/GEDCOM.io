@@ -20,9 +20,9 @@ standard tag: NATI
 
 specification:
   - Nationality
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - nationality
-  - An individual’s national heritage or origin, or other folk, house, kindred,
+  - An individual's national heritage or origin, or other folk, house, kindred,
     lineage, or tribal interest.
 
 label: 'Nationality'
@@ -56,6 +56,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

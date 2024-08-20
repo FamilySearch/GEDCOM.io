@@ -20,7 +20,7 @@ standard tag: HUSB
 
 specification:
   - Husband
-  - This is a partner in a FAM record. See FAMILY_RECORD for more.
+  - This is a partner in a `FAM` record. See `FAMILY_RECORD` for more details.
 
 label: 'Husband'
 
@@ -31,6 +31,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,7 +20,7 @@ standard tag: TYPE
 
 specification:
   - Type
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-NAME-TYPE
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-NAME-TYPE`
     indicating the type of the name.
 
 label: 'Type'
@@ -34,6 +34,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/INDI-NAME": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

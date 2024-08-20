@@ -20,10 +20,10 @@ standard tag: CONL
 
 specification:
   - Confirmation, Latter-Day Saint
-  - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
+  - A [Latter-Day Saint Ordinance]. See also `LDS_INDIVIDUAL_ORDINANCE`.
   - confirmation
   - The religious event by which a person receives membership in The Church of
-    Jesus Christ of Latter-day Saints. (See also CONF)
+    Jesus Christ of Latter-day Saints. (See also [`CONF`])
 
 label: 'Confirmation, Latter-Day Saint'
 
@@ -40,6 +40,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

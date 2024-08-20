@@ -20,7 +20,7 @@ standard tag: BARM
 
 specification:
   - Bar Mitzvah
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - Bar Mitzvah
   - The ceremonial event held when a Jewish boy reaches age 13.
 
@@ -56,6 +56,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

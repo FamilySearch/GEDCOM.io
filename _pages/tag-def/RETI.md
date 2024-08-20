@@ -20,10 +20,10 @@ standard tag: RETI
 
 specification:
   - Retirement
-  - An Individual Event. See also INDIVIDUAL_EVENT_STRUCTURE.
+  - An [Individual Event]. See also `INDIVIDUAL_EVENT_STRUCTURE`.
   - retirement
-  - Exiting an occupational relationship with an employer after a qualifying
-    time period.
+  - Exiting an occupational relationship with an employer after a qualifying time
+    period.
 
 label: 'Retirement'
 
@@ -57,6 +57,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

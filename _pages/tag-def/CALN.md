@@ -20,9 +20,9 @@ standard tag: CALN
 
 specification:
   - Call number
-  - An identification or reference description used to file and retrieve items
-    from the holdings of a repository. Despite the word “number” in the name,
-    may contain any character, not just digits.
+  - An identification or reference description used to file and retrieve items from
+    the holdings of a repository. Despite the word "number" in the name, may
+    contain any character, not just digits.
 
 label: 'Call number'
 
@@ -33,6 +33,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/REPO": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

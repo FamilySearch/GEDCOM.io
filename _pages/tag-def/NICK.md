@@ -20,8 +20,22 @@ standard tag: NICK
 
 specification:
   - Nickname
-  - A descriptive or familiar name that is used instead of, or in addition to,
-    one’s proper name.
+  - |
+    A descriptive or familiar name that is used instead of, or in addition to,
+    one’s official or legal name.
+    
+    <div class="note">
+    
+    The label "nickname" and description text of this structure were introduced
+    with version 5.5 in 1996, but are understood differently by different users.
+    Some use `NICK` only for names that would be inappropriate in formal settings.
+    Some use it for pseudonyms regardless of where they are used. Some use it for
+    any variant of a name that is not the one used on legal documents. Because all
+    of these uses, and likely others as well, are common in existing data, no
+    further clarification of the meaning of the `NICK` structure is possible
+    without contradicting some existing data.
+    
+    </div>
 
 label: 'Nickname'
 
@@ -32,6 +46,8 @@ substructures: {}
 superstructures:
   "https://gedcom.io/terms/v7/INDI-NAME": "{0:M}"
   "https://gedcom.io/terms/v7/NAME-TRAN": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

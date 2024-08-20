@@ -22,13 +22,13 @@ specification:
   - Reference
   - |
     A user-defined number or text that the submitter uses to identify the
-    superstructure. For instance, it may be a record number within the
-    submitter’s automated or manual system, or it may be a page and position
-    number on a pedigree chart.
+    superstructure. For instance, it may be a record number within the submitter's
+    automated or manual system, or it may be a page and position number on a
+    pedigree chart.
     
     This is metadata about the structure itself, not data about its subject.
-    Multiple structures describing different aspects of the same subject must
-    not have the same REFN value.
+    Multiple structures describing different aspects of the same subject must not
+    have the same `REFN` value.
 
 label: 'Reference'
 
@@ -45,6 +45,8 @@ superstructures:
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:M}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

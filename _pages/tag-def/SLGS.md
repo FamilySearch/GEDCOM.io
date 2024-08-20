@@ -20,13 +20,14 @@ standard tag: SLGS
 
 specification:
   - Sealing, spouse
-  - A Latter-Day Saint Ordinance. See also LDS_SPOUSE_SEALING.
+  - A [Latter-Day Saint Ordinance]. See also `LDS_SPOUSE_SEALING`.
   - Ordinances performed by members of The Church of Jesus Christ of Latter-day
-    Saints; see [Latter-day Saint Ordinances] for more.
+    Saints; see [Latter-day Saint Ordinances] for descriptions of each ordinance
+    type.
   - sealing spouse
-  - A religious event pertaining to the sealing of a husband and wife in a
-    temple ceremony of The Church of Jesus Christ of Latter-day Saints. (See
-    also MARR)
+  - A religious event pertaining to the sealing of a husband and wife in a temple
+    ceremony of The Church of Jesus Christ of Latter-day Saints. (See also
+    [`MARR`])
 
 label: 'Sealing, spouse'
 
@@ -43,6 +44,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

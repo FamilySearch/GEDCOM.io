@@ -20,10 +20,9 @@ standard tag: PROP
 
 specification:
   - Property
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - property
-  - Pertaining to possessions such as real estate or other property of
-    interest.
+  - Pertaining to possessions such as real estate or other property of interest.
 
 label: 'Property'
 
@@ -56,6 +55,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

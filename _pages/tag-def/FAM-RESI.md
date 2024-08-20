@@ -21,10 +21,10 @@ standard tag: RESI
 specification:
   - Residence
   - |
-    A Family Attribute. See also FAMILY_ATTRIBUTE_STRUCTURE.
+    A [Family Attribute]. See also `FAMILY_ATTRIBUTE_STRUCTURE`.
     
-    See https://gedcom.io/terms/v7/INDI-RESI for comments on the use of payload
-    strings in RESI structures.
+    See `https://gedcom.io/terms/v7/INDI-RESI` for comments on the use of payload
+    strings in `RESI` structures.
   - residence
   - An address or place of residence where a family resided.
 
@@ -58,8 +58,7 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
 
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+contact: "https://gedcom.io/community/"
 ...
 
 ```

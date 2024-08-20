@@ -21,13 +21,24 @@ standard tag: HEIGHT
 specification:
   - Height in pixels
   - |
-    How many pixels to display vertically for the image. See CROP for more.
+    How many pixels to display vertically for the image. See `CROP` for more
+    details.
     
-    HEIGHT is a number of pixels. The correct tag for the height of an
-    individual is the DSCR attribute.
+    <div class="note">
     
-        0 @I45@ INDI
-        1 DSCR brown eyes, 5ft 10in, 198 pounds
+    `HEIGHT` is a number of pixels. The correct tag for the height of an individual
+    is the `DSCR` attribute.
+    
+    <div class="example">
+    
+    ```gedcom
+    0 @I45@ INDI
+    1 DSCR brown eyes, 5ft 10in, 198 pounds
+    ```
+    
+    </div>
+    
+    </div>
 
 label: 'Height in pixels'
 
@@ -37,6 +48,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/CROP": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

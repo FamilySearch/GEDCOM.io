@@ -23,7 +23,8 @@ specification:
   - |
     A language the subject of that record understands.
     
-    The payload of the LANG structure is a language tag, as defined by BCP 47.
+    The payload of the `LANG` structure is a language tag, as defined by [BCP
+    47].
 
 label: 'Language'
 
@@ -33,6 +34,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

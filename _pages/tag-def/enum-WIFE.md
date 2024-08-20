@@ -19,10 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-WIFE
 standard tag: WIFE
 
 specification:
-  - Wife; implies SPOU
+  - Wife; implies `SPOU`
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -21,7 +21,7 @@ standard tag: POST
 specification:
   - Postal code
   - A code used by a postal service to identify an area to facilitate mail
-    handling. See ADDRESS_STRUCTURE for more.
+    handling. See `ADDRESS_STRUCTURE` for more details.
 
 label: 'Postal code'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/ADDR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

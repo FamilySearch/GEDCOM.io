@@ -21,11 +21,13 @@ standard tag: SUBMITTED
 specification:
   - "Applies to: All"
   - Ordinance was previously submitted.
-  - "Status: Deprecated. This status was defined for use with TempleReady which
-    is no longer in use."
+  - "Status: Deprecated. This status was defined for use with TempleReady which is
+    no longer in use."
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

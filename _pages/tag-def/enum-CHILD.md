@@ -19,13 +19,15 @@ uri: https://gedcom.io/terms/v7/enum-CHILD
 standard tag: CHILD
 
 specification:
-  - "Applies to: All but SLGC"
-  - Died before 8 years old, so ordinances other than child to parent sealing
-    are not required.
+  - "Applies to: All but `SLGC`"
+  - Died before 8 years old, so ordinances other than child to parent sealing are
+    not required.
   - "Status: Current"
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

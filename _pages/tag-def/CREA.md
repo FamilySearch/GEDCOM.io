@@ -21,10 +21,10 @@ standard tag: CREA
 specification:
   - Creation
   - The initial creation of the superstructure. This is metadata about the
-    structure itself, not data about its subject. See CREATION_DATE for more.
-  - The date of the initial creation of the superstructure. Because this refers
-    to the initial creation, it should not be modified after the structure is
-    created.
+    structure itself, not data about its subject. See `CREATION_DATE` for more
+    details.
+  - The date of the initial creation of the superstructure. Because this refers to
+    the initial creation, it should not be modified after the structure is created.
 
 label: 'Creation'
 
@@ -41,6 +41,8 @@ superstructures:
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:1}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

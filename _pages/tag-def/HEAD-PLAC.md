@@ -20,7 +20,7 @@ standard tag: PLAC
 
 specification:
   - Place
-  - This is a placeholder for providing a default PLAC.FORM, and must not have
+  - This is a placeholder for providing a default `PLAC`.`FORM`, and must not have
     a payload.
 
 label: 'Place'
@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

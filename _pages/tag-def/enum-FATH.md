@@ -19,10 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-FATH
 standard tag: FATH
 
 specification:
-  - Father; implies PARENT
+  - Father; implies `PARENT`
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

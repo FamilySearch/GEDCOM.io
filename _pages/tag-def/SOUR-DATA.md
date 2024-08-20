@@ -20,7 +20,7 @@ standard tag: DATA
 
 specification:
   - Data
-  - See https://gedcom.io/terms/v7/DATA.
+  - See `https://gedcom.io/terms/v7/DATA`.
 
 label: 'Data'
 
@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

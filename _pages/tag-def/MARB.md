@@ -20,7 +20,7 @@ standard tag: MARB
 
 specification:
   - Marriage banns
-  - A Family Event. See also FAMILY_EVENT_STRUCTURE.
+  - A [Family Event]. See also `FAMILY_EVENT_STRUCTURE`.
   - marriage bann
   - Official public notice given that 2 people intend to marry.
 
@@ -57,6 +57,8 @@ superstructures:
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVEN"
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

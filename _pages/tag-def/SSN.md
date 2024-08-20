@@ -20,10 +20,10 @@ standard tag: SSN
 
 specification:
   - Social security number
-  - An Individual Attribute. See also INDIVIDUAL_ATTRIBUTE_STRUCTURE.
+  - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
   - social security number
-  - A number assigned by the United States Social Security Administration, used
-    for tax identification purposes. It is a type of IDNO.
+  - A number assigned by the United States Social Security Administration, used for
+    tax identification purposes. It is a type of `IDNO`.
 
 label: 'Social security number'
 
@@ -56,6 +56,8 @@ superstructures:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

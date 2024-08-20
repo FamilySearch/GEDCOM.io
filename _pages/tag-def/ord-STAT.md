@@ -20,7 +20,7 @@ standard tag: STAT
 
 specification:
   - Status
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-ord-STAT
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-ord-STAT`
     assessing of the state or condition of an ordinance.
 
 label: 'Status'
@@ -39,6 +39,8 @@ superstructures:
   "https://gedcom.io/terms/v7/INIL": "{0:1}"
   "https://gedcom.io/terms/v7/SLGC": "{0:1}"
   "https://gedcom.io/terms/v7/SLGS": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

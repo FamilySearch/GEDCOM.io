@@ -20,11 +20,11 @@ standard tag: ENDL
 
 specification:
   - Endowment, Latter-Day Saint
-  - A Latter-Day Saint Ordinance. See also LDS_INDIVIDUAL_ORDINANCE.
+  - A [Latter-Day Saint Ordinance]. See also `LDS_INDIVIDUAL_ORDINANCE`.
   - endowment
-  - A religious event where an endowment ordinance for an individual was
-    performed by priesthood authority in a temple of The Church of Jesus Christ
-    of Latter-day Saints.
+  - A religious event where an endowment ordinance for an individual was performed
+    by priesthood authority in a temple of The Church of Jesus Christ of Latter-day
+    Saints.
 
 label: 'Endowment, Latter-Day Saint'
 
@@ -41,6 +41,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

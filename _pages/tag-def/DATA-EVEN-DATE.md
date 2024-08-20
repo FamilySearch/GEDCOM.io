@@ -20,7 +20,7 @@ standard tag: DATE
 
 specification:
   - Date
-  - The DatePeriod covered by the entire source; the period during which this
+  - The `DatePeriod` covered by the entire source; the period during which this
     source recorded events.
 
 label: 'Date'
@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/DATA-EVEN": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

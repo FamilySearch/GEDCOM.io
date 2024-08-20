@@ -20,8 +20,8 @@ standard tag: AGE
 
 specification:
   - Age at event
-  - The age of the individual at the time an event occurred, or the age listed
-    in the document.
+  - The age of the individual at the time an event occurred, or the age listed in
+    the document.
 
 label: 'Age at event'
 
@@ -70,6 +70,8 @@ superstructures:
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WIFE": "{1:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,8 +20,8 @@ standard tag: NSFX
 
 specification:
   - Name suffix
-  - Text which appears on a name line after or behind the given and surname
-    parts of a name.
+  - Text which appears on a name line after or behind the given and surname parts
+    of a name.
 
 label: 'Name suffix'
 
@@ -32,6 +32,8 @@ substructures: {}
 superstructures:
   "https://gedcom.io/terms/v7/INDI-NAME": "{0:M}"
   "https://gedcom.io/terms/v7/NAME-TRAN": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

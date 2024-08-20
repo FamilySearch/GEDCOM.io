@@ -20,11 +20,10 @@ standard tag: AGNC
 
 specification:
   - Responsible agency
-  - The organization, institution, corporation, person, or other entity that
-    has responsibility for the associated context. Examples are an employer of
-    a person of an associated occupation, or a church that administered rites
-    or events, or an organization responsible for creating or archiving
-    records.
+  - The organization, institution, corporation, person, or other entity that has
+    responsibility for the associated context. Examples are an employer of a person
+    of an associated occupation, or a church that administered rites or events, or
+    an organization responsible for creating or archiving records.
 
 label: 'Responsible agency'
 
@@ -85,6 +84,8 @@ superstructures:
   "https://gedcom.io/terms/v7/RETI": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -20,8 +20,8 @@ standard tag: SCHMA
 
 specification:
   - Extension schema
-  - A container for storing meta-information about the extension tags used in
-    this document. See Extensions for more.
+  - A container for storing meta-information about the extension tags used in this
+    document. See [Extensions] for more details.
 
 label: 'Extension schema'
 
@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

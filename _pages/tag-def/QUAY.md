@@ -20,12 +20,11 @@ standard tag: QUAY
 
 specification:
   - Quality of data
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-QUAY
-    indicating the credibility of a piece of information, based on its
-    supporting evidence. Some systems use this feature to rank multiple
-    conflicting opinions for display of most likely information first. It is
-    not intended to eliminate the receivers’ need to evaluate the evidence for
-    themselves.
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-QUAY`
+    indicating the credibility of a piece of information, based on its supporting
+    evidence. Some systems use this feature to rank multiple conflicting opinions
+    for display of most likely information first. It is not intended to eliminate
+    the receivers' need to evaluate the evidence for themselves.
 
 label: 'Quality of data'
 
@@ -37,6 +36,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

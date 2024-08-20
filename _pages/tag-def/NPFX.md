@@ -20,8 +20,7 @@ standard tag: NPFX
 
 specification:
   - Name prefix
-  - Text that appears on a name line before the given and surname parts of a
-    name.
+  - Text that appears on a name line before the given and surname parts of a name.
 
 label: 'Name prefix'
 
@@ -32,6 +31,8 @@ substructures: {}
 superstructures:
   "https://gedcom.io/terms/v7/INDI-NAME": "{0:M}"
   "https://gedcom.io/terms/v7/NAME-TRAN": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

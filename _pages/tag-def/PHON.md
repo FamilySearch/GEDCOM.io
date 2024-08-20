@@ -23,13 +23,13 @@ specification:
   - |
     A telephone number. Telephone numbers have many regional variations and can
     contain non-digit characters. Users should be encouraged to use
-    internationalized telephone numbers rather than local versions. As a
-    starting point for this recommendation, there are international standards
-    that use a “‘+’” shorthand for the international prefix (for example, in
-    place of “011” in the US or “00” in the UK). Examples are +1 (555) 555-1234
-    (US) or +44 20 1234 1234 (UK).
+    internationalized telephone numbers rather than local versions. As a starting
+    point for this recommendation, there are international standards that use a
+    "'+'" shorthand for the international prefix (for example, in place of "011" in
+    the US or "00" in the UK). Examples are `+1 (555) 555-1234` (US) or
+    `+44 20 1234 1234` (UK).
     
-    See ITU standards E.123 and E.164 for more information.
+    See ITU standards [E.123] and [E.164] for more information.
 
 label: 'Phone'
 
@@ -92,6 +92,8 @@ superstructures:
   "https://gedcom.io/terms/v7/WILL": "{0:M}"
   "https://gedcom.io/terms/v7/record-REPO": "{0:M}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

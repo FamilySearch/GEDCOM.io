@@ -21,47 +21,65 @@ standard tag: PLAC
 specification:
   - Place
   - |
-    The principal place in which the superstructure’s subject occurred,
-    represented as a [List] of jurisdictional entities in a sequence from the
-    lowest to the highest jurisdiction. As with other lists, the jurisdictions
-    are separated by commas. Any jurisdiction’s name that is missing is still
-    accounted for by an empty string in the list.
+    The principal place in which the superstructure's subject occurred, represented
+    as a [List] of jurisdictional entities in a sequence from the lowest to the
+    highest jurisdiction, where "jurisdiction" includes units in a political,
+    ecclesiastical, and geographical hierarchies and may include units of any size,
+    such as a continent, "at sea", or a specific building, farm, or cemetery. As
+    with other lists, the jurisdictions are separated by commas. Any jurisdiction's
+    name that is missing is still accounted for by an empty string in the list.
     
-    The type of each jurisdiction is given in the PLAC.FORM substructure, if
-    present, or in the HEAD.PLAC.FORM structure. If neither is present, the
-    jurisdictional types are unspecified beyond the lowest-to-highest order
-    noted above.
+    The type of each jurisdiction is given in the `PLAC`.`FORM` substructure, if
+    present, or in the `HEAD`.`PLAC`.`FORM` structure. If neither is present, the
+    jurisdictional types are unspecified beyond the lowest-to-highest order noted
+    above.
   - |
-    Having an EXID without an EXID.TYPE substructure is deprecated. The meaning
-    of an EXID depends on its EXID.TYPE. The cardinality of EXID.TYPE will be
-    changed to {1:1} in version 8.0.
+    <div class="deprecation">
+    
+    Having an `EXID` without an `EXID`.`TYPE` substructure is deprecated. The
+    meaning of an `EXID` depends on its `EXID`.`TYPE`. The cardinality of
+    `EXID`.`TYPE` will be changed to `{1:1}` in version 8.0.
+    
+    </div>
     
     A place, which can be represented in several ways:
     
-    -   The payload contains a comma-separated list of region names, ordered
-        from smallest to largest. The specific meaning of each element is given
-        by the FORM substructure, or in the HEAD.PLAC.FORM if there is no FORM
-        substructure. Elements should be left blank if they are unknown, do not
-        apply to the location, or are too specific for the region in question.
+    - The payload contains a comma-separated list of region names, ordered from
+      smallest to largest. The specific meaning of each element is given by the
+      `FORM` substructure, or in the `HEAD`.`PLAC`.`FORM` if there is no `FORM`
+      substructure. If neither `FORM` exists, the meaning of the elements are not
+      defined in this specification beyond being names of jurisdictions of some
+      kind, ordered from smallest to largest.
     
-        A record describing births throughout Oneida county could be recorded
-        as
+      Elements should be left blank if they are unknown, do not apply to the
+      location, or are too specific for the region in question.
     
-            0 @S1@ SOUR
-            1 DATA
-            2 EVEN BIRT
-            3 PLAC , Oneida, Idaho, USA
-            4 FORM City, County, State, Country
+      <div class="example">
+        A record describing births throughout Oneida county could be recorded as
     
-    -   The payload may be translated or transliterated into different
-        languages or scripts using the TRAN substructure. It should use the
-        same FORM as the payload.
+      ```gedcom
+      0 @S1@ SOUR
+      1 DATA
+      2 EVEN BIRT
+      3 PLAC , Oneida, Idaho, USA
+      4 FORM City, County, State, Country
+      ```
     
-    -   Global coordinates may be presented in the MAP substructure
+      </div>
+    
+    - The payload may be translated or transliterated into different languages or
+      scripts using the `TRAN` substructure. It should use the same `FORM` as the
+      payload.
+    
+    - Global coordinates may be presented in the `MAP` substructure
+    
+    <div class="note">
     
     This specification does not support places where a region name contains a
-    comma. An alternative system for representing locations is likely to be
-    added in a later version.
+    comma. An alternative system for representing locations is likely to be added
+    in a later version.
+    
+    </div>
 
 label: 'Place'
 
@@ -135,6 +153,8 @@ superstructures:
   "https://gedcom.io/terms/v7/SLGS": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

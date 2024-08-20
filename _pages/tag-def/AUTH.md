@@ -21,9 +21,9 @@ standard tag: AUTH
 specification:
   - Author
   - The person, agency, or entity who created the record. For a published work,
-    this could be the author, compiler, transcriber, abstractor, or editor. For
-    an unpublished source, this may be an individual, a government agency,
-    church organization, or private organization.
+    this could be the author, compiler, transcriber, abstractor, or editor. For an
+    unpublished source, this may be an individual, a government agency, church
+    organization, or private organization.
 
 label: 'Author'
 
@@ -33,6 +33,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

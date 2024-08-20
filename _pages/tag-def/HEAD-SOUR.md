@@ -20,10 +20,10 @@ standard tag: SOUR
 
 specification:
   - Source
-  - An identifier for the product producing this dataset. A registration
-    process for these identifiers existed for a time, but no longer does. If an
-    existing identifier is known, it should be used. Otherwise, a URI owned by
-    the product should be used instead.
+  - An identifier for the product producing this dataset. A registration process
+    for these identifiers existed for a time, but no longer does. If an existing
+    identifier is known, it should be used. Otherwise, a URI owned by the product
+    should be used instead.
 
 label: 'Source'
 
@@ -37,6 +37,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

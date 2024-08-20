@@ -21,13 +21,14 @@ standard tag: CHAN
 specification:
   - Change
   - The most recent change to the superstructure. This is metadata about the
-    structure itself, not data about its subject. See CHANGE_DATE for more.
+    structure itself, not data about its subject. See `CHANGE_DATE` for more
+    details.
   - |
-    The date of the most recent modification of the superstructure, optionally
-    with notes about that modification.
+    The date of the most recent modification of the superstructure, optionally with
+    notes about that modification.
     
-    The NOTE substructure may describe previous changes as well as the most
-    recent, although only the most recent change is described by the DATE
+    The `NOTE` substructure may describe previous changes as well as the most
+    recent, although only the most recent change is described by the `DATE`
     substructure.
 
 label: 'Change'
@@ -47,6 +48,8 @@ superstructures:
   "https://gedcom.io/terms/v7/record-SNOTE": "{0:1}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
   "https://gedcom.io/terms/v7/record-SUBM": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

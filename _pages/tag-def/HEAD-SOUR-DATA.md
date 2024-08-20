@@ -20,9 +20,9 @@ standard tag: DATA
 
 specification:
   - Data
-  - The electronic data source or digital repository from which this dataset
-    was exported. The payload is the name of that source, with substructures
-    providing additional details about the source (not the export).
+  - The electronic data source or digital repository from which this dataset was
+    exported. The payload is the name of that source, with substructures providing
+    additional details about the source (not the export).
 
 label: 'Data'
 
@@ -34,6 +34,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD-SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

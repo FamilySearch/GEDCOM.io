@@ -20,10 +20,11 @@ standard tag: VERS
 
 specification:
   - Version
-  - The version number of the official specification that this document’s data
+  - The version number of the official specification that this document's data
     conforms to. This must include the major and minor version (for example,
-    “7.0”); it may include the patch as well (for example, “7.0.1”), but doing
-    so is not required. See [A Guide to Version Numbers] for more.
+    "`7.0`"); it may include the patch as well (for example, "`7.0.1`"), but doing
+    so is not required. See [A Guide to Version Numbers] for more details about
+    version numbers.
 
 label: 'Version'
 
@@ -33,6 +34,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/GEDC": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

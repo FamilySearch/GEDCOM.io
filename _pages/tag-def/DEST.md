@@ -21,7 +21,7 @@ standard tag: DEST
 specification:
   - Destination
   - An identifier for the system expected to receive this document. See
-    HEAD.SOUR for guidance on choosing identifiers.
+    `HEAD`.`SOUR` for guidance on choosing identifiers.
 
 label: 'Destination'
 
@@ -31,6 +31,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

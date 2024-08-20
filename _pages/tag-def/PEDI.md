@@ -20,7 +20,7 @@ standard tag: PEDI
 
 specification:
   - Pedigree
-  - An enumerated value from set https://gedcom.io/terms/v7/enumset-PEDI
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-PEDI`
     indicating the type of child-to-family relationship represented by the
     superstructure.
 
@@ -35,6 +35,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/INDI-FAMC": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

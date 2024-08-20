@@ -19,10 +19,12 @@ uri: https://gedcom.io/terms/v7/enum-HUSB
 standard tag: HUSB
 
 specification:
-  - Husband; implies SPOU
+  - Husband; implies `SPOU`
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

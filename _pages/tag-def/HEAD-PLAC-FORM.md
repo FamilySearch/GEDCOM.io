@@ -20,7 +20,7 @@ standard tag: FORM
 
 specification:
   - Format
-  - Any PLAC with no FORM shall be treated as if it has this FORM.
+  - Any `PLAC` with no [`FORM`] shall be treated as if it has this [`FORM`].
 
 label: 'Format'
 
@@ -30,6 +30,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD-PLAC": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```
