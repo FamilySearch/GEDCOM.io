@@ -334,3 +334,20 @@ to be legal in 7.0.
 `WAC` has a complicated history.  Strictly speaking, it was not present in 5.5.1, but was in 5.3 and earlier
 GEDCOM versions and is still used in 5.5.1 by some implementations.  FamilySearch GEDCOM 7.0 replaces `WAC`
 with `INIL`.
+
+## ROMAN and UNKNOWN calendars
+
+The calendar values `ROMAN` and `UNKNOWN` were permitted in 5.5.1 but their meaning was never defined, and they are
+not permitted in FamilySearch GEDCOM 7.0. If they appear in any 5.5.1 file, their use would be implementation
+specific and so should be converted to `_ROMAN` and `_UNKNOWN`, respectively.
+
+This 5.5.1:
+```
+2 DATE @#ROMAN@ 71
+```
+
+becomes this 7.0:
+```
+2 DATE _ROMAN 71
+```
+

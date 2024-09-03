@@ -1,0 +1,29 @@
+---
+title: enum-NCHI
+permalink: /terms/v7/enum-NCHI.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-NCHI
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-NCHI
+
+standard tag: NCHI
+
+specification:
+  - A count of children; either `https://gedcom.io/terms/v7/INDI-NCHI` or
+    `https://gedcom.io/terms/v7/FAM-NCHI`
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
+...
+
+```

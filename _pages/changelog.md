@@ -4,6 +4,7 @@ permalink: /changelog/
 sidebar:
 nav: "changelog"
 ---
+
 # Version 7.0.15
 
 - Clarified that `FORM`.`MEDI` describe the original medium, not the derived medium, when used with derived files.
