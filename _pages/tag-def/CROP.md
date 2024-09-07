@@ -55,6 +55,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/OBJE": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

@@ -33,6 +33,8 @@ superstructures:
   "https://gedcom.io/terms/v7/HEAD": "{0:1}"
   "https://gedcom.io/terms/v7/record-FAM": "{0:M}"
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

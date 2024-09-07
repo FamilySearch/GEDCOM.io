@@ -25,6 +25,8 @@ label: 'Vendémiaire'
 
 calendars:
   - "https://gedcom.io/terms/v7/cal-FRENCH_R"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

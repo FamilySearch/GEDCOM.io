@@ -41,6 +41,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/MAP": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

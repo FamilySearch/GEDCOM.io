@@ -34,6 +34,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/INDI-NAME": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

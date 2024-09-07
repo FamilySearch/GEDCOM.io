@@ -30,6 +30,8 @@ substructures: {}
 
 superstructures:
   "https://gedcom.io/terms/v7/HEAD-PLAC": "{1:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```
