@@ -33,6 +33,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/REPO": "{0:M}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

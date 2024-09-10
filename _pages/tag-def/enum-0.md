@@ -23,6 +23,8 @@ specification:
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-QUAY"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

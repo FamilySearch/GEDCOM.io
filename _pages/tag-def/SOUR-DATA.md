@@ -32,6 +32,8 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

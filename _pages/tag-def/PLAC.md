@@ -23,9 +23,11 @@ specification:
   - |
     The principal place in which the superstructure's subject occurred, represented
     as a [List] of jurisdictional entities in a sequence from the lowest to the
-    highest jurisdiction. As with other lists, the jurisdictions are separated by
-    commas. Any jurisdiction's name that is missing is still accounted for by an
-    empty string in the list.
+    highest jurisdiction, where "jurisdiction" includes units in a political,
+    ecclesiastical, and geographical hierarchies and may include units of any size,
+    such as a continent, "at sea", or a specific building, farm, or cemetery. As
+    with other lists, the jurisdictions are separated by commas. Any jurisdiction's
+    name that is missing is still accounted for by an empty string in the list.
     
     The type of each jurisdiction is given in the `PLAC`.`FORM` substructure, if
     present, or in the `HEAD`.`PLAC`.`FORM` structure. If neither is present, the
@@ -45,8 +47,12 @@ specification:
     - The payload contains a comma-separated list of region names, ordered from
       smallest to largest. The specific meaning of each element is given by the
       `FORM` substructure, or in the `HEAD`.`PLAC`.`FORM` if there is no `FORM`
-      substructure. Elements should be left blank if they are unknown, do not apply
-      to the location, or are too specific for the region in question.
+      substructure. If neither `FORM` exists, the meaning of the elements are not
+      defined in this specification beyond being names of jurisdictions of some
+      kind, ordered from smallest to largest.
+    
+      Elements should be left blank if they are unknown, do not apply to the
+      location, or are too specific for the region in question.
     
       <div class="example">
         A record describing births throughout Oneida county could be recorded as
@@ -147,6 +153,8 @@ superstructures:
   "https://gedcom.io/terms/v7/SLGS": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

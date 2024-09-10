@@ -24,6 +24,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-MARRIED"
   - "https://gedcom.io/terms/v7/enum-PROFESSIONAL"
   - "https://gedcom.io/terms/v7/enum-OTHER"
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```

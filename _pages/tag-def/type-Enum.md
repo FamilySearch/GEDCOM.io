@@ -60,6 +60,8 @@ specification:
     </div>
     
     The URI for the `Enum` data type is `https://gedcom.io/terms/v7/type-Enum`.
+
+contact: "https://gedcom.io/community/"
 ...
 
 ```
