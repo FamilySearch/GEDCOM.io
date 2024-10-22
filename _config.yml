@@ -17,10 +17,10 @@
 title: FamilySearch GEDCOM
 subtitle: Genealogical Data Communication
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-  # this means to ignore newlines until "baseurl:"
   - The official website for the GEDCOM specification used for storing and sharing genealogical information.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""  # the subpath of your site, e.g. /blog
+url: ""  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FamilySearch
 github_username: FamilySearch
 repository: "FamilySearch/GEDCOM.io"
@@ -40,7 +40,7 @@ plugins:
   - jekyll-include-cache
 
 permalink: /:year/:month/:day/:title
-# paginate: 5 # amount of posts to show
+# paginate: 5  # amount of posts to show
 # paginate_path: /page:num/
 timezone: America/Denver
 
@@ -49,7 +49,7 @@ include:
 
 # Analytics
 analytics:
-  provider: "custom" # Put your analytics code in /_includes/analytics-providers/custom.html
+  provider: "custom"  # Put your analytics code in /_includes/analytics-providers/custom.html
 
 collections:
   faqs:
