@@ -1,8 +1,9 @@
 ﻿0 HEAD
-1 SOUR TEST_FILES
-1 SUBM @1@
 1 GEDC
 2 VERS 7.0
+1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+1 SOUR TEST_FILES
+1 SUBM @1@
 1 LANG af
 1 SCHMA
 2 TAG _PHRASE https://gedcom.io/terms/v7/PHRASE
