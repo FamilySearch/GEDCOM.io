@@ -1,6 +1,7 @@
 ﻿0 HEAD
 1 GEDC
 2 VERS 7.0
+1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
 0 @1@ OBJE
 1 NOTE Traditional file URI for a local file with an empty authority, per RFC 8089.
 1 FILE file:///unix/absolute

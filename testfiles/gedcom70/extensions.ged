@@ -16,7 +16,9 @@
 2 TAG _PHRASE https://gedcom.io/terms/v7/PHRASE
 2 TAG _PARTY http://example.com/party-participation
 2 TAG _PARTY http://example.com/party
-1 NOTE This file contains the following extension-related content:
+1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+2 CONT
+2 CONT This file contains the following extension-related content:
 2 CONT Standard record with an extTag           0 @U1@ _USER
 2 CONT Standard substructure                    1 NAME Aliased record
 2 CONT Standard structure with an extTag        1 _CREATOR @U1@
