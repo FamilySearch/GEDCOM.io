@@ -2,6 +2,15 @@
 1 GEDC
 2 VERS 7.0
 1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+2 CONT That observation applies even to the substructures of this NOTE.
+2 MIME text/plain
+2 LANG en-US
+2 TRAN British English
+3 LANG en-GB
+2 SOUR @S1@
+3 PAGE 1
+2 SOUR @S1@
+3 PAGE 2
 1 SCHMA
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
@@ -39,15 +48,6 @@
 1 LANG en-US
 1 PLAC
 2 FORM City, County, State, Country
-1 NOTE American English
-2 MIME text/plain
-2 LANG en-US
-2 TRAN British English
-3 LANG en-GB
-2 SOUR @S1@
-3 PAGE 1
-2 SOUR @S1@
-3 PAGE 2
 0 @F1@ FAM
 1 RESN CONFIDENTIAL, LOCKED
 1 NCHI 2
