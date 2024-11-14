@@ -1,0 +1,45 @@
+# For documentation on the github environment, see
+# https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+#
+# For documentation on the syntax of this file, see
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+---
+name: Validate-GEDCOM
+
+on:
+  push:
+    branches: [main, next-minor, next-patch]
+  pull_request:
+    branches: [main, next-minor, next-patch]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-gedcom:
+    runs-on: windows-latest
+    env:
+      BUILD_PLATFORM: x64
+
+    steps:
+      - name: Checkout GEDCOM.io
+        uses: actions/checkout@v4
+
+      - name: Checkout GEDCOM-registries
+        uses: actions/checkout@v4
+        with:
+          repository: FamilySearch/GEDCOM-registries
+          path: GEDCOM-registries
+
+      - name: Download GedValidate
+        shell: pwsh
+        run: Invoke-WebRequest https://github.com/ArmidaleSoftware/gedcom7/releases/download/v1.1.0/Windows-Release-GedValidate.zip -OutFile GedValidate.zip
+
+      - name: Unzip GedValidate
+        shell: pwsh
+        run: Expand-Archive GedValidate.zip -DestinationPath .\${{env.BUILD_PLATFORM}}
+
+      - name: Run GedValidate
+        shell: pwsh
+        run: |
+          .\${{env.BUILD_PLATFORM}}\GedValidate.exe .\GEDCOM-registries .\testfiles\gedcom70\
