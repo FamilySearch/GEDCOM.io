@@ -99,6 +99,9 @@ Three keys are always present:
     </tbody></table>
 
     The URI that identifies the concept documented in this YAML file.
+    If the YAML file also includes the key <code>fragment</code>,
+    this URI should be followed by a fragment identifier when used;
+    the meaning of the fragment is defined by the <code>fragment</code> entry.
 
 ## Other keys
 
@@ -183,6 +186,19 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
     Standard structures may have an `extension tags` entry to list *fully compatible* extensions that predated the standard and can be converted to the `standard tag` without any other modification.
     For example, 7.0's `UID` structure is fully compatible with the common 5.5.1 extension identified by tag `_UID`.
+
+-   <table><tbody>
+    <tr><th>Key</th><td><code>fragment</code></td></tr>
+    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td><code>type: uri</code></td></tr>
+    </tbody></table>
+    
+    When combined with the fragment identifer of a URI,
+    creates a brief name or label to show to users to describe the fragment identifier.
+    It is recommended that applications use this instead of `label` in UI elements.
+    
+    By being present in the YAML file, this field also implies that the URI should have a fragment identifier appended to it when used.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>help text</code></td></tr>
