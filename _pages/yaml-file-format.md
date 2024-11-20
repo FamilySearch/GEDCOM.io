@@ -103,6 +103,10 @@ Three keys are always present:
     this URI should be followed by a fragment identifier when used;
     the meaning of the fragment is defined by the <code>fragment</code> entry.
 
+    For example, if <code>uri</code> is "https://gedcom.io/terms/v7/RIN" and
+    <code>fragment</code> is "Source System", then a full URI might be
+    "https://gedcom.io/terms/v7/RIN#MyProgram" where the fragment identifier
+    "MyProgram" indicates the source system that generated the RIN payload value.
 ## Other keys
 
 The following keys may appear in a YAML file.
