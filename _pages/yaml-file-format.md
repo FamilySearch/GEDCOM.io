@@ -123,7 +123,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td>all</td></tr>
     </tbody></table>
 
-    An identifier of who is allowed to make changes to this file.  For example, it could be
+    An identifier of who is allowed to authorize changes to this file.  For example, it could be
     FamilySearch, another company name, or a domain name.  If not present, the change controller
     is the GEDCOM Steering Committee.
 
