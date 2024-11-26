@@ -117,6 +117,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     The list may be incomplete, as a new calendar might be defined that uses an existing month.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>change controller</code></td></tr>
+    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    An identifier of who is allowed to authorize changes to this file.  For example, it could be
+    FamilySearch, another company name, or a domain name.  If not present, the change controller
+    is the GEDCOM Steering Committee.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>contact</code></td></tr>
     <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
