@@ -198,9 +198,9 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td><code>type: uri</code></td></tr>
     </tbody></table>
     
-    When combined with the fragment identifer of a URI,
-    creates a brief name or label to show to users to describe the fragment identifier.
-    It is recommended that applications use this instead of `label` in UI elements.
+A recommended brief name or label for a fragment identifier, to show to users. Labels are user-centric; for programmer-centric explanations of the concept, see `specification`.
+
+Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `help text`.
     
     By being present in the YAML file, this field also implies that the URI should have a fragment identifier appended to it when used.
 
