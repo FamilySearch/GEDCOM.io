@@ -47,7 +47,7 @@ The GEDCOM standard is overseen by a steering committee who meet weekly to discu
 
 Most of the work of developing and refining the standard is done between those meetings,
 either by individuals or project teams.
-That work consists of identifying issues, proposing alternatives, and writing those up as pull requests.
+That work consists of identifying issues, proposing changes, and converting those change proposals into pull requests.
 The weekly steering committee meetings primarily discuss the issues and pull requests resulting from that project team and individual work.
 
 When the current steering committee notices that someone not on the committee is making consistent helpful contributions spanning several areas of the specification over an extended time,
