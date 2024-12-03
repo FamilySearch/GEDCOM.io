@@ -76,6 +76,10 @@ properties:
     "$ref": "#/definitions/uris"
   contact:
     type: string
+  change controller:
+    type: string
+  fragment:
+    type: string
 
 additionalProperties: false
 
