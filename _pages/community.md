@@ -53,7 +53,9 @@ The weekly steering committee meetings primarily discuss the issues and pull req
 When the current GEDCOM Steering Committee notices that someone not on the committee is making consistent helpful contributions spanning several areas of the specification over an extended time,
 they invite that person to join the steering committee.
 
-## Project Teams
+### Project Teams
+
+The GEDCOM Steering Committee also organizes Project Teams for more complex projects.
 
 If you would like additional information or request to participate in one or more of the following Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
