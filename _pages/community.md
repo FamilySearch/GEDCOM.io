@@ -41,7 +41,7 @@ FamilySearch has consolidated on one page the companies and websites committed t
 If you are associated with an application and want to add it to this listing or change its existing entry in this listing, send an email to <GEDCOM@FamilySearch.org>.
 
 
-## Steering Committee
+## GEDCOM Steering Committee
 
 The GEDCOM standard is overseen by a steering committee who meet weekly to discuss issues and pull requests on the GEDCOM  repositories.
 
