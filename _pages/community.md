@@ -50,6 +50,7 @@ either by individuals or project teams.
 That work consists of identifying issues, proposing changes, and converting those change proposals into pull requests.
 The weekly steering committee meetings primarily discuss the issues and pull requests resulting from that project team or individual work.
 
+The GEDCOM Steering Committee was initially formed by FamilySearch from volunteers representing several companies and groups.
 When the current GEDCOM Steering Committee notices that someone not on the committee is making consistent helpful contributions spanning several areas of the specification over an extended time,
 they invite that person to join the steering committee.
 
