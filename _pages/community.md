@@ -41,7 +41,22 @@ FamilySearch has consolidated on one page the companies and websites committed t
 If you are associated with an application and want to add it to this listing or change its existing entry in this listing, send an email to <GEDCOM@FamilySearch.org>.
 
 
-## Project Teams
+## GEDCOM Steering Committee
+
+The GEDCOM standard is overseen by a steering committee who meet weekly to discuss issues and pull requests on the GEDCOM repositories.
+
+Most of the work of developing and refining the standard is done between those meetings,
+either by individuals or project teams.
+That work consists of identifying issues, proposing changes, and converting those change proposals into pull requests.
+The weekly steering committee meetings primarily discuss the issues and pull requests resulting from that project team or individual work.
+
+The GEDCOM Steering Committee was initially formed by FamilySearch from volunteers representing several companies and groups.
+When the current GEDCOM Steering Committee notices that someone not on the committee is making consistent helpful contributions spanning several areas of the specification over an extended time,
+they invite that person to join the steering committee.
+
+### Project Teams
+
+The GEDCOM Steering Committee also organizes Project Teams for more complex projects.
 
 If you would like additional information or request to participate in one or more of the following Project Teams, send an email to <GEDCOM@familysearch.org> putting "Project Team: team name(s)" in the subject.
 
