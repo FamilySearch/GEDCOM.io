@@ -43,7 +43,7 @@ If you are associated with an application and want to add it to this listing or 
 
 ## GEDCOM Steering Committee
 
-The GEDCOM standard is overseen by a steering committee who meet weekly to discuss issues and pull requests on the GEDCOM  repositories.
+The GEDCOM standard is overseen by a steering committee who meet weekly to discuss issues and pull requests on the GEDCOM repositories.
 
 Most of the work of developing and refining the standard is done between those meetings,
 either by individuals or project teams.
