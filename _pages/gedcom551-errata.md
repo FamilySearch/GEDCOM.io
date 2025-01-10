@@ -15,7 +15,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 37 |  6 | MULTIMEDIA_LINK |            | [ | Add open bracket before first line of MULTIMEDIA_LINK |
 | 37 | 12 | MULTIMEDIA_LINK |            | ] | Add close bracket after last line of MULTIMEDIA_LINK |
 | 37 |  8 | MULTIMEDIA_LINK | n **OBJE** | n **OBJE**     {1:1} | Add cardinality |
-| 59 |  9 | PLACE_PHONETIC_VARIATION | the same form as  was the place name | the same form as was the place name | Remove extra space before "was" |
+| 59 |  9 | PLACE_PHONETIC_VARIATION | the same form as \ was the place name | the same form as was the place name | Remove extra space before "was" |
 | 59 | 11 | PLACE_PHONETIC_VARIATION | for example if hiragana was used to provide a reading of a a | for example if hiragana was used to provide a reading of a | Remove duplicate "a" |
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
 | 62 | 14 | SOURCE_FILED_BY_ENTRY |  {Size= 1:60} | {Size=1:60} | Remove space |
