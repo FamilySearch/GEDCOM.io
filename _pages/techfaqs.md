@@ -258,7 +258,7 @@ The standard `RESN` tag is used to mark data confidential but it is not a substr
 
 Note that with all confidential communications, it is important not only to mark the data as confidential but also to ensure that the recipient of the data understands in what cases they are to remove the confidential data and agrees to do so. `_RESN` communicates the confidential nature, but does not enforce the desired behavior.
 
-# Miscellaneous
+# Places
 
 ## How do I list two places in an emigration?
 
@@ -274,6 +274,30 @@ Use paired immigration/emigration events:
 3 FORM Borough, City, State, Country
 2 DATE 8 MAR 1903
 ```
+
+## How do I record a place whose jurisdictional level is ambiguous?
+
+Sometimes a source is found indicating a place but it is unclear what jurisdiction level was meant.
+For example, if the record says "New York", does it refer to a state or a city? There are many
+examples of such places in the world where the city and a larger jurisdiction have the same name,
+such as "St. Louis" in Missouri being both a city and a county.
+
+The `PLAC`.`FORM` structure in GEDCOM contains a list of jurisdictional titles, leading to the
+issue in GEDCOM of how to represent a place name whose jurisdictional title could potentially
+be any of two or more possibilities.  Simply not including a `FORM` with the specific place is
+insufficient since `HEAD`.`PLAC`.`FORM` is used with any `PLAC` with no `FORM`.
+
+One might attempt to use a `PLAC` with no `FORM` in a GEDCOM file with no `HEAD`.`PLAC`.`FORM`
+since no version of GEDCOM has justified any assumption that levels have any specific meaning
+(such as "City, County, State, Country") without a `FORM` explicitly indicating that. In spite
+of that, some applications and users have incorrectly defaulted to assuming a `FORM` of 
+"City, County, State, Country", and some applications even ignore any `FORM` substructures and
+treat payloads with a smaller number of elements as if they had additional blank elements at
+the end, leading to problems of interpretation of GEDCOM files.
+
+A `PLAC`.`NOTE` could perhaps be used in such a case.
+
+# Miscellaneous
 
 ## How do I choose LANG payloads?
 
@@ -381,7 +405,7 @@ while others might put it in the `CALN` of a `SOURCE_REPOSITORY_CITATION` as fol
 Note that unlike the `PAGE` structure, the `CALN` structure has no current recommendation about using
 label: value pairs.
 
-# How do I record information about one parent?
+## How do I record information about one parent?
 
 Parent-child relationships are stored in the `INDI`.`FAMC` structure, which must point to a `FAM` not an `INDI`.
 Additional details about that relationship are stored in its `PEDI` substructure.
