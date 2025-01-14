@@ -22,6 +22,7 @@ or email addresses.  The current contact email address for all GEDCOM versions b
 
 - [Version 5.6 (XML)](/specifications/Gedcom5.6.pdf)
 - [Version 5.5.1](/specifications/ged551.pdf)
+- [Version 5.5.1 Errata](/gedcom551-errata/)
 - [Version 5.5](/specifications/ged55.pdf)
 - [Version 5.4](/specifications/Gedcom5.4.pdf)
 - [Version 5.3](/specifications/Gedcom5.3.pdf)
