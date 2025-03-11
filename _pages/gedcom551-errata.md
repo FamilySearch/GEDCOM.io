@@ -21,7 +21,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 62 | 14 | SOURCE_FILED_BY_ENTRY |  {Size= 1:60} | {Size=1:60} | Remove space |
 | 84 |  7 | ANCE | Pertaining to forbearers of an individual. | Pertaining to forebearers of an individual. | Change "forbearers" to "forebearers" |
 | 84 | 16 | BAPL | **BAPL {BAPTISM-LDS}:=** | **BAPL {BAPTISM_LDS}:=** | Change "-" to "_" |
-| 87 | 12 | EMAI | **EMAI {EMAIL}:=** | **EMAIL{EMAIL}:=** | Change EMAI to EMAIL |
+| 87 | 12 | EMAI | **EMAI {EMAIL}:=** | **EMAIL {EMAIL}:=** | Change EMAI to EMAIL |
 | 88 |  7 | FAX | **FAX {FACIMILIE}:=** | **FAX {FACSIMILE}:=** | Change FACIMILIE to FACSIMILE |
 | 88 |  8 | FAX | Electronic facimilie transmission. | Electronic facsimile transmission. | Change facimilie to facsimile |
 | 88 | 15 | FONE | **FONE {PHONETIC}** | **FONE {PHONETIC}:=** | Add ":=" |
