@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/CORP
 
-standard tag: CORP
+standard tag: 'CORP'
 
 specification:
   - Corporate name

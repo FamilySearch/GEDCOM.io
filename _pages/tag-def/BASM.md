@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/BASM
 
-standard tag: BASM
+standard tag: 'BASM'
 
 specification:
   - Bas Mitzvah

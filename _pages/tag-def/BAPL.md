@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/BAPL
 
-standard tag: BAPL
+standard tag: 'BAPL'
 
 specification:
   - Baptism, Latter-Day Saint

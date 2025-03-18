@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-DNS
 
-standard tag: DNS
+standard tag: 'DNS'
 
 specification:
   - "Applies to: `SLGC`, `SLGS`"

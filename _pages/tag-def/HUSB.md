@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/HUSB
 
-standard tag: HUSB
+standard tag: 'HUSB'
 
 specification:
   - Husband

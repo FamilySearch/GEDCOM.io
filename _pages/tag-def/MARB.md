@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/MARB
 
-standard tag: MARB
+standard tag: 'MARB'
 
 specification:
   - Marriage banns

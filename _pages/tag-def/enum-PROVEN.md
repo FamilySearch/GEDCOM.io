@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-PROVEN
 
-standard tag: PROVEN
+standard tag: 'PROVEN'
 
 specification:
   - Linking this child to this family has been proven.

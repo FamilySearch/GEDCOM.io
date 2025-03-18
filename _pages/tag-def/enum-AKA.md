@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-AKA
 
-standard tag: AKA
+standard tag: 'AKA'
 
 specification:
   - Also known as, alias, etc.

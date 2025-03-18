@@ -16,14 +16,14 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/WWW
 
-standard tag: WWW
+standard tag: 'WWW'
 
 specification:
   - Web address
   - |
     A URL or other locator for a World Wide Web page of the subject of the
-    superstructure, as defined by any relevant standard such as [whatwg/url],
-    [RFC 3986], [RFC 3987], and so forth.
+    superstructure, as defined by any relevant standard such as [whatwg/url], [RFC
+    3986], [RFC 3987], and so forth.
     
     Like other substructures, the `WWW` structure provides details about the
     subject of its superstructure. For example, a `MARR`.`WWW` is a world wide web

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-SUBMITTED
 
-standard tag: SUBMITTED
+standard tag: 'SUBMITTED'
 
 specification:
   - "Applies to: All"

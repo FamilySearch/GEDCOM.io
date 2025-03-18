@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/CAST
 
-standard tag: CAST
+standard tag: 'CAST'
 
 specification:
   - Caste

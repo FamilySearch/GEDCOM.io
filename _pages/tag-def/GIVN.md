@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/GIVN
 
-standard tag: GIVN
+standard tag: 'GIVN'
 
 specification:
   - Given name

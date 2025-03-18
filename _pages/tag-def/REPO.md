@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/REPO
 
-standard tag: REPO
+standard tag: 'REPO'
 
 specification:
   - Repository

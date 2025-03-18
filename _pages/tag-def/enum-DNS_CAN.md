@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-DNS_CAN
 
-standard tag: DNS_CAN
+standard tag: 'DNS_CAN'
 
 specification:
   - "Applies to: `SLGS`"

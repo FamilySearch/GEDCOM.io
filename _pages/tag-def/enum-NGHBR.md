@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-NGHBR
 
-standard tag: NGHBR
+standard tag: 'NGHBR'
 
 specification:
   - Neighbor

@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/HEAD-LANG
 
-standard tag: LANG
+standard tag: 'LANG'
 
 specification:
   - Language
@@ -26,8 +26,7 @@ specification:
     structure. An application may choose to use a different default based on its
     knowledge of the language preferences of the user.
     
-    The payload of the `LANG` structure is a language tag, as defined by [BCP
-    47].
+    The payload of the `LANG` structure is a language tag, as defined by [BCP 47].
     
     <div class="note">
     

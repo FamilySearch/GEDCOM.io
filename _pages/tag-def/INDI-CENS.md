@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/INDI-CENS
 
-standard tag: CENS
+standard tag: 'CENS'
 
 specification:
   - Census

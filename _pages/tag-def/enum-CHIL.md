@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-CHIL
 
-standard tag: CHIL
+standard tag: 'CHIL'
 
 specification:
   - Child

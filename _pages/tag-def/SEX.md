@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/SEX
 
-standard tag: SEX
+standard tag: 'SEX'
 
 specification:
   - Sex

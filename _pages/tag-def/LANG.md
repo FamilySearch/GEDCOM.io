@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/LANG
 
-standard tag: LANG
+standard tag: 'LANG'
 
 specification:
   - Language
@@ -24,8 +24,8 @@ specification:
     The primary human language of the superstructure. The primary language in which
     the `Text`-typed payloads of the superstructure and its substructures appear.
     
-    The payload of the `LANG` structure is a language tag, as defined by [BCP
-    47]. A [registry of component subtags] is maintained publicly by the IANA.
+    The payload of the `LANG` structure is a language tag, as defined by [BCP 47].
+    A [registry of component subtags] is maintained publicly by the IANA.
     
     In the absence of a `LANG` structure, the language is assumed to be
     unspecified; that may also be recorded explicitly with language tag `und`

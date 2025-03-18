@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/BIRT
 
-standard tag: BIRT
+standard tag: 'BIRT'
 
 specification:
   - Birth

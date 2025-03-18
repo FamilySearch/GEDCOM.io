@@ -16,7 +16,7 @@ type: month
 
 uri: https://gedcom.io/terms/v7/month-JUN
 
-standard tag: JUN
+standard tag: 'JUN'
 
 specification:
   - June

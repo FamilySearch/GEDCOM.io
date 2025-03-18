@@ -16,13 +16,13 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/NAME-TRAN
 
-standard tag: TRAN
+standard tag: 'TRAN'
 
 specification:
   - Translation
   - |
-    A type of `TRAN` substructure specific to [Personal Names]. Each
-    `NAME`.`TRAN` must have a `LANG` substructure. See also `INDI`.`NAME`.
+    A type of `TRAN` substructure specific to [Personal Names]. Each `NAME`.`TRAN`
+    must have a `LANG` substructure. See also `INDI`.`NAME`.
     
     <div class="example">
     

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-ADOP-HUSB
 
-standard tag: HUSB
+standard tag: 'HUSB'
 
 specification:
   - Adopted by the `HUSB` of the `FAM` pointed to by `FAMC`.

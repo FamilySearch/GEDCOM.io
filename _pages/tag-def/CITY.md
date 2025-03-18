@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/CITY
 
-standard tag: CITY
+standard tag: 'CITY'
 
 specification:
   - City

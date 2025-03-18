@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/MIME
 
-standard tag: MIME
+standard tag: 'MIME'
 
 specification:
   - Media type
@@ -40,7 +40,7 @@ specification:
         `&quote;` and `&apos;` are only needed in attributes. Other entities should
         be represented as their respective Unicode characters instead.
     
-      Supporting more of HTML is encouraged. Unsupported elements should be ignored
+      Supporting more of HTML is encouraged. Unsupported tags should be ignored
       during display.
     
     <div class="note">

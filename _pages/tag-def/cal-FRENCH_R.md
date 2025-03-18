@@ -16,7 +16,7 @@ type: calendar
 
 uri: https://gedcom.io/terms/v7/cal-FRENCH_R
 
-standard tag: FRENCH_R
+standard tag: 'FRENCH_R'
 
 specification:
   - |
@@ -27,21 +27,21 @@ specification:
     
     Permitted months are
     
-    | Code   | Name                 |
-    | :----- | :------------------- |
-    | `VEND` | Vendémiaire          |
-    | `BRUM` | Brumaire             |
-    | `FRIM` | Frimaire             |
-    | `NIVO` | Nivôse               |
-    | `PLUV` | Pluviôse             |
-    | `VENT` | Ventôse              |
-    | `GERM` | Germinal             |
-    | `FLOR` | Floréal              |
-    | `PRAI` | Prairial             |
-    | `MESS` | Messidor             |
-    | `THER` | Thermidor            |
-    | `FRUC` | Fructidor            |
-    | `COMP` | Jour Complémentaires |
+    | `stdTag` | Name                 |
+    | :------- | :------------------- |
+    | `VEND`   | Vendémiaire          |
+    | `BRUM`   | Brumaire             |
+    | `FRIM`   | Frimaire             |
+    | `NIVO`   | Nivôse               |
+    | `PLUV`   | Pluviôse             |
+    | `VENT`   | Ventôse              |
+    | `GERM`   | Germinal             |
+    | `FLOR`   | Floréal              |
+    | `PRAI`   | Prairial             |
+    | `MESS`   | Messidor             |
+    | `THER`   | Thermidor            |
+    | `FRUC`   | Fructidor            |
+    | `COMP`   | Jour Complémentaires |
     
     No epoch marker is permitted in this calendar.
     

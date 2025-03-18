@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-CLERGY
 
-standard tag: CLERGY
+standard tag: 'CLERGY'
 
 specification:
   - Religious official in event; implies `OFFICIATOR`

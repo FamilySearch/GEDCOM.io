@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-WITN
 
-standard tag: WITN
+standard tag: 'WITN'
 
 specification:
   - Witness

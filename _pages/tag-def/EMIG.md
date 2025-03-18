@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/EMIG
 
-standard tag: EMIG
+standard tag: 'EMIG'
 
 specification:
   - Emigration

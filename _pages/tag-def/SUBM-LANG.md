@@ -16,15 +16,14 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/SUBM-LANG
 
-standard tag: LANG
+standard tag: 'LANG'
 
 specification:
   - Language
   - |
     A language the subject of that record understands.
     
-    The payload of the `LANG` structure is a language tag, as defined by [BCP
-    47].
+    The payload of the `LANG` structure is a language tag, as defined by [BCP 47].
 
 label: 'Language'
 
