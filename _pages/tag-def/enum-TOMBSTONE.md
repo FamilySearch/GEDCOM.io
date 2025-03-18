@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-TOMBSTONE
 
-standard tag: TOMBSTONE
+standard tag: 'TOMBSTONE'
 
 specification:
   - Burial marker or related memorial

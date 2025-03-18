@@ -16,12 +16,11 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/FILE
 
-standard tag: FILE
+standard tag: 'FILE'
 
 specification:
   - File reference
-  - A reference to an external file. See the [File Path datatype] for more
-    details.
+  - A reference to an external file. See the [File Path datatype] for more details.
 
 label: 'File reference'
 

@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/TITL
 
-standard tag: TITL
+standard tag: 'TITL'
 
 specification:
   - Title
@@ -47,9 +47,6 @@ specification:
     the `SOURCE_RECORD` substructures `AUTH`, `PUBL`, `REPO`, and so on. In such
     cases, the entire citation text may be presented as the payload of the
     `SOUR`.`TITL`.
-  - title
-  - A formal designation used by an individual in connection with positions of
-    royalty or other social status, such as Grand Duke.
 
 label: 'Title'
 
@@ -61,9 +58,6 @@ superstructures:
   "https://gedcom.io/terms/v7/FILE": "{0:1}"
   "https://gedcom.io/terms/v7/OBJE": "{0:1}"
   "https://gedcom.io/terms/v7/record-SOUR": "{0:1}"
-
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 
 contact: "https://gedcom.io/community/"
 ...

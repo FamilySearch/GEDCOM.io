@@ -16,7 +16,7 @@ type: calendar
 
 uri: https://gedcom.io/terms/v7/cal-GREGORIAN
 
-standard tag: GREGORIAN
+standard tag: 'GREGORIAN'
 
 specification:
   - |
@@ -26,20 +26,20 @@ specification:
     
     Permitted months are
     
-    | Code  | Name      |
-    | :---- | :-------- |
-    | `JAN` | January   |
-    | `FEB` | February  |
-    | `MAR` | March     |
-    | `APR` | April     |
-    | `MAY` | May       |
-    | `JUN` | June      |
-    | `JUL` | July      |
-    | `AUG` | August    |
-    | `SEP` | September |
-    | `OCT` | October   |
-    | `NOV` | November  |
-    | `DEC` | December  |
+    | `stdTag` | Name      |
+    | :------- | :-------- |
+    | `JAN`    | January   |
+    | `FEB`    | February  |
+    | `MAR`    | March     |
+    | `APR`    | April     |
+    | `MAY`    | May       |
+    | `JUN`    | June      |
+    | `JUL`    | July      |
+    | `AUG`    | August    |
+    | `SEP`    | September |
+    | `OCT`    | October   |
+    | `NOV`    | November  |
+    | `DEC`    | December  |
     
     The epoch marker `BCE` is permitted in this calendar; year *y* BCE indicates a
     year *y* years before year 1. Thus, there is no year 0; year 1 BCE was followed

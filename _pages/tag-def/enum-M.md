@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-M
 
-standard tag: M
+standard tag: 'M'
 
 specification:
   - Male

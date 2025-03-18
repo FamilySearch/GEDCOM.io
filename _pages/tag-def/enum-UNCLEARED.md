@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-UNCLEARED
 
-standard tag: UNCLEARED
+standard tag: 'UNCLEARED'
 
 specification:
   - "Applies to: All"

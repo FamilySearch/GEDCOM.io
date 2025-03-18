@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-INFANT
 
-standard tag: INFANT
+standard tag: 'INFANT'
 
 specification:
   - "Applies to: All but `SLGC`"

@@ -16,11 +16,14 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/INDI-TITL
 
-standard tag: TITL
+standard tag: 'TITL'
 
 specification:
   - Title
   - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
+  - title
+  - A formal designation used by an individual in connection with positions of
+    royalty or other social status, such as Grand Duke.
 
 label: 'Title'
 
@@ -50,6 +53,9 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 
 contact: "https://gedcom.io/community/"
 ...

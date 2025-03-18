@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/record-FAM
 
-standard tag: FAM
+standard tag: 'FAM'
 
 specification:
   - Family record
@@ -57,7 +57,9 @@ specification:
     `HUSB` and `WIFE` as layout hints, for example, by consistently displaying the
     `HUSB` on the same side of the `WIFE` in a tree view. Family structures with
     more than 2 partners may either use several `FAM` records or use
-    `ASSOCIATION_STRUCTURE`s to indicate additional partners.
+    `ASSOCIATION_STRUCTURE`s to indicate additional partners. `ASSO` should not be
+    used for relationships that can be expressed using `HUSB`, `WIFE`, or `CHIL`
+    instead.
     
     <div class="note">
     
@@ -83,6 +85,10 @@ specification:
     same `INDI`; doing so implies a nonsensical birth order. An `INDI` record may
     have multiple `FAMC` substructures pointing to the same `FAM`, but doing so is
     not recommended.
+    
+    Source citations and notes related to the start of a specific child
+    relationship should be placed under the child's `BIRT`, `CHR`, or `ADOP` event,
+    rather than under the `FAM` record.
 
 label: 'Family record'
 

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-FICHE
 
-standard tag: FICHE
+standard tag: 'FICHE'
 
 specification:
   - Microfiche

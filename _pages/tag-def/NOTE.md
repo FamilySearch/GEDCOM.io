@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/NOTE
 
-standard tag: NOTE
+standard tag: 'NOTE'
 
 specification:
   - Note

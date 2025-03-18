@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-OFFICIATOR
 
-standard tag: OFFICIATOR
+standard tag: 'OFFICIATOR'
 
 specification:
   - Officiator of the event

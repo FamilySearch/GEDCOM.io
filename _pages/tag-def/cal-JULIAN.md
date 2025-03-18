@@ -16,7 +16,7 @@ type: calendar
 
 uri: https://gedcom.io/terms/v7/cal-JULIAN
 
-standard tag: JULIAN
+standard tag: 'JULIAN'
 
 specification:
   - |

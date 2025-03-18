@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/DIVF
 
-standard tag: DIVF
+standard tag: 'DIVF'
 
 specification:
   - Divorce filing

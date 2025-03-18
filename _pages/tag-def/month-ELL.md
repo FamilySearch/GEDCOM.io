@@ -16,7 +16,7 @@ type: month
 
 uri: https://gedcom.io/terms/v7/month-ELL
 
-standard tag: ELL
+standard tag: 'ELL'
 
 specification:
   - Elul (אֱלוּל)

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-VIDEO
 
-standard tag: VIDEO
+standard tag: 'VIDEO'
 
 specification:
   - Motion picture recording

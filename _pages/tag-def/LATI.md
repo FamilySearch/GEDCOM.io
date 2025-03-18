@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/LATI
 
-standard tag: LATI
+standard tag: 'LATI'
 
 specification:
   - Latitude

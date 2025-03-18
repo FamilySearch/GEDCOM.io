@@ -16,11 +16,14 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/INDI-RELI
 
-standard tag: RELI
+standard tag: 'RELI'
 
 specification:
   - Religion
   - An [Individual Attribute]. See also `INDIVIDUAL_ATTRIBUTE_STRUCTURE`.
+  - religion
+  - A religious denomination to which a person is affiliated or for which a record
+    applies.
 
 label: 'Religion'
 
@@ -50,6 +53,9 @@ substructures:
 
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 
 contact: "https://gedcom.io/community/"
 ...

@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/CONT
 
-standard tag: CONT
+standard tag: 'CONT'
 
 specification:
   - Continued

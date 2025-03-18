@@ -16,7 +16,7 @@ type: month
 
 uri: https://gedcom.io/terms/v7/month-DEC
 
-standard tag: DEC
+standard tag: 'DEC'
 
 specification:
   - December

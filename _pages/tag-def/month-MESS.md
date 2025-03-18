@@ -16,7 +16,7 @@ type: month
 
 uri: https://gedcom.io/terms/v7/month-MESS
 
-standard tag: MESS
+standard tag: 'MESS'
 
 specification:
   - Messidor

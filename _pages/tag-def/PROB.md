@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/PROB
 
-standard tag: PROB
+standard tag: 'PROB'
 
 specification:
   - Probate

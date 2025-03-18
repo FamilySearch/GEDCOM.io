@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/STAE
 
-standard tag: STAE
+standard tag: 'STAE'
 
 specification:
   - State

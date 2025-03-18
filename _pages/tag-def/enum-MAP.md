@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-MAP
 
-standard tag: MAP
+standard tag: 'MAP'
 
 specification:
   - Cartographic map

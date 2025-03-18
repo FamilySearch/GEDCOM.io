@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/CREA
 
-standard tag: CREA
+standard tag: 'CREA'
 
 specification:
   - Creation

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-FRIEND
 
-standard tag: FRIEND
+standard tag: 'FRIEND'
 
 specification:
   - Friend

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-PHOTO
 
-standard tag: PHOTO
+standard tag: 'PHOTO'
 
 specification:
   - Photograph

@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/SOUR
 
-standard tag: SOUR
+standard tag: 'SOUR'
 
 specification:
   - Source

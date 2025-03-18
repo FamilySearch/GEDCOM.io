@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/SUBM
 
-standard tag: SUBM
+standard tag: 'SUBM'
 
 specification:
   - Submitter

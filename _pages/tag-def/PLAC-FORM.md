@@ -16,7 +16,7 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/PLAC-FORM
 
-standard tag: FORM
+standard tag: 'FORM'
 
 specification:
   - Format

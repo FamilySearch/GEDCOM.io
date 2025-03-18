@@ -16,15 +16,12 @@ type: structure
 
 uri: https://gedcom.io/terms/v7/RELI
 
-standard tag: RELI
+standard tag: 'RELI'
 
 specification:
   - Religion
   - A religious denomination associated with the event or attribute described by
     the superstructure.
-  - religion
-  - A religious denomination to which a person is affiliated or for which a record
-    applies.
 
 label: 'Religion'
 
@@ -84,9 +81,6 @@ superstructures:
   "https://gedcom.io/terms/v7/RETI": "{0:1}"
   "https://gedcom.io/terms/v7/SSN": "{0:1}"
   "https://gedcom.io/terms/v7/WILL": "{0:1}"
-
-value of:
-  - "https://gedcom.io/terms/v7/enumset-EVENATTR"
 
 contact: "https://gedcom.io/community/"
 ...

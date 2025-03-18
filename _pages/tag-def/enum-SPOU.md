@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-SPOU
 
-standard tag: SPOU
+standard tag: 'SPOU'
 
 specification:
   - Spouse

@@ -16,7 +16,7 @@ type: enumeration
 
 uri: https://gedcom.io/terms/v7/enum-FATH
 
-standard tag: FATH
+standard tag: 'FATH'
 
 specification:
   - Father; implies `PARENT`
