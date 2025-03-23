@@ -11,6 +11,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 |Page|Line|Heading| Original Text | Corrected Text | Notes |
 |----|----|-------|---------------|----------------|-------|
 |  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see <<FAMILY_RECORD>>, page 24.) | data may not have been supplied in the transmission (see <<FAM_RECORD>>, page 24). | FAMILY_RECORD should be FAM_RECORD |
+|  7 |  4 | The following tags were added: | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
 | 32 | 36 | FAMILY_EVENT_STRUCTURE | n RESI | n RESI     {1:1} | Add cardinality |
 | 37 |  6 | MULTIMEDIA_LINK |            | [ | Add open bracket before first line of MULTIMEDIA_LINK |
 | 37 | 12 | MULTIMEDIA_LINK |            | ] | Add close bracket after last line of MULTIMEDIA_LINK |
@@ -20,6 +21,8 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
 | 62 | 14 | SOURCE_FILED_BY_ENTRY |  {Size= 1:60} | {Size=1:60} | Remove space |
 | 84 |  7 | ANCE | Pertaining to forbearers of an individual. | Pertaining to forebearers of an individual. | Change "forbearers" to "forebearers" |
+| 83 | 28 | Lineage-Linked GEDCOM Tag Definitions | | **ADR3 {ADDRESS3}:=** | Add ADR3 after ADR2 |
+| 83 | 28 | Lineage-Linked GEDCOM Tag Definitions | | The third line of an address. | |
 | 84 | 16 | BAPL | **BAPL {BAPTISM-LDS}:=** | **BAPL {BAPTISM_LDS}:=** | Change "-" to "_" |
 | 87 | 12 | EMAI | **EMAI {EMAIL}:=** | **EMAIL {EMAIL}:=** | Change EMAI to EMAIL |
 | 88 |  7 | FAX | **FAX {FACIMILIE}:=** | **FAX {FACSIMILE}:=** | Change FACIMILIE to FACSIMILE |
