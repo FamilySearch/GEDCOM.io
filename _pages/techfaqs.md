@@ -166,7 +166,7 @@ When birth date and date range of attribute are both known, `DATE` is generally 
 
 ## How do I record the age of an associated individual?
 
-Roles of associated individuals such as witnesses can be used with the `ASSO` structure,
+Roles of associated individuals such as witnesses can be provided with the `ASSO` structure,
 which does not permit `AGE` as a substructure.  The most interoperable option, which
 maximizes the chance that other applications will display and preserve the age, is to use
 a `NOTE` structure:
