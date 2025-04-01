@@ -164,6 +164,34 @@ Another case is when an attribute was expected to be temporary and observed at a
 
 When birth date and date range of attribute are both known, `DATE` is generally better than `AGE`, but sometimes sources contain claims like "I earned my degree when I was 15" without clear dates, hence the provision of `AGE` for attributes.
 
+## How do I record the age of an associated individual?
+
+Roles of associated individuals such as witnesses can be provided with the `ASSO` structure,
+which does not permit `AGE` as a substructure.  The most interoperable option, which
+maximizes the chance that other applications will display and preserve the age, is to use
+a `NOTE` structure:
+
+```
+2 ASSO @I2@
+3 ROLE WITN
+3 NOTE 29 years old
+```
+
+The `NOTE` structure does not provide a way for an application to reliably
+detect the value as an age.  In the unlikely event that an application
+needs such an ability, a relocated standard structure can be used.
+
+```
+0 HEAD
+1 SCHMA
+2 TAG _AGE http://gedcom.io/terms/v7/AGE
+0 @I1@ INDI
+1 BIRT
+2 ASSO @I2@
+3 ROLE WITN
+3 _AGE 29y
+```
+
 # Children
 
 ## How do I record a stillborn child?
