@@ -10,7 +10,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 
 |Page|Line|Heading| Original Text | Corrected Text | Notes |
 |----|----|-------|---------------|----------------|-------|
-|  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see <<FAMILY_RECORD>>, page 24.) | data may not have been supplied in the transmission (see <<FAM_RECORD>>, page 24). | FAMILY_RECORD should be FAM_RECORD |
+|  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see \<\<FAMILY_RECORD\>\>, page 24.) | data may not have been supplied in the transmission (see \<\<FAM_RECORD\>\>, page 24). | FAMILY_RECORD should be FAM_RECORD |
 |  7 |  4 | The following tags were added: | | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
 | 32 | 36 | FAMILY_EVENT_STRUCTURE | n RESI | n RESI     {1:1} | Add cardinality |
 | 37 |  6 | MULTIMEDIA_LINK |            | [ | Add open bracket before first line of MULTIMEDIA_LINK |
