@@ -10,12 +10,13 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 
 |Page|Line|Heading| Original Text | Corrected Text | Notes |
 |----|----|-------|---------------|----------------|-------|
-|  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see <<FAMILY_RECORD>>, page 24.) | data may not have been supplied in the transmission (see <<FAM_RECORD>>, page 24). | FAMILY_RECORD should be FAM_RECORD |
-|  7 |  4 | The following tags were added: | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
+|  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see \<\<FAMILY_RECORD\>\>, page 24.) | data may not have been supplied in the transmission (see \<\<FAM_RECORD\>\>, page 24). | FAMILY_RECORD should be FAM_RECORD |
+|  7 |  4 | The following tags were added: | | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
 | 32 | 36 | FAMILY_EVENT_STRUCTURE | n RESI | n RESI     {1:1} | Add cardinality |
 | 37 |  6 | MULTIMEDIA_LINK |            | [ | Add open bracket before first line of MULTIMEDIA_LINK |
 | 37 | 12 | MULTIMEDIA_LINK |            | ] | Add close bracket after last line of MULTIMEDIA_LINK |
 | 37 |  8 | MULTIMEDIA_LINK | n **OBJE** | n **OBJE**     {1:1} | Add cardinality |
+| 58 |  2 | PHONETIC_TYPE | \<user define\> | \<user defined\> | Change "define" to "defined" |
 | 59 |  9 | PLACE_PHONETIC_VARIATION | the same form as&nbsp; was the place name | the same form as was the place name | Remove extra space before "was" |
 | 59 | 11 | PLACE_PHONETIC_VARIATION | for example if hiragana was used to provide a reading of a a | for example if hiragana was used to provide a reading of a | Remove duplicate "a" |
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
