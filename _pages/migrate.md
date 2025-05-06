@@ -282,6 +282,7 @@ the syntax supports other strings 1 to 7 characters long, so strings like
 
 It is recommended that GEDCOM 5.5.1 strings starting with `M`, `F`, or `X` be
 converted to the single-letter equivalents, and that all others be converted to `U`.
+Language-specific conversions may also be used.
 
 ## SURN Values
 
