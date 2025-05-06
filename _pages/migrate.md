@@ -5,7 +5,7 @@ toc: true
 toc_label: "Issues on this Page"
 toc_sticky: true
 ---
-# How do I replace GEDCOM 5.5.1 tags that were removed in FamilySearch GEDCOM 7.0?
+# How do I replace GEDCOM 5.5.1 structures that were removed in FamilySearch GEDCOM 7.0?
 
 ## ROMN, FONE
 
@@ -156,6 +156,14 @@ becomes this 7.0:
 1 CHAN 5 JAN 2021
 ```
 
+## WAC
+
+`WAC` has a complicated history.  Strictly speaking, it was not present in 5.5.1, but was in 5.3 and earlier
+GEDCOM versions and is still used in 5.5.1 by some implementations.  FamilySearch GEDCOM 7.0 replaces `WAC`
+with `INIL`.
+
+# How do I replace GEDCOM 5.5.1 payload values that were removed in FamilySearch GEDCOM 7.0?
+
 ## Non-pointer OBJE Substructures
 
 GEDCOM 5.5.1 allowed the same tag in the same context to have different meaning depending on its payload type. This added significant implementation complexity as has been removed from v7.0.
@@ -265,6 +273,16 @@ Examples:
 - `PEDI birth` becomes `PEDI BIRTH`.
 - `RESN confidential` becomes `RESN CONFIDENTIAL`.
 
+## SEX Values
+
+FamilySearch GEDCOM 7 supports `SEX` values of `M`, `F`, `X`, and `U`.
+Although only `M`, `F`, and `U` were defined in the GEDCOM 5.5.1 specification,
+the syntax supports other strings 1 to 7 characters long, so strings like
+`Male`, `Unknown`, and even `X` were still valid in GEDCOM 5.5.1.
+
+It is recommended that GEDCOM 5.5.1 strings starting with `M`, `F`, or `X` be
+converted to the single-letter equivalents, and that all others be converted to `U`.
+
 ## SURN Values
 
 GEDCOM 5.5.1 defined the `SURN` structure as appearing at most once per `NAME`, and defined its
@@ -329,12 +347,6 @@ must be converted to
 ```
 to be legal in 7.0.
 
-## WAC
-
-`WAC` has a complicated history.  Strictly speaking, it was not present in 5.5.1, but was in 5.3 and earlier
-GEDCOM versions and is still used in 5.5.1 by some implementations.  FamilySearch GEDCOM 7.0 replaces `WAC`
-with `INIL`.
-
 ## ROMAN and UNKNOWN calendars
 
 The calendar values `ROMAN` and `UNKNOWN` were permitted in 5.5.1 but their meaning was never defined, and they are
@@ -350,4 +362,3 @@ becomes this 7.0:
 ```
 2 DATE _ROMAN 71
 ```
-
