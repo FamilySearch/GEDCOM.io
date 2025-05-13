@@ -26,7 +26,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 59 |  9 | PLACE_PHONETIC_VARIATION | the same form as&nbsp; was the place name | the same form as was the place name | Remove extra space before "was" |
 | 59 | 11 | PLACE_PHONETIC_VARIATION | for example if hiragana was used to provide a reading of a a | for example if hiragana was used to provide a reading of a | Remove duplicate "a" |
 | 60 | 19 | RESTRICTION_NOTICE | {Size=6:7} | {Size=6:12} | Maximum size is 12 to accommodate "confidential" |
-| 61 |  5 | ROLE_DESCRIPTOR | {Size=1:25} | {Size=1:13} | Only used within ROLE_IN_EVENT which has max size 15 |
+| 61 |  9 | ROLE_IN_EVENT | {Size=1:15} | {Size=1:27} | Accommodate a ROLE_DESCRIPTOR of length 25 |
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
 | 62 | 14 | SOURCE_FILED_BY_ENTRY | {Size= 1:60} | {Size=1:60} | Remove space |
 | 62 | 22 | SOURCE_MEDIA_TYPE | {Size=1:15} | {Size=3:10) | All alternatives are within size range 3 to 10 |
