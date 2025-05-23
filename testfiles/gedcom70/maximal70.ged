@@ -532,6 +532,10 @@
 1 FAMC @F1@
 0 @O1@ OBJE
 1 RESN CONFIDENTIAL, LOCKED
+1 FILE media/CharlotteBront%C3%AB.jpg
+2 FORM image/jpeg
+3 MEDI OTHER
+4 PHRASE Portrait
 1 FILE file:///path/to/file1
 2 FORM text/plain
 3 MEDI OTHER
