@@ -25,6 +25,12 @@
 1 NOTE Web-accessible file with path and fragment components, per RFC 3986.
 1 FILE https://host.example.com?with=args#and-frags
 2 FORM image/bmp
+1 NOTE Web-accessible file using a valid URL string with a non-ASCII character.
+1 FILE https://upload.wikimedia.org/wikipedia/commons/1/16/Charlotte_Brontë_2.jpg
+2 FORM image/jpg
+1 NOTE Web-accessible file using a valid URL string with a percent-encoded non-ASCII character.
+1 FILE https://upload.wikimedia.org/wikipedia/commons/1/16/Charlotte_Bront%C3%AB_2.jpg
+2 FORM image/jpg
 1 NOTE It is recommended that gedcom.ged and MANIFEST.MF and any URL beginning with META-INF/ not be used, but they're not disallowed.
 1 FILE gedcom.ged
 2 FORM text/vnd.familysearch.gedcom
