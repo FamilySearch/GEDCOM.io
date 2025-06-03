@@ -377,7 +377,7 @@ or, alternatively:
 A `PHRASE` substructure would be appropriate to contain text from an original source, such as:
 ```
 2 DATE 30 JAN 1649
-2 PHRASE 30th of January, 1648/9
+3 PHRASE 30th of January, 1648/9
 ```
 However, when migrating from a standard GEDCOM 5.5.1 file this would not apply as 5.5.1 had no way to represent
 such information in a `DATE` structure or substructures, without using extensions.
