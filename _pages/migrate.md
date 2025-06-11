@@ -380,6 +380,7 @@ Thus this 5.5.1:
 becomes this 7.0:
 ```
 2 DATE 30 JAN 1649
+3 PHRASE 30 JAN 1648/9
 ```
 
 or, alternatively:
