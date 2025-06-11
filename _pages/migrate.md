@@ -395,7 +395,6 @@ A `PHRASE` substructure contains "textual information that cannot be expressed i
 3 PHRASE 30th of January, 1648/9
 ```
 
-
 There may however be GEDCOM 5.5.1 files in the wild with dual dating payloads that are not valid values of
 Julian/Gregorian calendar differences.  Applications that wish to migrate such invalid dates might convert
 them to two separate events, or to a single event with the confusing date in a `PHRASE` payload.
