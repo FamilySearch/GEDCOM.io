@@ -386,6 +386,7 @@ becomes this 7.0:
 or, alternatively:
 ```
 2 DATE JULIAN 30 JAN 1648
+3 PHRASE 30 JAN 1648/9
 ```
 
 A `PHRASE` substructure would be appropriate to contain text from an original source, such as:
