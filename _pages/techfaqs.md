@@ -470,15 +470,38 @@ Certain additional information about specific aspects of a parent-child relation
 
 ## How do I protect sensitive information?
 
-Protecting sensitive information is a more complicated topic than this FAQ can fully address, but a few guidelines can be given.
+Protecting sensitive information is a more complicated topic than this FAQ can fully address,
+but a few guidelines can be given.
 
-Be aware that once information is visibile and understandable to another human or application, you cannot keep them from sharing it more broadly than you desire. You may be able to take legal action against them, depending on the nature of the information and the laws available, but cannot prevent them sharing.
+Be aware that once information is visible and understandable to another human or application,
+you cannot keep them from sharing it more broadly than you desire.
+You may be able to take legal action against them,
+depending on the nature of the information and the laws available,
+but cannot prevent them sharing.
 
-The [`RESN`](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#RESN) structure can be used to indicate that part of the data in a dataset is considered to be confidential. It is up to individual applications to decide what to do with that information, but it is recommended that they facilitate [removing](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#removing-data) data that is marked with `RESN` when exporting a dataset.
+The [`RESN`](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#RESN) structure can be used to indicate that part of the data in a dataset is considered to be confidential.
+It is up to individual applications to decide what to do with that information,
+but it is recommended that they facilitate [removing](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#removing-data) data that is marked with `RESN` when exporting a dataset.
 
-If a dataset contains sensitive information and is being shared between users or applications, it is recommended that encryption be used to prevent others from accessing the data. Such encryption can be broadly broken into two types: secure channels and encrypted files.
+If a dataset contains sensitive information and is being shared between users or applications,
+it is recommended that encryption be used to prevent others from accessing the data.
+Such encryption can be broadly broken into two types: secure channels and encrypted files.
 
-A secure channel (for example, using TLS) can be established and the unencrypted data sent over it. This has the advantage that the nature of the communication is encrypted so even the fact that the data sent contains GEDCOM-related data is invisible to outsiders. It has the disadvantage that secure channels are general synchronous, requiring the sending and receiving applications to communicate directly and concurrently.
+A secure channel (for example, using TLS) can be established and the unencrypted data sent over it.
+This has the advantage that the nature of the communication is encrypted so even the fact that the data sent contains GEDCOM-related data is invisible to outsiders.
+It has the disadvantage that secure channels are general synchronous, requiring the sending and receiving applications to communicate directly and concurrently.
 
-An encrypted file can be created, then shared over insecure channels (for example, using email) or stored on insecure media (for example, on an external drive) and later decrypted to retrieve file contents. The GEDZIP format allows encryption of contained file contents, but does not encrypt file names or sizes and does not provide source authentication. External techniques can also be applied to a GEDZIP file, such as authenticated encryption (for example, a scheme that combines passphrase-keyed encryption and message authentication codes) to provide a greater degree of security and greater guarantee of authenticity. Both techniques have the advantage of flexibility in how the resulting files are are used. They have the disadvantage of being less secure, both because they typically rely on human-memorable passphrase rather than large random keys and because they typically persist for much longer, perhaps long enough for the encryption techniques they used to be compromised. External encryption also have the disadvantage of requiring an external technique for communicating what encryption scheme was used, which is not covered by the FamilySearch GEDCOM 7 specification.
+An encrypted file can be created, then shared over insecure channels (for example, using email)
+or stored on insecure media (for example, on an external drive) and later decrypted to retrieve file contents.
+The GEDZIP format allows encryption of contained file contents,
+but does not encrypt file names or sizes and does not provide source authentication.
+External techniques, such as authenticated encryption (for example, a scheme that combines passphrase-keyed encryption and message authentication codes),
+can also be applied to a GEDZIP file
+to provide a greater degree of security and greater guarantee of authenticity.
+Both techniques have the advantage of flexibility in how the resulting files are used.
+They have the disadvantage of being less secure than a secure channel,
+both because they typically rely on human-memorable passphrases rather than large random keys
+and because they typically persist for much longer, perhaps long enough for the encryption techniques they used to be compromised.
+External encryption also have the disadvantage of requiring an external technique for communicating what encryption scheme was used,
+which is not covered by the FamilySearch GEDCOM 7 specification.
 
