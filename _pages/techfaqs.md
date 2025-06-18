@@ -502,6 +502,6 @@ Both techniques have the advantage of flexibility in how the resulting files are
 They have the disadvantage of being less secure than a secure channel,
 both because they typically rely on human-memorable passphrases rather than large random keys
 and because they typically persist for much longer, perhaps long enough for the encryption techniques they used to be compromised.
-External encryption also have the disadvantage of requiring an external technique for communicating what encryption scheme was used,
+External encryption also has the disadvantage of requiring an external technique for communicating what encryption scheme was used,
 which is not covered by the FamilySearch GEDCOM 7 specification.
 
