@@ -380,20 +380,23 @@ Thus this 5.5.1:
 becomes this 7.0:
 ```
 2 DATE 30 JAN 1649
+3 PHRASE 30 JAN 1648/9
 ```
 
 or, alternatively:
 ```
 2 DATE JULIAN 30 JAN 1648
+3 PHRASE 30 JAN 1648/9
 ```
 
-A `PHRASE` substructure would be appropriate to contain text from an original source, such as:
+A `PHRASE` substructure contains "textual information that cannot be expressed in the
+superstructure due to the limitations of its data type." If the original source text is known,
+it would also be appropriate to use that text in the `PHRASE` instead of the 5.5.1 payload,
+such as:
 ```
 2 DATE 30 JAN 1649
-2 PHRASE 30th of January, 1648/9
+3 PHRASE 30th of January, 1648/9
 ```
-However, when migrating from a standard GEDCOM 5.5.1 file this would not apply as 5.5.1 had no way to represent
-such information in a `DATE` structure or substructures, without using extensions.
 
 There may however be GEDCOM 5.5.1 files in the wild with dual dating payloads that are not valid values of
 Julian/Gregorian calendar differences.  Applications that wish to migrate such invalid dates might convert
