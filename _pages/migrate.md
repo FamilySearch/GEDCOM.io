@@ -363,3 +363,41 @@ becomes this 7.0:
 ```
 2 DATE _ROMAN 71
 ```
+
+## Dual Dating
+
+Unlike FamilySearch GEDCOM 7.0, GEDCOM 5.5.1 permitted the `DATE` payload to contain two alternative years due
+to switching from the Julian calendar to the Gregorian calendar.
+[Section 6.2 of the FamilySearch GEDCOM 7 specification](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#dual-dates)
+explains that dual dates in 7.0 are represented where the `DATE` payload contains the date in
+one calendar while a `PHRASE` substructure can contain the dates in both calendars.
+
+Thus this 5.5.1:
+```
+2 DATE 30 JAN 1648/9
+```
+
+becomes this 7.0:
+```
+2 DATE 30 JAN 1649
+3 PHRASE 30 JAN 1648/9
+```
+
+or, alternatively:
+```
+2 DATE JULIAN 30 JAN 1648
+3 PHRASE 30 JAN 1648/9
+```
+
+A `PHRASE` substructure contains "textual information that cannot be expressed in the
+superstructure due to the limitations of its data type." If the original source text is known,
+it would also be appropriate to use that text in the `PHRASE` instead of the 5.5.1 payload,
+such as:
+```
+2 DATE 30 JAN 1649
+3 PHRASE 30th of January, 1648/9
+```
+
+There may however be GEDCOM 5.5.1 files in the wild with dual dating payloads that are not valid values of
+Julian/Gregorian calendar differences.  Applications that wish to migrate such invalid dates might convert
+them to two separate events, or to a single event with the confusing date in a `PHRASE` payload.
