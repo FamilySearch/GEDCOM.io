@@ -20,6 +20,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 37 |  9 | MULTIMEDIA_LINK | \<MULTIMEDIA_FILE_REFN\> | \<MULTIMEDIA_FILE_REFERENCE\> | Change "REFN" to "REFERENCE" |
 | 37 | 12 | MULTIMEDIA_LINK |            | ] | Add close bracket after last line of MULTIMEDIA_LINK |
 | 37 | 36 | PERSONAL_NAME_PIECES | \<NAME_PIECE_SURNAME_PREFIX | \<NAME_PIECE_SURNAME_PREFIX\> | Add matching angle bracket |
+| 51 |  4 | LANGUAGE_ID | Manipuri | Mandarin \| Manipuri | Both "Mandrin" and the corrected spelling "Mandarin" are in use |
 | 54 |  4 | MULTIMEDIA_FORMAT | {Size=3:4} | {Size=3:3} | Maximum size is 3 since all values are size 3 |
 | 56 | 15 | NAME_TYPE | {Size=5:30} | {Size=3:30} | Minimum size is 3 due to accommodate "aka" |
 | 57 | 33 | PHONETIC_TYPE | {Size=5:30} | {Size=4:30} | Minimum size is 4 to accommodate "kana" |
