@@ -107,6 +107,7 @@ Three keys are always present:
     <code>fragment</code> is "Source System", then a full URI might be
     "https://gedcom.io/terms/v7/RIN#MyProgram" where the fragment identifier
     "MyProgram" indicates the source system that generated the RIN payload value.
+
 ## Other keys
 
 The following keys may appear in a YAML file.
@@ -264,6 +265,21 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
     - The special string "`Y|<NULL>`", meaning the payload is either "`Y`" or omitted
     - The URI of a datatype, meaning a payload of this type is required
     - A string of the form `@<`URI`>@`, meaning the payload is a pointer to a structure whose type is given by the URI.
+
+-   <table><tbody>
+    <tr><th>Key</th><td><code>prerelease</code></td></tr>
+    <tr><th>Type</th><td><code>bool</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    If present with a true value,
+    the URI documented by this YAML file is not yet released;
+    breaking changes may appear in the future without changing the URI.
+
+    If absent, or if present with a false value,
+    the URI documented by this YAML file is released;
+    patches may be applied, but any minor or major revisions would require a new URI.
     
 -   <table><tbody>
     <tr><th>Key</th><td><code>specification</code></td></tr>
