@@ -342,6 +342,19 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
     If `superstructures` is an empty `map`, then the structure is a record and must not appear in any other structure's `substructures`.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>translated from</code></td></tr>
+    <tr><th>Type</th><td>Language Tag</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td>all</td></tr>
+    </tbody></table>
+
+    A language tag, as specified in BCP 47, which must be different from the language tag included in the `lang` key.
+    If present, this field indicates that this YAML file is a translation of a different YAML file, one presented in the indicated language.
+    in the event that the two disagree, the other YAML file shall be taken as more correct.
+    
+    Note that `translated from` chains may be longer than one step: for example, an extension authored in Japanese might be translated to English, and then the English translation further translated to German.
+    
+-   <table><tbody>
     <tr><th>Key</th><td><code>used by</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>str</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
