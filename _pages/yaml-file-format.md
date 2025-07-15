@@ -275,7 +275,7 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
 
     If present with a true value,
     the URI documented by this YAML file is not yet releeased;
-    breaking changed may appear in the future without changing the URI.
+    breaking changes may appear in the future without changing the URI.
 
     If absent, or if present with a false value,
     the URI documented by this YAML file is released;
