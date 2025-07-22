@@ -82,6 +82,8 @@ properties:
     type: string
   prerelease:
     type: boolean
+  translated from:
+    type: string
 
 additionalProperties: false
 
