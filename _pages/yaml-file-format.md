@@ -350,7 +350,7 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
 
     A language tag, as specified in BCP 47, which must be different from the language tag included in the `lang` key.
     If present, this field indicates that this YAML file is a translation of a different YAML file, one presented in the indicated language.
-    in the event that the two disagree, the other YAML file shall be taken as more correct.
+    In the event that the two disagree, the other YAML file shall be taken as more correct.
     
 -   <table><tbody>
     <tr><th>Key</th><td><code>used by</code></td></tr>
