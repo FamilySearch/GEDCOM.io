@@ -84,6 +84,10 @@ properties:
     type: boolean
   translated from:
     type: string
+  used by:
+    type: array
+    items:
+      type: string
 
 additionalProperties: false
 
