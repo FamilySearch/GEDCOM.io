@@ -1,20 +1,19 @@
 ---
-title: type-List
-permalink: /terms/v7/type-List.html
+title: type-List-Enum
+permalink: /terms/v7/type-List-Enum.html
 layout: none
 redirect-from:
-  - /terms/v7/type-List
+  - /terms/v7/type-List-Enum
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
 
 type: data type
 
-uri: https://gedcom.io/terms/v7/type-List
+uri: https://gedcom.io/terms/v7/type-List#Enum
 
 specification:
   - |
