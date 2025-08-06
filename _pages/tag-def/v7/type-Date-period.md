@@ -1,9 +1,9 @@
 ---
-title: type-Date
-permalink: /terms/v7/type-Date.html
+title: type-Date-period
+permalink: /terms/v7/type-Date-period.html
 layout: none
 redirect-from:
-  - /terms/v7/type-Date
+  - /terms/v7/type-Date-period
 ...
 
 ```
@@ -13,7 +13,7 @@ lang: en-US
 
 type: data type
 
-uri: https://gedcom.io/terms/v7/type-Date
+uri: https://gedcom.io/terms/v7/type-Date#period
 
 specification:
   - |
@@ -136,14 +136,3 @@ contact: "https://gedcom.io/community/"
 ...
 
 ```
-
-<script>
-const allowed_fragments = {'period': '/terms/v7/type-Date-period', 'exact': '/terms/v7/type-Date-exact', '': '/terms/v7/type-Date'};
-const maybe_redirect = (event) => {
-    const fragment = location.hash.substr(1)
-    if (fragment in allowed_fragments && location.pathname != allowed_fragments[fragment])
-        location = allowed_fragments[fragment];
-};
-window.addEventListener('load', maybe_redirect);
-window.addEventListener('hashchange', maybe_redirect);
-</script>
