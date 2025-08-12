@@ -1,20 +1,19 @@
 ---
-title: type-Date
-permalink: /terms/v7/type-Date.html
+title: type-Date-period
+permalink: /terms/v7/type-Date-period.html
 layout: none
 redirect-from:
-  - /terms/v7/type-Date
+  - /terms/v7/type-Date-period
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
 
 type: data type
 
-uri: https://gedcom.io/terms/v7/type-Date
+uri: https://gedcom.io/terms/v7/type-Date#period
 
 specification:
   - |
