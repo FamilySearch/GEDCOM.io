@@ -88,6 +88,8 @@ properties:
     type: array
     items:
       type: string
+  abnf production:
+    type: string
 
 additionalProperties: false
 

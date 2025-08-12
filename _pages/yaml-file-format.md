@@ -114,6 +114,15 @@ The following keys may appear in a YAML file.
 Their names may be changed a YAML file with a `lang` other than `en`.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>abnf production</code></td></tr>
+    <tr><th>Type</th><td><code>str</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td><code>type: data type</code></td></tr>
+    </tbody></table>
+    
+    The rule name of an ABNF rule defining this datatype. Should only be included if the corresponding ABNF grammar is provided.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>calendars</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of URI</td></tr>
     <tr><th>Required by</th><td><code>type: month</code></td></tr>
