@@ -23,10 +23,10 @@ jobs:
 
     steps:
       - name: Checkout GEDCOM.io
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Checkout GEDCOM-registries
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: FamilySearch/GEDCOM-registries
           path: GEDCOM-registries
