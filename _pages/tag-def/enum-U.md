@@ -1,0 +1,30 @@
+---
+title: enum-U
+permalink: /terms/v7/enum-U.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-U
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-U
+
+standard tag: 'U'
+
+specification:
+  - Cannot be determined from available sources
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-SEX"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

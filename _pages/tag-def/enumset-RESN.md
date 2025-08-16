@@ -1,0 +1,27 @@
+---
+title: enumset-RESN
+permalink: /terms/v7/enumset-RESN.html
+layout: none
+redirect-from:
+  - /terms/v7/enumset-RESN
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration set
+
+uri: https://gedcom.io/terms/v7/enumset-RESN
+
+enumeration values:
+  - "https://gedcom.io/terms/v7/enum-CONFIDENTIAL"
+  - "https://gedcom.io/terms/v7/enum-LOCKED"
+  - "https://gedcom.io/terms/v7/enum-PRIVACY"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

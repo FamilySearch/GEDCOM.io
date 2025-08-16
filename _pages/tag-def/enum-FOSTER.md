@@ -1,0 +1,30 @@
+---
+title: enum-FOSTER
+permalink: /terms/v7/enum-FOSTER.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-FOSTER
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-FOSTER
+
+standard tag: 'FOSTER'
+
+specification:
+  - The child was included in a foster or guardian family
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-PEDI"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

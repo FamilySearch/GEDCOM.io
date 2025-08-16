@@ -1,0 +1,38 @@
+---
+title: DEST
+permalink: /terms/v7/DEST.html
+layout: none
+redirect-from:
+  - /terms/v7/DEST
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/DEST
+
+standard tag: 'DEST'
+
+specification:
+  - Destination
+  - An identifier for the system expected to receive this document. See
+    `HEAD`.`SOUR` for guidance on choosing identifiers.
+
+label: 'Destination'
+
+payload: http://www.w3.org/2001/XMLSchema#string
+
+substructures: {}
+
+superstructures:
+  "https://gedcom.io/terms/v7/HEAD": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

@@ -1,0 +1,40 @@
+---
+title: SEX
+permalink: /terms/v7/SEX.html
+layout: none
+redirect-from:
+  - /terms/v7/SEX
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/SEX
+
+standard tag: 'SEX'
+
+specification:
+  - Sex
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-SEX` that
+    indicates the sex of the individual at birth.
+
+label: 'Sex'
+
+payload: https://gedcom.io/terms/v7/type-Enum
+
+enumeration set: "https://gedcom.io/terms/v7/enumset-SEX"
+
+substructures: {}
+
+superstructures:
+  "https://gedcom.io/terms/v7/record-INDI": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

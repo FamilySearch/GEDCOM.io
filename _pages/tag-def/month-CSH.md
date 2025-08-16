@@ -1,0 +1,32 @@
+---
+title: month-CSH
+permalink: /terms/v7/month-CSH.html
+layout: none
+redirect-from:
+  - /terms/v7/month-CSH
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: month
+
+uri: https://gedcom.io/terms/v7/month-CSH
+
+standard tag: 'CSH'
+
+specification:
+  - Marcheshvan (מַרְחֶשְׁוָן) or Cheshvan (חֶשְׁוָן)
+
+label: 'Marcheshvan'
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-HEBREW"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

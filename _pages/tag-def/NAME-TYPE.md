@@ -1,0 +1,41 @@
+---
+title: NAME-TYPE
+permalink: /terms/v7/NAME-TYPE.html
+layout: none
+redirect-from:
+  - /terms/v7/NAME-TYPE
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/NAME-TYPE
+
+standard tag: 'TYPE'
+
+specification:
+  - Type
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-NAME-TYPE`
+    indicating the type of the name.
+
+label: 'Type'
+
+payload: https://gedcom.io/terms/v7/type-Enum
+
+enumeration set: "https://gedcom.io/terms/v7/enumset-NAME-TYPE"
+
+substructures:
+  "https://gedcom.io/terms/v7/PHRASE": "{0:1}"
+
+superstructures:
+  "https://gedcom.io/terms/v7/INDI-NAME": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

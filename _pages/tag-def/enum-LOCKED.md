@@ -1,0 +1,30 @@
+---
+title: enum-LOCKED
+permalink: /terms/v7/enum-LOCKED.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-LOCKED
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-LOCKED
+
+standard tag: 'LOCKED'
+
+specification:
+  - Some systems may ignore changes to this data.
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-RESN"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

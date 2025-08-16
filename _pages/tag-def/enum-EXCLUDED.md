@@ -1,0 +1,33 @@
+---
+title: enum-EXCLUDED
+permalink: /terms/v7/enum-EXCLUDED.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-EXCLUDED
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-EXCLUDED
+
+standard tag: 'EXCLUDED'
+
+specification:
+  - "Applies to: All"
+  - Patron excluded this ordinance from being cleared in this submission.
+  - "Status: Deprecated. This status was defined for use with TempleReady which is
+    no longer in use."
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

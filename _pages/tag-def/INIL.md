@@ -1,0 +1,51 @@
+---
+title: INIL
+permalink: /terms/v7/INIL.html
+layout: none
+redirect-from:
+  - /terms/v7/INIL
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/INIL
+
+standard tag: 'INIL'
+
+specification:
+  - Initiatory, Latter-Day Saint
+  - A [Latter-Day Saint Ordinance]. See also `LDS_INDIVIDUAL_ORDINANCE`.
+    Previously, GEDCOM versions 3.0 through 5.3 called this `WAC`; it was not part
+    of 5.4 through 5.5.1. FamilySearch GEDCOM 7.0 reintroduced it with the name
+    `INIL` for consistency with `BAPL`, `CONL`, and `ENDL`.
+  - initiatory
+  - A religious event where an initiatory ordinance for an individual was performed
+    by priesthood authority in a temple of The Church of Jesus Christ of Latter-day
+    Saints.
+
+label: 'Initiatory, Latter-Day Saint'
+
+payload: null
+
+substructures:
+  "https://gedcom.io/terms/v7/DATE": "{0:1}"
+  "https://gedcom.io/terms/v7/NOTE": "{0:M}"
+  "https://gedcom.io/terms/v7/PLAC": "{0:1}"
+  "https://gedcom.io/terms/v7/SNOTE": "{0:M}"
+  "https://gedcom.io/terms/v7/SOUR": "{0:M}"
+  "https://gedcom.io/terms/v7/TEMP": "{0:1}"
+  "https://gedcom.io/terms/v7/ord-STAT": "{0:1}"
+
+superstructures:
+  "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

@@ -1,0 +1,42 @@
+---
+title: PEDI
+permalink: /terms/v7/PEDI.html
+layout: none
+redirect-from:
+  - /terms/v7/PEDI
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/PEDI
+
+standard tag: 'PEDI'
+
+specification:
+  - Pedigree
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-PEDI`
+    indicating the type of child-to-family relationship represented by the
+    superstructure.
+
+label: 'Pedigree'
+
+payload: https://gedcom.io/terms/v7/type-Enum
+
+enumeration set: "https://gedcom.io/terms/v7/enumset-PEDI"
+
+substructures:
+  "https://gedcom.io/terms/v7/PHRASE": "{0:1}"
+
+superstructures:
+  "https://gedcom.io/terms/v7/INDI-FAMC": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

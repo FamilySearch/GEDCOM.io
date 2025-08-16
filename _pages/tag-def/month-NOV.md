@@ -1,0 +1,33 @@
+---
+title: month-NOV
+permalink: /terms/v7/month-NOV.html
+layout: none
+redirect-from:
+  - /terms/v7/month-NOV
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: month
+
+uri: https://gedcom.io/terms/v7/month-NOV
+
+standard tag: 'NOV'
+
+specification:
+  - November
+
+label: 'November'
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-GREGORIAN"
+  - "https://gedcom.io/terms/v7/cal-JULIAN"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

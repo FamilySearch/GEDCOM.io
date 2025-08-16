@@ -1,0 +1,39 @@
+---
+title: NSFX
+permalink: /terms/v7/NSFX.html
+layout: none
+redirect-from:
+  - /terms/v7/NSFX
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/NSFX
+
+standard tag: 'NSFX'
+
+specification:
+  - Name suffix
+  - Text which appears on a name line after or behind the given and surname parts
+    of a name.
+
+label: 'Name suffix'
+
+payload: http://www.w3.org/2001/XMLSchema#string
+
+substructures: {}
+
+superstructures:
+  "https://gedcom.io/terms/v7/INDI-NAME": "{0:M}"
+  "https://gedcom.io/terms/v7/NAME-TRAN": "{0:M}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

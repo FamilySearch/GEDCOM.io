@@ -1,0 +1,32 @@
+---
+title: enum-STILLBORN
+permalink: /terms/v7/enum-STILLBORN.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-STILLBORN
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-STILLBORN
+
+standard tag: 'STILLBORN'
+
+specification:
+  - "Applies to: All"
+  - Born dead, so no ordinances are required.
+  - "Status: Current"
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

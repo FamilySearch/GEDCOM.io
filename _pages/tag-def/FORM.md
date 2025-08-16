@@ -1,0 +1,39 @@
+---
+title: FORM
+permalink: /terms/v7/FORM.html
+layout: none
+redirect-from:
+  - /terms/v7/FORM
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/FORM
+
+standard tag: 'FORM'
+
+specification:
+  - Format
+  - The [media type] of the file referenced by the superstructure.
+
+label: 'Format'
+
+payload: http://www.w3.org/ns/dcat#mediaType
+
+substructures:
+  "https://gedcom.io/terms/v7/MEDI": "{0:1}"
+
+superstructures:
+  "https://gedcom.io/terms/v7/FILE": "{1:1}"
+  "https://gedcom.io/terms/v7/FILE-TRAN": "{1:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

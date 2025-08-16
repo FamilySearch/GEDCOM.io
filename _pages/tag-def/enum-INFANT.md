@@ -1,0 +1,32 @@
+---
+title: enum-INFANT
+permalink: /terms/v7/enum-INFANT.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-INFANT
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-INFANT
+
+standard tag: 'INFANT'
+
+specification:
+  - "Applies to: All but `SLGC`"
+  - Died before less than 1 year old, baptism or endowment not required.
+  - "Status: Deprecated. Use `CHILD` instead."
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

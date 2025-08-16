@@ -1,0 +1,32 @@
+---
+title: month-ELL
+permalink: /terms/v7/month-ELL.html
+layout: none
+redirect-from:
+  - /terms/v7/month-ELL
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: month
+
+uri: https://gedcom.io/terms/v7/month-ELL
+
+standard tag: 'ELL'
+
+specification:
+  - Elul (אֱלוּל)
+
+label: 'Elul'
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-HEBREW"
+
+contact: "https://gedcom.io/community/"
+...
+
+```
