@@ -1,0 +1,30 @@
+---
+title: enum-CLERGY
+permalink: /terms/v7/enum-CLERGY.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-CLERGY
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-CLERGY
+
+standard tag: 'CLERGY'
+
+specification:
+  - Religious official in event; implies `OFFICIATOR`
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

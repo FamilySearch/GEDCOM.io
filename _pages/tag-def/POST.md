@@ -1,0 +1,38 @@
+---
+title: POST
+permalink: /terms/v7/POST.html
+layout: none
+redirect-from:
+  - /terms/v7/POST
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/POST
+
+standard tag: 'POST'
+
+specification:
+  - Postal code
+  - A code used by a postal service to identify an area to facilitate mail
+    handling. See `ADDRESS_STRUCTURE` for more details.
+
+label: 'Postal code'
+
+payload: http://www.w3.org/2001/XMLSchema#string
+
+substructures: {}
+
+superstructures:
+  "https://gedcom.io/terms/v7/ADDR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

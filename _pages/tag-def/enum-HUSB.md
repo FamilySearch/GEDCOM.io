@@ -1,0 +1,30 @@
+---
+title: enum-HUSB
+permalink: /terms/v7/enum-HUSB.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-HUSB
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-HUSB
+
+standard tag: 'HUSB'
+
+specification:
+  - Husband; implies `SPOU`
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ROLE"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

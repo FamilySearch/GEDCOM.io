@@ -1,0 +1,43 @@
+---
+title: QUAY
+permalink: /terms/v7/QUAY.html
+layout: none
+redirect-from:
+  - /terms/v7/QUAY
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/QUAY
+
+standard tag: 'QUAY'
+
+specification:
+  - Quality of data
+  - An enumerated value from set `https://gedcom.io/terms/v7/enumset-QUAY`
+    indicating the credibility of a piece of information, based on its supporting
+    evidence. Some systems use this feature to rank multiple conflicting opinions
+    for display of most likely information first. It is not intended to eliminate
+    the receivers' need to evaluate the evidence for themselves.
+
+label: 'Quality of data'
+
+payload: https://gedcom.io/terms/v7/type-Enum
+
+enumeration set: "https://gedcom.io/terms/v7/enumset-QUAY"
+
+substructures: {}
+
+superstructures:
+  "https://gedcom.io/terms/v7/SOUR": "{0:1}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

@@ -1,0 +1,33 @@
+---
+title: enum-COMPLETED
+permalink: /terms/v7/enum-COMPLETED.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-COMPLETED
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-COMPLETED
+
+standard tag: 'COMPLETED'
+
+specification:
+  - "Applies to: All"
+  - Completed, but the date is not known.
+  - "Status: Deprecated, use `DATE BEF date` instead. This status was defined for
+    use with [TempleReady] which is no longer in use."
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

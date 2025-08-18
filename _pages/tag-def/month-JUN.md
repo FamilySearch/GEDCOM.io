@@ -1,0 +1,33 @@
+---
+title: month-JUN
+permalink: /terms/v7/month-JUN.html
+layout: none
+redirect-from:
+  - /terms/v7/month-JUN
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: month
+
+uri: https://gedcom.io/terms/v7/month-JUN
+
+standard tag: 'JUN'
+
+specification:
+  - June
+
+label: 'June'
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-GREGORIAN"
+  - "https://gedcom.io/terms/v7/cal-JULIAN"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

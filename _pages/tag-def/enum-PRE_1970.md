@@ -1,0 +1,33 @@
+---
+title: enum-PRE_1970
+permalink: /terms/v7/enum-PRE_1970.html
+layout: none
+redirect-from:
+  - /terms/v7/enum-PRE_1970
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://gedcom.io/terms/v7/enum-PRE_1970
+
+standard tag: 'PRE_1970'
+
+specification:
+  - "Applies to: All"
+  - Ordinance was likely completed because an ordinance for this person was
+    converted from temple records of work completed before 1970.
+  - "Status: Deprecated. Use `DATE BEF 1970` instead."
+
+value of:
+  - "https://gedcom.io/terms/v7/enumset-ord-STAT"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

@@ -1,0 +1,45 @@
+---
+title: DATA-EVEN
+permalink: /terms/v7/DATA-EVEN.html
+layout: none
+redirect-from:
+  - /terms/v7/DATA-EVEN
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: structure
+
+uri: https://gedcom.io/terms/v7/DATA-EVEN
+
+standard tag: 'EVEN'
+
+specification:
+  - Event
+  - A list of enumerated values from set
+    `https://gedcom.io/terms/v7/enumset-EVENATTR` indicating the types of events
+    that were recorded in a particular source. Each event type is separated by a
+    comma and space. For example, a parish register of births, deaths, and
+    marriages would be `BIRT, DEAT, MARR`.
+
+label: 'Event'
+
+payload: https://gedcom.io/terms/v7/type-List#Enum
+
+enumeration set: "https://gedcom.io/terms/v7/enumset-EVENATTR"
+
+substructures:
+  "https://gedcom.io/terms/v7/DATA-EVEN-DATE": "{0:1}"
+  "https://gedcom.io/terms/v7/PLAC": "{0:1}"
+
+superstructures:
+  "https://gedcom.io/terms/v7/DATA": "{0:M}"
+
+contact: "https://gedcom.io/community/"
+...
+
+```

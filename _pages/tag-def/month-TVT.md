@@ -1,0 +1,32 @@
+---
+title: month-TVT
+permalink: /terms/v7/month-TVT.html
+layout: none
+redirect-from:
+  - /terms/v7/month-TVT
+...
+
+```
+
+%YAML 1.2
+---
+lang: en-US
+
+type: month
+
+uri: https://gedcom.io/terms/v7/month-TVT
+
+standard tag: 'TVT'
+
+specification:
+  - Tevet (טֵבֵת)
+
+label: 'Tevet'
+
+calendars:
+  - "https://gedcom.io/terms/v7/cal-HEBREW"
+
+contact: "https://gedcom.io/community/"
+...
+
+```
