@@ -213,6 +213,17 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     For example, 7.0's `UID` structure is fully compatible with the common 5.5.1 extension identified by tag `_UID`.
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>nonconformant tags</code></td></tr>
+    <tr><th>Type</th><td><code>seq</code> of <code>stdTag</code></td></tr>
+    <tr><th>Required by</th><td>*</td></tr>
+    <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
+    </tbody></table>
+    
+    A list of nonconformant tags known to be used by applications incorrectly using a `stdTag` rather than an `extTag`
+    for extensions.  Such nonconformant tags may be recognized when reading a GEDCOM file, but should be converted
+    to equivalent conformant tags (whether standard or extension tags) when writing a GEDCOM file.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>fragment</code></td></tr>
     <tr><th>Type</th><td><code>str</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
