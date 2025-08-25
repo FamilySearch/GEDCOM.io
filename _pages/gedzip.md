@@ -17,7 +17,7 @@ and standardized by ISO/IEC 21320-1:2015.
 - Files within an archive can be added, removed, or updated
 individually without needing to re-process the rest of the archive.
 - Libraries such as libzip allow applications to operate directly on the
-- zip archive as if it were a normal directory tree.
+zip archive as if it were a normal directory tree.
 - What the zip specification calls a “file name” is actually a local path
 and may contain directories.
 - Directory separators are / internally and are converted to the
