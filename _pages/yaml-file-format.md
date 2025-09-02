@@ -201,7 +201,7 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 -   <table><tbody>
     <tr><th>Key</th><td><code>extension tags</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>extTag</code></td></tr>
-    <tr><th>Required by</th><td>*</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
@@ -313,7 +313,7 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
 -   <table><tbody>
     <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
-    <tr><th>Required by</th><td>*</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
