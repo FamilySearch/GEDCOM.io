@@ -317,7 +317,7 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
-    The tag for this concept, either for a standand structure as given in an official GEDCOM standard document,
+    The tag for this concept, either as given in an official GEDCOM standard document,
     or for an extension-defined substructure that uses a tag matching `stdTag` and a payload matching
     that of a standard structure with the same tag.
 
