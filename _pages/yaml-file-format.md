@@ -201,12 +201,10 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 -   <table><tbody>
     <tr><th>Key</th><td><code>extension tags</code></td></tr>
     <tr><th>Type</th><td><code>seq</code> of <code>extTag</code></td></tr>
-    <tr><th>Required by</th><td>*</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
-    \* Required instead of allowed if no `standard tag` is provided
-
     A list, with the most-preferred tag first, of extension tags known to be used by applications for this concept.
 
     Standard structures may have an `extension tags` entry to list *fully compatible* extensions that predated the standard and can be converted to the `standard tag` without any other modification.
@@ -315,14 +313,13 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
 -   <table><tbody>
     <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
-    <tr><th>Required by</th><td>*</td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
     <tr><th>Allowed by</th><td><code>type</code>s <code>calendar</code>, <code>enumeration</code>, <code>month</code>, <code>structure</code></td></tr>
     </tbody></table>
     
-    \* Required instead of allowed if no `extension tag` is provided
-
-
-    The standard tag of this concept, as given in an official GEDCOM standard document.
+    The tag for this concept, either as given in an official GEDCOM standard document,
+    or for an extension-defined substructure that uses a tag matching `stdTag` and a payload matching
+    that of a standard structure with the same tag.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>subsumes</code></td></tr>
