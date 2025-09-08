@@ -136,3 +136,4 @@ allOf:
       oneOf:
         - {required: [standard tag]}
         - {required: [extension tags]}
+        - {required: [nonconformant tags]}
