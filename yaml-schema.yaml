@@ -127,13 +127,3 @@ allOf:
           pattern: '^https://gedcom.io/terms/v7/type-(List#)?Enum$'
     then: {required: [enumeration set]}
     else: {not: {required: [enumeration set]}}
-
-  - if:
-      properties:
-        type:
-          pattern: "^(structure|enumeration|calendar|month)$"
-    then:
-      oneOf:
-        - {required: [standard tag]}
-        - {required: [extension tags]}
-        - {required: [nonconformant tags]}
