@@ -318,8 +318,9 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
     </tbody></table>
     
     The tag for this concept, either as given in an official GEDCOM standard document,
-    or for an extension-defined substructure that uses a tag matching `stdTag` and a payload matching
-    that of a standard structure with the same tag.
+    or for an extension-defined substructure that uses a tag matching `stdTag`, and a payload
+    and substructures matching that of a standard structure with the same tag,
+    though it can add more substructures to the substructure collection.
 
 -   <table><tbody>
     <tr><th>Key</th><td><code>subsumes</code></td></tr>
