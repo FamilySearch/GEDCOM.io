@@ -284,13 +284,13 @@ It is recommended that GEDCOM 5.5.1 strings starting with `M`, `F`, or `X` be
 converted to the single-letter equivalents, and that all others be converted to `U`.
 Language-specific conversions may also be used.
 
-## SURN Values
+## Name Piece Values
 
-GEDCOM 5.5.1 defined the `SURN` structure as appearing at most once per `NAME`, and defined its
-payload as `[ <NAME_PIECE> | <NAME_PIECE_SURNAME>, <NAME_PIECE> ]`, where different surnames are
-separated by a comma.
+GEDCOM 5.5.1 defined the `NPFX`, `GIVN`, `NICK`, `SPFX`, `SURN`, and `NSFX` structures as appearing
+at most once per `NAME`, and defined their payloads as having name parts separated by a comma.
+For example, it defined the `SURN` payload as `[ <NAME_PIECE> | <NAME_PIECE_SURNAME>, <NAME_PIECE> ]`.
 
-FamilySearch GEDCOM 7.0 on the other hand allows the `SURN` structure to appear multiple times,
+FamilySearch GEDCOM 7.0 on the other hand allows these structures to appear multiple times,
 with payload `<Text>`, meaning any comma is not a delimeter but part of the actual name piece.
 
 Thus, this 5.5.1:
@@ -310,7 +310,7 @@ becomes this 7.0:
 2 SURN Martinez
 ```
 
-Note that FamilySearch GEDCOM 7.0 explicitly does not define how the meaning of multiple `SURN` parts
+Note that FamilySearch GEDCOM 7.0 explicitly does not define how the meaning of multiple parts
 differs from the meaning of a single part with a concatenated larger payload such as
 
 ```
@@ -320,6 +320,38 @@ differs from the meaning of a single part with a concatenated larger payload suc
 ```
 
 but applications might use the difference to express at least a user preference.
+
+GEDCOM 5.5.1 likewise did not define how the meaning of multiple comma-separated parts
+differs from the meaning of a single part with a concatenated larger payload, and
+some applications use the non-comma separated form for multi-word parts. For example,
+the 5.5.1 specification states:
+
+> Different surname articles are separated by a comma, for example in the name "de la Cruz", this value would be "de, la".
+
+This can complicate the conversion of a 5.5.1 file to a 7.0 file, since comma-separated
+parts in 5.5.1 might, when converted to 7.0, map to a concatenated larger payload or to
+separate alternatives expressed in separate payloads.  Applications doing conversion to
+7.0 will need an appropriate algorithm.  An example of such an algorithm is to convert
+comma-separated pieces to separate 7.0 payloads if any piece contains a space or if only
+one of the comma-separated pieces appears in the `NAME` payload, and to a concatenated larger payload if not.
+
+For example, this 5.5.1:
+
+```
+1 NAME Velislava Velcheva /Marinova/
+2 GIVN Velislava Velcheva
+2 SURN Marinova, Marinov, Marinovi
+```
+
+becomes this 7.0:
+
+```
+1 NAME Velislava Velcheva /Marinova/
+2 GIVN Velislava Velcheva
+2 SURN Marinova
+2 SURN Marinov
+2 SURN Marinovi
+```
 
 ## Date Ranges
 
