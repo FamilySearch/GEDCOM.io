@@ -33,7 +33,7 @@ jobs:
 
       - name: Download GedValidate
         shell: pwsh
-        run: Invoke-WebRequest https://github.com/ArmidaleSoftware/gedcom7/releases/download/v1.3.0/Windows-Release-GedValidate.zip -OutFile GedValidate.zip
+        run: Invoke-WebRequest https://github.com/ArmidaleSoftware/gedcom7/releases/download/v1.4.0/Windows-Release-GedValidate.zip -OutFile GedValidate.zip
 
       - name: Unzip GedValidate
         shell: pwsh
