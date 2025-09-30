@@ -311,6 +311,21 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
     The specification are generally programmer-centric; for user-centric text, see `label` and `help text`
 
 -   <table><tbody>
+    <tr><th>Key</th><td><code>standard</code></td></tr>
+    <tr><th>Type</th><td><code>bool</code></td></tr>
+    <tr><th>Required by</th><td>—</td></tr>
+    <tr><th>Allowed by</th><td><code>enumeration set</code></td></tr>
+    </tbody></table>
+
+    If present with a true value, the enumeration set is defined in an official GEDCOM standard
+    document, but may still be in prerelease depending on the value of the `prerelease` field.
+    the URI documented by this YAML file is not yet released;
+    breaking changes may appear in the future without changing the URI.
+
+    If absent, or if present with a false value, the enumeration set is not in any official
+    GEDCOM standard.
+
+-   <table><tbody>
     <tr><th>Key</th><td><code>standard tag</code></td></tr>
     <tr><th>Type</th><td><code>stdTag</code></td></tr>
     <tr><th>Required by</th><td>—</td></tr>
