@@ -85,6 +85,8 @@ properties:
     type: string
   fragment:
     type: string
+  standard:
+    type: boolean
   prerelease:
     type: boolean
   translated from:

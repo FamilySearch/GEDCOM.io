@@ -87,6 +87,8 @@ properties:
     type: string
   prerelease:
     type: boolean
+  standard:
+    type: boolean
   translated from:
     type: string
   used by:
