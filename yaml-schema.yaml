@@ -126,6 +126,6 @@ allOf:
         type: {const: structure}
         payload:
           type: string
-          pattern: '^https://gedcom.io/terms/v7/type-(List#)?Enum$'
+          pattern: '^https://gedcom.io/terms/v7(\.\d+)?/type-(List#)?Enum$'
     then: {required: [enumeration set]}
     else: {not: {required: [enumeration set]}}
