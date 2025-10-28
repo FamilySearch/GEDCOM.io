@@ -12,6 +12,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 |----|----|-------|---------------|----------------|-------|
 |  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see \<\<FAMILY_RECORD\>\>, page 24.) | data may not have been supplied in the transmission (see \<\<FAM_RECORD\>\>, page 24). | FAMILY_RECORD should be FAM_RECORD |
 |  7 |  4 | The following tags were added: | | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
+| 23 |  7 | LINEAGE_LINKED_GEDCOM |  Tags that are required within a desired context have been bolded. Note that some contexts are not required but if they are used then the bolded tags are required. | | The use of bolding is inconsistent throughout the specification.  The cardinality indicates requirements, and should be used rather than basing requirement on whether a tag is bolded. |
 | 25 | 14 | INDIVIDUAL_RECORD | @XREF:INDI@ | @\<XREF:INDI\>@ | Add angle brackets |
 | 26 | 21 | MULTIMEDIA_RECORD | @XREF:OBJE@ | @\<XREF:OBJE\>@ | Add angle brackets |
 | 26 | 22 | MULTIMEDIA_RECORD | \<MULTIMEDIA_FILE_REFN\> | \<MULTIMEDIA_FILE_REFERENCE\> | Change "REFN" to "REFERENCE" |
