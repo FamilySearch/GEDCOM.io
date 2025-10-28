@@ -505,3 +505,35 @@ and because they typically persist for much longer, perhaps long enough for the 
 External encryption also has the disadvantage of requiring an external technique for communicating what encryption scheme was used,
 which is not covered by the FamilySearch GEDCOM 7 specification.
 
+## How do I record an announced intent to marry?
+
+Marriage banns, a public announcement, of intent to marry, in a church
+or, in some places, a town hall, can be expressed using the `MARB` structure in GEDCOM.
+Also, a newspaper may contain a public notice of an engagement
+or marriage license and may serve a similar purpose.
+
+Some parts of the world formally register the intention to marry as a civil
+process separate from an ecclesiastical banns process.  For example,
+in the Netherlands and Belgium, the civil requirement is known as "ondertrouw"
+and is separate from the banns.
+
+The choices in FamilySearch GEDCOM 7.0 are as follows (using "ondertrouw" as an example):
+
+* Use `MARB`.`TYPE ondertrouw`: The GEDCOM specification description of
+  `MARB` is "Official public notice given that 2 people intend to marry."
+  and this description is not specifically ecclesiastical, but the name is
+  "marriage bann" and so some applications might treat it as ecclesiastical.
+
+* Use `MARL`.`TYPE ondertrouw`: The GEDCOM specification description of
+  `MARL` is "Obtaining a legal license to marry." and this might be applicable
+  to a civil registration requirement.
+
+* Use `EVEN`.`TYPE ondertrouw`: A generic event structure is used when no
+  more specific event type applies.  
+
+When an ambiguity exists, applications should pick an appropriate tag above
+and use `TYPE` as shown above, with an appropriate term, whether "ondertrouw"
+or a similar term used in the relevant jurisdiction.  Using `EVEN` is more
+likely to be preserved by programs that don't keep all event types, but using
+`MARB` or `MARL` is more usable by applications that use marriage-related
+events for hinting or display.
