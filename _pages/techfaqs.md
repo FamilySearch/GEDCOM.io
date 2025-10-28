@@ -505,11 +505,11 @@ and because they typically persist for much longer, perhaps long enough for the 
 External encryption also has the disadvantage of requiring an external technique for communicating what encryption scheme was used,
 which is not covered by the FamilySearch GEDCOM 7 specification.
 
-## How do I record marriage intentions?
+## How do I record an announced intent to marry?
 
-Marriage banns, a public announcement of marriage intentions in a church
+Marriage banns, a public announcement, of intent to marry, in a church
 or, in some places, a town hall, can be expressed using the `MARB` structure in GEDCOM.
-Also in many places, a newspaper may contain a public notice of an engagement
+Also, a newspaper may contain a public notice of an engagement
 or marriage license and may serve a similar purpose.
 
 Some parts of the world formally register the intention to marry as a civil
