@@ -196,13 +196,44 @@ needs such an ability, a relocated standard structure can be used.
 
 ## How do I record a stillborn child?
 
-Use a `PHRASE` under the `AGE` at death:
+In some cultures, "stillborn" or a similar phrase appears in official records, but does not necessarily
+distinguish between "born dead" and "died shortly after birth".  In other cultures, there is a clear
+distinction between between the two.  GEDCOM 5.5.1 allows representing "stillborn" but did not formally
+define the meaning or support explicitly expressing "born dead".  FamilySearch GEDCOM 7.0 redefined
+the [LDS ordinance status](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#enumset-ord-STAT)
+value "STILLBORN" to be unambiguously born dead, so born dead can be expressed as:
+
+```
+1 BAPL
+2 STAT STILLBORN
+```
+
+However, this approach would require using an LDS tag even for non-LDS-related information and, furthermore,
+some applications may not support the LDS ordinance tags, which makes this technique problematic.
+
+The [FamilySearch GEDCOM 7.0 specification](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#TYPE)
+uses "stillborn" in an example along the lines of:
+
+```
+1 BIRT
+2 TYPE Stillborn
+```
+
+Like in GEDCOM 5.5.1, this approach still does not distinguish between "born dead" and "died shortly after birth".
+It also a language-specific term (e.g., "stillborn" in English), and so cannot be reliably used by an
+application to detect the concept of "stillborn".
+
+The current recommendation is to use a `PHRASE` under the `AGE` at death:
 
 ```
 1 DEAT
 2 AGE 0d
 3 PHRASE Stillborn
 ```
+
+This approach still does not distinguish between "born dead" and "died shortly after birth".
+While it uses a language-specific term (e.g., "stillborn" in English), the `AGE 0d` can be used
+by applications to detect the more general "stillborn" concept where death may be before or shortly after birth.
 
 ## How do I record a miscarriage?
 
