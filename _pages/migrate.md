@@ -196,7 +196,17 @@ becomes this 7.0:
 
 Take care to convert the `TITL` tag correctly. In the GEDCOM 5.5.1 MULTIMEDIA_LINK structure, the `TITL` tag is a substructure of the `OBJE` tag, but in the [MULTIMEDIA_RECORD](https://gedcom.io/specifications/FamilySearchGEDCOMv7.html#MULTIMEDIA_RECORD) in both GEDCOM 5.5.1 and FamilySearch GEDCCOM 7.0, the `TITL` tag is a substructure of the `FILE` tag.
 
-Similarly, the `FORM` tag must be converted correctly.  In the GEDCOM 5.5.1 MULTIMEDIA_FORMAT structure, the `FORM` tag is a set of enumerated values, but in FamilySearch GEDCOM 7.0, it must be a valid [media type](https://www.iana.org/assignments/media-types/media-types.xhtml).
+Similarly, the `FORM` tag must be converted correctly.  In the GEDCOM 5.5.1 MULTIMEDIA_FORMAT structure, the `FORM` tag is a set of enumerated values, but in FamilySearch GEDCOM 7.0, it must be a valid [media type](https://www.iana.org/assignments/media-types/media-types.xhtml). The recommended mapping is as follows:
+
+| 5.5.1 | 7.0                     |
+|-------|--------------------------|
+| bmp   | image/bmp                |
+| gif   | image/gif                |
+| jpeg  | image/jpeg               |
+| ole   | application/ole          |
+| pcx   | image/vnd.zbrush.pcx     |
+| tiff  | image/tiff               |
+| wav   | audio/wav                |
 
 ## Non-pointer SOUR Substructures
 
