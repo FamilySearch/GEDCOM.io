@@ -12,7 +12,12 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 |----|----|-------|---------------|----------------|-------|
 |  6 | 13 | Modifications in Version 5.5.1 | data may not have been supplied in the transmission. (see \<\<FAMILY_RECORD\>\>, page 24.) | data may not have been supplied in the transmission (see \<\<FAM_RECORD\>\>, page 24). | FAMILY_RECORD should be FAM_RECORD |
 |  7 |  4 | The following tags were added: | | **ADR3**     Address line 3. | Add ADR3 before EMAIL |
+| 23 |  7 | LINEAGE_LINKED_GEDCOM |  Tags that are required within a desired context have been bolded. Note that some contexts are not required but if they are used then the bolded tags are required. | | The use of bolding is inconsistent throughout the specification.  The cardinality indicates requirements, and should be used rather than basing requirement on whether a tag is bolded. |
+| 25 | 14 | INDIVIDUAL_RECORD | @XREF:INDI@ | @\<XREF:INDI\>@ | Add angle brackets |
+| 26 | 21 | MULTIMEDIA_RECORD | @XREF:OBJE@ | @\<XREF:OBJE\>@ | Add angle brackets |
 | 26 | 22 | MULTIMEDIA_RECORD | \<MULTIMEDIA_FILE_REFN\> | \<MULTIMEDIA_FILE_REFERENCE\> | Change "REFN" to "REFERENCE" |
+| 28 |  7 | SUBMISSION_RECORD | @XREF:SUBN@ | @\<XREF:SUBN\>@ | Add angle brackets |
+| 28 |  8 | SUBMISSION_RECORD | @XREF:SUBM@ | @\<XREF:SUBM\>@ | Add angle brackets |
 | 32 | 36 | FAMILY_EVENT_STRUCTURE | n RESI | n RESI     {1:1} | Add cardinality |
 | 35 |  4 | EVEN | n **EVEN**     {1:1} | n **EVEN** [\<EVENT_DESCRIPTOR\> \| \<NULL\>]     {1:1} | Allow EVENT_DESCRIPTOR payload |
 | 37 |  6 | MULTIMEDIA_LINK |            | [ | Add open bracket before first line of MULTIMEDIA_LINK |
@@ -20,6 +25,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 37 |  9 | MULTIMEDIA_LINK | \<MULTIMEDIA_FILE_REFN\> | \<MULTIMEDIA_FILE_REFERENCE\> | Change "REFN" to "REFERENCE" |
 | 37 | 12 | MULTIMEDIA_LINK |            | ] | Add close bracket after last line of MULTIMEDIA_LINK |
 | 37 | 36 | PERSONAL_NAME_PIECES | \<NAME_PIECE_SURNAME_PREFIX | \<NAME_PIECE_SURNAME_PREFIX\> | Add matching angle bracket |
+| 40 | 19 | SOURCE_REPOSITORY_CITATION | @XREF:REPO@ | @\<XREF:REPO\>@ | Add angle brackets |
 | 42 | 18 | AGE_AT_EVENT | ] | | Remove duplicate close bracket |
 | 46 | 30 | DATE_PERIOD | FROM 1904 to 1915 | FROM 1904 TO 1915 | "TO" should be upper case |
 | 49 | 19 | EVENT_TYPE_CITED_FROM | {SIZE=1:15} | {Size=1:15} | "Size" should be lower case |
@@ -32,6 +38,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 58 | 32 | PLACE_LONGITUDE | {Size=5:8} | {Size=5:11} | Maximum size is 11 to accommodate the example in line 35 |
 | 59 |  9 | PLACE_PHONETIC_VARIATION | the same form as&nbsp; was the place name | the same form as was the place name | Remove extra space before "was" |
 | 59 | 11 | PLACE_PHONETIC_VARIATION | for example if hiragana was used to provide a reading of a a | for example if hiragana was used to provide a reading of a | Remove duplicate "a" |
+| 60 |  8 | RELATION_IS_DESCRIPTOR | @XREF:SUBM@ | @\<XREF:SUBM\>@ | Add angle brackets |
 | 60 | 19 | RESTRICTION_NOTICE | {Size=6:7} | {Size=6:12} | Maximum size is 12 to accommodate "confidential" |
 | 61 |  9 | ROLE_IN_EVENT | {Size=1:15} | {Size=1:27} | Accommodate a ROLE_DESCRIPTOR of length 25 |
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
