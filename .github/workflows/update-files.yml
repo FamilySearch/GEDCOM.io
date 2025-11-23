@@ -40,14 +40,14 @@ jobs:
 
     steps:
       - name: Checkout GEDCOM.io
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: GEDCOM.io
           ref: ${{matrix.BRANCH}}
 
       - name: Checkout GEDCOM
         if: matrix.GEDCOM_BRANCH != 'release'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: FamilySearch/GEDCOM
           path: GEDCOM
@@ -62,7 +62,7 @@ jobs:
 
       - name: Checkout latest GEDCOM release
         if: matrix.GEDCOM_BRANCH == 'release'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: FamilySearch/GEDCOM
           path: GEDCOM
