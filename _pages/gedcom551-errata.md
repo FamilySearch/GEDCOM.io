@@ -31,6 +31,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 46 | 30 | DATE_PERIOD | FROM 1904 to 1915 | FROM 1904 TO 1915 | "TO" should be upper case |
 | 49 | 19 | EVENT_TYPE_CITED_FROM | {SIZE=1:15} | {Size=1:15} | "Size" should be lower case |
 | 51 |  4 | LANGUAGE_ID | Manipuri | Mandarin \| Manipuri | Both "Mandrin" and the corrected spelling "Mandarin" are in use |
+| 54 |  3 | MULTIMEDIA_FILE_REFERENCE | | Values longer than 30 should not be truncated if doing so would invalidate the reference. |
 | 54 |  4 | MULTIMEDIA_FORMAT | {Size=3:4} | {Size=3:3} | Maximum size is 3 since all values are size 3 |
 | 56 | 15 | NAME_TYPE | {Size=5:30} | {Size=3:30} | Minimum size is 3 due to accommodate "aka" |
 | 57 | 33 | PHONETIC_TYPE | {Size=5:30} | {Size=4:30} | Minimum size is 4 to accommodate "kana" |
