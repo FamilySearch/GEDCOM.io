@@ -192,7 +192,7 @@ needs such an ability, a relocated standard structure can be used.
 3 _AGE 29y
 ```
 
-# Children
+# Parent-Child Relationships
 
 ## How do I record a stillborn child?
 
@@ -317,6 +317,108 @@ The standard `RESN` tag is used to mark data confidential but it is not a substr
 
 Note that with all confidential communications, it is important not only to mark the data as confidential but also to ensure that the recipient of the data understands in what cases they are to remove the confidential data and agrees to do so. `_RESN` communicates the confidential nature, but does not enforce the desired behavior.
 
+## How do I record information about one parent?
+
+Parent-child relationships are stored in the `INDI`.`FAMC` structure, which must point to a `FAM` not an `INDI`.
+Additional details about that relationship are stored in its `PEDI` substructure.
+To describe the relationship of an `INDI` to just one parent, make a `FAM` that has only one partner.
+
+The following example indicates that `@I1@` was part of the family `@F1@`,
+but at birth was only related to the mother, not the father.
+
+```
+0 @F1@ FAM
+1 NOTE The family as it appeared later
+1 CHIL @I1@
+1 WIFE @I2@
+1 HUSB @I3@
+0 @I1@ INDI
+1 FAMC @F1@
+1 FAMC @F2@
+0 @F2@ FAM
+1 NOTE The birth coupling; not a "family" in the social sense
+1 CHIL @I1@
+1 WIFE @I2@
+```
+
+Certain additional information about specific aspects of a parent-child relationship can be provided in other structures:
+
+- `ADOP`.`FAMC` indicates the parents involved in a child's adoption.
+
+- `ASSO` with a family relationship `ROLE` -- including like `CHIL`, `FATH`, `MOTH`, and `PARENT` -- is for indicating a person acting in that role in a non-family context, such inside a `WILL` indicating relationships the will described for its beneficiaries or inside a `MARR` indicating guests who were present in the capacity of parents.
+
+- `BIRT`.`FAMC` indicates the parents as pertaining to a child's birth.
+
+- `SLGC`.`FAMC` indicates a recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints.
+
+# How do I record surrogacy?
+
+The specification notes that `INDI`.`FAMC`.`PEDI BIRTH` can be used to mean either "genetic parent"
+or "social parent at time of birth", so applications should refrain from assuming it has
+either meaning.  A `PEDI`.`PHRASE` is available but cannot represent separate values per parent.
+
+Instead, a surrogate parent and donors can be recorded using `ASSO`.`ROLE`.`PHRASE` as in the following example:
+
+```
+0 @I1@ INDI
+1 ASSO @I2@
+2 ROLE MOTH
+3 PHRASE Surrogate
+1 ASSO @I3@
+2 ROLE MOTH
+3 PHRASE Egg donor
+1 ASSO @I4@
+2 ROLE FATH
+3 PHRASE Sperm donor
+```
+
+In the above example, a child has a surrogate mother, an egg donor, and a sperm donor.
+
+# Spousal Relationships
+
+## How do I record an announced intent to marry?
+
+Marriage banns, a public announcement, of intent to marry, in a church
+or, in some places, a town hall, can be expressed using the `MARB` structure in GEDCOM.
+Also, a newspaper may contain a public notice of an engagement
+or marriage license and may serve a similar purpose.
+
+Some parts of the world formally register the intention to marry as a civil
+process separate from an ecclesiastical banns process.  For example,
+in the Netherlands and Belgium, the civil requirement is known as "ondertrouw"
+and is separate from the banns.
+
+The choices in FamilySearch GEDCOM 7.0 are as follows (using "ondertrouw" as an example):
+
+* Use `MARB`.`TYPE ondertrouw`: The GEDCOM specification description of
+  `MARB` is "Official public notice given that 2 people intend to marry."
+  and this description is not specifically ecclesiastical, but the name is
+  "marriage bann" and so some applications might treat it as ecclesiastical.
+
+* Use `MARL`.`TYPE ondertrouw`: The GEDCOM specification description of
+  `MARL` is "Obtaining a legal license to marry." and this might be applicable
+  to a civil registration requirement.
+
+* Use `EVEN`.`TYPE ondertrouw`: A generic event structure is used when no
+  more specific event type applies.  
+
+When an ambiguity exists, applications should pick an appropriate tag above
+and use `TYPE` as shown above, with an appropriate term, whether "ondertrouw"
+or a similar term used in the relevant jurisdiction.  Using `EVEN` is more
+likely to be preserved by programs that don't keep all event types, but using
+`MARB` or `MARL` is more usable by applications that use marriage-related
+events for hinting or display.
+
+## How do I record polygamous families?
+
+A `FAM` record should be used for each couple procreating or rearing offspring.
+This may result in many `FAM` records for one social family unit.
+
+A `FAM` record may also be used to represent the social family unit.
+If it is desirable that all the spouses appear structurally equal, they may be linked using `ASSO` pointers with `ROLE SPOU` instead of `HUSB` and `WIFE` pointers.
+
+Some applications may have more complete handling of `HUSB` and `WIFE` than they have for `ASSO`.
+
 # Places
 
 ## How do I list two places in an emigration?
@@ -378,16 +480,6 @@ The enumerated value on the `SEX` tag in GEDCOM 7.0 was amended to include "X" t
 Birth records in some jurisdictions use intersex as the sex value for a child who does not conform to the traditional biological definitions of male or female at birth.
 
 The `SEX` tag is only for anatomical or biological sex at birth. For any related concept that might change and/or manifest later in life, an individual attribute should be used instead.
-
-## How do I record polygamous families?
-
-A `FAM` record should be used for each couple procreating or rearing offspring.
-This may result in many `FAM` records for one social family unit.
-
-A `FAM` record may also be used to represent the social family unit.
-If it is desirable that all the spouses appear structurally equal, they may be linked using `ASSO` pointers with `ROLE SPOU` instead of `HUSB` and `WIFE` pointers.
-
-Some applications may have more complete handling of `HUSB` and `WIFE` than they have for `ASSO`.
 
 ## How do I link to individual structures within a FamilySearch GEDCOM file?
 
@@ -464,40 +556,6 @@ while others might put it in the `CALN` of a `SOURCE_REPOSITORY_CITATION` as fol
 Note that unlike the `PAGE` structure, the `CALN` structure has no current recommendation about using
 label: value pairs.
 
-## How do I record information about one parent?
-
-Parent-child relationships are stored in the `INDI`.`FAMC` structure, which must point to a `FAM` not an `INDI`.
-Additional details about that relationship are stored in its `PEDI` substructure.
-To describe the relationship of an `INDI` to just one parent, make a `FAM` that has only one partner.
-
-The following example indicates that `@I1@` was part of the family `@F1@`,
-but at birth was only related to the mother, not the father.
-
-```
-0 @F1@ FAM
-1 NOTE The family as it appeared later
-1 CHIL @I1@
-1 WIFE @I2@
-1 HUSB @I3@
-0 @I1@ INDI
-1 FAMC @F1@
-1 FAMC @F2@
-0 @F2@ FAM
-1 NOTE The birth coupling; not a "family" in the social sense
-1 CHIL @I1@
-1 WIFE @I2@
-```
-
-Certain additional information about specific aspects of a parent-child relationship can be provided in other structures:
-
-- `ADOP`.`FAMC` indicates the parents involved in a child's adoption.
-
-- `ASSO` with a family relationship `ROLE` -- including like `CHIL`, `FATH`, `MOTH`, and `PARENT` -- is for indicating a person acting in that role in a non-family context, such inside a `WILL` indicating relationships the will described for its beneficiaries or inside a `MARR` indicating guests who were present in the capacity of parents.
-
-- `BIRT`.`FAMC` indicates the parents as pertaining to a child's birth.
-
-- `SLGC`.`FAMC` indicates a recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints.
-
 
 ## How do I protect sensitive information?
 
@@ -535,36 +593,3 @@ both because they typically rely on human-memorable passphrases rather than larg
 and because they typically persist for much longer, perhaps long enough for the encryption techniques they used to be compromised.
 External encryption also has the disadvantage of requiring an external technique for communicating what encryption scheme was used,
 which is not covered by the FamilySearch GEDCOM 7 specification.
-
-## How do I record an announced intent to marry?
-
-Marriage banns, a public announcement, of intent to marry, in a church
-or, in some places, a town hall, can be expressed using the `MARB` structure in GEDCOM.
-Also, a newspaper may contain a public notice of an engagement
-or marriage license and may serve a similar purpose.
-
-Some parts of the world formally register the intention to marry as a civil
-process separate from an ecclesiastical banns process.  For example,
-in the Netherlands and Belgium, the civil requirement is known as "ondertrouw"
-and is separate from the banns.
-
-The choices in FamilySearch GEDCOM 7.0 are as follows (using "ondertrouw" as an example):
-
-* Use `MARB`.`TYPE ondertrouw`: The GEDCOM specification description of
-  `MARB` is "Official public notice given that 2 people intend to marry."
-  and this description is not specifically ecclesiastical, but the name is
-  "marriage bann" and so some applications might treat it as ecclesiastical.
-
-* Use `MARL`.`TYPE ondertrouw`: The GEDCOM specification description of
-  `MARL` is "Obtaining a legal license to marry." and this might be applicable
-  to a civil registration requirement.
-
-* Use `EVEN`.`TYPE ondertrouw`: A generic event structure is used when no
-  more specific event type applies.  
-
-When an ambiguity exists, applications should pick an appropriate tag above
-and use `TYPE` as shown above, with an appropriate term, whether "ondertrouw"
-or a similar term used in the relevant jurisdiction.  Using `EVEN` is more
-likely to be preserved by programs that don't keep all event types, but using
-`MARB` or `MARL` is more usable by applications that use marriage-related
-events for hinting or display.
