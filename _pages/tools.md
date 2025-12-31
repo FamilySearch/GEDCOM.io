@@ -33,6 +33,7 @@ sidebar:
 | C | public domain | <https://github.com/gedcom7code/c-parser> | Parses tree and resolves points with syntatic validation |
 | Javascript | dual licensed: unlicense and MIT license | <https://github.com/gedcom7code/js-gedcom> | DOM-style, full validation, with full SCHMA handling and registry parsing; also supports programmatic creation of GEDCOM files |
 | C# | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | GEDCOM 7 parsing, validation, and comparison library |
+| Dart | BSD | <https://github.com/ceburo/gedcom_parser> | GEDCOM 5.5.1 and 7.0 parsing and exporting |
 
 ## Development Aids
 
