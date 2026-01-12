@@ -351,7 +351,7 @@ Certain additional information about specific aspects of a parent-child relation
 
 - `SLGC`.`FAMC` indicates a recognition of a persons parents by the Church of Jesus Christ of Latter-Day Saints.
 
-# How do I record surrogacy?
+## How do I record surrogacy?
 
 The specification notes that `INDI`.`FAMC`.`PEDI BIRTH` can be used to mean either "genetic parent"
 or "social parent at time of birth", so applications should refrain from assuming it has
