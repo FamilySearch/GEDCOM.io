@@ -532,8 +532,11 @@ There exist multiple different standards for styles, any of which can be used wi
 
 Both of these are widely used in genealogy at present, and using one of these two is generally recommended.
 
-Since GEDCOM does not provide more granular source fields, it is in general not possible to
-distinguish among such fields within GEDCOM structure payloads (e.g., `PUBL`).  Furthermore,
+Since GEDCOM does not provide structures for each field included in common citations,
+it is common to include multiple such fields formatted per some style guide
+within a single structure's payload, such as including all publication information (publisher, city, date, etc) inside the `PUBL` structure.
+It is in general not possible to programmatically distinguish among such fields within GEDCOM structure payloads.
+Furthermore,
 if two GEDCOM files are merged, there may be multiple styles used in the same file.
 
 Support for better solutions are being discussed for possible revision in subsequent versions of FamilySearch GECDOM.
