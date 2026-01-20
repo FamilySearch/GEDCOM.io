@@ -519,6 +519,28 @@ Relative paths, however, are permitted in both GEDCOM and GEDZIP files and so ma
 use in both cases.  Any tool that converts FamilySearch GEDCOM 7.0 to GEDZIP should convert local file URLs
 to relative paths within the resulting GEDZIP file.
 
+## How should I format source information?
+
+A `SOURCE_RECORD` uses `AUTH`, `TITL`, and `PUBL` structures to contain source information, and
+a `SOURCE_CITATION` adds a `PAGE` structure to contain where in the source the relevant material can be found.
+The GEDCOM specification does not, however, state how to format the information in the payloads.
+
+There exist multiple different standards for styles, any of which can be used with GEDCOM, including:
+
+* [Evidence Explained](https://www.evidenceexplained.com/)
+* [Chicago Manual of Style](https://www.chicagomanualofstyle.org/)
+
+Both of these are widely used in genealogy at present, and using one of these two is generally recommended.
+
+Since GEDCOM does not provide structures for each field included in common citations,
+it is common to include multiple such fields formatted per some style guide
+within a single structure's payload, such as including all publication information (publisher, city, date, etc) inside the `PUBL` structure.
+It is in general not possible to programmatically distinguish among such fields within GEDCOM structure payloads.
+Furthermore,
+if two GEDCOM files are merged, there may be multiple styles used in the same file.
+
+Support for better solutions are being discussed for possible revision in subsequent versions of FamilySearch GECDOM.
+
 ## How do I record the URL of a source?
 
 While `EVENT_DETAIL` and `REPOSITORY_RECORD` both allow a URL to be placed in a `WWW` substructure,
