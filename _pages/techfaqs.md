@@ -501,7 +501,14 @@ This avoids the issues with "or", and also allows separate source citations if n
 * The size of the GEDCOM file increases
 
 
-A `PLAC`.`NOTE` could perhaps be used in such a case.
+
+A `PLAC`.`NOTE` could be used in such a case:
+
+```
+2 PLAC Kansas City, , , USA
+3 FORM City, County, State, Country
+3 NOTE Kansas City, Jackson, Missouri, USA or Kansas City, Wyandotte, Kansas, USA
+```
 
 # Miscellaneous
 
