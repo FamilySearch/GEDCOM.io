@@ -501,9 +501,7 @@ This avoids the issues with "or", and also allows separate source citations if n
 * The size of the GEDCOM file increases
 
 
-By including both structures, it is likely that applications will include the containing record in reports of both places.
-If one is believed to be more likely, it should be included first to align with general principle of "the first substructure being the most-preferred value" given in section 1.2 of the specification.
-If the correct jurisdiction is later determined, the incorrect entry can be removed.
+A `PLAC`.`NOTE` could perhaps be used in such a case.
 
 # Miscellaneous
 
