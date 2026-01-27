@@ -473,9 +473,9 @@ Some GEDCOM files have put "or" into the `PLAC` payload, such as:
 
 Such an approach has issues:
 
-* Some applications may interpret the "or" as being literally part of the jurisdiction name
+* Some applications may interpret the "or" as being literally part of the jurisdiction name.
 * It interferes with the ability to use other parts of a `PLACE_STRUCTURE` such as `MAP` and `EXID` in GEDCOM
-* Some applications may try to map a place name to a map location or other database entry even if no `MAP` or `EXID` are present, and such an entry interferes with this capability
+* Some applications may try to map a place name to a map location or other database entry even if no `MAP` or `EXID` are present, and such an entry interferes with this capability.
 * Kansas City, Missouri is in Jackson county, and Kansas City, Kansas is in Wyandotte county,
   but the county cannot be cleanly described ("Kansas City, Jackson or Wyandotte, Missouri or Kansas, USA"
   is even more ambiguous as to the relationship between individual county names and state names).
