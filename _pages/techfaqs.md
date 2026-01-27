@@ -485,11 +485,11 @@ Such an approach has issues:
 Other users or applications might use separate event structures:
 
 ```
-1 BIRT
+1 GRAD
 2 DATE 1 JUN 1890
 2 PLAC Kansas City, Jackson, Missouri, USA
 3 FORM City, County, State, Country
-1 BIRT
+1 GRAD
 2 DATE 1 JUN 1890
 2 PLAC Kansas City, Wyandotte, Kansas, USA
 3 FORM City, County, State, Country
