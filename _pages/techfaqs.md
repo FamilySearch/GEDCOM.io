@@ -478,7 +478,7 @@ Such an approach has issues:
 * Some applications may try to map a place name to a map location or other database entry even if no `MAP` or `EXID` are present, and such an entry interferes with this capability
 * Kansas City, Missouri is in Jackson county, and Kansas City, Kansas is in Wyandotte county,
   but the county cannot be cleanly described ("Kansas City, Jackson or Wyandotte, Missouri or Kansas, USA"
-  is even more ambiguous as to the relationship between individual county names and state names)
+  is even more ambiguous as to the relationship between individual county names and state names).
 * The word "or" is in English may lead to challenges of language translation.  For example if
   `PLAC`.`LANG` is present, is "or" in the indicated language?
 
@@ -491,6 +491,9 @@ Instead, it is recommended to use separate `PLAC` structures:
 3 FORM City, County, State, Country
 ```
 
+By including both structures, it is likely that applications will include the containing record in reports of both places.
+If one is believed to be more likely, it should be included first to align with general principle of "the first substructure being the most-preferred value" given in section 1.2 of the specification.
+If the correct jurisdiction is later determined, the incorrect entry can be removed.
 # Miscellaneous
 
 ## How do I choose LANG payloads?
