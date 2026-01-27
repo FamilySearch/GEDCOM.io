@@ -497,10 +497,9 @@ Other users or applications might use separate event structures:
 
 This avoids the issues with "or", and also allows separate source citations if needed.  However, it has its own issues:
 
-* Some applications or reports might only retain the first entry, which may be misleading
-* The size of the GEDCOM file increases
-
-
+* Some applications or reports might only retain the first entry, which may be misleading.
+* The size of the GEDCOM file increases.
+* It may imply that there were actually two separate events that were both correct, such as two graduations.
 
 A `PLAC`.`NOTE` could be used in such a case:
 
