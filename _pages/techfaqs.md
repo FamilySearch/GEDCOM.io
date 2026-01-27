@@ -482,14 +482,24 @@ Such an approach has issues:
 * The word "or" is in English may lead to challenges of language translation.  For example if
   `PLAC`.`LANG` is present, is "or" in the indicated language?
 
-Instead, it is recommended to use separate `PLAC` structures:
+Other users or applications might use separate event structures:
 
 ```
+1 BIRT
+2 DATE 1 JUN 1890
 2 PLAC Kansas City, Jackson, Missouri, USA
 3 FORM City, County, State, Country
+1 BIRT
+2 DATE 1 JUN 1890
 2 PLAC Kansas City, Wyandotte, Kansas, USA
 3 FORM City, County, State, Country
 ```
+
+This avoids the issues with "or", and also allows separate source citations if needed.  However, it has its own issues:
+
+* Some applications or reports might only retain the first entry, which may be misleading
+* The size of the GEDCOM file increases
+
 
 By including both structures, it is likely that applications will include the containing record in reports of both places.
 If one is believed to be more likely, it should be included first to align with general principle of "the first substructure being the most-preferred value" given in section 1.2 of the specification.
