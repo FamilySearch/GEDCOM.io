@@ -494,6 +494,7 @@ Instead, it is recommended to use separate `PLAC` structures:
 By including both structures, it is likely that applications will include the containing record in reports of both places.
 If one is believed to be more likely, it should be included first to align with general principle of "the first substructure being the most-preferred value" given in section 1.2 of the specification.
 If the correct jurisdiction is later determined, the incorrect entry can be removed.
+
 # Miscellaneous
 
 ## How do I choose LANG payloads?
