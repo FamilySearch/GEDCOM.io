@@ -458,6 +458,38 @@ the end, leading to problems of interpretation of GEDCOM files.
 
 A `PLAC`.`NOTE` could perhaps be used in such a case.
 
+## How do I record a place whose larger jurisdiction is ambiguous?
+
+Sometimes a source is found indicating a place but it is unclear what larger jurisdiction was meant.
+For example, if a record says "Kansas City", it might be known that either Kansas City, Missouri
+or Kansas City, Kansas was meant, but it might not be known which one.
+
+Some GEDCOM files have put "or" into the `PLAC` payload, such as:
+
+```
+2 PLAC Kansas City, Missouri or Kansas, USA
+3 FORM City, State, Country
+```
+
+Such an approach has issues:
+
+* Some applications may interpret the "or" as being literally part of the jurisdiction name
+* It interferes with the ability to use other parts of a `PLACE_STRUCTURE` such as `MAP` and `EXID`
+* Kansas City, Missouri is in Jackson county, and Kansas City, Kansas is in Wyandotte county,
+  but the county cannot be cleanly described ("Kansas City, Jackson or Wyandotte, Missouri or Kansas, USA"
+  is even more ambiguous as to the relationship between individual county names and state names)
+* The word "or" is in English may lead to challenges of language translation.  For example if
+  `PLAC`.`LANG` is present, is "or" in the indicated language?
+
+Instead, it is recommended to use separate `PLAC` structures:
+
+```
+2 PLAC Kansas City, Jackson, Missouri, USA
+3 FORM City, County, State, Country
+2 PLAC Kansas City, Wyandotte, Kansas, USA
+3 FORM City, County, State, Country
+```
+
 # Miscellaneous
 
 ## How do I choose LANG payloads?
