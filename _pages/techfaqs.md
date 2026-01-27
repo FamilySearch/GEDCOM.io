@@ -508,7 +508,8 @@ A `PLAC`.`NOTE` should be used in such a case:
 3 FORM City, County, State, Country
 3 NOTE Kansas City, Jackson, Missouri, USA or Kansas City, Wyandotte, Kansas, USA
 ```
-This approach allows the `LANG` (and any `TRAN` structures) of the `PLAC` payload to be specified separately from the `LANG` (and any `TRAN` structures) of the `NOTE`
+This approach allows the `LANG` (and any `TRAN` structures) of the `PLAC` payload to be
+specified separately from the `LANG` (and any `TRAN` structures) of the `NOTE`.
 # Miscellaneous
 
 ## How do I choose LANG payloads?
