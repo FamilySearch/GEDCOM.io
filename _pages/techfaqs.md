@@ -501,7 +501,7 @@ This avoids the issues with "or", and also allows separate source citations if n
 * The size of the GEDCOM file increases.
 * It may imply that there were actually two separate events that were both correct, such as two graduations.
 
-A `PLAC`.`NOTE` could be used in such a case:
+A `PLAC`.`NOTE` should be used in such a case:
 
 ```
 2 PLAC Kansas City, , , USA
