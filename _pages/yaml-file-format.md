@@ -319,8 +319,6 @@ Their names may be changed a YAML file with a `lang` other than `en`.
 
     If present with a true value, the enumeration set is defined in an official GEDCOM standard
     document, but may still be in prerelease depending on the value of the `prerelease` field.
-    the URI documented by this YAML file is not yet released;
-    breaking changes may appear in the future without changing the URI.
 
     If absent, or if present with a false value, the enumeration set is not in any official
     GEDCOM standard.
