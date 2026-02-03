@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -36,7 +35,7 @@ specification:
 
 label: 'Type'
 
-payload: http://www.w3.org/2001/XMLSchema#string
+payload: http://www.w3.org/2001/XMLSchema#anyURI
 
 substructures: {}
 

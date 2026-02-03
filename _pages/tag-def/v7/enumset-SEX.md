@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -21,6 +20,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-F"
   - "https://gedcom.io/terms/v7/enum-X"
   - "https://gedcom.io/terms/v7/enum-U"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

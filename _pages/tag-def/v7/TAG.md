@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -25,7 +24,7 @@ specification:
 
 label: 'Extension tag'
 
-payload: http://www.w3.org/2001/XMLSchema#string
+payload: https://gedcom.io/terms/v7/type-TagDef
 
 substructures: {}
 

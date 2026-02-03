@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -66,6 +65,13 @@ specification:
     by an `ASSO` pointer subordinate to the burial event; and so on. A subordinate
     `FAMC` pointer is allowed to refer to a family where the individual does not
     appear as a child.
+    
+    If a `FAM` that can be reached from a `INDI` by following `FAMS` and `CHIL`
+    pointers can also be reachable by following `FAMC`, `HUSB`, and `WIFE`
+    pointers, then that implies that a person is their own ancestor/descendant. In
+    most cases that would be an error, though it is theoretically possible that
+    such a situation could occur with non-biological relationships (marriages,
+    adoptions, etc.).
 
 label: 'Individual'
 

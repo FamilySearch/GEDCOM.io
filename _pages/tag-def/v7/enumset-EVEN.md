@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -48,6 +47,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/MARL"
   - "https://gedcom.io/terms/v7/MARR"
   - "https://gedcom.io/terms/v7/MARS"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

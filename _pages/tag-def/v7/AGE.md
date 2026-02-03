@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -20,8 +19,8 @@ standard tag: 'AGE'
 
 specification:
   - Age at event
-  - The age of the individual at the time an event occurred, or the age listed in
-    the document.
+  - The age of the individual at the time an event occurred. It is recommended that
+    this be an age from a cited source document.
 
 label: 'Age at event'
 

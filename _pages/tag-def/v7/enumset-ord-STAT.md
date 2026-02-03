@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -29,6 +28,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-STILLBORN"
   - "https://gedcom.io/terms/v7/enum-SUBMITTED"
   - "https://gedcom.io/terms/v7/enum-UNCLEARED"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

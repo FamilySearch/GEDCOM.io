@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -35,6 +34,11 @@ specification:
     </div>
     
     A `SOURCE_RECORD` may contain a pointer to a `SHARED_NOTE_RECORD` and vice
+    versa. Applications must not create datasets where these mutual pointers form a
+    cycle. Applications should also ensure they can handle invalid files with such
+    cycles in a safe manner.
+    
+    A `SOURCE_RECORD` may contain a pointer to a `MULTIMEDIA_RECORD` and vice
     versa. Applications must not create datasets where these mutual pointers form a
     cycle. Applications should also ensure they can handle invalid files with such
     cycles in a safe manner.
