@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -20,6 +19,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-ADOP-HUSB"
   - "https://gedcom.io/terms/v7/enum-ADOP-WIFE"
   - "https://gedcom.io/terms/v7/enum-BOTH"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...
