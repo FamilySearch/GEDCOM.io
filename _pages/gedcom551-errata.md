@@ -46,6 +46,7 @@ The following is the current list of errata for [the GEDCOM Standard, Release 5.
 | 62 |  8 | SOURCE_DESCRIPTIVE_TITLE | For An _unpublished_ work such as: | For an _unpublished_ work such as: | Lower case "an" |
 | 62 | 14 | SOURCE_FILED_BY_ENTRY | {Size= 1:60} | {Size=1:60} | Remove space |
 | 62 | 22 | SOURCE_MEDIA_TYPE | {Size=1:15} | {Size=3:10) | All alternatives are within size range 3 to 10 |
+| 68 | 14 | Adoption Events | ADOPTED_BY_WHICH_PARENTS | ADOPTED_BY_WHICH_PARENT | Remove "S" |
 | 74 | 21 | Sample Lineage-Linked GEDCOM Transmission | Indentation and bolding are added for readability only. | Indentation, bolding, and C-style comments are added fo readability only. | Clarify that C-style comments do not appear in the actual GEDCOM file |
 | 84 |  7 | ANCE | Pertaining to forbearers of an individual. | Pertaining to forebearers of an individual. | Change "forbearers" to "forebearers" |
 | 83 | 28 | Lineage-Linked GEDCOM Tag Definitions | | **ADR3 {ADDRESS3}:=** | Add ADR3 after ADR2 |
