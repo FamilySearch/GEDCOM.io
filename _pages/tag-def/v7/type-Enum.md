@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -15,6 +14,8 @@ lang: en-US
 type: data type
 
 uri: https://gedcom.io/terms/v7/type-Enum
+
+abnf production: Enum
 
 specification:
   - |

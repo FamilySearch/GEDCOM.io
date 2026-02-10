@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -24,6 +23,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-MARRIED"
   - "https://gedcom.io/terms/v7/enum-PROFESSIONAL"
   - "https://gedcom.io/terms/v7/enum-OTHER"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

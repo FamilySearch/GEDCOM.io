@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -63,6 +62,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/INDI-RELI"
   - "https://gedcom.io/terms/v7/SSN"
   - "https://gedcom.io/terms/v7/INDI-TITL"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

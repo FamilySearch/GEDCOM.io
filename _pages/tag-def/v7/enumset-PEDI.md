@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -22,6 +21,8 @@ enumeration values:
   - "https://gedcom.io/terms/v7/enum-FOSTER"
   - "https://gedcom.io/terms/v7/enum-SEALING"
   - "https://gedcom.io/terms/v7/enum-OTHER"
+
+standard: true
 
 contact: "https://gedcom.io/community/"
 ...

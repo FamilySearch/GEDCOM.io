@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -25,14 +24,25 @@ specification:
     records, connected by `ALIA` pointers (named after "alias" in the computing
     sense, not the pseudonym sense).
     
+    An `ALIA` pointer should not point to the superstructure of the `ALIA`.
+    
     <div class="note">
     
     This specification does not define how to connect `INDI` records with `ALIA`.
     Some systems organize `ALIA` pointers to create a tree structure, with the root
     `INDI` record containing the composite view of all facts in the leaf `INDI`
     records. Others distribute events and attributes between `INDI` records
-    mutually linked by symmetric pairs of `ALIA` pointers. A future version of this
-    specification may adjust the definition of `ALIA`.
+    mutually linked by symmetric pairs of `ALIA` pointers.
+    
+    `ALIA` is known to be used for different purposes by different users. Some
+    users use `ALIA` for uncertain connections, tentatively linking records prior
+    to confirming identities and merging them into a single record; other users
+    create one `INDI` for each single-source view of an individual, linked together
+    with `ALIA` and never merged into a single record; other uses of `ALIA` may
+    also exist. Applications should avoid assuming a particular usage was intended
+    without user confirmation.
+    
+    A future version of this specification may adjust the definition of `ALIA`.
     
     </div>
 
