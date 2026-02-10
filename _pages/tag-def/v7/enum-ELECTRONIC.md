@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -19,7 +18,7 @@ uri: https://gedcom.io/terms/v7/enum-ELECTRONIC
 standard tag: 'ELECTRONIC'
 
 specification:
-  - A digital artifact
+  - A digital artifact such as a computer file or a scan
 
 value of:
   - "https://gedcom.io/terms/v7/enumset-MEDI"

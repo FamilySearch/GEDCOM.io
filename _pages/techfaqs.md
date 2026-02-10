@@ -458,6 +458,60 @@ the end, leading to problems of interpretation of GEDCOM files.
 
 A `PLAC`.`NOTE` could perhaps be used in such a case.
 
+## How do I record a place whose larger jurisdiction is ambiguous?
+
+Sometimes a source is found indicating a place but it is unclear what larger jurisdiction was meant.
+For example, if a record says "Kansas City", it might be known that either Kansas City, Missouri
+or Kansas City, Kansas was meant, but it might not be known which one.
+
+Some GEDCOM files have put "or" into the `PLAC` payload, such as:
+
+```
+2 PLAC Kansas City, Missouri or Kansas, USA
+3 FORM City, State, Country
+```
+
+Such an approach has issues:
+
+* Some applications may interpret the "or" as being literally part of the jurisdiction name.
+* It interferes with the ability to use other parts of a `PLACE_STRUCTURE` such as `MAP` and `EXID` in GEDCOM.
+* Some applications may try to map a place name to a map location or other database entry even if no `MAP` or `EXID` are present, and such an entry interferes with this capability.
+* Kansas City, Missouri is in Jackson county, and Kansas City, Kansas is in Wyandotte county,
+  but the county cannot be cleanly described ("Kansas City, Jackson or Wyandotte, Missouri or Kansas, USA"
+  is even more ambiguous as to the relationship between individual county names and state names).
+* The word "or" is in English may lead to challenges of language translation.  For example if
+  `PLAC`.`LANG` is present, is "or" in the indicated language?
+
+Other users or applications might use separate event structures:
+
+```
+1 GRAD
+2 DATE 1 JUN 1890
+2 PLAC Kansas City, Jackson, Missouri, USA
+3 FORM City, County, State, Country
+1 GRAD
+2 DATE 1 JUN 1890
+2 PLAC Kansas City, Wyandotte, Kansas, USA
+3 FORM City, County, State, Country
+```
+
+This avoids the issues with "or", and also allows separate source citations if needed.  However, it has its own issues:
+
+* Some applications or reports might only retain the first entry, which may be misleading.
+* The size of the GEDCOM file increases.
+* It may imply that there were actually two separate events that were both correct, such as two graduations.
+
+A `PLAC`.`NOTE` should be used in such a case:
+
+```
+2 PLAC Kansas City, , , USA
+3 FORM City, County, State, Country
+3 NOTE Kansas City, Jackson, Missouri, USA or Kansas City, Wyandotte, Kansas, USA
+```
+
+This approach allows the `LANG` (and any `TRAN` structures) of the `PLAC` payload to be
+specified separately from the `LANG` (and any `TRAN` structures) of the `NOTE`.
+
 # Miscellaneous
 
 ## How do I choose LANG payloads?

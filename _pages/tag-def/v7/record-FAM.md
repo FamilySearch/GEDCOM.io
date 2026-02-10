@@ -7,7 +7,6 @@ redirect-from:
 ...
 
 ```
-
 %YAML 1.2
 ---
 lang: en-US
@@ -89,6 +88,13 @@ specification:
     Source citations and notes related to the start of a specific child
     relationship should be placed under the child's `BIRT`, `CHR`, or `ADOP` event,
     rather than under the `FAM` record.
+    
+    If an `INDI` that can be reached from a `FAM` by following `CHIL` and `FAMS`
+    pointers can also be reachable by following `HUSB`, `WIFE`, and `FAMC`
+    pointers, then that implies that a person is their own ancestor/descendant. In
+    most cases that would be an error, though it is theoretically possible that
+    such a situation could occur with non-biological relationships (marriages,
+    adoptions, etc.).
 
 label: 'Family record'
 

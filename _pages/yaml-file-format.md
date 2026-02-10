@@ -228,9 +228,9 @@ Their names may be changed a YAML file with a `lang` other than `en`.
     <tr><th>Allowed by</th><td><code>type: uri</code></td></tr>
     </tbody></table>
     
-A recommended brief name or label for a fragment identifier, to show to users. Labels are user-centric; for programmer-centric explanations of the concept, see `specification`.
+    A recommended brief name or label for a fragment identifier, to show to users. Labels are user-centric; for programmer-centric explanations of the concept, see `specification`.
 
-Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `help text`.
+    Labels are short to fit in forms and other constrained-space UI elements; for more detailed text see `help text`.
     
     By being present in the YAML file, this field also implies that the URI should have a fragment identifier appended to it when used.
 
@@ -319,8 +319,6 @@ Labels are short to fit in forms and other constrained-space UI elements; for mo
 
     If present with a true value, the enumeration set is defined in an official GEDCOM standard
     document, but may still be in prerelease depending on the value of the `prerelease` field.
-    the URI documented by this YAML file is not yet released;
-    breaking changes may appear in the future without changing the URI.
 
     If absent, or if present with a false value, the enumeration set is not in any official
     GEDCOM standard.
