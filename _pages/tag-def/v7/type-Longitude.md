@@ -27,7 +27,7 @@ specification:
     (the 180th meridian).
     
     ```abnf
-    Longitude = ("E" / "W") upto180 [ "." 1*digit]
+    Longitude = ("N" / "S") upto180 [ "." 1*digit]
     upto180  = "180" / "1" upto7 digit / [["0"] digit] digit
     upto7    = "0" / "1" / "2" / "3" / "4" / "5" / "6" / "7"
     ```
