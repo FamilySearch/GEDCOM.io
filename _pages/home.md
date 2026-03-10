@@ -18,7 +18,7 @@ feature_row:
   - image_path: mm-new-feature2.png
     alt: "many new features"
     title: "New Expressivity, Flexibility,and Compatibility"
-    excerpt: "FamilySearch GEDCOM Version 7.0 to represent concepts Version 5.5 could not. Media can now link to the Internet as well as local files. Notes may now use a subset of HTML for basic rich-text markup. All dates now have date phrases, including date ranges and periods. Identifiers RIN, RFN, and AFN have been combined into a new EXID. All text payloads may contain line breaks. LANG payloads are now language tags. Many other positive changes can be reviewed in the ChangeLog in the main public repository."
+    excerpt: "FamilySearch GEDCOM Version 7.0 can represent concepts Version 5.5 could not. Media can now link to the Internet as well as local files. Notes may now use a subset of HTML for basic rich-text markup. All dates now have date phrases, including date ranges and periods. Identifiers RIN, RFN, and AFN have been combined into a new EXID. All text payloads may contain line breaks. LANG payloads are now language tags. Many other positive changes can be reviewed in the ChangeLog in the main public repository."
     url: "/guides/"
     btn_label: "Learn More"
   - image_path: mm-public-feature1.png
