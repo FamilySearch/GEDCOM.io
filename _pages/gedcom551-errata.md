@@ -4,8 +4,6 @@ permalink: /gedcom551-errata/
 sidebar:
   nav: "errata"
 ---
-# GEDCOM 5.5.1 Errata
-
 The following is the current list of errata for [the GEDCOM Standard, Release 5.5.1, published 15 November 2019](https://gedcom.io/specifications/ged551.pdf).
 
 |Page|Line|Heading| Original Text | Corrected Text | Notes |
