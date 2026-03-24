@@ -626,6 +626,11 @@
 1 FILE http://host.example.com/path/to/file2
 2 FORM text/plain
 3 MEDI ELECTRONIC
+0 @O3@ OBJE
+1 RESN PRIVACY
+1 FILE http://host.example.com/path/to/file3
+2 FORM text/plain
+3 MEDI ELECTRONIC
 0 @R1@ REPO
 1 NAME Repository 1
 1 ADDR Family History Department
@@ -789,8 +794,8 @@
 2 TYPE http://example.com
 1 NOTE Note text
 1 SNOTE @N1@
-1 OBJE @O1@
 1 OBJE @O2@
+1 OBJE @O3@
 1 CHAN
 2 DATE 27 MAR 2022
 3 TIME 08:56

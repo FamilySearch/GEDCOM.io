@@ -188,7 +188,7 @@ becomes this 7.0:
 1 NAME John /Smith/
 1 OBJE @O1@
 
-0 @O1@
+0 @O1@ OBJE
 1 FILE file:///d//Media/1896-02-04-John-Smith.jpg
 2 FORM image/jpeg
 2 TITL John Smith, February 4, 1896
