@@ -79,6 +79,78 @@ the person.  Although the specification does not define any semantics to the ord
 some implementations are known to infer that the first NAME occuring is a "preferred" one to use
 for display.
 
+## How do I deal with names that have multiple representations in different scripts?
+
+Some cultures use multiple scripts to represent the same names.  For example, a Korean
+name may have three forms that are all in active use in genealogical records:
+Hangul (the modern script), Hanja (the Sino-Korean characters used in historical records),
+and Romanized (for international interoperability). These can be represented using `NAME`.`TRAN`
+as follows, where the lack of a space in the first two forms is intentional:
+
+```
+1 NAME /신/정구
+2 LANG ko
+2 GIVN 정구
+2 SURN 신
+2 TRAN /愼/靜九
+3 LANG ko-Hani
+2 TRAN /Sin/ Jeong-gu
+3 LANG ko-Latn
+```
+
+Japanese names also use multiple scripts, often needing
+representations in Kanji (historical/standardizing characters), Hiragana or
+Katakana (for pronunciation), and Romaji (Latin script), such as:
+
+```
+1 NAME /山田/太郎
+2 LANG ja
+2 GIVN 太郎
+2 SURN 山田
+2 TRAN /やまだ/たろう
+3 LANG ja-Hira
+2 TRAN /Yamada/ Tarō
+3 LANG ja-Latnare
+```
+
+Chinese names similarly have multiple forms.
+
+Vietnamese genealogical records—particularly older family registers
+(*gia phả*)—were historically recorded using Chữ Hán or Chữ Nôm
+(Sino-Vietnamese characters). Modern documentation relies on the
+Latin-based Chữ Quốc ngữ. Providing both ensures historical accuracy
+while maintaining modern readability.
+
+```
+1 NAME /Nguyễn/ Văn Nam
+2 LANG vi
+2 GIVN Văn Nam
+2 SURN Nguyễn
+2 TRAN /阮/文南
+3 LANG vi-Hani
+```
+
+Mongolian records often require transitioning between the modern
+Cyrillic alphabet and the traditional, vertical Mongolian script.
+Additionally, because Mongolian names typically utilize a patronymic
+rather than a true inherited family surname, capturing the exact
+script representations is vital for accurate record-keeping.
+
+```
+0 @i5@ INDI
+1 NAME /Дамдины/ Сүхбаатар
+2 LANG mn-Cyrl
+2 GIVN Сүхбаатар
+2 SURN Дамдины
+2 TRAN /ᠳᠠᠮᠳᠢᠨ ᠤ/ ᠰᠦᠬᠡᠪᠠᠭᠠᠲᠤᠷ
+3 LANG mn-Mong
+```
+
+Note: In this example, the patronymic is placed within the surname
+slashes and tagged with `SURN` to align with common software display
+conventions, while mn-Cyrl and mn-Mong designate the Cyrillic and
+Traditional Mongolian scripts respectively.
+
 # Dates and Ages
 
 ## How do I record a date without a year?
