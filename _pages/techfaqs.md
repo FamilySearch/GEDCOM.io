@@ -98,7 +98,7 @@ as follows, where the lack of a space in the first two forms is intentional:
 3 LANG ko-Latn
 ```
 
-Japanese names also share this multi-script requirement, often needing
+Japanese names also use multiple scripts, often needing
 representations in Kanji (historical/standardizing characters), Hiragana or
 Katakana (for pronunciation), and Romaji (Latin script), such as:
 
