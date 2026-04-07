@@ -126,7 +126,7 @@ while maintaining modern readability.
 2 LANG vi
 2 GIVN Văn Nam
 2 SURN Nguyễn
-2 TRAN /阮/ 文南
+2 TRAN /阮/文南
 3 LANG vi-Hani
 ```
 
@@ -147,7 +147,7 @@ script representations is vital for accurate record-keeping.
 ```
 
 Note: In this example, the patronymic is placed within the surname
-slashes and tagged with SURN to align with common software display
+slashes and tagged with `SURN` to align with common software display
 conventions, while mn-Cyrl and mn-Mong designate the Cyrillic and
 Traditional Mongolian scripts respectively.
 
