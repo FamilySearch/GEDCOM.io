@@ -138,11 +138,11 @@ script representations is vital for accurate record-keeping.
 
 ```
 0 @i5@ INDI
-1 NAME Дамдины /Сүхбаатар/
+1 NAME /Дамдины/ Сүхбаатар
 2 LANG mn-Cyrl
-2 GIVN Дамдины
-2 SURN Сүхбаатар
-2 TRAN ᠳᠠᠮᠳᠢᠨ ᠤ /ᠰᠦᠬᠡᠪᠠᠭᠠᠲᠤᠷ/
+2 GIVN Сүхбаатар
+2 SURN Дамдины
+2 TRAN /ᠳᠠᠮᠳᠢᠨ ᠤ/ ᠰᠦᠬᠡᠪᠠᠭᠠᠲᠤᠷ
 3 LANG mn-Mong
 ```
 
