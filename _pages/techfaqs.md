@@ -82,7 +82,7 @@ for display.
 ## How do I deal with names that have multiple representations in different scripts?
 
 Some cultures use multiple scripts to represent the same names.  For example, a Korean
-name has up to three forms that are all in active use in genealogical records:
+name may have three forms that are all in active use in genealogical records:
 Hangul (the modern script), Hanja (the Sino-Korean characters used in historical records),
 and Romanized (for international interoperability). These can be represented using `NAME`.`TRAN`
 as follows, where the lack of a space in the first two forms is intentional:
