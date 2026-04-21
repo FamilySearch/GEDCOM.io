@@ -36,6 +36,7 @@ sidebar:
 | C# | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | GEDCOM 7 parsing, validation, and comparison library |
 | Dart | BSD | <https://github.com/ceburo/gedcom_parser> | GEDCOM 5.5.1 and 7.0 parsing and exporting |
 | Java | Apache | <https://github.com/jayaskren/GEDCOM7-SAXlike-parser-java/tree/main> | Zero-dependency GEDCOM 7.0 reading and writing |
+| Go | Unlicense | <https://github.com/iand/gedcom> | Go package to parse and compose GEDCOM 5.5.1 and 7.0 files |
 
 ## Development Aids
 
