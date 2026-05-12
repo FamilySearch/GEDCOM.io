@@ -48,7 +48,7 @@ sidebar:
 | Command-line tool | Python | MIT | <https://github.com/cartwrightdj/gedcomtools> | GEDCOM 7 validator |
 | Web tool | - | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker |
 | Web tool | - | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator |
-| Web tool  | -| — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator |
+| Web tool  | — | — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator |
 | Command-line tool | Python | MIT | <https://github.com/vaelen/gedcom-reports> | GEDCOM 5.5.1 and 7 report generator |
 | Claude Code plugin | - | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 
