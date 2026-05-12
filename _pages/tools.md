@@ -43,14 +43,14 @@ sidebar:
 
 | Type | Language | License | Site | Notes |
 |------|----------|---------|------|-------|
-| Web tool | - | — | <https://ged-inline.org> | GEDCOM file validator website |
+| Web tool | — | — | <https://ged-inline.org> | GEDCOM file validator website |
 | Command-line tool | C# | MIT | <https://github.com/ArmidaleSoftware/gedcom7> | Compatibility checker |
 | Command-line tool | Python | MIT | <https://github.com/cartwrightdj/gedcomtools> | GEDCOM 7 validator |
-| Web tool | - | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker |
-| Web tool | - | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator |
+| Web tool | — | — | <https://magikeygedcomconverter.azurewebsites.net/Compatibility> | Compatibillity checker |
+| Web tool | — | — | <https://gedcom7code.github.io/js-gedcom/> | GEDCOM file validator |
 | Web tool  | — | — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator |
 | Command-line tool | Python | MIT | <https://github.com/vaelen/gedcom-reports> | GEDCOM 5.5.1 and 7 report generator |
-| Claude Code plugin | - | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
+| Claude Code plugin | — | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
