@@ -30,7 +30,7 @@ sidebar:
 | Javascript | public domain | <https://github.com/gedcom7code/js-parser> | DOM-style, no validation, with SCHMA handling |
 | Python | MIT license | <https://github.com/cartwrightdj/gedcomtools> | Python toolkit for parsing, converting, validating, and analyzing genealogical data using the GEDCOM 5.x, GEDCOM 7, and GEDCOM X data models |
 | Python | MIT license | <https://github.com/DavidMStraub/python-gedcom7> | GEDCOM 7 parser based on regular expressions generated directly from the ABNF grammar via abnf-to-regexp |
-| Python | MIT license | <https://github.com/vaelen/gedcom-lite>| A lightweight, fidelity-preserving parser for GEDCOM COM 5.5.1 and FamilySearch GEDCOM 7 |
+| Python | MIT license | <https://github.com/vaelen/gedcom-lite>| A lightweight, fidelity-preserving parser for GEDCOM 5.5.1 and FamilySearch GEDCOM 7 |
 | Go | GPL3 | <https://github.com/funwithbots/go-gedcom> | Golang package using ABNF grammar for validation |
 | C | public domain | <https://github.com/gedcom7code/c-parser> | Parses tree and resolves points with syntatic validation |
 | Javascript | dual licensed: unlicense and MIT license | <https://github.com/gedcom7code/js-gedcom> | DOM-style, full validation, with full SCHMA handling and registry parsing; also supports programmatic creation of GEDCOM files |
