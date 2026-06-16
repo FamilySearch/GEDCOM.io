@@ -1,6 +1,18 @@
 ﻿0 HEAD
 1 GEDC
-2 VERS 7.0
+2 VERS 7.1
+1 TITL Maximal FamilySearch 7.1 GEDCOM file for testing
+2 LANG en-US
+2 TRAN Canadian English title
+3 LANG en-CA
+2 TRAN British English title
+3 LANG en-GB
+1 DESC This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+2 LANG en-US
+2 TRAN Diese Datei soll Teile der Spezifikation abdecken und enthält keine aussagekräftigen historischen oder genealogischen Daten.
+3 LANG de
+2 TRAN This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+3 LANG en-GB
 1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
 2 MIME text/plain
 2 LANG en-US
