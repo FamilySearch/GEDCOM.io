@@ -1,6 +1,6 @@
 ﻿0 HEAD
 1 GEDC
-2 VERS 7.1
+2 VERS 7.0
 1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
 2 MIME text/plain
 2 LANG en-US
@@ -380,6 +380,7 @@
 3 ADOP WIFE
 1 BIRT
 2 TYPE birth type
+2 KIND BORN_LIVE
 2 DATE 1 JAN 2000
 1 CHR
 2 TYPE chr type
@@ -530,6 +531,8 @@
 0 @I4@ INDI
 1 SEX U
 1 FAMC @F1@
+1 BIRT
+2 KIND BORN_DEAD
 0 @O1@ OBJE
 1 RESN CONFIDENTIAL, LOCKED
 1 FILE media/CharlotteBront%C3%AB.jpg
