@@ -11,7 +11,7 @@ error: this URI is incomplete without a fragment identifier
 ```
 
 <script>
-const allowed_fragments = {'Text': '/terms/v7/type-List-Text', 'Enum': '/terms/v7/type-List-Enum'};
+const allowed_fragments = {'Enum': '/terms/v7/type-List-Enum', 'Text': '/terms/v7/type-List-Text'};
 const maybe_redirect = (event) => {
     const fragment = location.hash.substr(1)
     if (fragment in allowed_fragments && location.pathname != allowed_fragments[fragment])
