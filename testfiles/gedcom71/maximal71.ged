@@ -1,7 +1,23 @@
 ﻿0 HEAD
 1 GEDC
-2 VERS 7.0
+2 VERS 7.1
+1 TITL Maximal FamilySearch 7.1 GEDCOM file for testing
+2 LANG en-US
+2 TRAN Canadian English title
+3 LANG en-CA
+2 TRAN British English title
+3 LANG en-GB
+1 DESC This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+2 LANG en-US
+2 TRAN Diese Datei soll Teile der Spezifikation abdecken und enthält keine aussagekräftigen historischen oder genealogischen Daten.
+3 LANG de
+2 TRAN This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+3 LANG en-GB
 1 NOTE This file is intended to provide coverage of parts of the specification and does not contain meaningful historical or genealogical data.
+2 KIND OTHER
+3 PHRASE Description
+2 KIND OTHER
+3 PHRASE Another description
 2 MIME text/plain
 2 LANG en-US
 2 TRAN Diese Datei soll Teile der Spezifikation abdecken und enthält keine aussagekräftigen historischen oder genealogischen Daten.
@@ -10,6 +26,28 @@
 3 PAGE 1
 2 SOUR @S1@
 3 PAGE 2
+1 NOTE Historical data that is not present in other structures
+2 KIND DATA
+2 KIND DATA
+1 NOTE Notes about research performed
+2 KIND RESEARCH
+1 NOTE Descriptions of why the data is (or is not) believed to be accurate
+2 KIND REASONING
+1 NOTE A description of what data is or should be included in the given dataset
+2 KIND SCOPE
+1 NOTE Text presenting a story about or history of the file
+2 KIND STORY
+1 NOTE Notes about things the researcher wishes or hopes to do in the future
+2 KIND TODO
+1 NOTE A combination note
+2 KIND DATA
+2 KIND RESEARCH
+2 KIND REASONING
+2 KIND SCOPE
+2 KIND STORY
+2 KIND TODO
+2 KIND OTHER
+3 PHRASE Other
 1 SCHMA
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
@@ -380,6 +418,7 @@
 3 ADOP WIFE
 1 BIRT
 2 TYPE birth type
+2 KIND BORN_LIVE
 2 DATE 1 JAN 2000
 1 CHR
 2 TYPE chr type
@@ -530,6 +569,8 @@
 0 @I4@ INDI
 1 SEX U
 1 FAMC @F1@
+1 BIRT
+2 KIND BORN_DEAD
 0 @O1@ OBJE
 1 RESN CONFIDENTIAL, LOCKED
 1 FILE media/CharlotteBront%C3%AB.jpg
@@ -672,6 +713,7 @@
 2 DATE 27 MAR 2022
 3 TIME 08:55
 0 @R2@ REPO
+1 RESN CONFIDENTIAL, LOCKED
 1 NAME Repository 2
 0 @N1@ SNOTE Shared note 1
 1 MIME text/plain
@@ -682,6 +724,17 @@
 1 TRAN Shared note 1
 2 MIME text/plain
 2 LANG en-CA
+1 KIND DATA
+1 KIND DATA
+1 KIND RESEARCH
+1 KIND REASONING
+1 KIND SCOPE
+1 KIND STORY
+1 KIND TODO
+1 KIND OTHER
+2 KIND Other
+1 KIND OTHER
+2 KIND Another
 1 SOUR @S1@
 2 PAGE 1
 1 SOUR @S2@
@@ -705,6 +758,7 @@
 2 DATE 27 MAR 2022
 3 TIME 08:55
 0 @N2@ SNOTE Shared note 2
+1 RESN CONFIDENTIAL, LOCKED
 0 @S1@ SOUR
 1 DATA
 2 EVEN BIRT, DEAT
@@ -806,6 +860,7 @@
 3 TIME 08:55
 0 @S2@ SOUR
 1 TITL Source Two
+1 RESN CONFIDENTIAL, LOCKED
 0 @U1@ SUBM
 1 NAME GEDCOM Steering Committee
 1 ADDR Family History Department
@@ -872,4 +927,5 @@
 1 _JABBERID person@example.com
 0 @U2@ SUBM
 1 NAME Submitter 2
+1 RESN CONFIDENTIAL, LOCKED
 0 TRLR
