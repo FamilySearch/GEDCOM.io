@@ -28,7 +28,6 @@
 3 PAGE 2
 1 NOTE Historical data that is not present in other structures
 2 KIND DATA
-2 KIND DATA
 1 NOTE Notes about research performed
 2 KIND RESEARCH
 1 NOTE Descriptions of why the data is (or is not) believed to be accurate
@@ -39,6 +38,7 @@
 2 KIND STORY
 1 NOTE Notes about things the researcher wishes or hopes to do in the future
 2 KIND TODO
+3 PHRASE Things Luther agreed to do
 1 NOTE A combination note
 2 KIND DATA
 2 KIND RESEARCH
@@ -48,6 +48,8 @@
 2 KIND TODO
 2 KIND OTHER
 3 PHRASE Other
+2 KIND OTHER
+3 KIND Another
 1 SCHMA
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
@@ -724,7 +726,6 @@
 1 TRAN Shared note 1
 2 MIME text/plain
 2 LANG en-CA
-1 KIND DATA
 1 KIND DATA
 1 KIND RESEARCH
 1 KIND REASONING
