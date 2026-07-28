@@ -60,9 +60,6 @@
 3 ADDR Family History Department
 4 CONT 15 East South Temple Street
 4 CONT Salt Lake City, UT 84150 USA
-4 ADR1 Family History Department
-4 ADR2 15 East South Temple Street
-4 ADR3 Salt Lake City, UT 84150 USA
 4 CITY Salt Lake City
 4 STAE UT
 4 POST 84150
@@ -75,15 +72,11 @@
 3 FAX +1 (555) 555-1234
 3 WWW http://gedcom.io
 3 WWW http://gedcom.info
-2 DATA HEAD-SOUR-DATA
-3 DATE 1 NOV 2022
-4 TIME 8:38
-3 COPR copyright statement
 1 DEST https://gedcom.io/
 1 DATE 10 JUN 2022
 2 TIME 15:43:20.48Z
 1 SUBM @U1@
-1 COPR another copyright statement
+1 COPR copyright statement
 1 LANG en-US
 1 PLAC
 2 FORM City, County, State, Country
@@ -204,7 +197,6 @@
 3 PHRASE Afternoon
 2 TEMP LOGAN
 2 PLAC Place
-2 STAT COMPLETED
 3 DATE 27 MAR 2022
 4 TIME 15:48
 2 NOTE Note text
@@ -219,23 +211,11 @@
 3 DATE 27 MAR 2022
 1 SLGS
 2 DATE 27 MAR 2022
-2 STAT EXCLUDED
-3 DATE 27 MAR 2022
-1 SLGS
-2 DATE 27 MAR 2022
 2 STAT DNS
 3 DATE 27 MAR 2022
 1 SLGS
 2 DATE 27 MAR 2022
 2 STAT DNS_CAN
-3 DATE 27 MAR 2022
-1 SLGS
-2 DATE 27 MAR 2022
-2 STAT PRE_1970
-3 DATE 27 MAR 2022
-1 SLGS
-2 DATE 27 MAR 2022
-2 STAT UNCLEARED
 3 DATE 27 MAR 2022
 1 REFN 1
 2 TYPE User-generated identifier
@@ -443,13 +423,7 @@
 2 STAT STILLBORN
 3 DATE 27 MAR 2022
 1 BAPL
-2 STAT SUBMITTED
-3 DATE 27 MAR 2022
-1 BAPL
 2 DATE 27 MAR 2022
-1 CONL
-2 STAT INFANT
-3 DATE 27 MAR 2022
 1 CONL
 2 DATE 27 MAR 2022
 1 ENDL
@@ -457,9 +431,6 @@
 3 DATE 27 MAR 2022
 1 ENDL
 2 DATE 27 MAR 2022
-1 INIL
-2 STAT EXCLUDED
-3 DATE 27 MAR 2022
 1 INIL
 2 DATE 27 MAR 2022
 1 SLGC
@@ -679,9 +650,6 @@
 1 ADDR Family History Department
 2 CONT 15 East South Temple Street
 2 CONT Salt Lake City, UT 84150 USA
-2 ADR1 Family History Department
-2 ADR2 15 East South Temple Street
-2 ADR3 Salt Lake City, UT 84150 USA
 2 CITY Salt Lake City
 2 STAE UT
 2 POST 84150
@@ -867,9 +835,6 @@
 1 ADDR Family History Department
 2 CONT 15 East South Temple Street
 2 CONT Salt Lake City, UT 84150 USA
-2 ADR1 Family History Department
-2 ADR2 15 East South Temple Street
-2 ADR3 Salt Lake City, UT 84150 USA
 2 CITY Salt Lake City
 2 STAE UT
 2 POST 84150
