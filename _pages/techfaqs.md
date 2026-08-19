@@ -171,6 +171,26 @@ You might also consider bounding the year if possible:
 3 PHRASE March 3rd (year unknown)
 ```
 
+## How do I record a regnal year?
+
+A "regnal year" is a year in the reign of a sovereign, such as in "12 March, 5 Henry VIII"
+meaning March 5 in the 5th year of the reign of Henry VIII.  Such dates commonly
+appear in various types of historical records.
+
+Regnal years do not warrant new calendars, however, since they do not define their own months
+and do not span a full 12 months during the final year of the sovereign's reign.
+
+Dates with regnal years can be used in a `PHRASE`:
+
+```
+2 DATE 12 MAR 1514
+3 PHRASE 12 March, 5 Henry VIII
+```
+
+The actual year to use in the `DATE` payload can be looked up based on when the
+sovereign began their reign.  For example, Henry VIII's reign began on 22 April 1509
+so 12 March within the 5th year of his reign would be in 1514.
+
 ## How do I record the calendar that an age applies to?
 
 When a person has events recorded in the contexts of multiple calendars within their lifetime, such
