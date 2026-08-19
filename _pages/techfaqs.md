@@ -191,6 +191,13 @@ The actual year to use in the `DATE` payload can be looked up based on when the
 sovereign began their reign.  For example, Henry VIII's reign began on 22 April 1509
 so 12 March within the 5th year of his reign would be in 1514.
 
+If the exact year of a given regnal year is not known, approximate dates with `BET`/`AND` or `ABT` can be used to indicate this uncertainty:
+
+```
+2 DATE ABT 553 BCE
+3 PHRASE In the first year of Darius the son of Ahasuerus
+```
+
 ## How do I record the calendar that an age applies to?
 
 When a person has events recorded in the contexts of multiple calendars within their lifetime, such
