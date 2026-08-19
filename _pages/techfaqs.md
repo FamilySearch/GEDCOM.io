@@ -174,7 +174,7 @@ You might also consider bounding the year if possible:
 ## How do I record a regnal year?
 
 A "regnal year" is a year in the reign of a sovereign, such as in "12 March, 5 Henry VIII"
-meaning March 5 in the 5th year of the reign of Henry VIII.  Such dates commonly
+meaning March 12 in the 5th year of the reign of Henry VIII.  Such dates commonly
 appear in various types of historical records.
 
 Regnal years do not warrant new calendars, however, since they do not define their own months
