@@ -51,6 +51,8 @@ sidebar:
 | Web tool  | — | — | <https://magikeygedcomconverter.azurewebsites.net/Validate> | GEDCOM file validator |
 | Command-line tool | Python | MIT | <https://github.com/vaelen/gedcom-reports> | GEDCOM 5.5.1 and 7 report generator |
 | Claude Code plugin | — | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
+| IDE plugin | — | MIT | <https://github.com/lavich/domorium> | Editor plugin for validating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
+| Web tool | — | - | <https://domorium.com/> | Online GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 file editor |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
