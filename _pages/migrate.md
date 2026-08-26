@@ -390,7 +390,7 @@ must be converted to
 ```
 to be legal in 7.0.
 
-In GEDCOM 5.5.1, `BET' (between) was unambiguously defined as inclusive, where `BET JAN 1852 AND DEC 1852`
+In GEDCOM 5.5.1, `BET` (between) was unambiguously defined as inclusive, where `BET JAN 1852 AND DEC 1852`
 was explicitly defined to be synonymous with `BET 1 JAN 1852 AND 31 DEC 1852`.  However, `AFT` and `BEF`
 were ambiguous, simply defined as "after" or "before" the specified date.  Users in some regions interpreted
 `AFT JAN 1852` to mean after the *beginning* of January 1852 (synonymous with `AFT 1 JAN 1852`)
