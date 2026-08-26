@@ -223,7 +223,7 @@ Some sources simply record that an event occurred "by 1852", which typically mea
 other event in 1852 that it was known to have occurred before.  If no further information is provided,
 then the date might simply be entered as `BEF 1852`, but would more unambiguously be entered as
 `BEF 31 DEC 1852`, since the former would leave the possibility that it was entered by a 5.5.1 user
-who meant `BEF 31 DEC 1851`.
+who meant `BEF 1 JAN 1852`.
 
 ## How do I record the calendar that an age applies to?
 
