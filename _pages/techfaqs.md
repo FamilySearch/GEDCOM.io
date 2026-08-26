@@ -216,7 +216,7 @@ from the original user.
 
 When recording new information, an unambiguous date range should be used whenever possible.  For example,
 if a birth record states that a legitimate child was born on 10 January 1852, then a marriage between the
-parents can be recorded as `BEF 10 JAN 1852` rather than `BEF JAN 1852` or `BEF 1852` as many have
+parents should be recorded as `BEF 10 JAN 1852` rather than `BEF JAN 1852` or `BEF 1852` as many have
 previously done.
 
 Some sources simply record that an event occurred "by 1852", which typically means there is some
