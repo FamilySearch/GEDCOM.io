@@ -390,6 +390,21 @@ must be converted to
 ```
 to be legal in 7.0.
 
+In GEDCOM 5.5.1, `BET' (between) was unambiguously defined as inclusive, where `BET JAN 1852 AND DEC 1852`
+was explicitly defined to be synonymous with `BET 1 JAN 1852 AND 31 DEC 1852`.  However, `AFT` and `BEF`
+were ambiguous, simply defined as "after" or "before" the specified date.  Users in some regions interpreted
+`AFT JAN 1852` to mean after the *beginning* of January 1852 (synonymous with `AFT 1 JAN 1852`)
+and others to mean after the *end* of January 1852 (synonymous with `AFT 31 JAN 1852`),
+often with each believing their interpretation is the obvious linguistic
+meaning and not thinking it is ambiguous.  Thus without knowledge of the user's intent,
+one cannot know which meaning was intended by the user.
+
+FamilySearch GEDCOM 7.0 now uses "no earlier than" and "no later than" instead to define the meanings of
+`AFT` and `BEF` to be consistent with the meanings used by `BET` and `AND`.
+Without knowledge of the user's intent, a 5.5.1 date of `AFT JAN 1852` should be left as is
+when converting to 7.0, since the result is inclusive of both meanings, although it loses
+precision in one of the two possible meanings.
+
 ## ROMAN and UNKNOWN calendars
 
 The calendar values `ROMAN` and `UNKNOWN` were permitted in 5.5.1 but their meaning was never defined, and they are
