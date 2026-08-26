@@ -198,6 +198,33 @@ If the exact year of a given regnal year is not known, approximate dates with `B
 3 PHRASE In the first year of Darius the son of Ahasuerus
 ```
 
+## How do I record an ambiguous date range?
+
+In GEDCOM 5.5.1, `BET` (between) was unambiguously defined as inclusive, where `BET JAN 1852 AND DEC 1852`
+was explicitly defined to be synonymous with `BET 1 JAN 1852 AND 31 DEC 1852`.  However, `AFT` and `BEF`
+were ambiguous, simply defined as "after" or "before" the specified date.  Users in some regions interpreted
+`AFT JAN 1852` to mean after the *beginning* of January 1852 (synonymous with `AFT 1 JAN 1852`)
+and others to mean after the *end* of January 1852 (synonymous with `AFT 31 JAN 1852`),
+often with each believing their interpretation is the obvious linguistic
+meaning and not thinking it is ambiguous.  Thus without knowledge of the user's intent,
+one cannot know which meaning was intended by the user.
+
+FamilySearch GEDCOM 7.0 now uses "no earlier than" and "no later than" instead to define the meanings of
+`AFT` and `BEF` to be consistent with the meanings used by `BET` and `AND`, and is inclusive of both previous
+meanings.  Due to the earlier ambiguity, information migrated from GEDCOM 5.5.1 may still carry either meaning
+from the original user.
+
+When recording new information, an unambiguous date range should be used whenever possible.  For example,
+if a birth record states that a legitimate child was born on 10 January 1852, then a marriage between the
+parents should be recorded as `BEF 10 JAN 1852` rather than `BEF JAN 1852` or `BEF 1852` as many have
+previously done.
+
+Some sources simply record that an event occurred "by 1852", which typically means there is some
+other event in 1852 that it was known to have occurred before.  If no further information is provided,
+then the date might simply be entered as `BEF 1852`, but would more unambiguously be entered as
+`BEF 31 DEC 1852`, since the former would leave the possibility that it was entered by a 5.5.1 user
+who meant `BEF 1 JAN 1852`.
+
 ## How do I record the calendar that an age applies to?
 
 When a person has events recorded in the contexts of multiple calendars within their lifetime, such
