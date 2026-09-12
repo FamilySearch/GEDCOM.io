@@ -140,7 +140,7 @@ contact: "https://gedcom.io/community/"
 ```
 
 <script>
-const allowed_fragments = {'period': '/terms/v7/type-Date-period', 'exact': '/terms/v7/type-Date-exact', '': '/terms/v7/type-Date'};
+const allowed_fragments = {'exact': '/terms/v7/type-Date-exact', 'period': '/terms/v7/type-Date-period', '': '/terms/v7/type-Date'};
 const maybe_redirect = (event) => {
     const fragment = location.hash.substr(1)
     if (fragment in allowed_fragments && location.pathname != allowed_fragments[fragment])
