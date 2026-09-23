@@ -53,6 +53,7 @@ sidebar:
 | Claude Code plugin | — | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 | IDE plugin | — | MIT | <https://github.com/lavich/domorium> | Editor plugin for validating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 | Web tool | — | - | <https://domorium.com/> | Online GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 file editor |
+| Web tool | — | — | <https://gedcom.tools/> | GEDCOM file validator and other tools |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
