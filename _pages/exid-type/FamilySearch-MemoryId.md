@@ -21,7 +21,7 @@ specification:
   - |
     This URI is defined for use as the https://gedcom.io/terms/v7/TYPE of an
     https://gedcom.io/terms/v7/EXID containing a FamilySearch MemoryId as defined at
-    https://www.familysearch.org/developers/docs/api/memories/Memory_resource.
+    https://developers.familysearch.org/main/reference/readmemory.
 
 ...
 
