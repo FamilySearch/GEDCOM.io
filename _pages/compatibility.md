@@ -30,7 +30,7 @@ The vendor needs to demonstrate unzipping a .gdz file and how the unpackaged res
 <!--
 ## Compatibility Categories
 
-Like [FamilySearch API compatibility](https://www.familysearch.org/developers/docs/certification), FamilySearch GEDCOM file compatibility can be broken down into several categories.
+Like [FamilySearch API compatibility](https://developers.familysearch.org/main/docs/compatibility-checklist), FamilySearch GEDCOM file compatibility can be broken down into several categories.
 
 ### Minimal Compatibility
 
