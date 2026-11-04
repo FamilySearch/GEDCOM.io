@@ -1,7 +1,7 @@
 ﻿0 HEAD
 1 GEDC
 2 VERS 7.1
-1 TITL Maximal FamilySearch 7.1 GEDCOM file for testing
+1 DTITL Maximal FamilySearch 7.1 GEDCOM file for testing
 2 LANG en-US
 2 TRAN Canadian English title
 3 LANG en-CA
@@ -49,7 +49,7 @@
 2 KIND OTHER
 3 PHRASE Other
 2 KIND OTHER
-3 KIND Another
+3 PHRASE Another
 1 SCHMA
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
@@ -699,9 +699,9 @@
 1 KIND STORY
 1 KIND TODO
 1 KIND OTHER
-2 KIND Other
+2 PHRASE Other
 1 KIND OTHER
-2 KIND Another
+2 PHRASE Another
 1 SOUR @S1@
 2 PAGE 1
 1 SOUR @S2@
