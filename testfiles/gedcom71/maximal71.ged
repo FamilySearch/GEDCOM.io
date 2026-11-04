@@ -22,6 +22,10 @@
 2 LANG en-US
 2 TRAN Diese Datei soll Teile der Spezifikation abdecken und enthält keine aussagekräftigen historischen oder genealogischen Daten.
 3 LANG de
+2 DTITL About this file
+3 LANG en-US
+3 TRAN Über diese Datei
+4 LANG de
 2 SOUR @S1@
 3 PAGE 1
 2 SOUR @S1@
@@ -702,6 +706,10 @@
 2 PHRASE Other
 1 KIND OTHER
 2 PHRASE Another
+1 DTITL Shared note 1 title
+2 LANG en-US
+2 TRAN Titel der geteilten Notiz 1
+3 LANG de
 1 SOUR @S1@
 2 PAGE 1
 1 SOUR @S2@
