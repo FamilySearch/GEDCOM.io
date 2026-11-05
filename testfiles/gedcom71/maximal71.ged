@@ -1,7 +1,7 @@
 ﻿0 HEAD
 1 GEDC
 2 VERS 7.1
-1 TITL Maximal FamilySearch 7.1 GEDCOM file for testing
+1 DTITL Maximal FamilySearch 7.1 GEDCOM file for testing
 2 LANG en-US
 2 TRAN Canadian English title
 3 LANG en-CA
@@ -22,6 +22,10 @@
 2 LANG en-US
 2 TRAN Diese Datei soll Teile der Spezifikation abdecken und enthält keine aussagekräftigen historischen oder genealogischen Daten.
 3 LANG de
+2 DTITL About this file
+3 LANG en-US
+3 TRAN Über diese Datei
+4 LANG de
 2 SOUR @S1@
 3 PAGE 1
 2 SOUR @S1@
@@ -49,7 +53,7 @@
 2 KIND OTHER
 3 PHRASE Other
 2 KIND OTHER
-3 KIND Another
+3 PHRASE Another
 1 SCHMA
 2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
 2 TAG _JABBERID http://xmlns.com/foaf/0.1/jabberID
@@ -176,6 +180,8 @@
 2 PHRASE First child
 1 CHIL @VOID@
 2 PHRASE Second child
+2 SOUR @S1@
+3 PAGE 2
 1 ASSO @I3@
 2 PHRASE Association text
 2 ROLE OTHER
@@ -699,9 +705,13 @@
 1 KIND STORY
 1 KIND TODO
 1 KIND OTHER
-2 KIND Other
+2 PHRASE Other
 1 KIND OTHER
-2 KIND Another
+2 PHRASE Another
+1 DTITL Shared note 1 title
+2 LANG en-US
+2 TRAN Titel der geteilten Notiz 1
+3 LANG de
 1 SOUR @S1@
 2 PAGE 1
 1 SOUR @S2@
