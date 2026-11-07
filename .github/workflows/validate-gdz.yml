@@ -1,0 +1,85 @@
+---
+name: Validate-GDZ
+
+on:
+  workflow_call:
+    inputs:
+      archive:
+        description: GDZ archive path relative to the repository root
+        required: true
+        type: string
+      compare-gedcom:
+        description: Compare with the standalone GEDCOM file
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  validate-gdz:
+    runs-on: ubuntu-latest
+    env:
+      ARCHIVE: ${{ inputs.archive }}
+
+    steps:
+      - name: Checkout GEDCOM.io
+        uses: actions/checkout@v6
+
+      - name: Compare GDZ archive with extracted files
+        shell: python
+        run: |
+          from pathlib import Path
+          from zipfile import ZipFile
+          import os
+
+          archive = Path(os.environ["ARCHIVE"])
+          directory = archive.with_suffix("")
+          expected_files = set()
+          with ZipFile(archive) as zipped:
+              for member in zipped.infolist():
+                  if member.is_dir():
+                      continue
+                  path = directory / member.filename
+                  if not path.resolve().is_relative_to(directory.resolve()):
+                      raise SystemExit(f"{archive}: invalid path {member.filename}")
+                  expected_files.add(path)
+                  if not path.is_file():
+                      raise SystemExit(f"{archive}: missing {path}")
+                  if path.read_bytes() != zipped.read(member):
+                      raise SystemExit(f"{archive}: contents differ for {path}")
+
+          # Nested archives and their extracted files have separate invocations.
+          for nested in directory.rglob("*.gdz"):
+              expected_files.add(nested)
+              with ZipFile(nested) as zipped:
+                  expected_files.update(
+                      nested.with_suffix("") / member.filename
+                      for member in zipped.infolist() if not member.is_dir())
+          actual_files = {p for p in directory.rglob("*") if p.is_file()}
+          extra_files = actual_files - expected_files
+          if extra_files:
+              raise SystemExit(f"{directory}: unexpected files {sorted(extra_files)}")
+          print(f"{archive}: contents match")
+
+      - name: Compare GEDCOM and GEDZip variants
+        if: inputs.compare-gedcom
+        shell: python
+        run: |
+          from pathlib import Path
+          import difflib
+          import os
+
+          archive = Path(os.environ["ARCHIVE"])
+          source = archive.with_suffix(".ged")
+          extracted = archive.with_suffix("") / "gedcom.ged"
+          # Compare text, allowing LF/CRLF line endings and optional UTF-8 BOMs.
+          expected = source.read_text(encoding="utf-8-sig").replace("file:///", "")
+          actual = extracted.read_text(encoding="utf-8-sig")
+          if expected != actual:
+              print("".join(difflib.unified_diff(
+                  expected.splitlines(keepends=True),
+                  actual.splitlines(keepends=True),
+                  fromfile=str(source), tofile=str(extracted))), end="")
+              raise SystemExit(1)
+          print(f"{source}: GEDCOM and GEDZip variants match")
