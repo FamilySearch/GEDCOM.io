@@ -16,6 +16,72 @@ permissions:
   contents: read
 
 jobs:
+  validate-gdz:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GEDCOM.io
+        uses: actions/checkout@v6
+
+      - name: Compare GDZ archives with extracted files
+        shell: python
+        run: |
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          archives = sorted(Path("testfiles").rglob("*.gdz"))
+          expected_files = set(archives)
+          directories = []
+          for archive in archives:
+              directory = archive.with_suffix("")
+              directories.append(directory)
+              with ZipFile(archive) as zipped:
+                  for member in zipped.infolist():
+                      if member.is_dir():
+                          continue
+                      path = directory / member.filename
+                      if not path.resolve().is_relative_to(directory.resolve()):
+                          raise SystemExit(f"{archive}: invalid path {member.filename}")
+                      expected_files.add(path)
+                      if not path.is_file():
+                          raise SystemExit(f"{archive}: missing {path}")
+                      if path.read_bytes() != zipped.read(member):
+                          raise SystemExit(f"{archive}: contents differ for {path}")
+              print(f"{archive}: contents match")
+
+          # Nested archives and their extracted files belong to their own checks.
+          for directory in directories:
+              actual_files = {p for p in directory.rglob("*") if p.is_file()}
+              extra_files = actual_files - expected_files
+              if extra_files:
+                  raise SystemExit(f"{directory}: unexpected files {sorted(extra_files)}")
+
+  validate-maximal70:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GEDCOM.io
+        uses: actions/checkout@v6
+
+      - name: Compare maximal70 GEDCOM and GEDZip variants
+        shell: python
+        run: |
+          from pathlib import Path
+          import difflib
+
+          source = Path("testfiles/gedcom70/maximal70.ged")
+          extracted = source.with_suffix("") / "gedcom.ged"
+          # Compare text, allowing LF or CRLF line endings.
+          expected = source.read_text(encoding="utf-8").replace("file:///", "")
+          actual = extracted.read_text(encoding="utf-8")
+          if expected != actual:
+              print("".join(difflib.unified_diff(
+                  expected.splitlines(keepends=True),
+                  actual.splitlines(keepends=True),
+                  fromfile=str(source), tofile=str(extracted))), end="")
+              raise SystemExit(1)
+          print("maximal70 GEDCOM and GEDZip variants match")
+
   validate-gedcom:
     runs-on: windows-latest
     env:
