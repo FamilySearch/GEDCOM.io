@@ -20,22 +20,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - archive: testfiles/gedcom70/maximal70.gdz
-            compare-gedcom: true
-          - archive: testfiles/gedcom70/minimal70.gdz
-            compare-gedcom: true
-          - archive: testfiles/gedcom71/maximal71.gdz
-            compare-gedcom: true
-          - archive: testfiles/gedcom71/minimal71.gdz
-            compare-gedcom: true
-          # This older nested archive has no standalone GEDCOM counterpart.
-          - archive: testfiles/gedcom70/maximal70/maximal70.gdz
-            compare-gedcom: false
+        archive:
+          - testfiles/gedcom70/maximal70.gdz
+          - testfiles/gedcom70/minimal70.gdz
+          - testfiles/gedcom71/maximal71.gdz
+          - testfiles/gedcom71/minimal71.gdz
     uses: ./.github/workflows/validate-gdz.yml
     with:
       archive: ${{ matrix.archive }}
-      compare-gedcom: ${{ matrix.compare-gedcom }}
 
   validate-gedcom:
     runs-on: windows-latest

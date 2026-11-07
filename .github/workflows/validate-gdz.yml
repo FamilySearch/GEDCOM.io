@@ -8,10 +8,6 @@ on:
         description: GDZ archive path relative to the repository root
         required: true
         type: string
-      compare-gedcom:
-        description: Compare with the standalone GEDCOM file
-        default: true
-        type: boolean
 
 permissions:
   contents: read
@@ -49,13 +45,6 @@ jobs:
                   if path.read_bytes() != zipped.read(member):
                       raise SystemExit(f"{archive}: contents differ for {path}")
 
-          # Nested archives and their extracted files have separate invocations.
-          for nested in directory.rglob("*.gdz"):
-              expected_files.add(nested)
-              with ZipFile(nested) as zipped:
-                  expected_files.update(
-                      nested.with_suffix("") / member.filename
-                      for member in zipped.infolist() if not member.is_dir())
           actual_files = {p for p in directory.rglob("*") if p.is_file()}
           extra_files = actual_files - expected_files
           if extra_files:
@@ -63,7 +52,6 @@ jobs:
           print(f"{archive}: contents match")
 
       - name: Compare GEDCOM and GEDZip variants
-        if: inputs.compare-gedcom
         shell: python
         run: |
           from pathlib import Path
