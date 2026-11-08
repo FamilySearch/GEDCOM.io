@@ -16,6 +16,19 @@ permissions:
   contents: read
 
 jobs:
+  validate-gdz:
+    strategy:
+      fail-fast: false
+      matrix:
+        archive:
+          - testfiles/gedcom70/maximal70.gdz
+          - testfiles/gedcom70/minimal70.gdz
+          - testfiles/gedcom71/maximal71.gdz
+          - testfiles/gedcom71/minimal71.gdz
+    uses: ./.github/workflows/validate-gdz.yml
+    with:
+      archive: ${{ matrix.archive }}
+
   validate-gedcom:
     runs-on: windows-latest
     env:
