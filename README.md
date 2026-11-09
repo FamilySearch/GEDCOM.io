@@ -24,3 +24,7 @@ To change an archive, change the files in its folder, and for `maximal70` and `m
 file too (CI checks the two agree). Don't edit the `.gdz` itself: after a pull request merges, the
 "Build GEDZIP archives" workflow rebuilds it and opens a pull request with the result. To build them locally, run
 `python3 .github/scripts/build_gdz.py`.
+
+Why: an archive is a binary file, and Git can't merge two changes to one, so when two open pull requests both edited
+an archive, merging one made the other conflict. Building archives from their folders means pull requests change only
+text files, which Git merges.
