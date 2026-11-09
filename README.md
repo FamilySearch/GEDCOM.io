@@ -16,3 +16,11 @@ bundle install
 ```bash
 bundle exec jekyll serve -w --config _config.yml,_config.dev.yml
 ```
+
+## Test files
+
+Each GEDZIP test archive in `testfiles` is built from the folder beside it: `maximal71.gdz` from `maximal71/`.
+To change an archive, change the files in its folder, and for `maximal70` and `maximal71` the matching `.ged`
+file too (CI checks the two agree). Don't edit the `.gdz` itself: after a pull request merges, the
+"Build GEDZIP archives" workflow rebuilds it and opens a pull request with the result. To build them locally, run
+`python3 .github/scripts/build_gdz.py`.
