@@ -58,7 +58,7 @@ jobs:
         id: latesttag
         run: |
           LATEST_TAG=$(curl --silent "https://api.github.com/repos/FamilySearch/GEDCOM/releases/latest" | jq -r .tag_name)
-          echo "::set-output name=tag::${LATEST_TAG}"
+          echo "tag=${LATEST_TAG}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout latest GEDCOM release
         if: matrix.GEDCOM_BRANCH == 'release'
@@ -120,7 +120,7 @@ jobs:
         id: diff
         working-directory: ${{github.workspace}}/GEDCOM.io
         run: |
-          git diff --quiet origin/${{matrix.BRANCH}} . || echo "::set-output name=status::changes"
+          git diff --quiet origin/${{matrix.BRANCH}} . || echo "status=changes" >> "$GITHUB_OUTPUT"
         shell: bash
 
       - name: Create Pull Request
