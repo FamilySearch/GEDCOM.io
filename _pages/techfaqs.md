@@ -228,33 +228,8 @@ who meant `BEF 1 JAN 1852`.
 ## How do I record an event inferred from another event?
 
 A record of one event sometimes implies another. A christening, for example, implies a birth on or before the
-christening date. How to record the inferred event depends on what can be said about it.
-
-If it is only known to have happened, use the payload `Y`, which says the event is known to have occurred:
-
-```
-1 BIRT Y
-```
-
-If it happened no later than a known date, use `BEF` ("exact date unknown, but no later than" the date):
-
-```
-1 BIRT
-2 DATE BEF 3 MAR 1801
-```
-
-If a date near the known one can be estimated, such as where christenings usually followed birth within days,
-use `EST` ("exact date unknown, but near" the date, and calculated from other data):
-
-```
-1 BIRT
-2 DATE EST 3 MAR 1801
-```
-
-A `DATE`, a `PLAC` or the payload `Y` is what makes the structure say the event occurred. A `BIRT` with none of them
-is only a place for research notes about a possible birth.
-
-To show what the inference rests on, cite the record of the other event and say how it was reached:
+christening date. Record the inferred event with what the other record supports, cite that record, and say in a
+note how the inference was reached:
 
 ```
 1 BIRT
