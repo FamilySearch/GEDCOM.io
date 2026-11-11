@@ -52,10 +52,6 @@ jobs:
         shell: pwsh
         run: Expand-Archive GedValidate.zip -DestinationPath .\${{env.BUILD_PLATFORM}}
 
-      - name: Build GEDZIP archives from their folders
-        shell: pwsh
-        run: python .github/scripts/build_gdz.py
-
       - name: Run GedValidate
         shell: pwsh
         run: |

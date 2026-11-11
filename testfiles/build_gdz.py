@@ -2,16 +2,18 @@
 """Build each GEDZIP test archive from the folder beside it.
 
 Every file in testfiles/gedcom71/maximal71.gdz is also in testfiles/gedcom71/maximal71/,
-and that folder is what gets edited. This rebuilds an archive only when its contents
-differ from its folder, writing gedcom.ged first and then the other folders and files in
-sorted order, each with a fixed timestamp, so the same folder always gives the same
-archive. Pull requests change the folder (and the matching .ged file); the archive is
-rebuilt after they merge.
+and that folder is what gets edited. After editing it, run this and commit the folder and
+the archive together, so the two always match:
 
-  python3 .github/scripts/build_gdz.py [ARCHIVE.gdz ...]
+  python3 testfiles/build_gdz.py [ARCHIVE.gdz ...]
 
 With no arguments it builds every testfiles/**/*.gdz that has a folder beside it.
-Prints the path of each archive it rewrote.
+It rewrites an archive only when its contents differ from its folder, writing gedcom.ged
+first and then the other folders and files in sorted order, each with a fixed timestamp,
+so the same folder always gives the same archive. Prints the path of each archive it rewrote.
+
+Run it from the repository's root. The pull request's checks (validate-gdz.yml) then
+confirm that the archive and the folder hold the same files with the same bytes.
 """
 import sys
 import zipfile

@@ -19,12 +19,18 @@ bundle exec jekyll serve -w --config _config.yml,_config.dev.yml
 
 ## Test files
 
-Each GEDZIP test archive in `testfiles` is built from the folder beside it: `maximal71.gdz` from `maximal71/`.
-To change an archive, change the files in its folder, and for `maximal70` and `maximal71` the matching `.ged`
-file too (CI checks the two agree). Don't edit the `.gdz` itself: after a pull request merges, the
-"Build GEDZIP archives" workflow rebuilds it and opens a pull request with the result. To build them locally, run
-`python3 .github/scripts/build_gdz.py`.
+Each GEDZIP test archive in `testfiles` has a folder beside it with the same files: `maximal71.gdz` and `maximal71/`.
+The folder is there so a change can be reviewed, since GitHub can't show what changed inside an archive.
 
-Why: an archive is a binary file, and Git can't merge two changes to one, so when two open pull requests both edited
-an archive, merging one made the other conflict. Building archives from their folders means pull requests change only
-text files, which Git merges.
+To change an archive:
+
+1. Change the files in its folder, and for `maximal70` and `maximal71` the matching `.ged` file too.
+2. Run `python3 testfiles/build_gdz.py` from the repository's root. It rebuilds each archive whose folder changed.
+3. Commit the folder, the `.ged` file and the `.gdz` together.
+
+The pull request's checks confirm that the archive and its folder hold the same files with the same bytes, and that
+the `.ged` file and the archive's `gedcom.ged` agree, so every commit on `main` has them in step.
+
+If another pull request that changed the same archive merges first, yours will conflict on the `.gdz`, because Git
+can't merge two changes to a binary file. Merge `main` into your branch, keep both changes in the folder and the
+`.ged` file, run the script again, and commit the archive it builds.
