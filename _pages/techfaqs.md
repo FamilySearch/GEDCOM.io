@@ -238,6 +238,19 @@ then the date might simply be entered as `BEF 1852`, but would more unambiguousl
 `BEF 31 DEC 1852`, since the former would leave the possibility that it was entered by a 5.5.1 user
 who meant `BEF 1 JAN 1852`.
 
+## How do I record an event inferred from another event?
+
+A record of one event sometimes implies another. A christening, for example, implies a birth on or before the
+christening date. Record the inferred event with what the other record supports, cite that record, and say in a
+note how the inference was reached:
+
+```
+1 BIRT
+2 DATE BEF 3 MAR 1801
+2 NOTE Inferred from the christening on 3 March 1801.
+2 SOUR @S1@
+```
+
 ## How do I record the calendar that an age applies to?
 
 When a person has events recorded in the contexts of multiple calendars within their lifetime, such
