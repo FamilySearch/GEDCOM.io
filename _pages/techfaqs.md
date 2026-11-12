@@ -171,6 +171,19 @@ You might also consider bounding the year if possible:
 3 PHRASE March 3rd (year unknown)
 ```
 
+## How do I record a time given in words?
+
+Times in the `Time` datatype use a 24-hour clock, so a time known only in words, such as "early in the morning",
+cannot be a `TIME` payload, and FamilySearch GEDCOM 7.0 has no `PHRASE` under `TIME`.
+
+Instead, put the time in the date's `PHRASE`:
+
+```
+1 BIRT
+2 DATE 12 SEP 1888
+3 PHRASE early in the morning
+```
+
 ## How do I record a regnal year?
 
 A "regnal year" is a year in the reign of a sovereign, such as in "12 March, 5 Henry VIII"
