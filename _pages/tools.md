@@ -15,7 +15,7 @@ sidebar:
 | C | public domain | <https://github.com/gedcom7code/c-converter> | Command-line |
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
-| TypeScript | MIT | <https://github.com/thememorypalace/gedcom-tools> | Library and command-line tool; 5.5.1 to 7.0 and back |
+| TypeScript | MIT | <https://github.com/thememorypalace/gedcom-tools> | Library and command-line tool |
 
 ## Tree tool to v7.0 exporters
 
