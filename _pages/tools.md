@@ -15,6 +15,7 @@ sidebar:
 | C | public domain | <https://github.com/gedcom7code/c-converter> | Command-line |
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
+| TypeScript | MIT | <https://github.com/thememorypalace/gedcom-tools> | Library and command-line tool |
 
 ## Tree tool to v7.0 exporters
 
@@ -53,7 +54,9 @@ sidebar:
 | Claude Code plugin | — | MIT | <https://github.com/vaelen/gedcom-skills> | Claude Code plugin for reading and updating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 | IDE plugin | — | MIT | <https://github.com/lavich/domorium> | Editor plugin for validating GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 files |
 | Web tool | — | - | <https://domorium.com/> | Online GEDCOM 5.5.1 and FamilySearch GEDCOM 7.0 file editor |
-| Web tool | — | — | <https://gedcom.tools/> | GEDCOM file validator and other tools |
+| Web tool | — | — | <https://gedcom-tools.stas6236.workers.dev/> | GEDCOM file validator and other tools |
+| Web tool | — | — | <https://kinfoly.com/gedcom-viewer> | GEDCOM 5.5, 5.5.1 and 7.0 file viewer |
+| Web tool | — | — | <https://ancestral-fire.com/tools/gedcom> | GEDCOM file viewer, validator and 5.5.1 to 7.0 converter |
 
 ## Example FamilySearch GEDCOM 7.0 Files
 
