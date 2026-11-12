@@ -8,9 +8,12 @@ the archive together, so the two always match:
   python3 testfiles/build_gdz.py [ARCHIVE.gdz ...]
 
 With no arguments it builds every testfiles/**/*.gdz that has a folder beside it.
-It rewrites an archive only when its contents differ from its folder, writing gedcom.ged
-first and then the other folders and files in sorted order, each with a fixed timestamp,
-so the same folder always gives the same archive. Prints the path of each archive it rewrote.
+It rewrites an archive only when what it holds differs from its folder: an entry missing,
+an extra one, a name given twice, or different bytes. A run with nothing changed touches no
+archive, and an archive whose contents already match its folder is left as it is, however it
+was built. When it writes one, it writes gedcom.ged first and then the other folders and files
+in sorted order, each with a fixed timestamp, so the same folder always gives the same bytes.
+Prints the path of each archive it rewrote.
 
 Run it from the repository's root. The pull request's checks (validate-gdz.yml) then
 confirm that the archive and the folder hold the same files with the same bytes.
@@ -24,7 +27,10 @@ STAMP = (1980, 1, 1, 0, 0, 0)
 
 def archive_contents(archive):
     with zipfile.ZipFile(archive) as z:
-        return {i.filename: (None if i.is_dir() else z.read(i)) for i in z.infolist()}
+        infos = z.infolist()
+        if len({i.filename for i in infos}) != len(infos):
+            return None  # a name given twice is never up to date, so the archive is rebuilt
+        return {i.filename: (None if i.is_dir() else z.read(i)) for i in infos}
 
 
 def folder_contents(folder):
