@@ -184,6 +184,8 @@
 2 PHRASE Association text
 2 ROLE OTHER
 3 PHRASE Role text
+2 DATE FROM 1930 TO 1932
+3 PHRASE Association date phrase
 2 NOTE Note text
 2 SNOTE @N1@
 2 SOUR @S1@
