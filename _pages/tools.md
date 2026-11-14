@@ -16,6 +16,7 @@ sidebar:
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
 | TypeScript | MIT | <https://github.com/thememorypalace/gedcom-tools> | Library and command-line tool |
+| Go | MIT | <https://github.com/cacack/gedcom-go> | Library: bidirectional 5.5 / 5.5.1 / 7.0 conversion with a per-change report |
 
 ## Tree tool to v7.0 exporters
 
@@ -39,6 +40,7 @@ sidebar:
 | Dart | BSD | <https://github.com/ceburo/gedcom_parser> | GEDCOM 5.5.1 and 7.0 parsing and exporting |
 | Java | Apache | <https://github.com/jayaskren/GEDCOM7-SAXlike-parser-java/tree/main> | Zero-dependency GEDCOM 7.0 reading and writing |
 | Go | Unlicense | <https://github.com/iand/gedcom> | Go package to parse and compose GEDCOM 5.5.1 and 7.0 files |
+| Go | MIT | <https://github.com/cacack/gedcom-go> | Parses, validates, and writes GEDCOM 5.5, 5.5.1, and 7.0 (7.0.18), with version conversion and GEDZIP; lossless round-trip |
 
 ## Development Aids
 
