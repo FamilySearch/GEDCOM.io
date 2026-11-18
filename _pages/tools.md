@@ -16,7 +16,7 @@ sidebar:
 | Java | public domain | <https://github.com/gedcom7code/java-converter> | Command-line |
 | Web tool | — | <https://magikeygedcomconverter.azurewebsites.net/> | Website |
 | TypeScript | MIT | <https://github.com/thememorypalace/gedcom-tools> | Library and command-line tool |
-| Go | MIT | <https://github.com/cacack/gedcom-go> | Library: bidirectional 5.5 / 5.5.1 / 7.0 conversion with a per-change report |
+| Go | MIT | <https://github.com/cacack/gedcom-go> | Library |
 
 ## Tree tool to v7.0 exporters
 
