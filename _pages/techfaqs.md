@@ -171,6 +171,19 @@ You might also consider bounding the year if possible:
 3 PHRASE March 3rd (year unknown)
 ```
 
+## How do I record a time given in words?
+
+Times in the `Time` datatype use a 24-hour clock, so a time known only in words, such as "early in the morning",
+cannot be a `TIME` payload, and FamilySearch GEDCOM 7.0 has no `PHRASE` under `TIME`.
+
+Instead, put the time in the date's `PHRASE`:
+
+```
+1 BIRT
+2 DATE 12 SEP 1888
+3 PHRASE early in the morning
+```
+
 ## How do I record a regnal year?
 
 A "regnal year" is a year in the reign of a sovereign, such as in "12 March, 5 Henry VIII"
@@ -224,6 +237,19 @@ other event in 1852 that it was known to have occurred before.  If no further in
 then the date might simply be entered as `BEF 1852`, but would more unambiguously be entered as
 `BEF 31 DEC 1852`, since the former would leave the possibility that it was entered by a 5.5.1 user
 who meant `BEF 1 JAN 1852`.
+
+## How do I record an event inferred from another event?
+
+A record of one event sometimes implies another. A christening, for example, implies a birth on or before the
+christening date. Record the inferred event with what the other record supports, cite that record, and say in a
+note how the inference was reached:
+
+```
+1 BIRT
+2 DATE BEF 3 MAR 1801
+2 NOTE Inferred from the christening on 3 March 1801.
+2 SOUR @S1@
+```
 
 ## How do I record the calendar that an age applies to?
 
