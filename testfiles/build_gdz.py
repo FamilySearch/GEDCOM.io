@@ -18,11 +18,20 @@ Prints the path of each archive it rewrote.
 Run it from the repository's root. The pull request's checks (validate-gdz.yml) then
 confirm that the archive and the folder hold the same files with the same bytes.
 """
+import os
+import stat
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
+# ZIP stores times in MS-DOS format, which cannot hold a date before 1980-01-01; that is the earliest fixed time it can write.
 STAMP = (1980, 1, 1, 0, 0, 0)
+# Fixed permissions, so the archive's bytes do not depend on the permissions of the checkout it was built from.
+# The high 16 bits of external_attr hold the Unix mode; 0x10 is the MS-DOS directory attribute.
+MSDOS_DIRECTORY = 0x10
+DIR_ATTR = ((stat.S_IFDIR | 0o755) << 16) | MSDOS_DIRECTORY
+FILE_ATTR = 0o644 << 16  # a file: its permission bits alone, as the archives were first built
 
 
 def archive_contents(archive):
@@ -49,15 +58,17 @@ def build(archive):
     if archive.exists() and archive_contents(archive) == want:
         return False
     names = ["gedcom.ged"] + sorted(n for n in want if n != "gedcom.ged")
-    tmp = archive.with_name(archive.name + ".tmp")
+    fd, tmp = tempfile.mkstemp(dir=archive.parent, prefix=archive.name + ".", suffix=".tmp")
+    os.close(fd)
+    tmp = Path(tmp)
     with zipfile.ZipFile(tmp, "w") as z:
         for name in names:
             info = zipfile.ZipInfo(name, STAMP)
             if want[name] is None:
-                info.external_attr = (0o40755 << 16) | 0x10
+                info.external_attr = DIR_ATTR
                 z.writestr(info, b"", compress_type=zipfile.ZIP_STORED)
             else:
-                info.external_attr = 0o644 << 16
+                info.external_attr = FILE_ATTR
                 z.writestr(info, want[name], compress_type=zipfile.ZIP_DEFLATED)
     tmp.replace(archive)
     if archive_contents(archive) != want:
