@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build each GEDZIP test archive from the folder beside it.
 
-Every file in testfiles/gedcom71/maximal71.gdz is also in testfiles/gedcom71/maximal71/,
-and that folder is what gets edited. After editing it, run this and commit the folder and
-the archive together, so the two always match:
+Every testfiles/**/NAME.gdz has a folder NAME/ beside it holding the same files, and the
+folder is what gets edited. After editing a folder, run this and commit the folder and its
+archive together, so the two always match:
 
   python3 testfiles/build_gdz.py [ARCHIVE.gdz ...]
 
