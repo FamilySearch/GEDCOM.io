@@ -6,14 +6,16 @@
 Each line of SMALLER.ged, together with the chain of lines above it, must also
 appear in LARGER.ged. Pointer names are ignored, since a file copied into another
 may rename them to avoid collisions (@U1@ in extensions.ged is @XU1@ in
-maximal70.ged); @VOID@ is kept. The NOTE directly under SMALLER.ged's HEAD, which
-describes that file, is skipped. Prints each line that is missing and exits 1 if
+maximal70.ged); @VOID@ is kept. The NOTE directly under SMALLER.ged's HEAD that
+describes the file (it begins "This file is intended to provide coverage") is
+skipped with its substructures; any other NOTE under HEAD is compared. Prints each line that is missing and exits 1 if
 there are any.
 """
 import re
 import sys
 
 POINTER = re.compile(r"@(?!VOID@)[^@ ]+@")
+DESCRIPTION = "1 NOTE This file is intended to provide coverage"
 
 
 def structures(path, skip_head_note=False):
@@ -31,7 +33,7 @@ def structures(path, skip_head_note=False):
                 skipping = None
             del chain[level:]
             text = POINTER.sub("@@", line)
-            if skip_head_note and level == 1 and chain and chain[0] == "0 HEAD" and text.startswith("1 NOTE"):
+            if skip_head_note and level == 1 and chain and chain[0] == "0 HEAD" and text.startswith(DESCRIPTION):
                 skipping = level
                 continue
             chain.append(text)
