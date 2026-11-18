@@ -19,12 +19,12 @@ bundle exec jekyll serve -w --config _config.yml,_config.dev.yml
 
 ## Test files
 
-Each GEDZIP test archive in `testfiles` has a folder beside it with the same files: `maximal71.gdz` and `maximal71/`.
+Each GEDZIP test archive in `testfiles` has a folder beside it with the same files: e.g., `maximal71.gdz` has `maximal71/`.
 The folder is there so a change can be reviewed, since GitHub can't show what changed inside an archive.
 
 To change an archive:
 
-1. Change the files in its folder, and for `maximal70` and `maximal71` the matching `.ged` file too.
+1. Change the files in its folder, and the `.ged` file beside the archive (e.g., `maximal71.ged` beside `maximal71.gdz`).
 2. Run `python3 testfiles/build_gdz.py` from the repository's root. It rebuilds each archive whose folder changed.
 3. Commit the folder, the `.ged` file and the `.gdz` together.
 
