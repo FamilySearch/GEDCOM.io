@@ -40,7 +40,7 @@ sidebar:
 | Dart | BSD | <https://github.com/ceburo/gedcom_parser> | GEDCOM 5.5.1 and 7.0 parsing and exporting |
 | Java | Apache | <https://github.com/jayaskren/GEDCOM7-SAXlike-parser-java/tree/main> | Zero-dependency GEDCOM 7.0 reading and writing |
 | Go | Unlicense | <https://github.com/iand/gedcom> | Go package to parse and compose GEDCOM 5.5.1 and 7.0 files |
-| Go | MIT | <https://github.com/cacack/gedcom-go> | Parses, validates, and writes GEDCOM 5.5, 5.5.1, and 7.0 (7.0.18), with version conversion and GEDZIP; lossless round-trip |
+| Go | MIT | <https://github.com/cacack/gedcom-go> | GEDCOM 5.5, 5.5.1, and 7.0 parsing, validating, and exporting with GEDZIP support |
 
 ## Development Aids
 
