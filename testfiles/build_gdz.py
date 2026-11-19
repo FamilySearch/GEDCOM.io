@@ -25,7 +25,8 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-# ZIP stores times in MS-DOS format, which cannot hold a date before 1980-01-01; that is the earliest fixed time it can write.
+# Fixed timestamp, so the archive's bytes do not depend on the time it was created.
+# ZIP stores times in MS-DOS format, which cannot hold a date before 1980-01-01, so that's chosen as the timestamp
 STAMP = (1980, 1, 1, 0, 0, 0)
 # Fixed permissions, so the archive's bytes do not depend on the permissions of the checkout it was built from.
 # The high 16 bits of external_attr hold the Unix mode; 0x10 is the MS-DOS directory attribute.
