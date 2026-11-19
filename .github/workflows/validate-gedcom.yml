@@ -29,6 +29,19 @@ jobs:
     with:
       archive: ${{ matrix.archive }}
 
+  check-subsets:
+    # Test files that copy into maximal70.ged, kept in step with it (#431): every structure of each is also in maximal70.ged.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GEDCOM.io
+        uses: actions/checkout@v6
+
+      - name: extensions.ged is a subset of maximal70.ged
+        run: python3 testfiles/check_subset.py testfiles/gedcom70/extensions.ged testfiles/gedcom70/maximal70.ged
+
+      - name: maximal70-lds.ged is a subset of maximal70.ged
+        run: python3 testfiles/check_subset.py testfiles/gedcom70/maximal70-lds.ged testfiles/gedcom70/maximal70.ged
+
   validate-gedcom:
     runs-on: windows-latest
     env:
