@@ -180,6 +180,8 @@
 2 PHRASE First child
 1 CHIL @VOID@
 2 PHRASE Second child
+2 SOUR @S1@
+3 PAGE 2
 1 ASSO @I3@
 2 PHRASE Association text
 2 ROLE OTHER
